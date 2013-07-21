@@ -2,7 +2,7 @@
 ;; --------------------------------------------------------------------------
 ;; Desktop File for Emacs
 ;; --------------------------------------------------------------------------
-;; Created Sun Jul 21 20:17:41 2013
+;; Created Sun Jul 21 21:27:17 2013
 ;; Desktop file format version 206
 ;; Emacs version 24.3.50.1
 
@@ -10,22 +10,55 @@
 (setq desktop-missing-file-warning nil)
 (setq tags-file-name nil)
 (setq tags-table-list nil)
-(setq search-ring '("highlight" "set-faces" "color" "highlight" "changes" "high" "highli" "hi-lock" "highlight" "auto-com" "highlight" "color" "current" "high" "auto-comp" "auto-complete"))
+(setq search-ring '("color" "mode-l" "highlight-chan" "highlight" "set-faces" "color" "highlight" "changes" "high" "highli" "hi-lock" "highlight" "auto-com" "highlight" "color" "current"))
 (setq regexp-search-ring nil)
 (setq register-alist (list '(106 . "splay-time-24hr-format t)\n(setq display-time-day-and-date t)\n(display-time)\n(global-set-key [C-tab] \"\\C-q\\t\")\n(setq message-log-max nil)\n(setq ring-bell-function 'ignore)\n\n(load \"desktop\") \n(desktop-save-mode)\n;(setq mac-option-modifier 'hyper) ; sets the Option key as Hyper\n;(setq mac-option-modifier 'super) ; sets the Option key as Super\n;(setq mac-command-modifier 'meta) ; sets the Command key as Meta\n;(setq mac-control-modifier 'ctrl) ; sets the Control key as Meta\n\n(show-paren-mode)\n(require 'linum)\n\n(require 'ido)\n(ido-mode t)\n\n(require 'ibuffer)\n(global-set-key (kbd \"C-x C-b\") 'ibuffer)\n\n\n(defun toggle-fullscreen ()\n  \"Toggle full screen\"\n  (interactive)\n  (set-frame-parameter\n   nil 'fullscreen\n   (when (not (frame-parameter nil 'fullscreen)) 'fullscreen))\n  (if (frame-parameter nil 'fullscreen)\n      (display-time-mode 1))\n  (if (not (frame-parameter nil 'fullscreen))\n      (display-time-mode 0))\n  )\n\n(toggle-fullscreen)\n\n(load-file \"~/.emacs.d/anything.el\")\n;(load-file \"~/.emacs.d/anything-match-plugin.el\")\n(require 'anything-complete)\n;; Bind C-o to complete shell history\n(anything-complete-shell-history-setup-key \"\\C-o\")\n\n(global-set-key (kbd \"C-x C-f\") 'ido-find-file)\n(global-set-key (kbd \"C-x f\") 'ido-find-file)\n(global-set-key (kbd \"C-x m\") 'anything-execute-extended-command)\n;;(global-set-key (kbd \"C-x m\") 'execute-extended-command)\n(global-set-key (kbd \"C-c C-m\") 'anything-execute-extended-command)\n(global-set-key (kbd \"C-c m\")   'anything-execute-extended-command)\n\n\n\n(setq auto-mode-alist\n      (append '((\"\\\\.cpp$\" . c++-mode)\n		(\"\\\\.hpp$\" . c++-mode)\n		(\"\\\\.h$\" . c++-mode)\n		(\"\\\\.hh$\" . c++-mode)\n		(\"\\\\.lsp$\" . lisp-mode)\n		(\"\\\\.lisp$\" . lisp-mode)\n		(\"\\\\.scm$\" . scheme-mode)\n		(\"\\\\.pl$\" . perl-mode)\n		(\"\\\\.hs$\". haskell-mode)\n		(\"\\\\.vhd$\" . text-mode)\n		(\"\\\\.rb$\"  . ruby-mode)\n		(\"\\\\.rake$\" . ruby-mode)\n		(\"Gemfile\" . ruby-mode)\n		(\"\\\\.scss$\" . css-mode)\n") (desktop-list* 51 (let ((mk (make-marker))) (add-hook 'desktop-delay-hook `(lambda nil (set-marker ,mk ,nil (get-buffer ," *temp*")))) mk)) (desktop-list* 50 (let ((mk (make-marker))) (add-hook 'desktop-delay-hook `(lambda nil (set-marker ,mk ,nil (get-buffer ," *temp*")))) mk)) '(49 . "(require 'highlight-current-line)\n(highlight-current-line-minor-mode)\n\n(require 'highlight-parentheses)\n(defun turn-on-highlight-parentheses-mode ()\n(highlight-parentheses-mode t))\n(define-global-minor-mode global-highlight-parentheses-mode\n  highlight-parentheses-mode\n  turn-on-highlight-parentheses-mode)\n(global-highlight-parentheses-mode)\n(setq hl-paren-background-colors '(\"green\"))\n(global-set-key (kbd \"C-'\") 'highlight-symbol-next)\n\n(load-file \"~/.emacs.d/viewer.el\")\n") '(114 . "splay-time-24hr-format t)\n(setq display-time-day-and-date t)\n(display-time)\n(global-set-key [C-tab] \"\\C-q\\t\")\n(setq message-log-max nil)\n(setq ring-bell-function 'ignore)\n\n(load \"desktop\") \n(desktop-save-mode)\n;(setq mac-option-modifier 'hyper) ; sets the Option key as Hyper\n;(setq mac-option-modifier 'super) ; sets the Option key as Super\n;(setq mac-command-modifier 'meta) ; sets the Command key as Meta\n;(setq mac-control-modifier 'ctrl) ; sets the Control key as Meta\n\n(show-paren-mode)\n(require 'linum)\n\n(require 'ido)\n(ido-mode t)\n\n(require 'ibuffer)\n(global-set-key (kbd \"C-x C-b\") 'ibuffer)\n\n\n(defun toggle-fullscreen ()\n  \"Toggle full screen\"\n  (interactive)\n  (set-frame-parameter\n   nil 'fullscreen\n   (when (not (frame-parameter nil 'fullscreen)) 'fullscreen))\n  (if (frame-parameter nil 'fullscreen)\n      (display-time-mode 1))\n  (if (not (frame-parameter nil 'fullscreen))\n      (display-time-mode 0))\n  )\n\n(toggle-fullscreen)\n\n(load-file \"~/.emacs.d/anything.el\")\n;(load-file \"~/.emacs.d/anything-match-plugin.el\")\n(require 'anything-complete)\n;; Bind C-o to complete shell history\n(anything-complete-shell-history-setup-key \"\\C-o\")\n\n(global-set-key (kbd \"C-x C-f\") 'ido-find-file)\n(global-set-key (kbd \"C-x f\") 'ido-find-file)\n(global-set-key (kbd \"C-x m\") 'anything-execute-extended-command)\n;;(global-set-key (kbd \"C-x m\") 'execute-extended-command)\n(global-set-key (kbd \"C-c C-m\") 'anything-execute-extended-command)\n(global-set-key (kbd \"C-c m\")   'anything-execute-extended-command)\n\n\n\n(setq auto-mode-alist\n      (append '((\"\\\\.cpp$\" . c++-mode)\n		(\"\\\\.hpp$\" . c++-mode)\n		(\"\\\\.h$\" . c++-mode)\n		(\"\\\\.hh$\" . c++-mode)\n		(\"\\\\.lsp$\" . lisp-mode)\n		(\"\\\\.lisp$\" . lisp-mode)\n		(\"\\\\.scm$\" . scheme-mode)\n		(\"\\\\.pl$\" . perl-mode)\n		(\"\\\\.hs$\". haskell-mode)\n		(\"\\\\.vhd$\" . text-mode)\n		(\"\\\\.rb$\"  . ruby-mode)\n		(\"\\\\.rake$\" . ruby-mode)\n		(\"Gemfile\" . ruby-mode)\n		(\"\\\\.scss$\" . css-mode)\n		(\"Rakefile\" . ruby-mode)\n")))
-(setq file-name-history '("/Users/kang/.emacs.d/.gitignore" "/Users/kang/.emacs.d/highlight-current-line.el" "/Users/kang/.emacs" "/Users/kang/.emacs.d/smart-mode-line.el" "/Users/kang/.emacs.d/powerline/powerline-themes.el" "/Users/kang/.emacs.d/mode-line.el" "/Users/kang/.emacs.d/themes/molokai-theme-kit.el" "/Users/kang/.emacs.d/emacs-clang-complete-async/src/completion_serv.c" "/Users/kang/.emacs.d/emacs-clang-complete-async/README.org" "/Users/kang/.emacs.d/emacs-clang-complete-async/auto-complete-clang-async.el" "/Users/kang/.emacs.d/themes/molokai-theme-kit.el" "/Users/kang/code/Basketball_demo/src/main.cpp" "/Users/kang/code/Panda/core/main.c" "/Users/kang/code/Basketball_demo/src/Game.cpp" "/Users/kang/code/Basketball_demo/src/BaseGameEntity.cpp" "/tmp/demo.cc" "/Users/kang/.emacs.d/auto-complete/auto-complete.el" "/Users/kang/.emacs.d/auto-complete/auto-complete-config.el" "/tmp/demo.cc" "/Users/kang/.emacs.d/auto-complete/auto-complete-config.el" "/Users/kang/.emacs.d/auto-complete/auto-complete.el" "/tmp/demo.cc" "/Users/kang/.emacs.d/emacs-clang-complete-async/makefile.mk" "/Users/kang/.emacs.d/emacs-clang-complete-async/Makefile" "/Users/kang/.emacs.d/ace-jump-mode.el" "/Users/kang/code/Panda/core/file.c" "/Users/kang/code/Panda/core/main.c" "/Users/kang/code/Basketball_demo/src/BallTeam.cpp" "/Users/kang/code/Basketball_demo/src/Game.cpp" "/Users/kang/code/Basketball_demo/src/gtags.files"))
+(setq file-name-history '("/Users/kang/.emacs.d/smart-mode-line.el" "/Users/kang/code/Basketball_demo/src/BallTeam.cpp" "/Users/kang/.emacs.d/.gitignore" "/Users/kang/code/Basketball_demo/src/Game.cpp" "/Users/kang/code/Basketball_demo/src/BallTeam.h" "/Users/kang/.emacs.d/yasnippet/.gitignore" "/Users/kang/.emacs.d/.gitignore" "/Users/kang/.emacs.d/highlight-current-line.el" "/Users/kang/.emacs" "/Users/kang/.emacs.d/smart-mode-line.el" "/Users/kang/.emacs.d/powerline/powerline-themes.el" "/Users/kang/.emacs.d/mode-line.el" "/Users/kang/.emacs.d/themes/molokai-theme-kit.el" "/Users/kang/.emacs.d/emacs-clang-complete-async/src/completion_serv.c" "/Users/kang/.emacs.d/emacs-clang-complete-async/README.org" "/Users/kang/.emacs.d/emacs-clang-complete-async/auto-complete-clang-async.el" "/Users/kang/.emacs.d/themes/molokai-theme-kit.el" "/Users/kang/code/Basketball_demo/src/main.cpp" "/Users/kang/code/Panda/core/main.c" "/Users/kang/code/Basketball_demo/src/Game.cpp" "/Users/kang/code/Basketball_demo/src/BaseGameEntity.cpp" "/tmp/demo.cc" "/Users/kang/.emacs.d/auto-complete/auto-complete.el" "/Users/kang/.emacs.d/auto-complete/auto-complete-config.el" "/tmp/demo.cc" "/Users/kang/.emacs.d/auto-complete/auto-complete-config.el" "/Users/kang/.emacs.d/auto-complete/auto-complete.el" "/tmp/demo.cc" "/Users/kang/.emacs.d/emacs-clang-complete-async/makefile.mk" "/Users/kang/.emacs.d/emacs-clang-complete-async/Makefile"))
 
 ;; Buffer section -- buffers listed in same order as in buffer list:
+(desktop-create-buffer 206
+  "/Users/kang/.emacs.d/smart-mode-line.el"
+  "smart-mode-line.el"
+  'emacs-lisp-mode
+  '(highlight-current-line-minor-mode global-auto-revert-mode hi-lock-mode highlight-symbol-mode highlight-parentheses-mode undo-tree-mode auto-complete-mode highlight-changes-mode)
+  21707
+  '(50640 nil)
+  nil
+  nil
+  '((buffer-file-coding-system . utf-8-unix) (highlight-changes-mode . t)))
+
 (desktop-create-buffer 206
   "/Users/kang/.emacs"
   ".emacs"
   'emacs-lisp-mode
   '(highlight-current-line-minor-mode global-auto-revert-mode hi-lock-mode highlight-symbol-mode highlight-parentheses-mode undo-tree-mode auto-complete-mode)
-  3653
-  '(3529 nil)
+  16206
+  '(3775 nil)
   nil
   nil
   '((buffer-file-coding-system . utf-8-unix) (highlight-changes-mode)))
+
+(desktop-create-buffer 206
+  "/Users/kang/code/Basketball_demo/src/BallTeam.cpp"
+  "BallTeam.cpp"
+  'c++-mode
+  '(abbrev-mode global-auto-revert-mode hi-lock-mode highlight-symbol-mode highlight-parentheses-mode undo-tree-mode auto-complete-mode xgtags-mode hs-minor-mode)
+  8809
+  '(1232 nil)
+  nil
+  nil
+  '((tab-width . 4) (indent-tabs-mode) (buffer-file-coding-system . undecided-unix)))
+
+(desktop-create-buffer 206
+  "/Users/kang/code/Basketball_demo/src/BallTeam.h"
+  "BallTeam.h"
+  'c++-mode
+  '(abbrev-mode global-auto-revert-mode hi-lock-mode highlight-symbol-mode highlight-parentheses-mode undo-tree-mode auto-complete-mode xgtags-mode hs-minor-mode)
+  185
+  '(nil nil)
+  nil
+  nil
+  '((tab-width . 4) (indent-tabs-mode) (buffer-file-coding-system . utf-8-unix)))
 
 (desktop-create-buffer 206
   "/Users/kang/.emacs.d/.gitignore"
@@ -42,12 +75,23 @@
   "/Users/kang/code/Basketball_demo/src/Game.cpp"
   "Game.cpp"
   'c++-mode
-  '(highlight-current-line-minor-mode abbrev-mode global-auto-revert-mode hi-lock-mode highlight-symbol-mode highlight-parentheses-mode undo-tree-mode auto-complete-mode xgtags-mode view-mode hs-minor-mode highlight-changes-mode)
-  5688
+  '(abbrev-mode global-auto-revert-mode hi-lock-mode highlight-symbol-mode highlight-parentheses-mode undo-tree-mode auto-complete-mode xgtags-mode hs-minor-mode)
+  377
+  '(nil nil)
+  nil
+  nil
+  '((tab-width . 4) (indent-tabs-mode) (buffer-file-coding-system . utf-8-unix)))
+
+(desktop-create-buffer 206
+  "/Users/kang/.emacs.d/yasnippet/.gitignore"
+  ".gitignore<2>"
+  'fundamental-mode
+  '(global-auto-revert-mode hi-lock-mode highlight-parentheses-mode undo-tree-mode view-mode)
+  1
   '(nil nil)
   t
   nil
-  '((tab-width . 4) (indent-tabs-mode) (buffer-file-coding-system . utf-8-unix) (highlight-changes-mode . t)))
+  '((buffer-file-coding-system . undecided-dos)))
 
 (desktop-create-buffer 206
   "/Users/kang/.emacs.d/highlight-current-line.el"
@@ -56,17 +100,6 @@
   '(global-auto-revert-mode hi-lock-mode highlight-symbol-mode highlight-parentheses-mode undo-tree-mode auto-complete-mode view-mode highlight-changes-mode)
   15811
   '(4203 nil)
-  t
-  nil
-  '((buffer-file-coding-system . utf-8-unix) (highlight-changes-mode . t)))
-
-(desktop-create-buffer 206
-  "/Users/kang/.emacs.d/smart-mode-line.el"
-  "smart-mode-line.el"
-  'emacs-lisp-mode
-  '(highlight-current-line-minor-mode global-auto-revert-mode hi-lock-mode highlight-symbol-mode highlight-parentheses-mode undo-tree-mode auto-complete-mode view-mode highlight-changes-mode)
-  48340
-  '(1 nil)
   t
   nil
   '((buffer-file-coding-system . utf-8-unix) (highlight-changes-mode . t)))

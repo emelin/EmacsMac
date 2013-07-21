@@ -540,7 +540,7 @@ if you just want to fine-tune it)."
   :group 'smart-mode-line-faces
   :set 'sml/set-face-color
   :initialize 'set-default)
-(defcustom sml/active-background-color "black" "Background mode-line color for the active frame."
+(defcustom sml/active-background-color "gray10" "Background mode-line color for the active frame."
   :type 'color :group 'smart-mode-line-faces
   :set 'sml/set-face-color
   :initialize 'set-default)
