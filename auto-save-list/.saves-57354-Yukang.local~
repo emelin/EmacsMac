@@ -1,11 +1,13 @@
-/Users/kang/.emacs.d/yasnippet/.gitignore
-/Users/kang/.emacs.d/yasnippet/#.gitignore#
-/Users/kang/.emacs.d/.gitignore
-/Users/kang/.emacs.d/#.gitignore#
 /Users/kang/.emacs
 /Users/kang/#.emacs#
 /Users/kang/code/Basketball_demo/src/Game.cpp
 /Users/kang/code/Basketball_demo/src/#Game.cpp#
+/Users/kang/code/Basketball_demo/src/BallTeam.h
+/Users/kang/code/Basketball_demo/src/#BallTeam.h#
+/Users/kang/.emacs.d/yasnippet/.gitignore
+/Users/kang/.emacs.d/yasnippet/#.gitignore#
+/Users/kang/.emacs.d/.gitignore
+/Users/kang/.emacs.d/#.gitignore#
 /Users/kang/.emacs.d/highlight-current-line.el
 /Users/kang/.emacs.d/#highlight-current-line.el#
 /Users/kang/.emacs.d/smart-mode-line.el
