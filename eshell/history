@@ -1,0 +1,128 @@
+make LLVM_CONFIG=llvm-config-3.1
+ls
+./clang-complete 
+ls
+c
+ls
+cd
+ls
+cd /tmp/
+ls
+cd
+ls
+ls
+~/.emacs.d/emacs-clang-complete-async/clang-complete demo.cc 
+~/.emacs.d/emacs-clang-complete-async/clang-complete -h demo.cc 
+~/.emacs.d/emacs-clang-complete-async/clang-complete 
+~/.emacs.d/emacs-clang-complete-async/clang-complete -h demo.cc 
+cd ~/.emacs.d/
+ls
+cd emacs-clang-complete-async/
+ls
+cd /tmp
+~/.emacs.d/emacs-clang-complete-async/clang-complete -h demo.cc 
+~/.emacs.d/emacs-clang-complete-async/clang-complete  demo.cc 
+ls
+ls
+cd
+ls
+cd .emacs.d/
+ls
+cd emacs-clang-complete-async/
+ls
+make clean;make
+make LLVM_CONFING=llvm-config-3.1
+make clean
+make LLVM_CONFING=llvm-config-3.1
+ls
+clang
+clang -v
+ls
+ls
+cd ..
+ls
+git clone https://github.com/brianjcj/auto-complete-clang.git
+rm -rf auto-complete-clang/
+git clone https://github.com/brianjcj/auto-complete-clang.git
+ls
+ls
+cd auto-complete-clang/
+ls
+echo "" | g++ -v -x c++ -E -
+cd
+ls
+cd 2bugscope/
+ls
+find ./ -name src
+pwd
+ls
+ls
+cd .emacs.d/
+ls
+ls
+cd ..
+ls
+cd ..
+ls
+cd ..
+ls
+tags.sh
+ls
+cd .emacs.d/
+ls
+git clone https://github.com/sandai/dotfiles.git
+ls
+mv dotfiles/.emacs.d/ac-dict ./
+ls
+rm -rf dotfiles/
+ls
+cd ac-dict/
+ls
+ls
+ls
+cd ..
+ls
+mv ac-dict auto-complete/
+ls
+ls
+ls
+git clone https://github.com/emacs-helm/helm.git
+ls
+cd helm/
+ls
+ls
+make
+./emacs-helm.sh 
+./emacs-helm.sh 
+./emacs-helm.sh 
+ls
+cd 2bugscope/
+ls
+cd infra/
+ls
+git pull
+ls
+ls
+cd ..
+ls
+./infra/build-hima.py verifier
+./infra/build-hima.py verifier -getonly
+ls
+git clone yukang@huashan:/home/git/repo/verifer.git
+git clone yukang@huashan:/home/git/repo/verifier.git
+ls
+./infra/build-hima.py verifier -getonly
+./infra/build-hima.py verifier
+./infra/build-hima.py 
+ls
+rm -rf trace/
+./infra/build-hima.py -getonly trace
+./infra/build-hima.py 
+cd trace/
+ls
+mkdbg
+ls
+ls
+mkdbg
+ls
+ls

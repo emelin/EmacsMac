@@ -7,8 +7,12 @@
 	(".cpp$" . ["insert.cpp" auto-update-c-source-file])
 	(".sh$" . ["insert.sh" auto-update-header-file])
 	(".h$"   . ["insert.h" auto-update-header-file])
+    (".hh$"  . ["insert.hh" auto-update-header-file])
+    (".cc$"  . ["insert.cc" auto-update-c-source-file])
 	(".c$" . ["insert.c" auto-update-c-source-file])
 	))
+
+
 (setq auto-insert 'other)
 ;; function replaces the string '@@@' by the current file
 ;; name. You could use a similar approach to insert name and date into
