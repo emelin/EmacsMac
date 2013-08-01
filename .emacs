@@ -129,7 +129,7 @@
 (highlight-current-line-minor-mode)
 (highlight-current-line-on t)
 ;; To customize the background color
-(set-face-background 'highlight-current-line-face "gray30")
+(set-face-background 'highlight-current-line-face "gray24")
 
 (require 'highlight-parentheses)
 (defun turn-on-highlight-parentheses-mode ()
@@ -141,7 +141,7 @@
 (setq hl-paren-background-colors '("green"))
 (global-set-key (kbd "C-'") 'highlight-symbol-next)
 
-;;(load-file "~/.emacs.d/viewer.el")
+(load-file "~/.emacs.d/viewer.el")
 
 (defun open-eshell-now ()
   "Open eshell"
@@ -224,25 +224,14 @@
 
 (global-set-key (kbd "C-x y") 'get-continue-string)
 
-;; (defface font-lock-function-call-face
-;;   '((t (:foreground "cyan")))
-;;   "Font Lock mode face used to highlight function calls."
-;;   :group 'font-lock-highlighting-faces)
-
-;; (defvar font-lock-function-call-face 'font-lock-function-call-face)
-;; (add-hook 'c-mode-hook
-;;           (lambda ()
-;;             (font-lock-add-keywords
-;;              nil
-;;              '(("\\<\\(\\sw+\\) ?(" 1 font-lock-function-call-face)) t)))
-
 (flymake-mode)
 
 (add-to-list 'load-path "~/.emacs.d/auto-complete")
+
 (require 'auto-complete)
 (require 'auto-complete-config)
 (ac-config-default)
-(add-to-list 'ac-dictionary-directories "~/.emacs.d/auto-complete/ac-dict/")
+(add-to-list 'ac-dictionary-directories "~/.emacs.d/auto-complete/ac-dict")
 (setq ac-auto-start 3)
 (global-auto-complete-mode t)
 (define-key ac-complete-mode-map "\C-n" 'ac-next)
@@ -268,23 +257,15 @@
       (mapcar (lambda (item)(concat "-I" item))
               (split-string
                "
-/usr/include/c++/4.6
-/usr/include/c++/4.6/x86_64-linux-gnu/.
-/usr/include/c++/4.6/backward
-/usr/lib/gcc/x86_64-linux-gnu/4.6/include
-/usr/local/include
-/usr/lib/gcc/x86_64-linux-gnu/4.6/include-fixed
-/usr/include/x86_64-linux-gnu
-/usr/include
-/home/yukang/2bugscope/hbt/src
-/home/yukang/2bugscope/front/src
-/home/yukang/2bugscope/core/src
-/home/yukang/2bugscope/trace/src
-/home/yukang/2bugscope/printer/src
-/home/yukang/2bugscope/formal/src
-/home/yukang/2bugscope/expression/src
-/home/yukang/2bugscope/zlib/src
-/home/yukang/2bugscope/multicore/src
+ /usr/llvm-gcc-4.2/bin/../lib/gcc/i686-apple-darwin11/4.2.1/include
+ /usr/include/c++/4.2.1
+ /usr/include/c++/4.2.1/backward
+ /usr/local/include
+ /Applications/Xcode.app/Contents/Developer/usr/llvm-gcc-4.2/lib/gcc/i686-apple-darwin11/4.2.1/include
+ /usr/include
+ /Users/kang/code/Panda/inc
+ /System/Library/Frameworks
+ /Library/Frameworks
 "
                )))
 ;; ac-source-gtags
@@ -346,12 +327,18 @@
   )
 
 (defface font-lock-function-call-face
-  '((t (:foreground "sky blue")))
+  '((t (:foreground "LightSkyBlue2")))
   "Font Lock mode face used to highlight function calls."
   :group 'font-lock-highlighting-faces)
 
 (defvar font-lock-function-call-face 'font-lock-function-call-face)
 (add-hook 'my-c-mode-common-hook
+          (lambda ()
+            (font-lock-add-keywords
+             nil
+             '(("\\<\\(\\sw+\\) ?(" 1 font-lock-function-call-face)) t)))
+
+(add-hook 'c-mode-hook
           (lambda ()
             (font-lock-add-keywords
              nil
@@ -616,7 +603,7 @@
 (require 'smart-mode-line)
 (if after-init-time (sml/setup)
   (add-hook 'after-init-hook 'sml/setup))
-(set-face-background 'mode-line "gray23")
+(set-face-background 'mode-line "gray20")
 
 (load-file "~/.emacs.d/auto/autoconfig.el")
 ;;;###autoload

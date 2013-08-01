@@ -2,336 +2,204 @@
 ;; --------------------------------------------------------------------------
 ;; Desktop File for Emacs
 ;; --------------------------------------------------------------------------
-;; Created Mon Jul 29 13:45:33 2013
+;; Created Wed Jul 31 23:34:51 2013
 ;; Desktop file format version 206
-;; Emacs version 24.3.1
+;; Emacs version 24.3.50.1
 
 ;; Global section:
 (setq desktop-missing-file-warning nil)
 (setq tags-file-name nil)
-(setq tags-table-list '("./TAGS" "../TAGS" "../../TAGS"))
-(setq search-ring '("programming" "my-pyth" "newline-and" "current" "set_care" "pri" "printf" "register" "print" "return" "printf" "repr" "userid" "clk" "regi" "setconfg"))
-(setq regexp-search-ring '("64"))
-(setq register-alist nil)
-(setq file-name-history '("/home/yukang/2bugscope/infra/nightly.py" "/home/yukang/2bugscope/infra/mail.py" "/home/yukang/2bugscope/trace/log/Visitor/fifo_module.log" "/home/yukang/2bugscope/hbt/src/BinaryTrace/HimaBinaryTrace.c" "/home/yukang/2bugscope/hbt/src/BinaryTrace/HimaBinaryTrace.h" "/home/yukang/2bugscope/verifier/design/fifo_module/fifo.vcd" "/home/yukang/2bugscope/verifier/res" "/home/yukang/2bugscope/verifier/log/Scanner/fifo_module.in" "/home/yukang/2bugscope/verifier/log/Scanner/fifo_module.ma" "/home/yukang/2bugscope/verifier/log/Scanner/fifo_module.in" "/home/yukang/.emacs.back/.emacs" "/home/yukang/2bugscope/hbt/src/BinaryTrace/HimaBinaryTrace.c" "/home/yukang/2bugscope/infra/nightly_html.py" "/home/yukang/2bugscope/hbt/src/HimaHBT.c" "/home/yukang/2bugscope/infra/utils.py" "/home/yukang/2bugscope/infra/qmerge_server.py" "/usr/lib/python2.7/Queue.py" "/usr/lib/python2.7/pycomplete.py" "/usr/lib/python2.7/" "/home/yukang/.emacs" "~/2bugscope/infra/" "/home/yukang/.emacs.d/elpa/elpy-readme.txt" "~/2bugscope/infra/" "/home/yukang/2bugscope/infra/backup.py" "/usr/local/lib/python2.7/site-packages/pycomplete.py" "/home/yukang/2bugscope/infra/qmerge_server.py" "/home/yukang/2bugscope/infra/multiwork.py" "/home/yukang/2bugscope/infra/utils.py" "/home/yukang/2bugscope/infra/mail.py" "/home/yukang/2bugscope/infra/utils.py"))
+(setq tags-table-list nil)
+(setq search-ring '("blue" "c-mode-hook" "func" "qemu" "valid" "clang" "gray" "config" "auto" "auto-com" "installing" "install" "long_p" "urls" "echo" "highlight"))
+(setq regexp-search-ring nil)
+(setq register-alist (list '(106 . "splay-time-24hr-format t)\n(setq display-time-day-and-date t)\n(display-time)\n(global-set-key [C-tab] \"\\C-q\\t\")\n(setq message-log-max nil)\n(setq ring-bell-function 'ignore)\n\n(load \"desktop\") \n(desktop-save-mode)\n;(setq mac-option-modifier 'hyper) ; sets the Option key as Hyper\n;(setq mac-option-modifier 'super) ; sets the Option key as Super\n;(setq mac-command-modifier 'meta) ; sets the Command key as Meta\n;(setq mac-control-modifier 'ctrl) ; sets the Control key as Meta\n\n(show-paren-mode)\n(require 'linum)\n\n(require 'ido)\n(ido-mode t)\n\n(require 'ibuffer)\n(global-set-key (kbd \"C-x C-b\") 'ibuffer)\n\n\n(defun toggle-fullscreen ()\n  \"Toggle full screen\"\n  (interactive)\n  (set-frame-parameter\n   nil 'fullscreen\n   (when (not (frame-parameter nil 'fullscreen)) 'fullscreen))\n  (if (frame-parameter nil 'fullscreen)\n      (display-time-mode 1))\n  (if (not (frame-parameter nil 'fullscreen))\n      (display-time-mode 0))\n  )\n\n(toggle-fullscreen)\n\n(load-file \"~/.emacs.d/anything.el\")\n;(load-file \"~/.emacs.d/anything-match-plugin.el\")\n(require 'anything-complete)\n;; Bind C-o to complete shell history\n(anything-complete-shell-history-setup-key \"\\C-o\")\n\n(global-set-key (kbd \"C-x C-f\") 'ido-find-file)\n(global-set-key (kbd \"C-x f\") 'ido-find-file)\n(global-set-key (kbd \"C-x m\") 'anything-execute-extended-command)\n;;(global-set-key (kbd \"C-x m\") 'execute-extended-command)\n(global-set-key (kbd \"C-c C-m\") 'anything-execute-extended-command)\n(global-set-key (kbd \"C-c m\")   'anything-execute-extended-command)\n\n\n\n(setq auto-mode-alist\n      (append '((\"\\\\.cpp$\" . c++-mode)\n		(\"\\\\.hpp$\" . c++-mode)\n		(\"\\\\.h$\" . c++-mode)\n		(\"\\\\.hh$\" . c++-mode)\n		(\"\\\\.lsp$\" . lisp-mode)\n		(\"\\\\.lisp$\" . lisp-mode)\n		(\"\\\\.scm$\" . scheme-mode)\n		(\"\\\\.pl$\" . perl-mode)\n		(\"\\\\.hs$\". haskell-mode)\n		(\"\\\\.vhd$\" . text-mode)\n		(\"\\\\.rb$\"  . ruby-mode)\n		(\"\\\\.rake$\" . ruby-mode)\n		(\"Gemfile\" . ruby-mode)\n		(\"\\\\.scss$\" . css-mode)\n") (desktop-list* 51 (let ((mk (make-marker))) (add-hook 'desktop-delay-hook `(lambda nil (set-marker ,mk ,nil (get-buffer ," *temp*")))) mk)) (desktop-list* 50 (let ((mk (make-marker))) (add-hook 'desktop-delay-hook `(lambda nil (set-marker ,mk ,nil (get-buffer ," *temp*")))) mk)) '(49 . "(require 'highlight-current-line)\n(highlight-current-line-minor-mode)\n\n(require 'highlight-parentheses)\n(defun turn-on-highlight-parentheses-mode ()\n(highlight-parentheses-mode t))\n(define-global-minor-mode global-highlight-parentheses-mode\n  highlight-parentheses-mode\n  turn-on-highlight-parentheses-mode)\n(global-highlight-parentheses-mode)\n(setq hl-paren-background-colors '(\"green\"))\n(global-set-key (kbd \"C-'\") 'highlight-symbol-next)\n\n(load-file \"~/.emacs.d/viewer.el\")\n") '(114 . "splay-time-24hr-format t)\n(setq display-time-day-and-date t)\n(display-time)\n(global-set-key [C-tab] \"\\C-q\\t\")\n(setq message-log-max nil)\n(setq ring-bell-function 'ignore)\n\n(load \"desktop\") \n(desktop-save-mode)\n;(setq mac-option-modifier 'hyper) ; sets the Option key as Hyper\n;(setq mac-option-modifier 'super) ; sets the Option key as Super\n;(setq mac-command-modifier 'meta) ; sets the Command key as Meta\n;(setq mac-control-modifier 'ctrl) ; sets the Control key as Meta\n\n(show-paren-mode)\n(require 'linum)\n\n(require 'ido)\n(ido-mode t)\n\n(require 'ibuffer)\n(global-set-key (kbd \"C-x C-b\") 'ibuffer)\n\n\n(defun toggle-fullscreen ()\n  \"Toggle full screen\"\n  (interactive)\n  (set-frame-parameter\n   nil 'fullscreen\n   (when (not (frame-parameter nil 'fullscreen)) 'fullscreen))\n  (if (frame-parameter nil 'fullscreen)\n      (display-time-mode 1))\n  (if (not (frame-parameter nil 'fullscreen))\n      (display-time-mode 0))\n  )\n\n(toggle-fullscreen)\n\n(load-file \"~/.emacs.d/anything.el\")\n;(load-file \"~/.emacs.d/anything-match-plugin.el\")\n(require 'anything-complete)\n;; Bind C-o to complete shell history\n(anything-complete-shell-history-setup-key \"\\C-o\")\n\n(global-set-key (kbd \"C-x C-f\") 'ido-find-file)\n(global-set-key (kbd \"C-x f\") 'ido-find-file)\n(global-set-key (kbd \"C-x m\") 'anything-execute-extended-command)\n;;(global-set-key (kbd \"C-x m\") 'execute-extended-command)\n(global-set-key (kbd \"C-c C-m\") 'anything-execute-extended-command)\n(global-set-key (kbd \"C-c m\")   'anything-execute-extended-command)\n\n\n\n(setq auto-mode-alist\n      (append '((\"\\\\.cpp$\" . c++-mode)\n		(\"\\\\.hpp$\" . c++-mode)\n		(\"\\\\.h$\" . c++-mode)\n		(\"\\\\.hh$\" . c++-mode)\n		(\"\\\\.lsp$\" . lisp-mode)\n		(\"\\\\.lisp$\" . lisp-mode)\n		(\"\\\\.scm$\" . scheme-mode)\n		(\"\\\\.pl$\" . perl-mode)\n		(\"\\\\.hs$\". haskell-mode)\n		(\"\\\\.vhd$\" . text-mode)\n		(\"\\\\.rb$\"  . ruby-mode)\n		(\"\\\\.rake$\" . ruby-mode)\n		(\"Gemfile\" . ruby-mode)\n		(\"\\\\.scss$\" . css-mode)\n		(\"Rakefile\" . ruby-mode)\n")))
+(setq file-name-history '("/Users/kang/code/Panda/core/exec.c" "/Users/kang/code/Panda/core/cpu.c" "/Users/kang/code/Panda/core/kb.c" "/Users/kang/code/Panda/core/hd.c" "/Users/kang/code/Panda/core/buf.c" "/Users/kang/code/Panda/core/main.c" "/Users/kang/code/Panda/do.sh" "/Users/kang/code/Panda/usr/touch.c" "/Users/kang/code/Panda/core/pli.h" "~/code/Panda/core/blk.c" "~/code/Panda/core/blk_flymake.c" "blk_flymake.c" "/Users/kang/code/Panda/core/blk_flymake.c" "/tmp/demo.c" "/Users/kang/.emacs.d/auto-complete/auto-complete.el" "/Users/kang/.emacs.d/auto-complete-clang/auto-complete-clang.el" "/Users/kang/.emacs" "/tmp/demo.cc" "/Users/kang/.emacs_shell" "/Users/kang/Downloads/gevent-0.13.8/examples/webchat/settings.py" "/Users/kang/Downloads/gevent-0.13.8/examples/webchat/__init__.py" "/Users/kang/Downloads/gevent-0.13.8/examples/webchat/README" "/Users/kang/Downloads/gevent-0.13.8/examples/webchat/run.py" "/Users/kang/Downloads/gevent-0.13.8/examples/webchat/manage.py" "/Users/kang/Downloads/gevent-0.13.8/examples/webproxy.py" "/Users/kang/Downloads/gevent-0.13.8/examples/httpserver.py" "/Users/kang/Downloads/gevent-0.13.8/examples/dns_mass_resolve.py" "/Users/kang/Downloads/gevent-0.13.8/examples/webpy.py" "/Users/kang/Downloads/gevent-0.13.8/examples/httpserver.py" "/Users/kang/Downloads/gevent-0.13.8/examples/echoserver.py"))
 
 ;; Buffer section -- buffers listed in same order as in buffer list:
 (desktop-create-buffer 206
-  "/home/yukang/2bugscope/infra/nightly.py"
-  "nightly.py"
-  'python-mode
-  '(global-auto-revert-mode hi-lock-mode highlight-parentheses-mode undo-tree-mode auto-complete-mode)
-  251
-  '(nil nil)
-  nil
-  nil
-  '((tab-width . 8) (indent-tabs-mode) (buffer-file-coding-system . undecided-unix)))
-
-(desktop-create-buffer 206
-  "/home/yukang/2bugscope/infra/mail.py"
-  "mail.py"
-  'python-mode
-  '(global-auto-revert-mode hi-lock-mode highlight-parentheses-mode undo-tree-mode auto-complete-mode)
-  74
-  '(nil nil)
-  nil
-  nil
-  '((tab-width . 8) (indent-tabs-mode) (buffer-file-coding-system . undecided-unix)))
-
-(desktop-create-buffer 206
-  "/home/yukang/.emacs"
+  "/Users/kang/.emacs"
   ".emacs"
   'emacs-lisp-mode
-  '(global-auto-revert-mode hi-lock-mode highlight-symbol-mode highlight-parentheses-mode undo-tree-mode auto-complete-mode eldoc-mode)
-  18965
-  '(9880 nil)
-  nil
-  nil
-  '((buffer-file-coding-system . undecided-unix)))
-
-(desktop-create-buffer 206
-  "/home/yukang/2bugscope/trace/log/Visitor/fifo_module.log"
-  "fifo_module.log"
-  'fundamental-mode
-  '(global-auto-revert-mode hi-lock-mode highlight-parentheses-mode undo-tree-mode)
-  1
-  '(nil nil)
-  nil
-  nil
-  '((buffer-file-coding-system . undecided-unix)))
-
-(desktop-create-buffer 206
-  "/home/yukang/2bugscope/hbt/src/BinaryTrace/HimaBinaryTrace.c"
-  "HimaBinaryTrace.c"
-  'c-mode
-  '(abbrev-mode global-auto-revert-mode hi-lock-mode highlight-symbol-mode highlight-parentheses-mode undo-tree-mode auto-complete-mode hs-minor-mode)
-  40224
-  '(17050 nil)
-  nil
-  nil
-  '((tab-width . 4) (indent-tabs-mode) (buffer-file-coding-system . undecided-unix)))
-
-(desktop-create-buffer 206
-  "/home/yukang/2bugscope/hbt/src/BinaryTrace/HimaBinaryTrace.h"
-  "HimaBinaryTrace.h"
-  'c++-mode
-  '(abbrev-mode global-auto-revert-mode hi-lock-mode highlight-symbol-mode highlight-parentheses-mode undo-tree-mode auto-complete-mode hs-minor-mode)
-  11914
-  '(11912 nil)
-  nil
-  nil
-  '((tab-width . 4) (indent-tabs-mode) (buffer-file-coding-system . undecided-unix)))
-
-(desktop-create-buffer 206
-  "/home/yukang/2bugscope/verifier/log/Scanner/fifo_module.in"
-  "fifo_module.in"
-  'fundamental-mode
-  '(global-auto-revert-mode hi-lock-mode highlight-parentheses-mode undo-tree-mode)
-  70
-  '(nil nil)
-  nil
-  nil
-  '((buffer-file-coding-system . undecided-unix)))
-
-(desktop-create-buffer 206
-  "/home/yukang/2bugscope/verifier/log/Scanner/fifo_module.ma"
-  "fifo_module.ma"
-  'fundamental-mode
-  '(global-auto-revert-mode hi-lock-mode highlight-parentheses-mode undo-tree-mode)
-  1
-  '(nil nil)
-  nil
-  nil
-  '((buffer-file-coding-system . undecided-unix)))
-
-(desktop-create-buffer 206
-  "/home/yukang/2bugscope/hbt/src/HBTSample/HimaHBTSamplingReader.c"
-  "HimaHBTSamplingReader.c"
-  'c-mode
-  '(abbrev-mode global-auto-revert-mode hi-lock-mode highlight-symbol-mode highlight-parentheses-mode undo-tree-mode auto-complete-mode gtags-mode xgtags-mode hs-minor-mode)
-  6960
-  '(9368 nil)
-  nil
-  nil
-  '((tab-width . 4) (indent-tabs-mode) (buffer-file-coding-system . undecided-unix)))
-
-(desktop-create-buffer 206
-  "/home/yukang/2bugscope/hbt/src/BinaryTrace/HimaHBTTimeSlicedReader.c"
-  "HimaHBTTimeSlicedReader.c"
-  'c-mode
-  '(abbrev-mode global-auto-revert-mode hi-lock-mode highlight-symbol-mode highlight-parentheses-mode undo-tree-mode auto-complete-mode gtags-mode hs-minor-mode)
-  18588
-  '(18588 nil)
-  nil
-  nil
-  '((tab-width . 4) (indent-tabs-mode) (buffer-file-coding-system . undecided-unix)))
-
-(desktop-create-buffer 206
-  "/home/yukang/2bugscope/hbt/src/BinaryTrace/HimaHBTExpr.c"
-  "HimaHBTExpr.c"
-  'c-mode
-  '(abbrev-mode global-auto-revert-mode hi-lock-mode highlight-symbol-mode highlight-parentheses-mode undo-tree-mode auto-complete-mode xgtags-mode hs-minor-mode 2C-mode)
-  2491
-  '(225 nil)
-  nil
-  nil
-  '((tab-width . 4) (indent-tabs-mode) (buffer-file-coding-system . undecided-unix) (fill-column . 36)))
-
-(desktop-create-buffer 206
-  "/home/yukang/2bugscope/trace/src/TraceVisitor/HimaTraceIterator.cc"
-  "HimaTraceIterator.cc"
-  'c++-mode
-  '(abbrev-mode global-auto-revert-mode hi-lock-mode highlight-symbol-mode highlight-parentheses-mode undo-tree-mode auto-complete-mode gtags-mode hs-minor-mode)
-  217
-  '(217 nil)
-  nil
-  nil
-  '((tab-width . 4) (indent-tabs-mode) (buffer-file-coding-system . undecided-unix)))
-
-(desktop-create-buffer 206
-  "/home/yukang/2bugscope/trace/src/TraceGeneric/HimaTraceReader.cc"
-  "HimaTraceReader.cc"
-  'c++-mode
-  '(abbrev-mode global-auto-revert-mode hi-lock-mode highlight-symbol-mode highlight-parentheses-mode undo-tree-mode auto-complete-mode gtags-mode xgtags-mode hs-minor-mode)
-  1926
-  '(1926 nil)
-  nil
-  nil
-  '((tab-width . 4) (indent-tabs-mode) (buffer-file-coding-system . undecided-unix)))
-
-(desktop-create-buffer 206
-  "/home/yukang/2bugscope/verifier/design/fifo_module/fifo.vcd"
-  "fifo.vcd"
-  'fundamental-mode
-  '(global-auto-revert-mode hi-lock-mode highlight-parentheses-mode undo-tree-mode)
-  1459
-  '(22 nil)
-  nil
-  nil
-  '((buffer-file-coding-system . undecided-unix)))
-
-(desktop-create-buffer 206
-  "/home/yukang/2bugscope/trace/src/TraceVisitor/HimaTraceDispatcher.cc"
-  "HimaTraceDispatcher.cc"
-  'c++-mode
-  '(abbrev-mode global-auto-revert-mode hi-lock-mode highlight-symbol-mode highlight-parentheses-mode undo-tree-mode auto-complete-mode gtags-mode hs-minor-mode)
-  605
-  '(605 nil)
-  nil
-  nil
-  '((tab-width . 4) (indent-tabs-mode) (buffer-file-coding-system . undecided-unix)))
-
-(desktop-create-buffer 206
-  "/home/yukang/2bugscope/verifier/res"
-  "res"
-  'fundamental-mode
-  '(global-auto-revert-mode hi-lock-mode highlight-parentheses-mode undo-tree-mode)
-  927
-  '(nil nil)
-  nil
-  nil
-  '((buffer-file-coding-system . undecided-unix)))
-
-(desktop-create-buffer 206
-  "/home/yukang/2bugscope/hbt/src/HBTGeneric/HimaHBTGenericReader.h"
-  "HimaHBTGenericReader.h"
-  'c++-mode
-  '(abbrev-mode global-auto-revert-mode hi-lock-mode highlight-symbol-mode highlight-parentheses-mode undo-tree-mode auto-complete-mode gtags-mode hs-minor-mode)
-  1
-  '(1 nil)
-  nil
-  nil
-  '((tab-width . 4) (indent-tabs-mode) (buffer-file-coding-system . undecided-unix)))
-
-(desktop-create-buffer 206
-  "/home/yukang/.emacs.back/.emacs"
-  ".emacs<2>"
-  'emacs-lisp-mode
   '(global-auto-revert-mode hi-lock-mode highlight-symbol-mode highlight-parentheses-mode undo-tree-mode auto-complete-mode)
-  33930
-  '(33702 nil)
+  10677
+  '(10664 nil)
   nil
+  nil
+  '((buffer-file-coding-system . undecided-unix)))
+
+(desktop-create-buffer 206
+  "/Users/kang/code/Panda/core/exec.c"
+  "exec.c"
+  'c-mode
+  '(abbrev-mode global-auto-revert-mode hi-lock-mode highlight-symbol-mode highlight-parentheses-mode undo-tree-mode auto-complete-mode hs-minor-mode view-mode)
+  1043
+  '(nil nil)
+  t
+  nil
+  '((tab-width . 4) (indent-tabs-mode) (buffer-file-coding-system . undecided-unix)))
+
+(desktop-create-buffer 206
+  "/Users/kang/code/Panda/core/cpu.c"
+  "cpu.c"
+  'c-mode
+  '(abbrev-mode global-auto-revert-mode hi-lock-mode highlight-symbol-mode highlight-parentheses-mode undo-tree-mode auto-complete-mode hs-minor-mode view-mode)
+  7601
+  '(nil nil)
+  t
+  nil
+  '((tab-width . 4) (indent-tabs-mode) (buffer-file-coding-system . undecided-unix)))
+
+(desktop-create-buffer 206
+  "/Users/kang/code/Panda/core/hd.c"
+  "hd.c"
+  'c++-mode
+  '(abbrev-mode global-auto-revert-mode hi-lock-mode highlight-symbol-mode highlight-parentheses-mode undo-tree-mode auto-complete-mode hs-minor-mode)
+  3737
+  '(nil nil)
+  nil
+  nil
+  '((tab-width . 4) (indent-tabs-mode) (buffer-file-coding-system . undecided-unix)))
+
+(desktop-create-buffer 206
+  "/Users/kang/code/Panda/core/kb.c"
+  "kb.c"
+  'c-mode
+  '(abbrev-mode global-auto-revert-mode hi-lock-mode highlight-symbol-mode highlight-parentheses-mode undo-tree-mode auto-complete-mode hs-minor-mode view-mode)
+  1074
+  '(nil nil)
+  t
+  nil
+  '((tab-width . 4) (indent-tabs-mode) (buffer-file-coding-system . undecided-unix)))
+
+(desktop-create-buffer 206
+  "/Users/kang/code/Panda/core/buf.c"
+  "buf.c"
+  'c-mode
+  '(abbrev-mode global-auto-revert-mode hi-lock-mode highlight-symbol-mode highlight-parentheses-mode undo-tree-mode auto-complete-mode hs-minor-mode view-mode)
+  338
+  '(nil nil)
+  t
+  nil
+  '((tab-width . 4) (indent-tabs-mode) (buffer-file-coding-system . undecided-unix)))
+
+(desktop-create-buffer 206
+  "/Users/kang/code/Panda/core/main.c"
+  "main.c"
+  'c-mode
+  '(abbrev-mode global-auto-revert-mode hi-lock-mode highlight-symbol-mode highlight-parentheses-mode undo-tree-mode auto-complete-mode hs-minor-mode view-mode)
+  1071
+  '(nil nil)
+  t
+  nil
+  '((tab-width . 4) (indent-tabs-mode) (buffer-file-coding-system . undecided-unix)))
+
+(desktop-create-buffer 206
+  "/Users/kang/code/Panda/do.sh"
+  "do.sh"
+  'sh-mode
+  '(global-auto-revert-mode hi-lock-mode highlight-parentheses-mode undo-tree-mode auto-complete-mode view-mode)
+  765
+  '(739 nil)
+  t
+  nil
+  '((buffer-file-coding-system . undecided-unix)))
+
+(desktop-create-buffer 206
+  "/Users/kang/.emacs_shell"
+  ".emacs_shell"
+  'fundamental-mode
+  '(global-auto-revert-mode hi-lock-mode highlight-parentheses-mode undo-tree-mode view-mode)
+  1
+  '(nil nil)
+  t
+  nil
+  '((buffer-file-coding-system . undecided-unix)))
+
+(desktop-create-buffer 206
+  "/Users/kang/code/Panda/usr/touch.c"
+  "touch.c"
+  'c-mode
+  '(abbrev-mode global-auto-revert-mode hi-lock-mode highlight-symbol-mode highlight-parentheses-mode undo-tree-mode auto-complete-mode hs-minor-mode view-mode)
+  1
+  '(nil nil)
+  t
+  nil
+  '((tab-width . 4) (indent-tabs-mode) (buffer-file-coding-system . undecided-unix)))
+
+(desktop-create-buffer 206
+  "/Users/kang/code/Panda/core/blk.c"
+  "blk.c"
+  'c-mode
+  '(abbrev-mode global-auto-revert-mode hi-lock-mode highlight-symbol-mode highlight-parentheses-mode undo-tree-mode auto-complete-mode hs-minor-mode view-mode)
+  164
+  '(164 nil)
+  t
+  nil
+  '((tab-width . 4) (indent-tabs-mode) (buffer-file-coding-system . undecided-unix)))
+
+(desktop-create-buffer 206
+  "/tmp/demo.c"
+  "demo.c"
+  'c-mode
+  '(abbrev-mode global-auto-revert-mode hi-lock-mode highlight-symbol-mode highlight-parentheses-mode undo-tree-mode auto-complete-mode hs-minor-mode view-mode)
+  120
+  '(nil nil)
+  t
+  nil
+  '((tab-width . 4) (indent-tabs-mode) (buffer-file-coding-system . undecided-unix)))
+
+(desktop-create-buffer 206
+  "/tmp/demo.cc"
+  "demo.cc"
+  'c++-mode
+  '(abbrev-mode global-auto-revert-mode hi-lock-mode highlight-symbol-mode highlight-parentheses-mode undo-tree-mode auto-complete-mode hs-minor-mode view-mode)
+  296
+  '(500 nil)
+  t
+  nil
+  '((tab-width . 4) (indent-tabs-mode) (buffer-file-coding-system . undecided-unix)))
+
+(desktop-create-buffer 206
+  "/Users/kang/.emacs.d/auto-complete/auto-complete.el"
+  "auto-complete.el"
+  'emacs-lisp-mode
+  '(global-auto-revert-mode hi-lock-mode highlight-symbol-mode highlight-parentheses-mode undo-tree-mode auto-complete-mode view-mode)
+  1870
+  '(nil nil)
+  t
   nil
   '((buffer-file-coding-system . utf-8-unix)))
 
 (desktop-create-buffer 206
-  "/home/yukang/2bugscope/verifier/src/Frame/HimaInstResolver.cc"
-  "HimaInstResolver.cc"
-  'c++-mode
-  '(abbrev-mode global-auto-revert-mode hi-lock-mode highlight-symbol-mode highlight-parentheses-mode undo-tree-mode auto-complete-mode gtags-mode hs-minor-mode)
-  116
-  '(1 nil)
+  "/Users/kang/.emacs.d/auto-complete-clang/auto-complete-clang.el"
+  "auto-complete-clang.el"
+  'emacs-lisp-mode
+  '(global-auto-revert-mode hi-lock-mode highlight-symbol-mode highlight-parentheses-mode undo-tree-mode auto-complete-mode view-mode)
+  4227
+  '(14847 nil)
+  t
   nil
-  nil
-  '((tab-width . 4) (indent-tabs-mode) (buffer-file-coding-system . undecided-unix)))
+  '((buffer-file-coding-system . utf-8-unix)))
 
 (desktop-create-buffer 206
-  "/home/yukang/2bugscope/hbt/src/HimaHBT.c"
-  "HimaHBT.c"
-  'c-mode
-  '(abbrev-mode global-auto-revert-mode hi-lock-mode highlight-symbol-mode highlight-parentheses-mode undo-tree-mode auto-complete-mode hs-minor-mode)
-  110
-  '(nil nil)
-  nil
-  nil
-  '((tab-width . 4) (indent-tabs-mode) (buffer-file-coding-system . undecided-unix)))
-
-(desktop-create-buffer 206
-  "/home/yukang/2bugscope/infra/utils.py"
-  "utils.py"
-  'python-mode
-  '(global-auto-revert-mode hi-lock-mode highlight-parentheses-mode undo-tree-mode auto-complete-mode)
-  1649
-  '(1 nil)
-  nil
-  nil
-  '((tab-width . 8) (indent-tabs-mode) (buffer-file-coding-system . undecided-unix)))
-
-(desktop-create-buffer 206
-  "/home/yukang/2bugscope/infra/qmerge_server.py"
-  "qmerge_server.py"
-  'python-mode
-  '(global-auto-revert-mode hi-lock-mode highlight-parentheses-mode undo-tree-mode auto-complete-mode)
-  8220
-  '(8296 nil)
-  nil
-  nil
-  '((tab-width . 8) (indent-tabs-mode) (buffer-file-coding-system . undecided-unix)))
-
-(desktop-create-buffer 206
-  "/home/yukang/2bugscope/infra/backup.py"
-  "backup.py"
-  'python-mode
-  '(global-auto-revert-mode hi-lock-mode highlight-parentheses-mode undo-tree-mode flymake-mode auto-complete-mode outline-minor-mode)
-  535
-  '(484 nil)
-  nil
-  nil
-  '((tab-width . 8) (indent-tabs-mode) (buffer-file-coding-system . undecided-unix)))
-
-(desktop-create-buffer 206
-  "/usr/lib/python2.7/code.py"
-  "code.py"
-  'python-mode
-  '(global-auto-revert-mode hi-lock-mode highlight-parentheses-mode undo-tree-mode auto-complete-mode)
-  2727
+  "/Users/kang/code/homebrew/Library/Homebrew/formula.rb"
+  "formula.rb"
+  'ruby-mode
+  '(global-auto-revert-mode hi-lock-mode highlight-symbol-mode highlight-parentheses-mode undo-tree-mode auto-complete-mode auto-indent-minor-mode view-mode)
+  1452
   '(nil nil)
   t
   nil
-  '((tab-width . 8) (indent-tabs-mode) (buffer-file-coding-system . undecided-unix)))
+  '((indent-tabs-mode) (buffer-file-coding-system . undecided-unix)))
 
 (desktop-create-buffer 206
   nil
-  "python2.7"
+  "Homebrew"
   'dired-mode
   '(global-auto-revert-mode hi-lock-mode highlight-parentheses-mode dired-omit-mode)
-  1775
+  1
   '(nil nil)
   t
-  '("/usr/lib/python2.7/")
+  '("/Users/kang/code/homebrew/Library/Homebrew/")
   nil)
-
-(desktop-create-buffer 206
-  "/usr/lib/python2.7/Queue.py"
-  "Queue.py"
-  'python-mode
-  '(global-auto-revert-mode hi-lock-mode highlight-parentheses-mode undo-tree-mode auto-complete-mode)
-  1
-  '(1 nil)
-  t
-  nil
-  '((tab-width . 8) (indent-tabs-mode) (buffer-file-coding-system . undecided-unix)))
-
-(desktop-create-buffer 206
-  "/usr/lib/python2.7/pycomplete.py"
-  "pycomplete.py"
-  'python-mode
-  '(global-auto-revert-mode hi-lock-mode highlight-parentheses-mode undo-tree-mode auto-complete-mode)
-  1009
-  '(nil nil)
-  t
-  nil
-  '((tab-width . 8) (indent-tabs-mode) (buffer-file-coding-system . undecided-unix)))
-
-(desktop-create-buffer 206
-  "/home/yukang/.emacs.d/elpa/elpy-readme.txt"
-  "elpy-readme.txt"
-  'text-mode
-  '(global-auto-revert-mode hi-lock-mode highlight-symbol-mode highlight-parentheses-mode undo-tree-mode)
-  368
-  '(nil nil)
-  nil
-  nil
-  '((buffer-file-coding-system . undecided-unix)))
-
-(desktop-create-buffer 206
-  "/usr/lib/python2.7/commands.py"
-  "commands.py"
-  'python-mode
-  '(global-auto-revert-mode hi-lock-mode highlight-parentheses-mode undo-tree-mode flymake-mode auto-complete-mode eldoc-mode)
-  1
-  '(nil nil)
-  t
-  nil
-  '((tab-width . 8) (indent-tabs-mode) (buffer-file-coding-system . undecided-unix)))
 
