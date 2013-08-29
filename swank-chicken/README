@@ -1,0 +1,50 @@
+A SWANK server for Chicken Scheme. 
+
+See:
+  http://www.doof.me.uk/2010/12/12/using-slime-with-chicken-scheme/ 
+  http://www.doof.me.uk/2011/01/01/update-to-chicken-swank-server/
+  http://www.doof.me.uk/2011/01/02/chicken-slime-describe-and-apropos/
+for more details.
+
+Quickstart:
+
+1) chicken-install fmt symbol-utils apropos chicken-doc
+
+2) Run chicken-install in the directory where you cloned the repository: this 
+   will install the `slime' extension.
+
+3) Add the Chicken extensions directory to your Emacs load-path. Typically this 
+   will be /usr/local/lib/chicken/5/
+
+4) Add the following to your .emacs
+
+(slime-setup '(slime-fancy slime-banner))   ; If you don't use SLIME already
+                       ; Refer to the SLIME manual for setup instructions
+
+(autoload 'chicken-slime "chicken-slime" "SWANK backend for Chicken" t)
+
+;; If your csi executable is in a non-standard location
+(setq slime-csi-path "/path/to/csi")
+
+(add-hook 'scheme-mode-hook
+          (lambda ()
+            (slime-mode t)))
+
+5) Start a SLIME REPL with
+
+M-x chicken-slime
+
+Note for the describe and apropos commands to work you must install a 
+local copy of the Chicken documentation.
+
+If you want to hack on the SWANK server set the following variable:
+
+(setq swank-chicken-path "/path/to/swank-chicken.scm")
+
+This will interpret the code rather than loading the extension. Note 
+there is currently a bug in the interpreted version which causes a 
+SEGV when viewing local variables in a call frame.
+
+--
+
+Report all bugs, etc. to nick AT nickg DOT me DOT uk.

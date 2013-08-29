@@ -1,128 +1,128 @@
+scheme48 -h
+sudo ln /usr/local/bin/scheme48 /usr/local/bin/s48 
+s48 -h
+s48 -i 3.3.scm 
+s48 3.3.scm 
+s48 --help -a
+s48
 ls
-cd emacs-clang-complete-async/
+s48 -i a.image 
+s48 -i a.img -a "a-program  -1"
+s48 -i a.image -a "a-program  -1"
 ls
-make clean;make
-make LLVM_CONFING=llvm-config-3.1
-make clean
-make LLVM_CONFING=llvm-config-3.1
-ls
-clang
-clang -v
-ls
-ls
-cd ..
-ls
-git clone https://github.com/brianjcj/auto-complete-clang.git
-rm -rf auto-complete-clang/
-git clone https://github.com/brianjcj/auto-complete-clang.git
-ls
-ls
-cd auto-complete-clang/
-ls
-echo "" | g++ -v -x c++ -E -
 cd
 ls
-cd 2bugscope/
+cd ~/Downloads/
 ls
-find ./ -name src
-pwd
-ls
-ls
-cd .emacs.d/
-ls
-ls
-cd ..
-ls
-cd ..
-ls
-cd ..
-ls
-tags.sh
-ls
-cd .emacs.d/
-ls
-git clone https://github.com/sandai/dotfiles.git
-ls
-mv dotfiles/.emacs.d/ac-dict ./
-ls
-rm -rf dotfiles/
-ls
-cd ac-dict/
-ls
-ls
-ls
-cd ..
-ls
-mv ac-dict auto-complete/
-ls
-ls
-ls
-git clone https://github.com/emacs-helm/helm.git
-ls
-cd helm/
-ls
+cd chicken-4.8.0.4/
 ls
 make
-./emacs-helm.sh 
-./emacs-helm.sh 
-./emacs-helm.sh 
+make PLATFORM=macosx
 ls
-cd 2bugscope/
+csi
 ls
-cd infra/
+csc
 ls
-git pull
+make -h
+ls
+ls
+csc a.scm
+ls
+mkdir demo
+mv a.scm demo/
+ls
+cd demo/
+ls
+../csc a.scm 
+ls
+./a 
+ls
+./a 
+ls
+ls -l
+ls
+cat a.scm 
+ls
+../csc a.scm
+ls
+./a 
+ls
+./a 
 ls
 ls
 cd ..
 ls
-./infra/build-hima.py verifier
-./infra/build-hima.py verifier -getonly
+sudo make install
+sudo PLATFORM=macosx install
+sudo make PLATFORM=macosx install
 ls
-git clone yukang@huashan:/home/git/repo/verifer.git
-git clone yukang@huashan:/home/git/repo/verifier.git
-ls
-./infra/build-hima.py verifier -getonly
-./infra/build-hima.py verifier
-./infra/build-hima.py 
-ls
-rm -rf trace/
-./infra/build-hima.py -getonly trace
-./infra/build-hima.py 
-cd trace/
-ls
-mkdbg
-ls
-ls
-mkdbg
+csc
 ls
 ls
 ls
-cd /tmp/
-ls
-cd ~/.emacs.d.back/
-ls
-cd ../.emacs.d/
+csi -h
+csc -h
 ls
 ls
-find ./ -name ac-dict
+rm -rf a
 ls
-cd .em
+ls
+cd
+ls
 cd .emacs.d/
 ls
-cd auto-complete-clang/
+cd swank-chicken/
 ls
+ls -l /Users/kang/.emacs.d/swank-chicken.scm
+cd
 ls
-cd ..
-ls
-cd auto-complete/
-ls
-ls
-cd ..
-ls
-mv auto-complete auto-complete-backup
-git clone https://github.com/auto-complete/auto-complete.git
-ls
-cd inc/
+cd ~/.emacs.d/swank-chicken/
 ls
 pwd
+ls
+ls -l /usr/local/lib/chicken/6/
+chicken-install fmt apropos symbol-utils
+chicken-install chicken-doc
+chicken-install chicken-doc
+ls
+cd
+ls
+cd code/
+ls
+cd eopl/
+ls
+cd ch3/
+ls
+ls
+ls
+csc 3.3.scm 
+l
+ls
+./3.3 
+ls
+csc 3.3.scm 
+./3.3 
+./3.3 
+./3.3 
+./3.3 
+./3.3 
+./3.3 
+./3.3 
+gdb -args ./3.3
+ls
+./3.3 
+l
+ls
+cd ../ch2/
+ls
+csc 2.5.scm
+ls
+./2.5 
+ls
+csc 2.5.scm
+csc 2.5.scm
+./2.5 
+ls
+./2.5 
+ls
+ls

@@ -7,8 +7,8 @@
 	(".cpp$" . ["insert.cpp" auto-update-c-source-file])
 	(".sh$" . ["insert.sh" auto-update-header-file])
 	(".h$"   . ["insert.h" auto-update-header-file])
-    (".hh$"  . ["insert.hh" auto-update-header-file])
-    (".cc$"  . ["insert.cc" auto-update-c-source-file])
+	(".hh$"  . ["insert.hh" auto-update-header-file])
+	(".cc$"  . ["insert.cc" auto-update-c-source-file])
 	(".c$" . ["insert.c" auto-update-c-source-file])
 	))
 

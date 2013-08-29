@@ -63,6 +63,7 @@ Typing CHAR again will move backward to the next Nth occurence of CHAR."
   "Only when variable `buffer-file-name' is exist, enter function `emaci-mode'."
   (when (file-exists-p (buffer-file-name))
     (view-mode)))
-(add-hook 'find-file-hook 'view-exist-file)
+
+;;(add-hook 'find-file-hook 'view-exist-file)
 
 (global-set-key (kbd "C-o") 'view-mode)
