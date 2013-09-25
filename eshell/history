@@ -1,128 +1,128 @@
-scheme48 -h
-sudo ln /usr/local/bin/scheme48 /usr/local/bin/s48 
-s48 -h
-s48 -i 3.3.scm 
-s48 3.3.scm 
-s48 --help -a
-s48
+git push
 ls
-s48 -i a.image 
-s48 -i a.img -a "a-program  -1"
-s48 -i a.image -a "a-program  -1"
-ls
-cd
-ls
-cd ~/Downloads/
-ls
-cd chicken-4.8.0.4/
-ls
-make
-make PLATFORM=macosx
-ls
-csi
-ls
-csc
-ls
-make -h
+git status
+git add ch2
+git status
+git commit -am"continue chapter2"
+git push
 ls
 ls
-csc a.scm
+cd ch2/
 ls
-mkdir demo
-mv a.scm demo/
 ls
-cd demo/
-ls
-../csc a.scm 
-ls
-./a 
-ls
-./a 
-ls
-ls -l
-ls
-cat a.scm 
-ls
-../csc a.scm
-ls
-./a 
-ls
-./a 
+mv 2.15.scm 2.16.scm
 ls
 ls
 cd ..
 ls
-sudo make install
-sudo PLATFORM=macosx install
-sudo make PLATFORM=macosx install
+cd ch3/
 ls
-csc
+cd ..
+ls
+git status
+git add ch2/
+git status
+git commit -am"continue chapter 2"
+git push
+ls
+git commit -am"continue chapter 2"
+git push
+ls
+cd ch2/
 ls
 ls
+cd ..
 ls
-csi -h
-csc -h
+find ./ -name \*.scm | xargs grep list-of
+ls
+cd ..
+ls
+cd ch3/
 ls
 ls
-rm -rf a
+cd ..
 ls
+git status
+git  commit -am"almost finish chapter 3"
+git add ch3/18.scm 
+git  commit -am"almost finish chapter 3"
+git push
 ls
 cd
 ls
-cd .emacs.d/
+cd .rvm/
+l
 ls
-cd swank-chicken/
+cd examples/
 ls
-ls -l /Users/kang/.emacs.d/swank-chicken.scm
-cd
+cd ..
 ls
-cd ~/.emacs.d/swank-chicken/
+cd gemsets/
 ls
-pwd
+cd ..
 ls
-ls -l /usr/local/lib/chicken/6/
-chicken-install fmt apropos symbol-utils
-chicken-install chicken-doc
-chicken-install chicken-doc
+cd gems/
+ls
+cd ruby-1.9.3-p327@global/
+ls
+cd gems
+ls
+cd ..
+ls
+cd..
+cd ..
+ls
+cd ruby-1.9.3-p327/
+ls
+cd gems
+ls
+cd fork_manager-0.0.3/
+ls
+cd lib/
+ls
+ls
+cd ..
+ls
+cd ..
+ls
+git status
+git pull
+git push
+ls
+git status
+git commit -am"instrument for continuations"
+git push
+ls
+sudo mv /etc/hosts /etc/hosts.china
+sudo mv /etc/hosts.back /etc/hosts
+ls
 ls
 cd
 ls
 cd code/
 ls
+cd eopl_back/
+ls
+cd ..
+ls
 cd eopl/
 ls
-cd ch3/
+git pull
+git commit -am"multi args"
+git add ch5/*
+git add ch5/07.scm 
+git add ch5/08.scm 
+ls
+git commit -am"multi let and multi proc args"
+git push
+ls
+ls
+cd
 ls
 ls
 ls
-csc 3.3.scm 
-l
+mkdir hima
 ls
-./3.3 
+cd hima/
 ls
-csc 3.3.scm 
-./3.3 
-./3.3 
-./3.3 
-./3.3 
-./3.3 
-./3.3 
-./3.3 
-gdb -args ./3.3
-ls
-./3.3 
-l
-ls
-cd ../ch2/
-ls
-csc 2.5.scm
-ls
-./2.5 
-ls
-csc 2.5.scm
-csc 2.5.scm
-./2.5 
-ls
-./2.5 
-ls
-ls
+git clone yukang@huahsan.cn.atrenta.com:/home/git/repo/infra.git

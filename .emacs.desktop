@@ -2,27 +2,1083 @@
 ;; --------------------------------------------------------------------------
 ;; Desktop File for Emacs
 ;; --------------------------------------------------------------------------
-;; Created Thu Aug 29 15:44:54 2013
+;; Created Thu Sep 26 02:03:15 2013
 ;; Desktop file format version 206
 ;; Emacs version 24.3.50.1
 
 ;; Global section:
-(setq desktop-saved-frameset '(frameset (:version 1 :app (desktop . "206") :name "kang@Yukang.local 2013-08-29 15:44:54") ((((fontsize . 0) (font . "-apple-Monaco-medium-normal-normal-*-12-*-*-*-m-0-iso10646-1") (border-width . 0) (internal-border-width . 2) (vertical-scroll-bars) (foreground-color . "#DCDCCC") (background-color . "#3F3F3F") (line-spacing) (left-fringe . 0) (right-fringe . 0) (menu-bar-lines . 1) (tool-bar-lines . 0) (title) (icon-type) (auto-raise) (auto-lower) (cursor-type . box) (scroll-bar-width . 0) (alpha) (fullscreen . fullboth) (horizontal-scroll-bars . t) (display-type . color) (background-mode . dark) (cursor-color . "SteelBlue1") (environment) (frame-id . "0BA3-BE63-BAC0-0CEB") (frameset--mini t . t) (modeline . t) (minibuffer . t) (unsplittable) (icon-name) (display . "Yukang.local") (explicit-name) (tool-bar-position . top) (visibility . t) (height . 53) (width . 182) (left . 0) (top . 0)) ((min-height . 4) (min-width . 20) (min-height-ignore . 2) (min-width-ignore . 4) (min-height-safe . 1) (min-width-safe . 4)) hc (total-height . 52) (total-width . 182) (normal-height . 1.0) (normal-width . 1.0) (combination-limit) (leaf (total-height . 52) (total-width . 91) (normal-height . 1.0) (normal-width . 0.5) (buffer "*inferior-lisp*" (selected . t) (hscroll . 0) (fringes 0 0 nil) (margins nil) (scroll-bars 15 0 t nil) (vscroll . 0) (dedicated) (point . 3998) (start . 1748))) (leaf (last . t) (total-height . 52) (total-width . 91) (normal-height . 1.0) (normal-width . 0.5) (buffer "2.1.scm" (selected) (hscroll . 0) (fringes 0 0 nil) (margins nil) (scroll-bars 15 0 t nil) (vscroll . 0) (dedicated) (point . 1239) (start . 851)))))))
+(setq desktop-saved-frameset '(frameset (:version 1 :app (desktop . "206") :name "kang@Yukang.local 2013-09-26 02:03:15") ((((fontsize . 0) (font . "-apple-Monaco-medium-normal-normal-*-12-*-*-*-m-0-iso10646-1") (border-width . 0) (internal-border-width . 2) (vertical-scroll-bars) (foreground-color . "#DCDCCC") (background-color . "#3F3F3F") (line-spacing) (left-fringe . 0) (right-fringe . 0) (menu-bar-lines . 1) (tool-bar-lines . 0) (title) (icon-type) (auto-raise) (auto-lower) (cursor-type . box) (scroll-bar-width . 0) (alpha) (fullscreen . fullboth) (horizontal-scroll-bars . t) (display-type . color) (background-mode . dark) (cursor-color . "SteelBlue1") (environment) (frame-id . "0BA3-BE63-BAC0-0CEB") (frameset--mini t . t) (modeline . t) (minibuffer . t) (unsplittable) (icon-name) (display . "Yukang.local") (explicit-name) (tool-bar-position . top) (visibility . t) (height . 53) (width . 182) (left . 0) (top . 0)) ((min-height . 4) (min-width . 10) (min-height-ignore . 2) (min-width-ignore . 2) (min-height-safe . 1) (min-width-safe . 2)) leaf (total-height . 52) (total-width . 182) (normal-height . 1.0) (normal-width . 1.0) (buffer "*shell*" (selected . t) (hscroll . 0) (fringes 0 0 nil) (margins nil) (scroll-bars 15 0 t nil) (vscroll . 0) (dedicated) (point . 434) (start . 1))))))
 (setq desktop-missing-file-warning nil)
 (setq tags-file-name nil)
 (setq tags-table-list nil)
-(setq search-ring '("doc" "dc" "egg" "chi" "let" "program" "exp" "make-define" "run-" "num-val" "gram" "parser" "scan&" "equal-ex" "printq" "print"))
+(setq search-ring '("youtu" "call-exp" "proc" "let-exp-cont" "exps" "value-of-vals" "extend-env-list" "apply-cont" "let-exp-cont-else" "let-exp-cont" "list-cont" "list-exp" "let-exp" "let" "proc-val" "expval"))
 (setq regexp-search-ring nil)
 (setq register-alist (list '(106 . "splay-time-24hr-format t)\n(setq display-time-day-and-date t)\n(display-time)\n(global-set-key [C-tab] \"\\C-q\\t\")\n(setq message-log-max nil)\n(setq ring-bell-function 'ignore)\n\n(load \"desktop\") \n(desktop-save-mode)\n;(setq mac-option-modifier 'hyper) ; sets the Option key as Hyper\n;(setq mac-option-modifier 'super) ; sets the Option key as Super\n;(setq mac-command-modifier 'meta) ; sets the Command key as Meta\n;(setq mac-control-modifier 'ctrl) ; sets the Control key as Meta\n\n(show-paren-mode)\n(require 'linum)\n\n(require 'ido)\n(ido-mode t)\n\n(require 'ibuffer)\n(global-set-key (kbd \"C-x C-b\") 'ibuffer)\n\n\n(defun toggle-fullscreen ()\n  \"Toggle full screen\"\n  (interactive)\n  (set-frame-parameter\n   nil 'fullscreen\n   (when (not (frame-parameter nil 'fullscreen)) 'fullscreen))\n  (if (frame-parameter nil 'fullscreen)\n      (display-time-mode 1))\n  (if (not (frame-parameter nil 'fullscreen))\n      (display-time-mode 0))\n  )\n\n(toggle-fullscreen)\n\n(load-file \"~/.emacs.d/anything.el\")\n;(load-file \"~/.emacs.d/anything-match-plugin.el\")\n(require 'anything-complete)\n;; Bind C-o to complete shell history\n(anything-complete-shell-history-setup-key \"\\C-o\")\n\n(global-set-key (kbd \"C-x C-f\") 'ido-find-file)\n(global-set-key (kbd \"C-x f\") 'ido-find-file)\n(global-set-key (kbd \"C-x m\") 'anything-execute-extended-command)\n;;(global-set-key (kbd \"C-x m\") 'execute-extended-command)\n(global-set-key (kbd \"C-c C-m\") 'anything-execute-extended-command)\n(global-set-key (kbd \"C-c m\")   'anything-execute-extended-command)\n\n\n\n(setq auto-mode-alist\n      (append '((\"\\\\.cpp$\" . c++-mode)\n		(\"\\\\.hpp$\" . c++-mode)\n		(\"\\\\.h$\" . c++-mode)\n		(\"\\\\.hh$\" . c++-mode)\n		(\"\\\\.lsp$\" . lisp-mode)\n		(\"\\\\.lisp$\" . lisp-mode)\n		(\"\\\\.scm$\" . scheme-mode)\n		(\"\\\\.pl$\" . perl-mode)\n		(\"\\\\.hs$\". haskell-mode)\n		(\"\\\\.vhd$\" . text-mode)\n		(\"\\\\.rb$\"  . ruby-mode)\n		(\"\\\\.rake$\" . ruby-mode)\n		(\"Gemfile\" . ruby-mode)\n		(\"\\\\.scss$\" . css-mode)\n") (desktop-list* 51 (let ((mk (make-marker))) (add-hook 'desktop-delay-hook `(lambda nil (set-marker ,mk ,nil (get-buffer ," *temp*")))) mk)) (desktop-list* 50 (let ((mk (make-marker))) (add-hook 'desktop-delay-hook `(lambda nil (set-marker ,mk ,nil (get-buffer ," *temp*")))) mk)) '(49 . "(require 'highlight-current-line)\n(highlight-current-line-minor-mode)\n\n(require 'highlight-parentheses)\n(defun turn-on-highlight-parentheses-mode ()\n(highlight-parentheses-mode t))\n(define-global-minor-mode global-highlight-parentheses-mode\n  highlight-parentheses-mode\n  turn-on-highlight-parentheses-mode)\n(global-highlight-parentheses-mode)\n(setq hl-paren-background-colors '(\"green\"))\n(global-set-key (kbd \"C-'\") 'highlight-symbol-next)\n\n(load-file \"~/.emacs.d/viewer.el\")\n") '(114 . "splay-time-24hr-format t)\n(setq display-time-day-and-date t)\n(display-time)\n(global-set-key [C-tab] \"\\C-q\\t\")\n(setq message-log-max nil)\n(setq ring-bell-function 'ignore)\n\n(load \"desktop\") \n(desktop-save-mode)\n;(setq mac-option-modifier 'hyper) ; sets the Option key as Hyper\n;(setq mac-option-modifier 'super) ; sets the Option key as Super\n;(setq mac-command-modifier 'meta) ; sets the Command key as Meta\n;(setq mac-control-modifier 'ctrl) ; sets the Control key as Meta\n\n(show-paren-mode)\n(require 'linum)\n\n(require 'ido)\n(ido-mode t)\n\n(require 'ibuffer)\n(global-set-key (kbd \"C-x C-b\") 'ibuffer)\n\n\n(defun toggle-fullscreen ()\n  \"Toggle full screen\"\n  (interactive)\n  (set-frame-parameter\n   nil 'fullscreen\n   (when (not (frame-parameter nil 'fullscreen)) 'fullscreen))\n  (if (frame-parameter nil 'fullscreen)\n      (display-time-mode 1))\n  (if (not (frame-parameter nil 'fullscreen))\n      (display-time-mode 0))\n  )\n\n(toggle-fullscreen)\n\n(load-file \"~/.emacs.d/anything.el\")\n;(load-file \"~/.emacs.d/anything-match-plugin.el\")\n(require 'anything-complete)\n;; Bind C-o to complete shell history\n(anything-complete-shell-history-setup-key \"\\C-o\")\n\n(global-set-key (kbd \"C-x C-f\") 'ido-find-file)\n(global-set-key (kbd \"C-x f\") 'ido-find-file)\n(global-set-key (kbd \"C-x m\") 'anything-execute-extended-command)\n;;(global-set-key (kbd \"C-x m\") 'execute-extended-command)\n(global-set-key (kbd \"C-c C-m\") 'anything-execute-extended-command)\n(global-set-key (kbd \"C-c m\")   'anything-execute-extended-command)\n\n\n\n(setq auto-mode-alist\n      (append '((\"\\\\.cpp$\" . c++-mode)\n		(\"\\\\.hpp$\" . c++-mode)\n		(\"\\\\.h$\" . c++-mode)\n		(\"\\\\.hh$\" . c++-mode)\n		(\"\\\\.lsp$\" . lisp-mode)\n		(\"\\\\.lisp$\" . lisp-mode)\n		(\"\\\\.scm$\" . scheme-mode)\n		(\"\\\\.pl$\" . perl-mode)\n		(\"\\\\.hs$\". haskell-mode)\n		(\"\\\\.vhd$\" . text-mode)\n		(\"\\\\.rb$\"  . ruby-mode)\n		(\"\\\\.rake$\" . ruby-mode)\n		(\"Gemfile\" . ruby-mode)\n		(\"\\\\.scss$\" . css-mode)\n		(\"Rakefile\" . ruby-mode)\n")))
-(setq file-name-history '("~/code/eopl/ch2/2.1.scm" "/Users/kang/code/eopl/libs/scheme48-init.scm" "~/code/eopl/ch2/2.5.scm" "/Users/kang/code/eopl/ch2/2.5.scm" "/Users/kang/code/eopl/ch2/2.5" "/Users/kang/code/eopl/ch3/3.3.scm" "~/code/eopl/ch2/" "/Users/kang/code/eopl/ch3/3.3.scm" "/Users/kang/.emacs.d/swank-chicken/README" "/Users/kang/.emacs" "/Users/kang/Downloads/chicken-4.8.0.4/demo/a.scm" "/Users/kang/.emacs" "/Users/kang/Downloads/chicken-4.8.0.4/demo/a.scm" "/Users/kang/code/eopl/ch2/2.4.scm" "/Users/kang/Downloads/chicken-4.8.0.4/a.scm" "/Users/kang/.emacs.d/.gitignore" "/Users/kang/code/eopl/ch3/3.3.scm" "/Users/kang/code/eopl/README.md" "/Users/kang/code/eopl/base/chapter3/proc-lang/proc-rep/tests.scm" "/Users/kang/Downloads/eopl/chapter3/let-lang/drscheme-init.scm" "/Users/kang/Downloads/eopl/chapter3/let-lang/environments.scm" "/Users/kang/code/eopl/libs/scheme48-init.scm" "/Users/kang/code/eopl/libs/6-grammar.scm" "/Users/kang/Downloads/eopl/chapter2/utils.scm" "/Users/kang/code/eopl/libs/sllgen.scm" "/Users/kang/code/eopl/ch3/3.3.scm" "/Users/kang/code/eopl/libs/test-suite.scm" "/Users/kang/code/eopl/libs/test-harness.scm" "/Users/kang/code/eopl/libs/scheme48-init.scm" "/Users/kang/code/eopl/libs/scm-init.scm"))
+(setq file-name-history '("~/code/eopl/ch5/08.scm" "/etc/hosts" "/Users/kang/code/eopl/ch3/21.scm" "/Users/kang/code/eopl/ch5/08.scm" "~/code/eopl/ch5/07.scm" "~/code/eopl/ch5/" "~/code/eopl/ch5/07.scm" "~/code/eopl/ch5/" "~/code/eopl/ch5/07.scm" "~/code/eopl/ch5/" "~/code/eopl/ch5/07.scm" "~/code/eopl/ch5/" "~/code/eopl/ch5/07.scm" "~/code/eopl/ch5/" "~/code/eopl/ch5/07.scm" "/Users/kang/code/eopl/ch5/06.scm" "/Users/kang/code/eopl/ch3/06.scm" "~/code/eopl/ch5/07.scm" "/Users/kang/code/eopl/ch3/16.scm" "~/code/eopl/ch5/07.scm" "/Users/kang/code/eopl/ch5/base/letrec-lang.scm" "/Users/kang/code/eopl/ch5/07.scm" "~/code/eopl/ch5/12.scm" "/Users/kang/code/eopl/ch5/base/letrec-cases.scm" "~/code/eopl/ch5/12.scm" "/Users/kang/code/eopl/ch4/base/explicit-lang.scm" "~/code/eopl/ch5/12.scm" "/Users/kang/code/eopl/.gitignore" "/Users/kang/code/eopl/base/chapter3/proc-lang/ds-rep/interp.scm" "~/code/eopl/ch5/12.scm"))
 
 ;; Buffer section -- buffers listed in same order as in buffer list:
 (desktop-create-buffer 206
-  "/Users/kang/code/eopl/ch2/2.1.scm"
-  "2.1.scm"
+  "/Users/kang/code/eopl/ch5/08.scm"
+  "08.scm<2>"
   'scheme-mode
   '(global-auto-revert-mode hi-lock-mode highlight-parentheses-mode undo-tree-mode auto-complete-mode slime-mode eldoc-mode)
-  1239
+  8008
+  '(5645 nil)
+  nil
+  nil
+  '((buffer-file-coding-system . utf-8-unix)))
+
+(desktop-create-buffer 206
+  "/Users/kang/code/eopl/ch3/21.scm"
+  "21.scm"
+  'scheme-mode
+  '(global-auto-revert-mode hi-lock-mode highlight-parentheses-mode undo-tree-mode auto-complete-mode slime-mode eldoc-mode)
+  1340
+  '(1279 nil)
+  nil
+  nil
+  '((buffer-file-coding-system . utf-8-unix)))
+
+(desktop-create-buffer 206
+  "/etc/hosts"
+  "hosts"
+  'conf-space-mode
+  '(global-auto-revert-mode hi-lock-mode highlight-parentheses-mode undo-tree-mode)
+  2
+  '(2 nil)
+  t
+  nil
+  '((buffer-file-coding-system . undecided-unix)))
+
+(desktop-create-buffer 206
+  "/Users/kang/code/eopl/ch5/base/letrec-lang.scm"
+  "letrec-lang.scm<2>"
+  'scheme-mode
+  '(global-auto-revert-mode hi-lock-mode highlight-parentheses-mode undo-tree-mode auto-complete-mode slime-mode eldoc-mode)
+  7992
+  '(1 nil)
+  nil
+  nil
+  '((buffer-file-coding-system . utf-8-unix)))
+
+(desktop-create-buffer 206
+  "/Users/kang/code/eopl/ch5/07.scm"
+  "07.scm"
+  'scheme-mode
+  '(global-auto-revert-mode hi-lock-mode highlight-parentheses-mode undo-tree-mode auto-complete-mode slime-mode eldoc-mode)
+  4736
+  '(8689 nil)
+  nil
+  nil
+  '((buffer-file-coding-system . utf-8-unix)))
+
+(desktop-create-buffer 206
+  "/Users/kang/code/eopl/ch3/16.scm"
+  "16.scm<2>"
+  'scheme-mode
+  '(global-auto-revert-mode hi-lock-mode highlight-parentheses-mode undo-tree-mode auto-complete-mode slime-mode eldoc-mode)
+  10165
+  '(9212 nil)
+  nil
+  nil
+  '((buffer-file-coding-system . undecided-unix)))
+
+(desktop-create-buffer 206
+  "/Users/kang/code/eopl/ch5/06.scm"
+  "06.scm"
+  'scheme-mode
+  '(global-auto-revert-mode hi-lock-mode highlight-parentheses-mode undo-tree-mode auto-complete-mode slime-mode eldoc-mode)
+  10857
+  '(10867 nil)
+  nil
+  nil
+  '((buffer-file-coding-system . utf-8-unix)))
+
+(desktop-create-buffer 206
+  "/Users/kang/code/eopl/ch3/06.scm"
+  "06.scm<2>"
+  'scheme-mode
+  '(global-auto-revert-mode hi-lock-mode highlight-parentheses-mode undo-tree-mode auto-complete-mode slime-mode eldoc-mode)
+  2807
+  '(1480 nil)
+  nil
+  nil
+  '((buffer-file-coding-system . undecided-unix)))
+
+(desktop-create-buffer 206
+  nil
+  "ch5"
+  'dired-mode
+  '(global-auto-revert-mode hi-lock-mode highlight-parentheses-mode dired-omit-mode)
+  557
+  '(nil nil)
+  t
+  '("/Users/kang/code/eopl/ch5/")
+  nil)
+
+(desktop-create-buffer 206
+  nil
+  "eopl"
+  'dired-mode
+  '(global-auto-revert-mode hi-lock-mode highlight-parentheses-mode dired-omit-mode)
+  532
+  '(nil nil)
+  t
+  '("/Users/kang/code/eopl/")
+  nil)
+
+(desktop-create-buffer 206
+  "/Users/kang/code/eopl/base/chapter3/proc-lang/ds-rep/drscheme-init.scm"
+  "drscheme-init.scm"
+  'scheme-mode
+  '(global-auto-revert-mode hi-lock-mode highlight-parentheses-mode undo-tree-mode auto-complete-mode slime-mode eldoc-mode)
+  4287
+  '(nil nil)
+  nil
+  nil
+  '((buffer-file-coding-system . undecided-dos)))
+
+(desktop-create-buffer 206
+  "/Users/kang/code/eopl/ch5/12.scm"
+  "12.scm<3>"
+  'scheme-mode
+  '(global-auto-revert-mode hi-lock-mode highlight-parentheses-mode undo-tree-mode auto-complete-mode slime-mode eldoc-mode)
+  332
+  '(8612 nil)
+  nil
+  nil
+  '((buffer-file-coding-system . utf-8-unix)))
+
+(desktop-create-buffer 206
+  "/Users/kang/code/eopl/ch3/12.scm"
+  "12.scm"
+  'scheme-mode
+  '(global-auto-revert-mode hi-lock-mode highlight-parentheses-mode undo-tree-mode auto-complete-mode slime-mode eldoc-mode)
+  7791
+  '(7453 nil)
+  nil
+  nil
+  '((buffer-file-coding-system . undecided-unix)))
+
+(desktop-create-buffer 206
+  "/Users/kang/code/eopl/ch5/base/letrec-cases.scm"
+  "letrec-cases.scm"
+  'scheme-mode
+  '(global-auto-revert-mode hi-lock-mode highlight-parentheses-mode undo-tree-mode auto-complete-mode slime-mode eldoc-mode)
+  2230
+  '(1933 nil)
+  nil
+  nil
+  '((buffer-file-coding-system . utf-8-unix)))
+
+(desktop-create-buffer 206
+  "/Users/kang/code/eopl/ch4/12.scm"
+  "12.scm<2>"
+  'scheme-mode
+  '(global-auto-revert-mode hi-lock-mode highlight-parentheses-mode undo-tree-mode auto-complete-mode slime-mode eldoc-mode)
+  1025
+  '(1 nil)
+  nil
+  nil
+  '((buffer-file-coding-system . utf-8-unix)))
+
+(desktop-create-buffer 206
+  "/Users/kang/code/eopl/ch4/base/explicit-lang.scm"
+  "explicit-lang.scm"
+  'scheme-mode
+  '(global-auto-revert-mode hi-lock-mode highlight-parentheses-mode undo-tree-mode auto-complete-mode slime-mode eldoc-mode)
+  7710
+  '(2555 nil)
+  nil
+  nil
+  '((buffer-file-coding-system . undecided-unix)))
+
+(desktop-create-buffer 206
+  nil
+  "base"
+  'dired-mode
+  '(global-auto-revert-mode hi-lock-mode highlight-parentheses-mode dired-omit-mode)
+  495
+  '(nil nil)
+  t
+  '("/Users/kang/code/eopl/ch3/base/")
+  nil)
+
+(desktop-create-buffer 206
+  "/Users/kang/code/eopl/.gitignore"
+  ".gitignore"
+  'fundamental-mode
+  '(global-auto-revert-mode hi-lock-mode highlight-parentheses-mode undo-tree-mode)
+  37
+  '(1 nil)
+  nil
+  nil
+  '((buffer-file-coding-system . utf-8-unix)))
+
+(desktop-create-buffer 206
+  "/Users/kang/code/eopl/base/chapter3/proc-lang/ds-rep/interp.scm"
+  "interp.scm"
+  'scheme-mode
+  '(global-auto-revert-mode hi-lock-mode highlight-parentheses-mode undo-tree-mode auto-complete-mode slime-mode eldoc-mode)
+  2234
+  '(1 nil)
+  nil
+  nil
+  '((buffer-file-coding-system . undecided-dos)))
+
+(desktop-create-buffer 206
+  "/Users/kang/code/eopl/ch3/41.scm"
+  "41.scm"
+  'scheme-mode
+  '(global-auto-revert-mode hi-lock-mode highlight-parentheses-mode undo-tree-mode auto-complete-mode slime-mode eldoc-mode)
+  5879
+  '(5793 nil)
+  nil
+  nil
+  '((buffer-file-coding-system . undecided-unix)))
+
+(desktop-create-buffer 206
+  "/Users/kang/code/eopl/ch3/41-translator.scm"
+  "41-translator.scm"
+  'scheme-mode
+  '(global-auto-revert-mode hi-lock-mode highlight-parentheses-mode undo-tree-mode auto-complete-mode slime-mode eldoc-mode)
+  935
+  '(2089 nil)
+  nil
+  nil
+  '((buffer-file-coding-system . undecided-unix)))
+
+(desktop-create-buffer 206
+  "/Users/kang/code/eopl/ch3/40.scm"
+  "40.scm"
+  'scheme-mode
+  '(global-auto-revert-mode hi-lock-mode highlight-parentheses-mode undo-tree-mode auto-complete-mode slime-mode eldoc-mode)
+  6534
+  '(5061 nil)
+  nil
+  nil
+  '((buffer-file-coding-system . undecided-unix)))
+
+(desktop-create-buffer 206
+  "/Users/kang/code/eopl/ch3/40-translator.scm"
+  "40-translator.scm"
+  'scheme-mode
+  '(global-auto-revert-mode hi-lock-mode highlight-parentheses-mode undo-tree-mode auto-complete-mode slime-mode eldoc-mode)
+  2166
+  '(1404 nil)
+  nil
+  nil
+  '((buffer-file-coding-system . undecided-unix)))
+
+(desktop-create-buffer 206
+  "/Users/kang/code/eopl/ch3/39-translator.scm"
+  "39-translator.scm"
+  'scheme-mode
+  '(global-auto-revert-mode hi-lock-mode highlight-parentheses-mode undo-tree-mode auto-complete-mode slime-mode eldoc-mode)
+  2084
+  '(2084 nil)
+  nil
+  nil
+  '((buffer-file-coding-system . undecided-unix)))
+
+(desktop-create-buffer 206
+  "/Users/kang/code/eopl/ch3/38-translator.scm"
+  "38-translator.scm"
+  'scheme-mode
+  '(global-auto-revert-mode hi-lock-mode highlight-parentheses-mode undo-tree-mode auto-complete-mode slime-mode eldoc-mode)
+  2382
+  '(1778 nil)
+  nil
+  nil
+  '((buffer-file-coding-system . undecided-unix)))
+
+(desktop-create-buffer 206
+  "/Users/kang/code/eopl/ch3/33.scm"
+  "33.scm"
+  'scheme-mode
+  '(global-auto-revert-mode hi-lock-mode highlight-parentheses-mode undo-tree-mode auto-complete-mode slime-mode eldoc-mode)
+  863
+  '(2201 nil)
+  nil
+  nil
+  '((buffer-file-coding-system . undecided-unix)))
+
+(desktop-create-buffer 206
+  "/Users/kang/code/eopl/ch3/32.scm"
+  "32.scm"
+  'scheme-mode
+  '(global-auto-revert-mode hi-lock-mode highlight-parentheses-mode undo-tree-mode auto-complete-mode slime-mode eldoc-mode)
+  3194
+  '(2122 nil)
+  nil
+  nil
+  '((buffer-file-coding-system . undecided-unix)))
+
+(desktop-create-buffer 206
+  "/Users/kang/code/eopl/ch3/31.scm"
+  "31.scm"
+  'scheme-mode
+  '(global-auto-revert-mode hi-lock-mode highlight-parentheses-mode undo-tree-mode auto-complete-mode slime-mode eldoc-mode)
+  948
+  '(2111 nil)
+  nil
+  nil
+  '((buffer-file-coding-system . undecided-unix)))
+
+(desktop-create-buffer 206
+  "/Users/kang/code/eopl/ch3/30.scm"
+  "30.scm"
+  'scheme-mode
+  '(global-auto-revert-mode hi-lock-mode highlight-parentheses-mode undo-tree-mode auto-complete-mode slime-mode eldoc-mode)
+  158
+  '(20 nil)
+  nil
+  nil
+  '((buffer-file-coding-system . utf-8-unix)))
+
+(desktop-create-buffer 206
+  "/Users/kang/code/eopl/ch3/28.scm"
+  "28.scm"
+  'scheme-mode
+  '(global-auto-revert-mode hi-lock-mode highlight-parentheses-mode undo-tree-mode auto-complete-mode slime-mode eldoc-mode)
+  5612
+  '(2775 nil)
+  nil
+  nil
+  '((buffer-file-coding-system . utf-8-unix)))
+
+(desktop-create-buffer 206
+  "/Users/kang/code/eopl/ch3/27.scm"
+  "27.scm"
+  'scheme-mode
+  '(global-auto-revert-mode hi-lock-mode highlight-parentheses-mode undo-tree-mode auto-complete-mode slime-mode eldoc-mode)
+  3297
+  '(2845 nil)
+  nil
+  nil
+  '((buffer-file-coding-system . utf-8-unix)))
+
+(desktop-create-buffer 206
+  "/Users/kang/code/eopl/ch3/26.scm"
+  "26.scm"
+  'scheme-mode
+  '(global-auto-revert-mode hi-lock-mode highlight-parentheses-mode undo-tree-mode auto-complete-mode slime-mode eldoc-mode)
+  6912
+  '(2907 nil)
+  nil
+  nil
+  '((buffer-file-coding-system . utf-8-unix)))
+
+(desktop-create-buffer 206
+  "/Users/kang/code/eopl/ch3/25.scm"
+  "25.scm"
+  'scheme-mode
+  '(global-auto-revert-mode hi-lock-mode highlight-parentheses-mode undo-tree-mode auto-complete-mode slime-mode eldoc-mode)
+  802
+  '(419 nil)
+  nil
+  nil
+  '((buffer-file-coding-system . undecided-unix)))
+
+(desktop-create-buffer 206
+  "/Users/kang/code/eopl/ch3/24.scm"
+  "24.scm"
+  'scheme-mode
+  '(global-auto-revert-mode hi-lock-mode highlight-parentheses-mode undo-tree-mode auto-complete-mode slime-mode eldoc-mode)
+  613
+  '(189 nil)
+  nil
+  nil
+  '((buffer-file-coding-system . undecided-unix)))
+
+(desktop-create-buffer 206
+  "/Users/kang/code/eopl/ch3/23.scm"
+  "23.scm"
+  'scheme-mode
+  '(global-auto-revert-mode hi-lock-mode highlight-parentheses-mode undo-tree-mode auto-complete-mode slime-mode eldoc-mode)
+  1716
+  '(2689 nil)
+  nil
+  nil
+  '((buffer-file-coding-system . utf-8-unix)))
+
+(desktop-create-buffer 206
+  "/Users/kang/code/eopl/ch3/20.scm"
+  "20.scm"
+  'scheme-mode
+  '(global-auto-revert-mode hi-lock-mode highlight-parentheses-mode undo-tree-mode auto-complete-mode slime-mode eldoc-mode)
+  5108
+  '(2754 nil)
+  nil
+  nil
+  '((buffer-file-coding-system . utf-8-unix)))
+
+(desktop-create-buffer 206
+  "/Users/kang/code/eopl/ch3/19.scm"
+  "19.scm"
+  'scheme-mode
+  '(global-auto-revert-mode hi-lock-mode highlight-parentheses-mode undo-tree-mode auto-complete-mode slime-mode eldoc-mode)
+  739
+  '(2826 nil)
+  nil
+  nil
+  '((buffer-file-coding-system . utf-8-unix)))
+
+(desktop-create-buffer 206
+  "/Users/kang/code/eopl/ch3/17.scm"
+  "17.scm"
+  'scheme-mode
+  '(global-auto-revert-mode hi-lock-mode highlight-parentheses-mode undo-tree-mode auto-complete-mode slime-mode eldoc-mode)
+  11803
+  '(11716 nil)
+  nil
+  nil
+  '((buffer-file-coding-system . undecided-unix)))
+
+(desktop-create-buffer 206
+  "/Users/kang/code/eopl/ch3/10.scm"
+  "10.scm"
+  'scheme-mode
+  '(global-auto-revert-mode hi-lock-mode highlight-parentheses-mode undo-tree-mode auto-complete-mode slime-mode eldoc-mode)
+  9620
+  '(9516 nil)
+  nil
+  nil
+  '((buffer-file-coding-system . undecided-unix)))
+
+(desktop-create-buffer 206
+  "/Users/kang/code/eopl/ch3/09.scm"
+  "09.scm<2>"
+  'scheme-mode
+  '(global-auto-revert-mode hi-lock-mode highlight-parentheses-mode undo-tree-mode auto-complete-mode slime-mode eldoc-mode)
+  2519
+  '(6844 nil)
+  nil
+  nil
+  '((buffer-file-coding-system . undecided-unix)))
+
+(desktop-create-buffer 206
+  nil
+  "ch3"
+  'dired-mode
+  '(global-auto-revert-mode hi-lock-mode highlight-parentheses-mode dired-omit-mode)
+  2306
+  '(942 nil)
+  t
+  '("/Users/kang/code/eopl/ch3/")
+  nil)
+
+(desktop-create-buffer 206
+  "/Users/kang/code/eopl/ch5/01.scm"
+  "01.scm<2>"
+  'scheme-mode
+  '(global-auto-revert-mode hi-lock-mode highlight-parentheses-mode undo-tree-mode auto-complete-mode slime-mode eldoc-mode)
+  1
+  '(5651 nil)
+  nil
+  nil
+  '((buffer-file-coding-system . utf-8-unix)))
+
+(desktop-create-buffer 206
+  "/Users/kang/code/eopl/ch4/29.scm"
+  "29.scm"
+  'scheme-mode
+  '(global-auto-revert-mode hi-lock-mode highlight-parentheses-mode undo-tree-mode auto-complete-mode slime-mode eldoc-mode)
+  7967
+  '(7968 nil)
+  nil
+  nil
+  '((buffer-file-coding-system . undecided-unix)))
+
+(desktop-create-buffer 206
+  nil
+  "ch4"
+  'dired-mode
+  '(global-auto-revert-mode hi-lock-mode highlight-parentheses-mode dired-omit-mode)
+  887
+  '(nil nil)
+  t
+  '("/Users/kang/code/eopl/ch4/")
+  nil)
+
+(desktop-create-buffer 206
+  "/Users/kang/code/eopl/ch4/08.scm"
+  "08.scm"
+  'scheme-mode
+  '(global-auto-revert-mode hi-lock-mode highlight-parentheses-mode undo-tree-mode auto-complete-mode slime-mode eldoc-mode)
+  1
+  '(nil nil)
+  nil
+  nil
+  '((buffer-file-coding-system . undecided-unix)))
+
+(desktop-create-buffer 206
+  "/Users/kang/code/eopl/ch4/01.scm"
+  "01.scm"
+  'scheme-mode
+  '(global-auto-revert-mode hi-lock-mode highlight-parentheses-mode undo-tree-mode auto-complete-mode slime-mode eldoc-mode)
+  1
+  '(121 nil)
+  nil
+  nil
+  '((buffer-file-coding-system . utf-8-unix)))
+
+(desktop-create-buffer 206
+  "/Users/kang/code/eopl/ch4/42.scm"
+  "42.scm"
+  'scheme-mode
+  '(global-auto-revert-mode hi-lock-mode highlight-symbol-mode highlight-parentheses-mode undo-tree-mode auto-complete-mode slime-mode eldoc-mode)
+  1
+  '(10149 nil)
+  nil
+  nil
+  '((buffer-file-coding-system . utf-8-unix)))
+
+(desktop-create-buffer 206
+  "/Users/kang/code/eopl/ch4/40.scm"
+  "40.scm<2>"
+  'scheme-mode
+  '(global-auto-revert-mode hi-lock-mode highlight-parentheses-mode undo-tree-mode auto-complete-mode slime-mode eldoc-mode)
+  1
+  '(5712 nil)
+  nil
+  nil
+  '((buffer-file-coding-system . utf-8-unix)))
+
+(desktop-create-buffer 206
+  "/Users/kang/code/eopl/ch4/38.scm"
+  "38.scm<2>"
+  'scheme-mode
+  '(global-auto-revert-mode hi-lock-mode highlight-parentheses-mode undo-tree-mode auto-complete-mode slime-mode eldoc-mode)
+  1
+  '(6390 nil)
+  nil
+  nil
+  '((buffer-file-coding-system . undecided-unix)))
+
+(desktop-create-buffer 206
+  "/Users/kang/code/eopl/ch4/36.scm"
+  "36.scm"
+  'scheme-mode
+  '(global-auto-revert-mode hi-lock-mode highlight-symbol-mode highlight-parentheses-mode undo-tree-mode auto-complete-mode slime-mode eldoc-mode)
+  1
+  '(142 nil)
+  nil
+  nil
+  '((buffer-file-coding-system . utf-8-unix)))
+
+(desktop-create-buffer 206
+  "/Users/kang/code/eopl/ch4/35.scm"
+  "35.scm"
+  'scheme-mode
+  '(global-auto-revert-mode hi-lock-mode highlight-parentheses-mode undo-tree-mode auto-complete-mode slime-mode eldoc-mode)
+  4733
+  '(4734 nil)
+  nil
+  nil
+  '((buffer-file-coding-system . utf-8-unix)))
+
+(desktop-create-buffer 206
+  "/Users/kang/code/eopl/ch4/34.scm"
+  "34.scm"
+  'scheme-mode
+  '(global-auto-revert-mode hi-lock-mode highlight-parentheses-mode undo-tree-mode auto-complete-mode slime-mode eldoc-mode)
+  1
+  '(13707 nil)
+  nil
+  nil
+  '((buffer-file-coding-system . utf-8-unix)))
+
+(desktop-create-buffer 206
+  "/Users/kang/code/eopl/ch4/32.scm"
+  "32.scm<2>"
+  'scheme-mode
+  '(global-auto-revert-mode hi-lock-mode highlight-parentheses-mode undo-tree-mode auto-complete-mode slime-mode eldoc-mode)
+  1
+  '(1 nil)
+  nil
+  nil
+  '((buffer-file-coding-system . utf-8-unix)))
+
+(desktop-create-buffer 206
+  "/Users/kang/code/eopl/ch4/30.scm"
+  "30.scm<2>"
+  'scheme-mode
+  '(global-auto-revert-mode hi-lock-mode highlight-parentheses-mode undo-tree-mode auto-complete-mode slime-mode eldoc-mode)
+  8605
+  '(8606 nil)
+  nil
+  nil
+  '((buffer-file-coding-system . utf-8-unix)))
+
+(desktop-create-buffer 206
+  "/Users/kang/code/eopl/ch4/28.txt"
+  "28.txt"
+  'text-mode
+  '(global-auto-revert-mode hi-lock-mode highlight-symbol-mode highlight-parentheses-mode undo-tree-mode)
+  43
+  '(nil nil)
+  nil
+  nil
+  '((buffer-file-coding-system . utf-8-unix)))
+
+(desktop-create-buffer 206
+  "/Users/kang/code/eopl/ch4/21.scm"
+  "21.scm<2>"
+  'scheme-mode
+  '(global-auto-revert-mode hi-lock-mode highlight-symbol-mode highlight-parentheses-mode undo-tree-mode auto-complete-mode slime-mode eldoc-mode)
+  4764
+  '(4765 nil)
+  nil
+  nil
+  '((buffer-file-coding-system . utf-8-unix)))
+
+(desktop-create-buffer 206
+  "/Users/kang/code/eopl/ch4/20.scm"
+  "20.scm<2>"
+  'scheme-mode
+  '(global-auto-revert-mode hi-lock-mode highlight-parentheses-mode undo-tree-mode auto-complete-mode slime-mode eldoc-mode)
+  4715
+  '(4716 nil)
+  nil
+  nil
+  '((buffer-file-coding-system . utf-8-unix)))
+
+(desktop-create-buffer 206
+  "/Users/kang/code/eopl/ch4/18.scm"
+  "18.scm<2>"
+  'scheme-mode
+  '(global-auto-revert-mode hi-lock-mode highlight-parentheses-mode undo-tree-mode auto-complete-mode slime-mode eldoc-mode)
+  4573
+  '(4574 nil)
+  nil
+  nil
+  '((buffer-file-coding-system . utf-8-unix)))
+
+(desktop-create-buffer 206
+  "/Users/kang/code/eopl/ch4/17.scm"
+  "17.scm<2>"
+  'scheme-mode
+  '(global-auto-revert-mode hi-lock-mode highlight-parentheses-mode undo-tree-mode auto-complete-mode slime-mode eldoc-mode)
+  4534
+  '(4535 nil)
+  nil
+  nil
+  '((buffer-file-coding-system . utf-8-unix)))
+
+(desktop-create-buffer 206
+  "/Users/kang/code/eopl/ch4/16.scm"
+  "16.scm"
+  'scheme-mode
+  '(global-auto-revert-mode hi-lock-mode highlight-parentheses-mode undo-tree-mode auto-complete-mode slime-mode eldoc-mode)
+  4487
+  '(4483 nil)
+  nil
+  nil
+  '((buffer-file-coding-system . utf-8-unix)))
+
+(desktop-create-buffer 206
+  "/Users/kang/code/eopl/ch4/11.scm"
+  "11.scm"
+  'scheme-mode
+  '(global-auto-revert-mode hi-lock-mode highlight-parentheses-mode undo-tree-mode auto-complete-mode slime-mode eldoc-mode)
+  1
+  '(10309 nil)
+  nil
+  nil
+  '((buffer-file-coding-system . utf-8-unix)))
+
+(desktop-create-buffer 206
+  "/Users/kang/code/eopl/ch4/10.scm"
+  "10.scm<2>"
+  'scheme-mode
+  '(global-auto-revert-mode hi-lock-mode highlight-parentheses-mode undo-tree-mode auto-complete-mode slime-mode eldoc-mode)
+  1
+  '(8207 nil)
+  nil
+  nil
+  '((buffer-file-coding-system . undecided-unix)))
+
+(desktop-create-buffer 206
+  "/Users/kang/code/eopl/ch4/09.scm"
+  "09.scm"
+  'scheme-mode
+  '(global-auto-revert-mode hi-lock-mode highlight-parentheses-mode undo-tree-mode auto-complete-mode slime-mode eldoc-mode)
+  1
+  '(419 nil)
+  nil
+  nil
+  '((buffer-file-coding-system . undecided-unix)))
+
+(desktop-create-buffer 206
+  "/Users/kang/code/eopl/ch4/base/mutable-pair-lang.scm"
+  "mutable-pair-lang.scm"
+  'scheme-mode
+  '(global-auto-revert-mode hi-lock-mode highlight-parentheses-mode undo-tree-mode auto-complete-mode slime-mode eldoc-mode)
+  7658
+  '(11874 nil)
+  nil
+  nil
+  '((buffer-file-coding-system . utf-8-unix)))
+
+(desktop-create-buffer 206
+  "/Users/kang/code/eopl/ch4/base/store.scm"
+  "store.scm<2>"
+  'scheme-mode
+  '(global-auto-revert-mode hi-lock-mode highlight-parentheses-mode undo-tree-mode auto-complete-mode slime-mode eldoc-mode)
+  1919
+  '(1098 nil)
+  nil
+  nil
+  '((buffer-file-coding-system . undecided-unix)))
+
+(desktop-create-buffer 206
+  "/Users/kang/code/eopl/ch4/base/test.scm"
+  "test.scm"
+  'scheme-mode
+  '(global-auto-revert-mode hi-lock-mode highlight-parentheses-mode undo-tree-mode auto-complete-mode slime-mode eldoc-mode)
+  89
+  '(4493 nil)
+  nil
+  nil
+  '((buffer-file-coding-system . undecided-unix)))
+
+(desktop-create-buffer 206
+  "/Users/kang/code/eopl/ch4/base/callneed-lang.scm"
+  "callneed-lang.scm<2>"
+  'scheme-mode
+  '(global-auto-revert-mode hi-lock-mode highlight-parentheses-mode undo-tree-mode auto-complete-mode slime-mode eldoc-mode)
+  1
+  '(1 nil)
+  nil
+  nil
+  '((buffer-file-coding-system . utf-8-unix)))
+
+(desktop-create-buffer 206
+  "/Users/kang/code/eopl/ch4/base/callref-lang.scm"
+  "callref-lang.scm"
+  'scheme-mode
+  '(global-auto-revert-mode hi-lock-mode highlight-parentheses-mode undo-tree-mode auto-complete-mode slime-mode eldoc-mode)
+  1
+  '(1 nil)
+  nil
+  nil
+  '((buffer-file-coding-system . utf-8-unix)))
+
+(desktop-create-buffer 206
+  "/Users/kang/code/eopl/ch4/base/implicit-lang.scm"
+  "implicit-lang.scm"
+  'scheme-mode
+  '(global-auto-revert-mode hi-lock-mode highlight-parentheses-mode undo-tree-mode auto-complete-mode slime-mode eldoc-mode)
+  1
+  '(9261 nil)
+  nil
+  nil
+  '((buffer-file-coding-system . undecided-unix)))
+
+(desktop-create-buffer 206
+  "/Users/kang/code/eopl/base/chapter4/explicit-refs/tests.scm"
+  "tests.scm<3>"
+  'scheme-mode
+  '(global-auto-revert-mode hi-lock-mode highlight-parentheses-mode undo-tree-mode auto-complete-mode slime-mode eldoc-mode)
+  4840
+  '(94 nil)
+  nil
+  nil
+  '((buffer-file-coding-system . undecided-dos)))
+
+(desktop-create-buffer 206
+  nil
+  "base<3>"
+  'dired-mode
+  '(global-auto-revert-mode hi-lock-mode highlight-parentheses-mode dired-omit-mode)
+  554
+  '(nil nil)
+  t
+  '("/Users/kang/code/eopl/ch4/base/")
+  nil)
+
+(desktop-create-buffer 206
+  nil
+  "explicit-refs"
+  'dired-mode
+  '(global-auto-revert-mode hi-lock-mode highlight-parentheses-mode dired-omit-mode)
+  614
+  '(nil nil)
+  t
+  '("/Users/kang/code/eopl/base/chapter4/explicit-refs/")
+  nil)
+
+(desktop-create-buffer 206
+  "/Users/kang/code/eopl/ch4/base/cases.scm"
+  "cases.scm"
+  'scheme-mode
+  '(global-auto-revert-mode hi-lock-mode highlight-parentheses-mode undo-tree-mode auto-complete-mode slime-mode eldoc-mode)
+  1
+  '(2092 nil)
+  nil
+  nil
+  '((buffer-file-coding-system . undecided-unix)))
+
+(desktop-create-buffer 206
+  "/Users/kang/code/eopl/ch4/base/pair-cases.scm"
+  "pair-cases.scm"
+  'scheme-mode
+  '(global-auto-revert-mode hi-lock-mode highlight-parentheses-mode undo-tree-mode auto-complete-mode slime-mode eldoc-mode)
+  2925
+  '(nil nil)
+  nil
+  nil
+  '((buffer-file-coding-system . undecided-unix)))
+
+(desktop-create-buffer 206
+  "/Users/kang/code/eopl/ch5/05.scm"
+  "05.scm"
+  'scheme-mode
+  '(global-auto-revert-mode hi-lock-mode highlight-parentheses-mode undo-tree-mode auto-complete-mode slime-mode eldoc-mode)
+  9362
+  '(9313 nil)
+  nil
+  nil
+  '((buffer-file-coding-system . utf-8-unix)))
+
+(desktop-create-buffer 206
+  "/Users/kang/code/eopl/ch5/02.scm"
+  "02.scm"
+  'scheme-mode
+  '(global-auto-revert-mode hi-lock-mode highlight-parentheses-mode undo-tree-mode auto-complete-mode slime-mode eldoc-mode)
+  6994
+  '(1 nil)
+  nil
+  nil
+  '((buffer-file-coding-system . undecided-unix)))
+
+(desktop-create-buffer 206
+  "/Users/kang/code/eopl/ch5/04.scm"
+  "04.scm"
+  'scheme-mode
+  '(global-auto-revert-mode hi-lock-mode highlight-parentheses-mode undo-tree-mode auto-complete-mode slime-mode eldoc-mode)
+  1
+  '(227 nil)
+  nil
+  nil
+  '((buffer-file-coding-system . utf-8-unix)))
+
+(desktop-create-buffer 206
+  "/Users/kang/code/eopl/ch5/03.scm"
+  "03.scm"
+  'scheme-mode
+  '(global-auto-revert-mode hi-lock-mode highlight-symbol-mode highlight-parentheses-mode undo-tree-mode auto-complete-mode slime-mode eldoc-mode)
+  1
+  '(8128 nil)
+  nil
+  nil
+  '((buffer-file-coding-system . utf-8-unix)))
+
+(desktop-create-buffer 206
+  nil
+  "base<4>"
+  'dired-mode
+  '(global-auto-revert-mode hi-lock-mode highlight-parentheses-mode dired-omit-mode)
+  288
+  '(nil nil)
+  t
+  '("/Users/kang/code/eopl/ch5/base/")
+  nil)
+
+(desktop-create-buffer 206
+  "/Users/kang/code/eopl/ch5/base/test.scm"
+  "test.scm<2>"
+  'scheme-mode
+  '(global-auto-revert-mode hi-lock-mode highlight-parentheses-mode undo-tree-mode auto-complete-mode slime-mode eldoc-mode)
+  3825
+  '(1 nil)
+  nil
+  nil
+  '((buffer-file-coding-system . undecided-unix)))
+
+(desktop-create-buffer 206
+  "/Users/kang/code/eopl/base/chapter5/letrec-lang/tests.scm"
+  "tests.scm<11>"
+  'scheme-mode
+  '(global-auto-revert-mode hi-lock-mode highlight-parentheses-mode undo-tree-mode auto-complete-mode slime-mode eldoc-mode)
+  3073
+  '(94 nil)
+  nil
+  nil
+  '((buffer-file-coding-system . undecided-dos)))
+
+(desktop-create-buffer 206
+  nil
+  "ch1"
+  'dired-mode
+  '(global-auto-revert-mode hi-lock-mode highlight-parentheses-mode dired-omit-mode)
+  172
+  '(nil nil)
+  t
+  '("/Users/kang/code/eopl/ch1/")
+  nil)
+
+(desktop-create-buffer 206
+  "/Users/kang/code/eopl/base/chapter5/letrec-lang/environments.scm"
+  "environments.scm<9>"
+  'scheme-mode
+  '(global-auto-revert-mode hi-lock-mode highlight-parentheses-mode undo-tree-mode auto-complete-mode slime-mode eldoc-mode)
+  1029
+  '(546 nil)
+  nil
+  nil
+  '((buffer-file-coding-system . undecided-dos)))
+
+(desktop-create-buffer 206
+  nil
+  "letrec-lang"
+  'dired-mode
+  '(global-auto-revert-mode hi-lock-mode highlight-parentheses-mode dired-omit-mode)
+  447
+  '(nil nil)
+  t
+  '("/Users/kang/code/eopl/base/chapter5/letrec-lang/")
+  nil)
+
+(desktop-create-buffer 206
+  "/Users/kang/code/eopl/base/chapter5/letrec-lang/top-interp.scm"
+  "top-interp.scm"
+  'scheme-mode
+  '(global-auto-revert-mode hi-lock-mode highlight-parentheses-mode undo-tree-mode auto-complete-mode slime-mode eldoc-mode)
+  670
+  '(588 nil)
+  nil
+  nil
+  '((buffer-file-coding-system . undecided-dos)))
+
+(desktop-create-buffer 206
+  "/Users/kang/code/eopl/base/chapter5/letrec-lang/top.scm"
+  "top.scm<7>"
+  'scheme-mode
+  '(global-auto-revert-mode hi-lock-mode highlight-parentheses-mode undo-tree-mode auto-complete-mode slime-mode eldoc-mode)
+  329
+  '(nil nil)
+  nil
+  nil
+  '((buffer-file-coding-system . undecided-dos)))
+
+(desktop-create-buffer 206
+  "/Users/kang/code/eopl/base/chapter5/letrec-lang/data-structures.scm"
+  "data-structures.scm<9>"
+  'scheme-mode
+  '(global-auto-revert-mode hi-lock-mode highlight-parentheses-mode undo-tree-mode auto-complete-mode slime-mode eldoc-mode)
+  2392
+  '(295 nil)
+  nil
+  nil
+  '((buffer-file-coding-system . undecided-dos)))
+
+(desktop-create-buffer 206
+  "/Users/kang/code/eopl/base/chapter5/letrec-lang/drscheme-init-cps.scm"
+  "drscheme-init-cps.scm"
+  'scheme-mode
+  '(global-auto-revert-mode hi-lock-mode highlight-parentheses-mode undo-tree-mode auto-complete-mode slime-mode eldoc-mode)
+  7236
+  '(nil nil)
+  nil
+  nil
+  '((buffer-file-coding-system . undecided-unix)))
+
+(desktop-create-buffer 206
+  "/Users/kang/code/eopl/base/chapter5/letrec-lang/drscheme-init.scm"
+  "drscheme-init.scm<9>"
+  'scheme-mode
+  '(global-auto-revert-mode hi-lock-mode highlight-parentheses-mode undo-tree-mode auto-complete-mode slime-mode eldoc-mode)
+  3164
+  '(nil nil)
+  nil
+  nil
+  '((buffer-file-coding-system . undecided-dos)))
+
+(desktop-create-buffer 206
+  "/Users/kang/code/eopl/base/chapter5/letrec-lang/eopl-without-exp.scm"
+  "eopl-without-exp.scm"
+  'scheme-mode
+  '(global-auto-revert-mode hi-lock-mode highlight-parentheses-mode undo-tree-mode auto-complete-mode slime-mode eldoc-mode)
+  1
+  '(nil nil)
+  nil
+  nil
+  '((buffer-file-coding-system . undecided-unix)))
+
+(desktop-create-buffer 206
+  "/Users/kang/code/eopl/base/chapter5/letrec-lang/interp-registers.scm"
+  "interp-registers.scm"
+  'scheme-mode
+  '(global-auto-revert-mode hi-lock-mode highlight-parentheses-mode undo-tree-mode auto-complete-mode slime-mode eldoc-mode)
+  348
+  '(nil nil)
+  nil
+  nil
+  '((buffer-file-coding-system . undecided-dos)))
+
+(desktop-create-buffer 206
+  "/Users/kang/code/eopl/base/chapter5/letrec-lang/interp.scm"
+  "interp.scm<9>"
+  'scheme-mode
+  '(global-auto-revert-mode hi-lock-mode highlight-parentheses-mode undo-tree-mode auto-complete-mode slime-mode eldoc-mode)
+  3508
+  '(538 nil)
+  nil
+  nil
+  '((buffer-file-coding-system . undecided-dos)))
+
+(desktop-create-buffer 206
+  "/Users/kang/code/eopl/base/chapter5/letrec-lang/lang.scm"
+  "lang.scm<8>"
+  'scheme-mode
+  '(global-auto-revert-mode hi-lock-mode highlight-parentheses-mode undo-tree-mode auto-complete-mode slime-mode eldoc-mode)
+  1650
+  '(156 nil)
+  nil
+  nil
+  '((buffer-file-coding-system . undecided-dos)))
+
+(desktop-create-buffer 206
+  nil
+  "chapter5"
+  'dired-mode
+  '(global-auto-revert-mode hi-lock-mode highlight-parentheses-mode dired-omit-mode)
+  286
+  '(nil nil)
+  t
+  '("/Users/kang/code/eopl/base/chapter5/")
+  nil)
+
+(desktop-create-buffer 206
+  "/Users/kang/code/eopl/base/chapter5/test-all.scm"
+  "test-all.scm"
+  'scheme-mode
+  '(global-auto-revert-mode hi-lock-mode highlight-parentheses-mode undo-tree-mode auto-complete-mode slime-mode eldoc-mode)
+  1
+  '(nil nil)
+  nil
+  nil
+  '((buffer-file-coding-system . undecided-dos)))
+
+(desktop-create-buffer 206
+  nil
+  "code"
+  'dired-mode
+  '(global-auto-revert-mode hi-lock-mode highlight-parentheses-mode dired-omit-mode)
+  1499
+  '(220 nil)
+  t
+  '("/Users/kang/code/")
+  nil)
+
+(desktop-create-buffer 206
+  "/Users/kang/code/eopl/ch5/base/store.scm"
+  "store.scm<7>"
+  'scheme-mode
+  '(global-auto-revert-mode hi-lock-mode highlight-parentheses-mode undo-tree-mode auto-complete-mode slime-mode eldoc-mode)
+  2530
   '(nil nil)
   nil
   nil
@@ -33,108 +1089,1109 @@
   ".emacs"
   'emacs-lisp-mode
   '(global-auto-revert-mode hi-lock-mode highlight-symbol-mode highlight-parentheses-mode undo-tree-mode auto-complete-mode auto-indent-minor-mode)
-  2558
-  '(21073 nil)
+  3328
+  '(2688 nil)
   nil
   nil
   '((buffer-file-coding-system . undecided-unix)))
 
 (desktop-create-buffer 206
   nil
-  "ch2"
+  ".emacs.d"
   'dired-mode
   '(global-auto-revert-mode hi-lock-mode highlight-parentheses-mode dired-omit-mode)
-  220
-  '(nil nil)
+  6748
+  '(7070 nil)
   t
-  '("/Users/kang/code/eopl/ch2/")
+  '("/Users/kang/.emacs.d/")
   nil)
 
 (desktop-create-buffer 206
-  "/Users/kang/code/eopl/ch2/2.5.scm"
-  "2.5.scm"
+  "/Users/kang/code/eopl/ch4/base/callneed-cases.scm"
+  "callneed-cases.scm"
   'scheme-mode
   '(global-auto-revert-mode hi-lock-mode highlight-parentheses-mode undo-tree-mode auto-complete-mode slime-mode eldoc-mode)
-  311
-  '(594 nil)
+  3321
+  '(3006 nil)
+  nil
+  nil
+  '((buffer-file-coding-system . utf-8-unix)))
+
+(desktop-create-buffer 206
+  "/Users/kang/code/eopl/ch3/base/proc-lang.scm"
+  "proc-lang.scm<2>"
+  'scheme-mode
+  '(global-auto-revert-mode hi-lock-mode highlight-parentheses-mode undo-tree-mode auto-complete-mode slime-mode eldoc-mode)
+  40
+  '(nil nil)
   nil
   nil
   '((buffer-file-coding-system . undecided-unix)))
 
 (desktop-create-buffer 206
-  "/Users/kang/code/eopl/ch2/2.12.scm"
-  "2.12.scm"
+  "/Users/kang/code/eopl/libs/init.scm"
+  "init.scm"
   'scheme-mode
   '(global-auto-revert-mode hi-lock-mode highlight-parentheses-mode undo-tree-mode auto-complete-mode slime-mode eldoc-mode)
-  54
+  8
+  '(nil nil)
+  nil
+  nil
+  '((buffer-file-coding-system . undecided-unix)))
+
+(desktop-create-buffer 206
+  nil
+  "call-by-need"
+  'dired-mode
+  '(global-auto-revert-mode hi-lock-mode highlight-parentheses-mode dired-omit-mode)
+  314
+  '(nil nil)
+  t
+  '("/Users/kang/code/eopl/base/chapter4/call-by-need/")
+  nil)
+
+(desktop-create-buffer 206
+  "/Users/kang/code/eopl/base/chapter4/call-by-need/top.scm"
+  "top.scm<6>"
+  'scheme-mode
+  '(global-auto-revert-mode hi-lock-mode highlight-parentheses-mode undo-tree-mode auto-complete-mode slime-mode eldoc-mode)
+  590
+  '(508 nil)
+  nil
+  nil
+  '((buffer-file-coding-system . undecided-dos)))
+
+(desktop-create-buffer 206
+  "/Users/kang/code/eopl/base/chapter4/call-by-need/tests.scm"
+  "tests.scm<10>"
+  'scheme-mode
+  '(global-auto-revert-mode hi-lock-mode highlight-parentheses-mode undo-tree-mode auto-complete-mode slime-mode eldoc-mode)
+  5082
+  '(94 nil)
+  nil
+  nil
+  '((buffer-file-coding-system . undecided-dos)))
+
+(desktop-create-buffer 206
+  "/Users/kang/code/eopl/base/chapter4/call-by-need/store.scm"
+  "store.scm<6>"
+  'scheme-mode
+  '(global-auto-revert-mode hi-lock-mode highlight-parentheses-mode undo-tree-mode auto-complete-mode slime-mode eldoc-mode)
+  3320
+  '(nil nil)
+  nil
+  nil
+  '((buffer-file-coding-system . undecided-dos)))
+
+(desktop-create-buffer 206
+  "/Users/kang/code/eopl/base/chapter4/call-by-need/drscheme-init.scm"
+  "drscheme-init.scm<8>"
+  'scheme-mode
+  '(global-auto-revert-mode hi-lock-mode highlight-parentheses-mode undo-tree-mode auto-complete-mode slime-mode eldoc-mode)
+  1
+  '(nil nil)
+  nil
+  nil
+  '((buffer-file-coding-system . undecided-dos)))
+
+(desktop-create-buffer 206
+  "/Users/kang/code/eopl/base/chapter4/call-by-need/environments.scm"
+  "environments.scm<8>"
+  'scheme-mode
+  '(global-auto-revert-mode hi-lock-mode highlight-parentheses-mode undo-tree-mode auto-complete-mode slime-mode eldoc-mode)
+  2110
+  '(589 nil)
+  nil
+  nil
+  '((buffer-file-coding-system . undecided-dos)))
+
+(desktop-create-buffer 206
+  "/Users/kang/code/eopl/base/chapter4/call-by-need/interp.scm"
+  "interp.scm<8>"
+  'scheme-mode
+  '(global-auto-revert-mode hi-lock-mode highlight-parentheses-mode undo-tree-mode auto-complete-mode slime-mode eldoc-mode)
+  4338
+  '(483 nil)
+  nil
+  nil
+  '((buffer-file-coding-system . undecided-dos)))
+
+(desktop-create-buffer 206
+  "/Users/kang/code/eopl/base/chapter4/call-by-need/lang.scm"
+  "lang.scm<7>"
+  'scheme-mode
+  '(global-auto-revert-mode hi-lock-mode highlight-parentheses-mode undo-tree-mode auto-complete-mode slime-mode eldoc-mode)
+  2283
+  '(253 nil)
+  nil
+  nil
+  '((buffer-file-coding-system . undecided-dos)))
+
+(desktop-create-buffer 206
+  "/Users/kang/code/eopl/base/chapter4/call-by-need/data-structures.scm"
+  "data-structures.scm<8>"
+  'scheme-mode
+  '(global-auto-revert-mode hi-lock-mode highlight-parentheses-mode undo-tree-mode auto-complete-mode slime-mode eldoc-mode)
+  3106
+  '(463 nil)
+  nil
+  nil
+  '((buffer-file-coding-system . undecided-dos)))
+
+(desktop-create-buffer 206
+  nil
+  "chapter4"
+  'dired-mode
+  '(global-auto-revert-mode hi-lock-mode highlight-parentheses-mode dired-omit-mode)
+  229
+  '(nil nil)
+  t
+  '("/Users/kang/code/eopl/base/chapter4/")
+  nil)
+
+(desktop-create-buffer 206
+  "/Users/kang/code/eopl/ch4/base/callref-cases.scm"
+  "callref-cases.scm"
+  'scheme-mode
+  '(global-auto-revert-mode hi-lock-mode highlight-parentheses-mode undo-tree-mode auto-complete-mode slime-mode eldoc-mode)
+  4616
+  '(3532 nil)
+  nil
+  nil
+  '((buffer-file-coding-system . utf-8-unix)))
+
+(desktop-create-buffer 206
+  nil
+  "~"
+  'dired-mode
+  '(global-auto-revert-mode hi-lock-mode highlight-parentheses-mode dired-omit-mode)
+  278
+  '(nil nil)
+  t
+  '("/Users/kang/")
+  nil)
+
+(desktop-create-buffer 206
+  nil
+  "call-by-reference"
+  'dired-mode
+  '(global-auto-revert-mode hi-lock-mode highlight-parentheses-mode dired-omit-mode)
+  799
+  '(nil nil)
+  t
+  '("/Users/kang/code/eopl/base/chapter4/call-by-reference/")
+  nil)
+
+(desktop-create-buffer 206
+  "/Users/kang/code/eopl/base/chapter4/call-by-reference/tests.scm"
+  "tests.scm<9>"
+  'scheme-mode
+  '(global-auto-revert-mode hi-lock-mode highlight-parentheses-mode undo-tree-mode auto-complete-mode slime-mode eldoc-mode)
+  6639
+  '(94 nil)
+  nil
+  nil
+  '((buffer-file-coding-system . undecided-dos)))
+
+(desktop-create-buffer 206
+  "/Users/kang/code/eopl/base/chapter4/call-by-reference/pairval2.scm"
+  "pairval2.scm<2>"
+  'scheme-mode
+  '(global-auto-revert-mode hi-lock-mode highlight-parentheses-mode undo-tree-mode auto-complete-mode slime-mode eldoc-mode)
+  1198
+  '(nil nil)
+  nil
+  nil
+  '((buffer-file-coding-system . undecided-dos)))
+
+(desktop-create-buffer 206
+  "/Users/kang/code/eopl/base/chapter4/call-by-reference/top.scm"
+  "top.scm<5>"
+  'scheme-mode
+  '(global-auto-revert-mode hi-lock-mode highlight-parentheses-mode undo-tree-mode auto-complete-mode slime-mode eldoc-mode)
+  1229
+  '(509 nil)
+  nil
+  nil
+  '((buffer-file-coding-system . undecided-dos)))
+
+(desktop-create-buffer 206
+  "/Users/kang/code/eopl/base/chapter4/call-by-reference/interp.scm"
+  "interp.scm<7>"
+  'scheme-mode
+  '(global-auto-revert-mode hi-lock-mode highlight-parentheses-mode undo-tree-mode auto-complete-mode slime-mode eldoc-mode)
+  5701
+  '(403 nil)
+  nil
+  nil
+  '((buffer-file-coding-system . undecided-dos)))
+
+(desktop-create-buffer 206
+  "/Users/kang/code/eopl/base/chapter4/call-by-reference/lang.scm"
+  "lang.scm<6>"
+  'scheme-mode
+  '(global-auto-revert-mode hi-lock-mode highlight-parentheses-mode undo-tree-mode auto-complete-mode slime-mode eldoc-mode)
+  247
+  '(2276 t)
+  nil
+  nil
+  '((buffer-file-coding-system . undecided-dos)))
+
+(desktop-create-buffer 206
+  "/Users/kang/code/eopl/base/chapter4/call-by-reference/pairvals.scm"
+  "pairvals.scm<2>"
+  'scheme-mode
+  '(global-auto-revert-mode hi-lock-mode highlight-parentheses-mode undo-tree-mode auto-complete-mode slime-mode eldoc-mode)
+  1
+  '(nil nil)
+  nil
+  nil
+  '((buffer-file-coding-system . undecided-dos)))
+
+(desktop-create-buffer 206
+  "/Users/kang/code/eopl/base/chapter4/call-by-reference/store.scm"
+  "store.scm<5>"
+  'scheme-mode
+  '(global-auto-revert-mode hi-lock-mode highlight-parentheses-mode undo-tree-mode auto-complete-mode slime-mode eldoc-mode)
+  1749
+  '(nil nil)
+  nil
+  nil
+  '((buffer-file-coding-system . undecided-dos)))
+
+(desktop-create-buffer 206
+  "/Users/kang/code/eopl/base/chapter4/call-by-reference/environments.scm"
+  "environments.scm<7>"
+  'scheme-mode
+  '(global-auto-revert-mode hi-lock-mode highlight-parentheses-mode undo-tree-mode auto-complete-mode slime-mode eldoc-mode)
+  127
+  '(490 nil)
+  nil
+  nil
+  '((buffer-file-coding-system . undecided-dos)))
+
+(desktop-create-buffer 206
+  "/Users/kang/code/eopl/base/chapter4/call-by-reference/drscheme-init.scm"
+  "drscheme-init.scm<7>"
+  'scheme-mode
+  '(global-auto-revert-mode hi-lock-mode highlight-parentheses-mode undo-tree-mode auto-complete-mode slime-mode eldoc-mode)
+  1
+  '(nil nil)
+  nil
+  nil
+  '((buffer-file-coding-system . undecided-dos)))
+
+(desktop-create-buffer 206
+  "/Users/kang/code/eopl/base/chapter4/call-by-reference/data-structures.scm"
+  "data-structures.scm<7>"
+  'scheme-mode
+  '(global-auto-revert-mode hi-lock-mode highlight-parentheses-mode undo-tree-mode auto-complete-mode slime-mode eldoc-mode)
+  2905
+  '(468 nil)
+  nil
+  nil
+  '((buffer-file-coding-system . undecided-dos)))
+
+(desktop-create-buffer 206
+  "/Users/kang/code/eopl/.DS_Store"
+  ".DS_Store"
+  'fundamental-mode
+  '(global-auto-revert-mode hi-lock-mode highlight-parentheses-mode undo-tree-mode)
+  2619
+  '(nil nil)
+  nil
+  nil
+  '((buffer-file-coding-system . no-conversion)))
+
+(desktop-create-buffer 206
+  "/Users/kang/code/eopl/ch4/base/pair-v2.scm"
+  "pair-v2.scm"
+  'scheme-mode
+  '(global-auto-revert-mode hi-lock-mode highlight-parentheses-mode undo-tree-mode auto-complete-mode slime-mode eldoc-mode)
+  2
+  '(642 nil)
+  nil
+  nil
+  '((buffer-file-coding-system . utf-8-unix)))
+
+(desktop-create-buffer 206
+  "/Users/kang/code/eopl/libs/3-9.scm"
+  "3-9.scm"
+  'scheme-mode
+  '(global-auto-revert-mode hi-lock-mode highlight-parentheses-mode undo-tree-mode auto-complete-mode slime-mode eldoc-mode)
+  4088
+  '(4040 nil)
+  nil
+  nil
+  '((buffer-file-coding-system . undecided-unix)))
+
+(desktop-create-buffer 206
+  "/Users/kang/code/eopl/base/chapter4/mutable-pairs/pairval2.scm"
+  "pairval2.scm"
+  'scheme-mode
+  '(global-auto-revert-mode hi-lock-mode highlight-parentheses-mode undo-tree-mode auto-complete-mode slime-mode eldoc-mode)
+  542
+  '(542 nil)
+  nil
+  nil
+  '((buffer-file-coding-system . undecided-dos)))
+
+(desktop-create-buffer 206
+  nil
+  "mutable-pairs"
+  'dired-mode
+  '(global-auto-revert-mode hi-lock-mode highlight-parentheses-mode dired-omit-mode)
+  618
+  '(248 nil)
+  t
+  '("/Users/kang/code/eopl/base/chapter4/mutable-pairs/")
+  nil)
+
+(desktop-create-buffer 206
+  "/Users/kang/code/eopl/ch4/base/pair-v1.scm"
+  "pair-v1.scm"
+  'scheme-mode
+  '(global-auto-revert-mode hi-lock-mode highlight-parentheses-mode undo-tree-mode auto-complete-mode slime-mode eldoc-mode)
+  185
+  '(14 t)
+  nil
+  nil
+  '((buffer-file-coding-system . undecided-unix)))
+
+(desktop-create-buffer 206
+  "/Users/kang/code/eopl/base/chapter4/mutable-pairs/interp.scm"
+  "interp.scm<6>"
+  'scheme-mode
+  '(global-auto-revert-mode hi-lock-mode highlight-parentheses-mode undo-tree-mode auto-complete-mode slime-mode eldoc-mode)
+  5149
+  '(399 nil)
+  nil
+  nil
+  '((buffer-file-coding-system . undecided-dos)))
+
+(desktop-create-buffer 206
+  "/Users/kang/code/eopl/base/chapter4/mutable-pairs/data-structures.scm"
+  "data-structures.scm<6>"
+  'scheme-mode
+  '(global-auto-revert-mode hi-lock-mode highlight-parentheses-mode undo-tree-mode auto-complete-mode slime-mode eldoc-mode)
+  2859
+  '(399 nil)
+  nil
+  nil
+  '((buffer-file-coding-system . undecided-dos)))
+
+(desktop-create-buffer 206
+  "/Users/kang/code/eopl/base/chapter4/mutable-pairs/drscheme-init.scm"
+  "drscheme-init.scm<6>"
+  'scheme-mode
+  '(global-auto-revert-mode hi-lock-mode highlight-parentheses-mode undo-tree-mode auto-complete-mode slime-mode eldoc-mode)
+  4287
+  '(nil nil)
+  nil
+  nil
+  '((buffer-file-coding-system . undecided-dos)))
+
+(desktop-create-buffer 206
+  "/Users/kang/code/eopl/base/chapter4/mutable-pairs/environments.scm"
+  "environments.scm<6>"
+  'scheme-mode
+  '(global-auto-revert-mode hi-lock-mode highlight-parentheses-mode undo-tree-mode auto-complete-mode slime-mode eldoc-mode)
+  1658
+  '(428 nil)
+  nil
+  nil
+  '((buffer-file-coding-system . undecided-dos)))
+
+(desktop-create-buffer 206
+  "/Users/kang/code/eopl/base/chapter4/mutable-pairs/lang.scm"
+  "lang.scm<5>"
+  'scheme-mode
+  '(global-auto-revert-mode hi-lock-mode highlight-parentheses-mode undo-tree-mode auto-complete-mode slime-mode eldoc-mode)
+  2278
+  '(216 nil)
+  nil
+  nil
+  '((buffer-file-coding-system . undecided-dos)))
+
+(desktop-create-buffer 206
+  "/Users/kang/code/eopl/base/chapter4/mutable-pairs/pairval1.scm"
+  "pairval1.scm"
+  'scheme-mode
+  '(global-auto-revert-mode hi-lock-mode highlight-parentheses-mode undo-tree-mode auto-complete-mode slime-mode eldoc-mode)
+  1252
+  '(227 nil)
+  nil
+  nil
+  '((buffer-file-coding-system . undecided-dos)))
+
+(desktop-create-buffer 206
+  "/Users/kang/code/eopl/base/chapter4/mutable-pairs/pairvals.scm"
+  "pairvals.scm"
+  'scheme-mode
+  '(global-auto-revert-mode hi-lock-mode highlight-parentheses-mode undo-tree-mode auto-complete-mode slime-mode eldoc-mode)
+  1
+  '(nil nil)
+  nil
+  nil
+  '((buffer-file-coding-system . undecided-dos)))
+
+(desktop-create-buffer 206
+  "/Users/kang/code/eopl/base/chapter4/mutable-pairs/store.scm"
+  "store.scm<4>"
+  'scheme-mode
+  '(global-auto-revert-mode hi-lock-mode highlight-parentheses-mode undo-tree-mode auto-complete-mode slime-mode eldoc-mode)
+  3151
+  '(nil nil)
+  nil
+  nil
+  '((buffer-file-coding-system . undecided-dos)))
+
+(desktop-create-buffer 206
+  "/Users/kang/code/eopl/base/chapter4/mutable-pairs/tests.scm"
+  "tests.scm<8>"
+  'scheme-mode
+  '(global-auto-revert-mode hi-lock-mode highlight-parentheses-mode undo-tree-mode auto-complete-mode slime-mode eldoc-mode)
+  493
+  '(5233 nil)
+  nil
+  nil
+  '((buffer-file-coding-system . undecided-dos)))
+
+(desktop-create-buffer 206
+  "/Users/kang/code/eopl/base/chapter4/mutable-pairs/top.scm"
+  "top.scm<4>"
+  'scheme-mode
+  '(global-auto-revert-mode hi-lock-mode highlight-parentheses-mode undo-tree-mode auto-complete-mode slime-mode eldoc-mode)
+  1625
+  '(507 nil)
+  nil
+  nil
+  '((buffer-file-coding-system . undecided-dos)))
+
+(desktop-create-buffer 206
+  "/Users/kang/code/eopl/ch4/base/implicit-cases.scm"
+  "implicit-cases.scm"
+  'scheme-mode
+  '(global-auto-revert-mode hi-lock-mode highlight-parentheses-mode undo-tree-mode auto-complete-mode slime-mode eldoc-mode)
+  703
+  '(2799 nil)
+  nil
+  nil
+  '((buffer-file-coding-system . undecided-unix)))
+
+(desktop-create-buffer 206
+  "/Users/kang/code/Ruby/error.rb"
+  "error.rb"
+  'ruby-mode
+  '(global-auto-revert-mode hi-lock-mode highlight-symbol-mode highlight-parentheses-mode undo-tree-mode auto-complete-mode auto-indent-minor-mode)
+  191
+  '(1 nil)
+  nil
+  nil
+  '((indent-tabs-mode) (buffer-file-coding-system . utf-8-unix)))
+
+(desktop-create-buffer 206
+  "/Users/kang/code/Ruby/demo.rb"
+  "demo.rb"
+  'ruby-mode
+  '(global-auto-revert-mode hi-lock-mode highlight-symbol-mode highlight-parentheses-mode undo-tree-mode auto-complete-mode auto-indent-minor-mode)
+  424
+  '(267 nil)
+  nil
+  nil
+  '((indent-tabs-mode) (buffer-file-coding-system . utf-8-unix)))
+
+(desktop-create-buffer 206
+  nil
+  "gems"
+  'dired-mode
+  '(global-auto-revert-mode hi-lock-mode highlight-parentheses-mode)
+  40735
+  '(15150 nil)
+  t
+  '("/Users/kang/.rvm/gems/ruby-1.9.3-p327/gems/")
+  nil)
+
+(desktop-create-buffer 206
+  nil
+  "Ruby"
+  'dired-mode
+  '(global-auto-revert-mode hi-lock-mode highlight-parentheses-mode dired-omit-mode)
+  230
+  '(nil nil)
+  t
+  '("/Users/kang/code/Ruby/")
+  nil)
+
+(desktop-create-buffer 206
+  "/Users/kang/code/Ruby/yes.rb"
+  "yes.rb"
+  'ruby-mode
+  '(global-auto-revert-mode hi-lock-mode highlight-symbol-mode highlight-parentheses-mode undo-tree-mode auto-complete-mode auto-indent-minor-mode)
+  354
+  '(308 nil)
+  nil
+  nil
+  '((indent-tabs-mode) (buffer-file-coding-system . utf-8-unix)))
+
+(desktop-create-buffer 206
+  "/Users/kang/code/Ruby/mana.rb"
+  "mana.rb"
+  'ruby-mode
+  '(global-auto-revert-mode hi-lock-mode highlight-symbol-mode highlight-parentheses-mode undo-tree-mode auto-complete-mode auto-indent-minor-mode)
+  337
+  '(1 nil)
+  nil
+  nil
+  '((indent-tabs-mode) (buffer-file-coding-system . utf-8-unix)))
+
+(desktop-create-buffer 206
+  "/Users/kang/code/Ruby/paraller.rb"
+  "paraller.rb"
+  'ruby-mode
+  '(global-auto-revert-mode hi-lock-mode highlight-symbol-mode highlight-parentheses-mode undo-tree-mode auto-complete-mode auto-indent-minor-mode)
+  5509
+  '(615 nil)
+  nil
+  nil
+  '((indent-tabs-mode) (buffer-file-coding-system . utf-8-unix)))
+
+(desktop-create-buffer 206
+  "/Users/kang/.rvm/gems/ruby-1.9.3-p327/gems/fork_manager-0.0.3/lib/fork_manager.rb"
+  "fork_manager.rb"
+  'ruby-mode
+  '(global-auto-revert-mode hi-lock-mode highlight-symbol-mode highlight-parentheses-mode undo-tree-mode auto-complete-mode auto-indent-minor-mode)
+  1671
+  '(424 nil)
+  nil
+  nil
+  '((indent-tabs-mode) (buffer-file-coding-system . undecided-unix)))
+
+(desktop-create-buffer 206
+  nil
+  "lib"
+  'dired-mode
+  '(global-auto-revert-mode hi-lock-mode highlight-parentheses-mode dired-omit-mode)
+  253
+  '(nil nil)
+  t
+  '("/Users/kang/.rvm/gems/ruby-1.9.3-p327/gems/fork_manager-0.0.3/lib/")
+  nil)
+
+(desktop-create-buffer 206
+  nil
+  "fork_manager-0.0.3"
+  'dired-mode
+  '(global-auto-revert-mode hi-lock-mode highlight-parentheses-mode dired-omit-mode)
+  258
+  '(nil nil)
+  t
+  '("/Users/kang/.rvm/gems/ruby-1.9.3-p327/gems/fork_manager-0.0.3/")
+  nil)
+
+(desktop-create-buffer 206
+  "/Users/kang/code/Ruby/forma.rb"
+  "forma.rb"
+  'ruby-mode
+  '(global-auto-revert-mode hi-lock-mode highlight-symbol-mode highlight-parentheses-mode undo-tree-mode auto-complete-mode auto-indent-minor-mode)
+  91
+  '(91 nil)
+  nil
+  nil
+  '((indent-tabs-mode) (buffer-file-coding-system . utf-8-unix)))
+
+(desktop-create-buffer 206
+  "/Users/kang/code/Ruby/object_browser.rb"
+  "object_browser.rb"
+  'ruby-mode
+  '(global-auto-revert-mode hi-lock-mode highlight-symbol-mode highlight-parentheses-mode undo-tree-mode auto-complete-mode auto-indent-minor-mode)
+  1
+  '(nil nil)
+  nil
+  nil
+  '((indent-tabs-mode) (buffer-file-coding-system . undecided-unix)))
+
+(desktop-create-buffer 206
+  "/Users/kang/code/eopl/base/chapter4/implicit-refs/data-structures.scm"
+  "data-structures.scm<5>"
+  'scheme-mode
+  '(global-auto-revert-mode hi-lock-mode highlight-parentheses-mode undo-tree-mode auto-complete-mode slime-mode eldoc-mode)
+  2588
+  '(2585 nil)
+  nil
+  nil
+  '((buffer-file-coding-system . undecided-dos)))
+
+(desktop-create-buffer 206
+  nil
+  "implicit-refs"
+  'dired-mode
+  '(global-auto-revert-mode hi-lock-mode highlight-parentheses-mode dired-omit-mode)
+  247
+  '(nil nil)
+  t
+  '("/Users/kang/code/eopl/base/chapter4/implicit-refs/")
+  nil)
+
+(desktop-create-buffer 206
+  "/Users/kang/code/eopl/base/chapter4/implicit-refs/environments.scm"
+  "environments.scm<5>"
+  'scheme-mode
+  '(global-auto-revert-mode hi-lock-mode highlight-parentheses-mode undo-tree-mode auto-complete-mode slime-mode eldoc-mode)
+  21
+  '(492 nil)
+  nil
+  nil
+  '((buffer-file-coding-system . undecided-dos)))
+
+(desktop-create-buffer 206
+  "/Users/kang/code/eopl/base/chapter4/implicit-refs/lang.scm"
+  "lang.scm<4>"
+  'scheme-mode
+  '(global-auto-revert-mode hi-lock-mode highlight-parentheses-mode undo-tree-mode auto-complete-mode slime-mode eldoc-mode)
+  1271
+  '(216 nil)
+  nil
+  nil
+  '((buffer-file-coding-system . undecided-dos)))
+
+(desktop-create-buffer 206
+  "/Users/kang/code/eopl/base/chapter4/implicit-refs/interp.scm"
+  "interp.scm<5>"
+  'scheme-mode
+  '(global-auto-revert-mode hi-lock-mode highlight-parentheses-mode undo-tree-mode auto-complete-mode slime-mode eldoc-mode)
+  1524
+  '(1533 nil)
+  nil
+  nil
+  '((buffer-file-coding-system . undecided-dos)))
+
+(desktop-create-buffer 206
+  "/Users/kang/code/eopl/base/chapter4/implicit-refs/top.scm"
+  "top.scm<3>"
+  'scheme-mode
+  '(global-auto-revert-mode hi-lock-mode highlight-parentheses-mode undo-tree-mode auto-complete-mode slime-mode eldoc-mode)
+  591
+  '(509 nil)
+  nil
+  nil
+  '((buffer-file-coding-system . undecided-dos)))
+
+(desktop-create-buffer 206
+  "/Users/kang/code/eopl/base/chapter4/implicit-refs/tests.scm"
+  "tests.scm<7>"
+  'scheme-mode
+  '(global-auto-revert-mode hi-lock-mode highlight-parentheses-mode undo-tree-mode auto-complete-mode slime-mode eldoc-mode)
+  1
+  '(4044 nil)
+  nil
+  nil
+  '((buffer-file-coding-system . undecided-dos)))
+
+(desktop-create-buffer 206
+  "/Users/kang/code/eopl/base/chapter4/implicit-refs/store.scm"
+  "store.scm<3>"
+  'scheme-mode
+  '(global-auto-revert-mode hi-lock-mode highlight-parentheses-mode undo-tree-mode auto-complete-mode slime-mode eldoc-mode)
+  1
+  '(nil nil)
+  nil
+  nil
+  '((buffer-file-coding-system . undecided-dos)))
+
+(desktop-create-buffer 206
+  "/Users/kang/code/eopl/base/chapter4/implicit-refs/drscheme-init.scm"
+  "drscheme-init.scm<5>"
+  'scheme-mode
+  '(global-auto-revert-mode hi-lock-mode highlight-parentheses-mode undo-tree-mode auto-complete-mode slime-mode eldoc-mode)
+  3164
+  '(nil nil)
+  nil
+  nil
+  '((buffer-file-coding-system . undecided-dos)))
+
+(desktop-create-buffer 206
+  "/Users/kang/code/eopl/base/chapter3/proc-lang/proc-rep/tests.scm"
+  "tests.scm<6>"
+  'scheme-mode
+  '(global-auto-revert-mode hi-lock-mode highlight-parentheses-mode undo-tree-mode auto-complete-mode slime-mode eldoc-mode)
+  114
+  '(1 nil)
+  nil
+  nil
+  '((buffer-file-coding-system . undecided-dos)))
+
+(desktop-create-buffer 206
+  nil
+  "proc-rep"
+  'dired-mode
+  '(global-auto-revert-mode hi-lock-mode highlight-parentheses-mode dired-omit-mode)
+  554
+  '(nil nil)
+  t
+  '("/Users/kang/code/eopl/base/chapter3/proc-lang/proc-rep/")
+  nil)
+
+(desktop-create-buffer 206
+  "/Users/kang/code/eopl/base/chapter3/lexaddr-lang/tests.scm"
+  "tests.scm<2>"
+  'scheme-mode
+  '(global-auto-revert-mode hi-lock-mode highlight-parentheses-mode undo-tree-mode auto-complete-mode slime-mode eldoc-mode)
+  47
+  '(1927 nil)
+  nil
+  nil
+  '((buffer-file-coding-system . undecided-dos)))
+
+(desktop-create-buffer 206
+  "/Users/kang/code/eopl/base/chapter3/letrec-lang/tests.scm"
+  "tests.scm<5>"
+  'scheme-mode
+  '(global-auto-revert-mode hi-lock-mode highlight-parentheses-mode undo-tree-mode auto-complete-mode slime-mode eldoc-mode)
+  114
+  '(1 nil)
+  nil
+  nil
+  '((buffer-file-coding-system . undecided-dos)))
+
+(desktop-create-buffer 206
+  "/Users/kang/code/eopl/base/chapter3/let-lang/tests.scm"
+  "tests.scm<4>"
+  'scheme-mode
+  '(global-auto-revert-mode hi-lock-mode highlight-parentheses-mode undo-tree-mode auto-complete-mode slime-mode eldoc-mode)
+  63
+  '(1 nil)
+  nil
+  nil
+  '((buffer-file-coding-system . undecided-dos)))
+
+(desktop-create-buffer 206
+  "/Users/kang/code/eopl/base/chapter4/explicit-refs/store.scm"
+  "store.scm"
+  'scheme-mode
+  '(global-auto-revert-mode hi-lock-mode highlight-parentheses-mode undo-tree-mode auto-complete-mode slime-mode eldoc-mode)
+  230
+  '(184 nil)
+  nil
+  nil
+  '((buffer-file-coding-system . undecided-dos)))
+
+(desktop-create-buffer 206
+  "/Users/kang/code/eopl/base/chapter4/explicit-refs/interp.scm"
+  "interp.scm<4>"
+  'scheme-mode
+  '(global-auto-revert-mode hi-lock-mode highlight-parentheses-mode undo-tree-mode auto-complete-mode slime-mode eldoc-mode)
+  241
+  '(374 nil)
+  nil
+  nil
+  '((buffer-file-coding-system . undecided-dos)))
+
+(desktop-create-buffer 206
+  "/Users/kang/code/eopl/base/chapter4/explicit-refs/data-structures.scm"
+  "data-structures.scm<4>"
+  'scheme-mode
+  '(global-auto-revert-mode hi-lock-mode highlight-parentheses-mode undo-tree-mode auto-complete-mode slime-mode eldoc-mode)
+  2474
+  '(165 nil)
+  nil
+  nil
+  '((buffer-file-coding-system . undecided-dos)))
+
+(desktop-create-buffer 206
+  "/Users/kang/code/eopl/base/chapter4/explicit-refs/environments.scm"
+  "environments.scm<4>"
+  'scheme-mode
+  '(global-auto-revert-mode hi-lock-mode highlight-parentheses-mode undo-tree-mode auto-complete-mode slime-mode eldoc-mode)
+  1228
+  '(136 nil)
+  nil
+  nil
+  '((buffer-file-coding-system . undecided-dos)))
+
+(desktop-create-buffer 206
+  "/Users/kang/code/eopl/base/chapter4/explicit-refs/top.scm"
+  "top.scm<2>"
+  'scheme-mode
+  '(global-auto-revert-mode hi-lock-mode highlight-parentheses-mode undo-tree-mode auto-complete-mode slime-mode eldoc-mode)
+  1626
+  '(509 nil)
+  nil
+  nil
+  '((buffer-file-coding-system . undecided-dos)))
+
+(desktop-create-buffer 206
+  "/Users/kang/code/eopl/base/chapter4/explicit-refs/drscheme-init.scm"
+  "drscheme-init.scm<4>"
+  'scheme-mode
+  '(global-auto-revert-mode hi-lock-mode highlight-parentheses-mode undo-tree-mode auto-complete-mode slime-mode eldoc-mode)
+  3164
+  '(nil nil)
+  nil
+  nil
+  '((buffer-file-coding-system . undecided-dos)))
+
+(desktop-create-buffer 206
+  "/Users/kang/code/eopl/base/chapter4/explicit-refs/lang.scm"
+  "lang.scm<3>"
+  'scheme-mode
+  '(global-auto-revert-mode hi-lock-mode highlight-parentheses-mode undo-tree-mode auto-complete-mode slime-mode eldoc-mode)
+  2025
+  '(216 nil)
+  nil
+  nil
+  '((buffer-file-coding-system . undecided-dos)))
+
+(desktop-create-buffer 206
+  "/Users/kang/code/eopl/ch2/2.11.scm"
+  "2.11.scm"
+  'scheme-mode
+  '(global-auto-revert-mode hi-lock-mode highlight-parentheses-mode undo-tree-mode auto-complete-mode slime-mode eldoc-mode)
+  1403
+  '(748 nil)
+  nil
+  nil
+  '((buffer-file-coding-system . undecided-unix)))
+
+(desktop-create-buffer 206
+  "/Users/kang/code/eopl/base/chapter3/lexaddr-lang/translator.scm"
+  "translator.scm"
+  'scheme-mode
+  '(global-auto-revert-mode hi-lock-mode highlight-parentheses-mode undo-tree-mode auto-complete-mode slime-mode eldoc-mode)
+  2636
+  '(169 nil)
+  nil
+  nil
+  '((buffer-file-coding-system . undecided-dos)))
+
+(desktop-create-buffer 206
+  "/Users/kang/code/eopl/base/chapter3/lexaddr-lang/interp.scm"
+  "interp.scm<3>"
+  'scheme-mode
+  '(global-auto-revert-mode hi-lock-mode highlight-parentheses-mode undo-tree-mode auto-complete-mode slime-mode eldoc-mode)
+  2363
+  '(358 nil)
+  nil
+  nil
+  '((buffer-file-coding-system . undecided-dos)))
+
+(desktop-create-buffer 206
+  "/Users/kang/code/eopl/base/chapter3/lexaddr-lang/top.scm"
+  "top.scm"
+  'scheme-mode
+  '(global-auto-revert-mode hi-lock-mode highlight-parentheses-mode undo-tree-mode auto-complete-mode slime-mode eldoc-mode)
+  1425
+  '(583 nil)
+  nil
+  nil
+  '((buffer-file-coding-system . undecided-dos)))
+
+(desktop-create-buffer 206
+  "/Users/kang/code/eopl/base/chapter3/lexaddr-lang/lang.scm"
+  "lang.scm<2>"
+  'scheme-mode
+  '(global-auto-revert-mode hi-lock-mode highlight-parentheses-mode undo-tree-mode auto-complete-mode slime-mode eldoc-mode)
+  1834
+  '(1740 nil)
+  nil
+  nil
+  '((buffer-file-coding-system . undecided-dos)))
+
+(desktop-create-buffer 206
+  "/Users/kang/code/eopl/base/chapter3/lexaddr-lang/environments.scm"
+  "environments.scm<3>"
+  'scheme-mode
+  '(global-auto-revert-mode hi-lock-mode highlight-parentheses-mode undo-tree-mode auto-complete-mode slime-mode eldoc-mode)
+  705
+  '(452 nil)
+  nil
+  nil
+  '((buffer-file-coding-system . undecided-dos)))
+
+(desktop-create-buffer 206
+  "/Users/kang/code/eopl/base/chapter3/lexaddr-lang/drscheme-init.scm"
+  "drscheme-init.scm<3>"
+  'scheme-mode
+  '(global-auto-revert-mode hi-lock-mode highlight-parentheses-mode undo-tree-mode auto-complete-mode slime-mode eldoc-mode)
+  3164
+  '(nil nil)
+  nil
+  nil
+  '((buffer-file-coding-system . undecided-dos)))
+
+(desktop-create-buffer 206
+  "/Users/kang/code/eopl/base/chapter3/lexaddr-lang/data-structures.scm"
+  "data-structures.scm<3>"
+  'scheme-mode
+  '(global-auto-revert-mode hi-lock-mode highlight-parentheses-mode undo-tree-mode auto-complete-mode slime-mode eldoc-mode)
+  2358
+  '(1646 nil)
+  nil
+  nil
+  '((buffer-file-coding-system . undecided-dos)))
+
+(desktop-create-buffer 206
+  "/Users/kang/code/eopl/libs/test-harness.scm"
+  "test-harness.scm"
+  'scheme-mode
+  '(global-auto-revert-mode hi-lock-mode highlight-parentheses-mode undo-tree-mode auto-complete-mode slime-mode eldoc-mode)
+  1438
+  '(6364 nil)
+  nil
+  nil
+  '((buffer-file-coding-system . undecided-unix)))
+
+(desktop-create-buffer 206
+  "/Users/kang/code/eopl/libs/test-suite.scm"
+  "test-suite.scm"
+  'scheme-mode
+  '(global-auto-revert-mode hi-lock-mode highlight-parentheses-mode undo-tree-mode auto-complete-mode slime-mode eldoc-mode)
+  1
+  '(50842 nil)
+  nil
+  nil
+  '((buffer-file-coding-system . undecided-unix)))
+
+(desktop-create-buffer 206
+  "/Users/kang/code/eopl/libs/grammar.scm"
+  "grammar.scm"
+  'scheme-mode
+  '(global-auto-revert-mode hi-lock-mode highlight-parentheses-mode undo-tree-mode auto-complete-mode slime-mode eldoc-mode)
+  4548
+  '(4548 nil)
+  nil
+  nil
+  '((buffer-file-coding-system . undecided-unix)))
+
+(desktop-create-buffer 206
+  "/Users/kang/code/eopl/libs/define-datatype.scm"
+  "define-datatype.scm"
+  'scheme-mode
+  '(global-auto-revert-mode hi-lock-mode highlight-parentheses-mode undo-tree-mode auto-complete-mode slime-mode eldoc-mode)
+  19703
   '(1 nil)
   nil
   nil
   '((buffer-file-coding-system . undecided-unix)))
 
 (desktop-create-buffer 206
-  "/Users/kang/code/eopl/libs/scheme48-init.scm"
-  "scheme48-init.scm"
+  "/Users/kang/code/eopl/base/chapter3/letrec-lang/lang.scm"
+  "lang.scm"
   'scheme-mode
   '(global-auto-revert-mode hi-lock-mode highlight-parentheses-mode undo-tree-mode auto-complete-mode slime-mode eldoc-mode)
-  390
-  '(304 nil)
+  660
+  '(1177 nil)
   nil
   nil
-  '((buffer-file-coding-system . undecided-unix)))
+  '((buffer-file-coding-system . undecided-dos)))
 
 (desktop-create-buffer 206
-  "/Users/kang/code/eopl/ch3/3.3.scm"
-  "3.3.scm"
+  "/Users/kang/code/eopl/base/chapter3/letrec-lang/drscheme-init.scm"
+  "drscheme-init.scm<2>"
   'scheme-mode
   '(global-auto-revert-mode hi-lock-mode highlight-parentheses-mode undo-tree-mode auto-complete-mode slime-mode eldoc-mode)
-  99
-  '(100 nil)
+  1670
+  '(3164 nil)
   nil
   nil
-  '((buffer-file-coding-system . undecided-unix)))
+  '((buffer-file-coding-system . undecided-dos)))
 
 (desktop-create-buffer 206
-  "/Users/kang/code/eopl/ch2/2.4.scm"
-  "2.4.scm"
+  "/Users/kang/code/eopl/base/chapter3/letrec-lang/interp.scm"
+  "interp.scm<2>"
   'scheme-mode
   '(global-auto-revert-mode hi-lock-mode highlight-parentheses-mode undo-tree-mode auto-complete-mode slime-mode eldoc-mode)
-  84
-  '(84 nil)
+  2594
+  '(456 nil)
   nil
   nil
-  '((buffer-file-coding-system . undecided-unix)))
+  '((buffer-file-coding-system . undecided-dos)))
 
 (desktop-create-buffer 206
-  "/Users/kang/Downloads/chicken-4.8.0.4/demo/a.scm"
-  "a.scm"
+  "/Users/kang/code/eopl/base/chapter3/letrec-lang/environments.scm"
+  "environments.scm<2>"
   'scheme-mode
   '(global-auto-revert-mode hi-lock-mode highlight-parentheses-mode undo-tree-mode auto-complete-mode slime-mode eldoc-mode)
-  120
+  1314
+  '(545 nil)
+  nil
+  nil
+  '((buffer-file-coding-system . undecided-dos)))
+
+(desktop-create-buffer 206
+  "/Users/kang/code/eopl/base/chapter3/letrec-lang/data-structures.scm"
+  "data-structures.scm<2>"
+  'scheme-mode
+  '(global-auto-revert-mode hi-lock-mode highlight-parentheses-mode undo-tree-mode auto-complete-mode slime-mode eldoc-mode)
+  265
+  '(333 nil)
+  nil
+  nil
+  '((buffer-file-coding-system . undecided-dos)))
+
+(desktop-create-buffer 206
+  "/Users/kang/code/eopl/libs/environments.scm"
+  "environments.scm"
+  'scheme-mode
+  '(global-auto-revert-mode hi-lock-mode highlight-parentheses-mode undo-tree-mode auto-complete-mode slime-mode eldoc-mode)
+  1160
   '(nil nil)
   nil
   nil
+  '((buffer-file-coding-system . undecided-dos)))
+
+(desktop-create-buffer 206
+  "/Users/kang/code/eopl/base/chapter2/sec2.1.scm"
+  "sec2.1.scm"
+  'scheme-mode
+  '(global-auto-revert-mode hi-lock-mode highlight-parentheses-mode undo-tree-mode auto-complete-mode slime-mode eldoc-mode)
+  1249
+  '(1 nil)
+  nil
+  nil
   '((buffer-file-coding-system . undecided-unix)))
 
 (desktop-create-buffer 206
-  "/Users/kang/code/Ruby/tinyrb/vm/grammar.c"
-  "grammar.c"
-  'c-mode
-  '(abbrev-mode global-auto-revert-mode hi-lock-mode highlight-symbol-mode highlight-parentheses-mode undo-tree-mode auto-complete-mode xgtags-mode hs-minor-mode)
-  3080
-  '(98337 nil)
   nil
-  nil
-  '((tab-width . 4) (indent-tabs-mode) (buffer-file-coding-system . undecided-unix)))
+  "chapter2"
+  'dired-mode
+  '(global-auto-revert-mode hi-lock-mode highlight-parentheses-mode dired-omit-mode)
+  291
+  '(nil nil)
+  t
+  '("/Users/kang/code/eopl/base/chapter2/")
+  nil)
 
 (desktop-create-buffer 206
-  "/Users/kang/.emacs.d/swank-chicken/README"
-  "README"
-  'fundamental-mode
-  '(global-auto-revert-mode hi-lock-mode highlight-parentheses-mode undo-tree-mode)
-  337
-  '(57 nil)
+  "/Users/kang/code/eopl/base/chapter1/test-chap1.scm"
+  "test-chap1.scm"
+  'scheme-mode
+  '(global-auto-revert-mode hi-lock-mode highlight-parentheses-mode undo-tree-mode auto-complete-mode slime-mode eldoc-mode)
+  2738
+  '(1 nil)
   nil
   nil
-  '((buffer-file-coding-system . undecided-unix)))
+  '((buffer-file-coding-system . undecided-dos)))
+
+(desktop-create-buffer 206
+  "/Users/kang/code/eopl/base/chapter3/proc-lang/ds-rep/tests.scm"
+  "tests.scm"
+  'scheme-mode
+  '(global-auto-revert-mode hi-lock-mode highlight-parentheses-mode undo-tree-mode auto-complete-mode slime-mode eldoc-mode)
+  2422
+  '(nil nil)
+  nil
+  nil
+  '((buffer-file-coding-system . undecided-dos)))
+
+(desktop-create-buffer 206
+  "/Users/kang/code/eopl/base/chapter3/proc-lang/ds-rep/data-structures.scm"
+  "data-structures.scm"
+  'scheme-mode
+  '(global-auto-revert-mode hi-lock-mode highlight-parentheses-mode undo-tree-mode auto-complete-mode slime-mode eldoc-mode)
+  1371
+  '(1184 nil)
+  nil
+  nil
+  '((buffer-file-coding-system . undecided-dos)))
 

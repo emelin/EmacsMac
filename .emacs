@@ -6,11 +6,6 @@
 
 (setq load-path (cons (expand-file-name "~/.emacs.d") load-path))
 
-;; (set-fontset-font
-;;     (frame-parameter nil 'font)
-;;     'han
-;;     (font-spec :family "Hiragino Sans GB" ))
-
 (tool-bar-mode -1)
 (scroll-bar-mode -1)
 (set-fringe-mode '(0 . 0))
@@ -19,7 +14,16 @@
 (fset 'yes-or-no-p 'y-or-n-p)
 
 (global-set-key (kbd "C-c l") 'set-mark-command)
-(global-set-key (kbd "C-c C-v") 'copy-region-as-kill)
+(global-set-key (kbd "C-x c") 'copy-region-as-kill)
+(global-set-key (kbd "C-c u") 'uncomment-region)
+(global-set-key (kbd "C-c c") 'comment-region)
+(global-set-key (kbd "C-c k") 'kill-region)
+(global-set-key (kbd "C-c -") 'beginning-of-buffer)
+(global-set-key (kbd "C-c =") 'end-of-buffer)
+(global-set-key (kbd "C-c t") 'undo-tree-visualize)
+(global-set-key (kbd "C-c j") 'ido-switch-buffer)
+(global-set-key (kbd "C-c o") 'execute-extended-command)
+(global-set-key (kbd "C-c g") 'goto-line)
 
 (global-auto-revert-mode t)
 (setq column-number-mode t)
@@ -32,7 +36,7 @@
 (setq message-log-max nil)
 (setq ring-bell-function 'ignore)
 
-(load "desktop") 
+(load "desktop")
 (desktop-save-mode)
 (show-paren-mode)
 (require 'linum)
@@ -67,7 +71,6 @@
 (global-set-key (kbd "C-x C-f") 'ido-find-file)
 (global-set-key (kbd "C-x f") 'ido-find-file)
 (global-set-key (kbd "C-x m") 'anything-execute-extended-command)
-;;(global-set-key (kbd "C-x m") 'execute-extended-command)
 (global-set-key (kbd "C-c C-m") 'anything-execute-extended-command)
 (global-set-key (kbd "C-c m")   'anything-execute-extended-command)
 
@@ -108,7 +111,7 @@
   "Turn off function `highlight-symbol-mode'."
   (highlight-symbol-mode -1))
 (dolist (hook '(emacs-lisp-mode-hook lisp-interaction-mode-hook java-mode-hook
-	c++-mode-hook  c-mode-common-hook text-mode-hook ruby-mode-hook html-mode-hook))
+	c++-mode-hook  c-mode-common-hook text-mode-hook ruby-mode-hook html-mode-hook scheme-mode))
   (add-hook hook 'highlight-symbol-mode-on))
 
 (global-set-key [(control f3)] 'highlight-symbol-at-point)
@@ -119,8 +122,8 @@
 (global-set-key (kbd "C-c M-N") 'highlight-symbol-next-in-defun)
 (global-set-key (kbd "C-c M-P") 'highlight-symbol-prev-in-defun)
 
-;(define-globalized-minor-mode global-highlight-symbol-mode highlight-symbol-mode highlight-symbol-mode)
-;(global-highlight-symbol-mode 1)
+;;(define-globalized-minor-mode global-highlight-symbol-mode highlight-symbol-mode highlight-symbol-mode)
+;;(global-highlight-symbol-mode 1)
 (custom-set-faces
  '(highlight-symbol-face ((((class color) (background dark)) (:background "MediumPurple1")))))
 
@@ -182,30 +185,30 @@
              (find (aref (buffer-name buffer) 0) " *"))
           (buffer-list))))
 
-(set-face-attribute 'tabbar-default-face nil  
-                    :family "DejaVu Sans Mono"  
-                    :background "#3f3f3f"  
-                    :foreground "gray30"  
+(set-face-attribute 'tabbar-default-face nil
+                    :family "DejaVu Sans Mono"
+                    :background "#3f3f3f"
+                    :foreground "gray30"
                     :height 0.1
                     )
 
-(set-face-attribute 'tabbar-button-face nil  
-                    :inherit 'tabbar-default  
-                    :box '(:line-width 1 :color "yellow70")  
+(set-face-attribute 'tabbar-button-face nil
+                    :inherit 'tabbar-default
+                    :box '(:line-width 1 :color "yellow70")
                     )
-  
-(set-face-attribute 'tabbar-selected-face nil  
-                    :inherit 'tabbar-default  
-                    :foreground "DarkGreen"  
-                    :background "LightGoldenrod"  
-                    :box '(:line-width 1 :color "DarkGoldenrod")  
-                    :overline "rosy brown"  
-                    :underline "rosy brown"  
-                    :weight 'bold  
+
+(set-face-attribute 'tabbar-selected-face nil
+                    :inherit 'tabbar-default
+                    :foreground "DarkGreen"
+                    :background "LightGoldenrod"
+                    :box '(:line-width 1 :color "DarkGoldenrod")
+                    :overline "rosy brown"
+                    :underline "rosy brown"
+                    :weight 'bold
                     )
-(set-face-attribute 'tabbar-unselected-face nil  
-                    :inherit 'tabbar-default  
-                    :box '(:line-width 1 :color "#00B2BF")  
+(set-face-attribute 'tabbar-unselected-face nil
+                    :inherit 'tabbar-default
+                    :box '(:line-width 1 :color "#00B2BF")
                     )
 
 
@@ -228,11 +231,12 @@
 
 (add-to-list 'load-path "~/.emacs.d/auto-complete")
 
+(setq auto-save-default nil)
 (require 'auto-complete)
 (require 'auto-complete-config)
 (ac-config-default)
 (add-to-list 'ac-dictionary-directories "~/.emacs.d/auto-complete/ac-dict")
-(setq ac-auto-start 3)
+(setq ac-auto-start 2)
 (global-auto-complete-mode t)
 (define-key ac-complete-mode-map "\C-n" 'ac-next)
 (define-key ac-complete-mode-map "\C-p" 'ac-previous)
@@ -305,8 +309,8 @@
   (hs-minor-mode t)
   ;; hungry-delete and auto-newline
   ;;(c-toggle-auto-hungry-state 1)
-  (c-set-style "stroustrup")	
-  (setq c-basic-offset 4) 
+  (c-set-style "stroustrup")
+  (setq c-basic-offset 4)
   ;(flymake-clang-c-load)
   (define-key c-mode-base-map [(control \`)] 'hs-toggle-hiding)
   (define-key c-mode-base-map [(return)] 'newline-and-indent)
@@ -373,18 +377,22 @@
 
 
 (defun my-c++-mode-hook()
-  (setq c++-basic-offset 4) 
+  (setq c++-basic-offset 4)
   (hs-minor-mode)
   (c-set-style "mycodingstyle")
   ;;(flymake-clang-c++-load)
   (define-key c-mode-base-map [(return)] 'newline-and-indent))
 
+(require 'python-mode)
 (add-hook 'c++-mode-hook 'my-c++-mode-hook)
 (add-hook 'c++-mode-hook 'my-c-mode-common-hook)
 (add-hook 'python-mode-hook '(lambda ()
 			       (local-set-key (kbd "RET") 'newline-and-indent)))
 (add-hook 'ruby-mode-hook '(lambda ()
 			     (local-set-key (kbd "RET") 'newline-and-indent)))
+
+(add-hook 'lua-mode-hook '(lambda ()
+			    (local-set-key (kbd "RET") 'newline-and-indent)))
 
 
 (setq abbrev-mode t)
@@ -396,14 +404,6 @@
 
 (add-to-list 'load-path "~/.emacs.d/themes")
 (require 'zenburn-theme)
-;(require 'color-theme)
-;(require 'color-theme-zenburn)
-;(color-theme-zenburn)
-;;(require 'molokai-theme)
-;;(require 'molokai-theme-kit)
-;;(require 'color-theme-sons-of-obsidian)
-;;(color-theme-sons-of-obsidian)
-;(set-face-background 'modeline "#3f3f3f")
 
 
 (autoload 'ansi-color-for-comint-mode-on "ansi-color" nil t)
@@ -437,7 +437,7 @@
 	  '(lambda ()
 	     (require 'xcscope)))
 (add-hook 'c++-mode-common-hook
-	  '(lambda() 
+	  '(lambda()
 	     (require 'xcscope)))
 
 
@@ -506,50 +506,42 @@
 (add-to-list 'auto-mode-alist '("\\.lua$" . lua-mode))
 (add-to-list 'interpreter-mode-alist '("lua" . lua-mode))
 
-
-;; (add-to-list 'load-path "~/.emacs.d/projectile/")
-;; (require 'projectile)
-;; (require 'helm-projectile)
-;; (projectile-global-mode)
-;; (setq projectile-enable-caching nil)
-;; (setq projectile-require-project-root nil)
-
-;; (add-to-list 'load-path "~/.emacs.d/helm")
-;; (require 'helm-mode)
-;; (require 'helm-config)
-;; (global-set-key (kbd "C-c h") 'helm-mini)
-;; (global-set-key (kbd "C-;") 'xgtags-find-file)
-;; (helm-mode 1)
-;; (require 'helm-files)
-;; (add-hook 'eshell-mode-hook
-;;           #'(lambda ()
-;;               (define-key eshell-mode-map 
-;;                 [remap pcomplete]
-;;                 'helm-esh-pcomplete)))
-
-;; (eval-after-load "helm-regexp"
-;;   '(helm-attrset 'follow 1 helm-source-moccur))
-
-;; (defun my-helm-multi-all ()
-;;   "multi-occur in all buffers backed by files."
-;;   (interactive)
-;;   (helm-multi-occur
-;;    (delq nil
-;;          (mapcar (lambda (b)
-;;                    (when (buffer-file-name b) (buffer-name b)))
-;;                  (buffer-list)))))
-
 (require 'auto-indent-mode)
-;(add-hook 'emacs-lisp-mode-hook 'auto-indent-minor-mode)
+(add-hook 'emacs-lisp-mode-hook 'auto-indent-minor-mode)
 (add-hook 'javascript-mode-hook 'auto-indent-minor-mode)
 (add-hook 'ruby-mode-hook 'auto-indent-minor-mode)
 
-;;(load-file "~/.emacs.d/python-mode.el")
 (load-file "~/.emacs.d/set-indent.el")
 
 (require 'dired-x)
 (setq dired-omit-files "^\\...+$")
 (add-hook 'dired-mode-hook (lambda () (dired-omit-mode 1)))
+
+;; we want dired not not make always a new buffer if visiting a directory
+;; but using only one dired buffer for all directories.
+(defadvice dired-advertised-find-file (around dired-subst-directory activate)
+  "Replace current buffer if file is a directory."
+  (interactive)
+  (let ((orig (current-buffer))
+        (filename (dired-get-filename)))
+    ad-do-it
+    (when (and (file-directory-p filename)
+               (not (eq (current-buffer) orig)))
+      (kill-buffer orig))))
+
+(put 'dired-find-alternate-file 'disabled nil)
+(add-hook 'dired-mode-hook
+          (lambda ()
+            ;;(define-key dired-mode-map (kbd "<return>")
+            ;;'dired-find-alternate-file) ; was dired-advertised-find-file
+            (define-key dired-mode-map (kbd "^")
+              (lambda () (interactive) (find-alternate-file "..")))
+            (define-key dired-mode-map (kbd "r")
+              (lambda () (interactive) (find-alternate-file "..")))
+
+            ))
+
+
 (setq-default cursor-type '(hbar . 3))
 
 (setq default-frame-alist
@@ -569,12 +561,17 @@
 
 (require 'key-chord)
 (key-chord-mode 1)
-(key-chord-define-global "hj" 'undo)
-(key-chord-define-global "[]" 'indent-region)
+;; (key-chord-define-global "p[" 'undo)
+;; (key-chord-define-global "[]" 'indent-region)
+;; (key-chord-define-global "cm" 'comment-region)
+;; (key-chord-define-global "uc" 'uncomment-region)
+;; (key-chord-define-global "kr" 'kill-region)
+(key-chord-define-global ";'" 'copy-region-as-kill)
+
 
 ;;
 ;; ace jump mode major function
-;; 
+;;
 (require 'ace-jump-mode)
 (autoload
   'ace-jump-mode
@@ -626,31 +623,47 @@
 (global-set-key [f11] 'switch-source-file)
 
 
-;; (add-to-list 'load-path "~/.emacs.d/Pymacs")
-;; (load-file "~/.emacs.d/Pymacs/pymacs.el")
-;; (require 'pymacs)
+(add-hook 'before-save-hook 'delete-trailing-whitespace)
 
-;; ;; Initialize Pymacs
-;; (autoload 'pymacs-apply "pymacs")
-;; (autoload 'pymacs-call "pymacs")
-;; (autoload 'pymacs-eval "pymacs" nil t)
-;; (autoload 'pymacs-exec "pymacs" nil t)
-;; (autoload 'pymacs-load "pymacs" nil t)
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;; c/c++ header include guard
+(defun insert-include-guard ()
+  "insert include guard for c and c++ header file.
+for file filename.ext will generate:
+#ifndef FILENAME_EXT_
+#define FILENAME_EXT_
 
-;; (pymacs-load "ropemacs" "rope-")
-;; (setq ropemacs-enable-autoimport t)
-;; (require 'pycomplete)
-;; (setq auto-mode-alist (cons '("\\.py$" . python-mode) auto-mode-alist))
-;; (autoload 'python-mode "python-mode" "Python editing mode." t)
-;; (setq interpreter-mode-alist(cons '("python" . python-mode)
-;;                                   interpreter-mode-alist))
-;; Initialize Rope                                                                                            
-;(pymacs-load "ropemacs" "rope-")
-;(setq ropemacs-enable-autoimport t)
+original buffer content
 
-;; (package-initialize)
-;; (elpy-enable)
-;; (elpy-use-ipython)
-;; (elpy-clean-modeline)
-;; (setq python-indent-offset 4)
-;;(eldoc-mode nil)
+#endif//FILENAME_EXT_
+"
+  (interactive)
+  (setq file-macro
+	(concat "_" (replace-regexp-in-string "\\." "_"
+					  (upcase (file-name-nondirectory buffer-file-name))) "_"))
+  (setq guard-begin (concat "#ifndef " file-macro "\n"
+			    "#define " file-macro "\n\n"))
+  (setq guard-end
+	(concat "\n\n#endif//" file-macro "\n"))
+  (setq position (point))
+  (goto-char (point-min))
+  (insert guard-begin)
+  (goto-char (point-max))
+  (insert guard-end)
+  (goto-char (+ position (length guard-begin))))
+
+;;(require 'cmuscheme)
+(add-to-list 'load-path "~/.emacs.d/slime")
+(add-to-list 'load-path "~/.emacs.d/swank-chicken")
+(add-to-list 'load-path "/usr/local/lib/chicken/6/")
+(setq swank-chicken-path "~/.emacs.d/swank-chicken/swank-chicken.scm")
+(autoload 'chicken-slime "chicken-slime" "SWANK backend for Chicken" t)
+(require 'slime)
+(slime-setup '(slime-fancy slime-banner))
+(add-hook 'scheme-mode-hook
+          (lambda ()
+            (slime-mode t)))
+
+(setq slime-csi-path "/usr/local/bin/csi")
+
+(set-variable (quote scheme-program-name) "csi")
