@@ -1,128 +1,128 @@
+ls
+g++ merge-intervals.cc
+./a.out 
+g++ merge-intervals.cc
+./a.out 
+ls
+git add merge-intervals.cc 
+git commit -am"merge intervals"
 git push
+touch minimum-window-substring.cc
 ls
-git status
-git add ch2
-git status
-git commit -am"continue chapter2"
+g++ minimum-window-substring.cc
+g++ minimum-window-substring.cc
+./a.out 
+g++ minimum-window-substring.cc
+./a.out 
+g++ minimum-window-substring.cc
+./a.out 
+g++ minimum-window-substring.cc
+./a.out 
+g++ minimum-window-substring.cc
+./a.out 
+g++ minimum-window-substring.cc
+./a.out 
+g++ minimum-window-substring.cc
+./a.out 
+g++ minimum-window-substring.cc
+./a.out 
+git add minimum-window-substring.cc
+git commit -am"minimum window substring"
 git push
+cd /tmp/
 ls
+git clone git@github.com:astrellon/Rouge.git
+cd Rouge/
 ls
-cd ch2/
-ls
-ls
-mv 2.15.scm 2.16.scm
-ls
-ls
-cd ..
-ls
-cd ch3/
-ls
-cd ..
-ls
-git status
-git add ch2/
-git status
-git commit -am"continue chapter 2"
-git push
-ls
-git commit -am"continue chapter 2"
-git push
-ls
-cd ch2/
-ls
-ls
-cd ..
-ls
-find ./ -name \*.scm | xargs grep list-of
-ls
-cd ..
-ls
-cd ch3/
-ls
-ls
-cd ..
-ls
-git status
-git  commit -am"almost finish chapter 3"
-git add ch3/18.scm 
-git  commit -am"almost finish chapter 3"
-git push
-ls
-cd
-ls
-cd .rvm/
-l
-ls
-cd examples/
-ls
-cd ..
-ls
-cd gemsets/
-ls
-cd ..
-ls
-cd gems/
-ls
-cd ruby-1.9.3-p327@global/
-ls
-cd gems
-ls
-cd ..
-ls
-cd..
-cd ..
-ls
-cd ruby-1.9.3-p327/
-ls
-cd gems
-ls
-cd fork_manager-0.0.3/
-ls
-cd lib/
-ls
-ls
-cd ..
-ls
-cd ..
-ls
-git status
-git pull
-git push
-ls
-git status
-git commit -am"instrument for continuations"
-git push
-ls
-sudo mv /etc/hosts /etc/hosts.china
-sudo mv /etc/hosts.back /etc/hosts
-ls
+make
+brew install libopenal-dev
+brew install libopengl-dev
+make
+make
+make clean;make
+brew install install libopenal-dev libdevil-dev libogg-dev freeglut3-dev
+brew install  libopenal-dev libdevil-dev libogg-dev freeglut3-dev
+brew install libdevil-dev libogg-dev freeglut3-dev
 ls
 cd
 ls
 cd code/
 ls
-cd eopl_back/
+cd CodeSnippet/
+ls
+cd leetcode/
+ls
+make
+touch string-to-integer-atoi.cc
+g++ string-to-integer-atoi.cc 
+./a.out 
+g++ string-to-integer-atoi.cc 
+./a.out 
+g++ string-to-integer-atoi.cc 
+./a.out 
+g++ string-to-integer-atoi.cc 
+./a.out 
+g++ string-to-integer-atoi.cc 
+./a.out 
+g++ string-to-integer-atoi.cc 
+./a.out 
+g++ string-to-integer-atoi.cc 
+./a.out 
+g++ string-to-integer-atoi.cc 
+./a.out 
+g++ zigzag-conversion.cc 
+g++ zigzag-conversion.cc 
+g++ zigzag-conversion.cc 
+g++ zigzag-conversion.cc 
+./a.out 
+./a.out 
+g++ zigzag-conversion.cc 
 ls
 cd ..
 ls
-cd eopl/
+cd ..
 ls
-git pull
-git commit -am"multi args"
-git add ch5/*
-git add ch5/07.scm 
-git add ch5/08.scm 
+cd Panda/
 ls
-git commit -am"multi let and multi proc args"
-git push
 ls
+./do.sh -l
+cd usr/
+ls
+find ./ -name \*.c
+find ./ -name \*.c | wc -l
+find ./ -name \*.c | xargs wc -l
+cd ..
 ls
 cd
 ls
+cd Desktop/
+ls
+cd resume2/
+ls
+ cd resume/
+ls
+make
+ls
+cd ~/Desktop/
+ls
+mv wyx-cn.pdf 陈于康_cn.pdf
 ls
 ls
-mkdir hima
+cd 
 ls
-cd hima/
+cd Co
+cd code/
 ls
-git clone yukang@huahsan.cn.atrenta.com:/home/git/repo/infra.git
+cd CodeSnippet/leetcode/
+ls
+type emacs
+ls -l /usr/bin/emacs
+ls -lh /usr/bin/emacs
+brew install emacs
+brew remove emacs
+cd ../../Panda/
+ls
+cd usr/
+ls
+git push
+git push
