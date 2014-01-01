@@ -1,105 +1,8 @@
-ls
-g++ merge-intervals.cc
-./a.out 
-g++ merge-intervals.cc
-./a.out 
-ls
-git add merge-intervals.cc 
-git commit -am"merge intervals"
-git push
-touch minimum-window-substring.cc
-ls
-g++ minimum-window-substring.cc
-g++ minimum-window-substring.cc
-./a.out 
-g++ minimum-window-substring.cc
-./a.out 
-g++ minimum-window-substring.cc
-./a.out 
-g++ minimum-window-substring.cc
-./a.out 
-g++ minimum-window-substring.cc
-./a.out 
-g++ minimum-window-substring.cc
-./a.out 
-g++ minimum-window-substring.cc
-./a.out 
-g++ minimum-window-substring.cc
-./a.out 
-git add minimum-window-substring.cc
-git commit -am"minimum window substring"
-git push
-cd /tmp/
-ls
-git clone git@github.com:astrellon/Rouge.git
-cd Rouge/
-ls
-make
-brew install libopenal-dev
-brew install libopengl-dev
-make
-make
-make clean;make
-brew install install libopenal-dev libdevil-dev libogg-dev freeglut3-dev
-brew install  libopenal-dev libdevil-dev libogg-dev freeglut3-dev
-brew install libdevil-dev libogg-dev freeglut3-dev
-ls
-cd
-ls
-cd code/
-ls
-cd CodeSnippet/
-ls
-cd leetcode/
-ls
-make
-touch string-to-integer-atoi.cc
-g++ string-to-integer-atoi.cc 
-./a.out 
-g++ string-to-integer-atoi.cc 
-./a.out 
-g++ string-to-integer-atoi.cc 
-./a.out 
-g++ string-to-integer-atoi.cc 
-./a.out 
-g++ string-to-integer-atoi.cc 
-./a.out 
-g++ string-to-integer-atoi.cc 
-./a.out 
-g++ string-to-integer-atoi.cc 
-./a.out 
-g++ string-to-integer-atoi.cc 
-./a.out 
-g++ zigzag-conversion.cc 
-g++ zigzag-conversion.cc 
-g++ zigzag-conversion.cc 
-g++ zigzag-conversion.cc 
-./a.out 
-./a.out 
-g++ zigzag-conversion.cc 
-ls
-cd ..
-ls
-cd ..
-ls
-cd Panda/
-ls
-ls
-./do.sh -l
-cd usr/
-ls
-find ./ -name \*.c
-find ./ -name \*.c | wc -l
-find ./ -name \*.c | xargs wc -l
-cd ..
-ls
-cd
-ls
 cd Desktop/
 ls
 cd resume2/
 ls
- cd resume/
+cd resume/
 ls
 make
 ls
@@ -126,3 +29,100 @@ cd usr/
 ls
 git push
 git push
+ls
+ls
+cd 
+ls
+cd .emacs.d/
+ls
+git pull
+git commit -am"add ignore"
+git pull
+git commit -am"sync up"
+git pull
+ls
+mkdir lisp
+mv *.el lisp/
+ls
+rm -rf color-theme-zenburn.el\~ 
+ls
+rm -rf trap
+ls
+rm -rf tramp 
+ls
+rm -rf *.eld
+ls
+rm -rf history 
+ls
+git commit -am"add a lisp dir in .emacs.d to remove wanrning messages"
+git push
+git status
+rm -rf slime/slime.el.~1.1430.~ ; 
+git status
+git commit -am"add lisp dir"
+git add .
+git commit -am"add lisp dir"
+git push
+git status
+ls
+ls
+ls
+cd
+ls
+cd code/
+ls
+cd CodeSnippet/leetcode/
+ls
+g++ median-of-two-sorted-arrays.cc 
+g++ median-of-two-sorted-arrays.cc 
+g++ median-of-two-sorted-arrays.cc 
+g++ median-of-two-sorted-arrays.cc 
+./a.out 
+./a.out 
+g++ median-of-two-sorted-arrays.cc 
+./a.out 
+g++ median-of-two-sorted-arrays.cc 
+./a.out 
+g++ median-of-two-sorted-arrays.cc 
+./a.out 
+g++ median-of-two-sorted-arrays.cc 
+./a.out 
+g++ median-of-two-sorted-arrays.cc 
+g++ median-of-two-sorted-arrays.cc 
+./a.out 
+g++ median-of-two-sorted-arrays.cc 
+./a.out 
+ls
+cd co
+l
+cd 
+ls
+cd Co
+ls
+cd code/
+ls
+cd CodeSnippet/
+ls
+cd leetcode/
+ls
+git status
+git add .
+git commit -am"median of two sorted array"
+git push
+ls
+cd .em
+ls
+cd
+ls
+cd .emacs.d/
+ls
+find ./ -name melpa.el
+ls
+ls
+cd
+ls
+cd .emacs.d/
+ls
+find ./ -name \*.el | xargs grep package-desc-vers
+find ./ -name init-elpa.el
+find ./ -name elpa.el

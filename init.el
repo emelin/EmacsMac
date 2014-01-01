@@ -1,3 +1,7 @@
+(defsubst package-desc-vers (desc)
+  "Extract version from a package description vector."
+  (aref desc 0))
+
 (when (>= emacs-major-version 24)
   (require 'package)
   (package-initialize)
@@ -40,8 +44,8 @@
 (desktop-save-mode)
 (show-paren-mode)
 
-(set-default-font "Source Code Pro-12")
-(set-fontset-font "fontset-default" 'gb18030' ("STHeiti" . "unicode-bmp"))
+;;(set-default-font "Source Code Pro-12")
+;;(set-fontset-font "fontset-default" 'gb18030' ("STHeiti" . "unicode-bmp"))
 
 (require 'linum)
 
@@ -129,7 +133,13 @@
 ;;(define-globalized-minor-mode global-highlight-symbol-mode highlight-symbol-mode highlight-symbol-mode)
 ;;(global-highlight-symbol-mode 1)
 (custom-set-faces
- '(highlight-symbol-face ((((class color) (background dark)) (:background "MediumPurple1")))))
+ ;; custom-set-faces was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+ '(highlight-current-line-face ((t (:background "gray32"))))
+ '(highlight-symbol-face ((t (:background "selectedMenuItemColor"))))
+ '(which-func ((t (:foreground "dark cyan")))))
 
 
 (require 'highlight-current-line)
@@ -425,12 +435,7 @@
  '(projectile-enable-caching nil)
  '(projectile-global-mode t)
  '(projectile-require-project-root nil))
-(custom-set-faces
- ;; custom-set-faces was added by Custom.
- ;; If you edit it by hand, you could mess it up, so be careful.
- ;; Your init file should contain only one such instance.
- ;; If there is more than one, they won't work right.
- '(which-func ((t (:foreground "dark cyan")))))
+
 
 (setq which-func-cleanup-function
       (lambda (s) (set-text-properties 0 (length s) nil s) s))
