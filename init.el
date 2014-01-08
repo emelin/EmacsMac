@@ -407,7 +407,6 @@
 (add-hook 'lua-mode-hook '(lambda ()
 			    (local-set-key (kbd "RET") 'newline-and-indent)))
 
-
 (setq abbrev-mode t)
 (global-set-key (kbd "C-=") 'dabbrev-expand)
 
@@ -689,3 +688,23 @@ original buffer content
                             auto-mode-alist))
 
 (put 'set-goal-column 'disabled nil)
+
+(require 'org-mode)
+(setq org-hide-leading-stars t)
+(define-key global-map "\C-ca" 'org-agenda)
+(setq org-log-done 'time)
+
+(setq org-directory "~/.emacs.d/org")
+(setq org-agenda-files (list "~/.emacs.d/org/sandbox.org"))
+(setq org-default-notes-file "~/git/org/refile.org")
+
+(setq org-todo-keywords
+      '((sequence "TODO" "|" "RUNNING" "DONE"  "CANCELED")
+	(sequence "REPORT" "BUG" "KNOWNCAUSE" "|" "FIXED")
+	))
+
+(setq org-remember-templates
+      '(("TODO" ?t "* TODO %?\n %x\n %a" "~/.emacs.d/org/sandbox.org" "tasks")))
+
+(add-to-list 'org-modules 'org-timer)
+(setq org-timer-default-timer 25)
