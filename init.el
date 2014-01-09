@@ -70,7 +70,12 @@
 
 (toggle-fullscreen)
 
-(load-file "~/.emacs.d/lisp/anything.el")
+;(require 'revive)
+;(autoload 'save-current-configuration "revive" "Save status" t)
+;(autoload 'resume "revive" "Resume Emacs" t)
+;(autoload 'wipe "revive" "Wipe Emacs" t)
+
+
 ;(load-file "~/.emacs.d/lisp/anything-match-plugin.el")
 (require 'anything-complete)
 ;; Bind C-o to complete shell history
@@ -447,8 +452,6 @@
 	  '(lambda()
 	     (require 'xcscope)))
 
-
-
 (load-file "~/.emacs.d/lisp/gtags.el")
 (gtags-mode)
 
@@ -647,7 +650,7 @@ original buffer content
   (interactive)
   (setq file-macro
 	(concat "_" (replace-regexp-in-string "\\." "_"
-					  (upcase (file-name-nondirectory buffer-file-name))) "_"))
+            (upcase (file-name-nondirectory buffer-file-name))) "_"))
   (setq guard-begin (concat "#ifndef " file-macro "\n"
 			    "#define " file-macro "\n\n"))
   (setq guard-end
@@ -689,22 +692,9 @@ original buffer content
 
 (put 'set-goal-column 'disabled nil)
 
-(require 'org-mode)
-(setq org-hide-leading-stars t)
-(define-key global-map "\C-ca" 'org-agenda)
-(setq org-log-done 'time)
+(defalias 'qrr 'query-replace-regexp)
+(defalias 'lml 'list-matching-lines)
 
-(setq org-directory "~/.emacs.d/org")
-(setq org-agenda-files (list "~/.emacs.d/org/sandbox.org"))
-(setq org-default-notes-file "~/git/org/refile.org")
-
-(setq org-todo-keywords
-      '((sequence "TODO" "|" "RUNNING" "DONE"  "CANCELED")
-	(sequence "REPORT" "BUG" "KNOWNCAUSE" "|" "FIXED")
-	))
-
-(setq org-remember-templates
-      '(("TODO" ?t "* TODO %?\n %x\n %a" "~/.emacs.d/org/sandbox.org" "tasks")))
-
-(add-to-list 'org-modules 'org-timer)
-(setq org-timer-default-timer 25)
+(defalias 'g 'grep)
+(defalias 'gf 'grep-find)
+(defalias 'fd 'find-dired)

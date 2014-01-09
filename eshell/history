@@ -1,68 +1,3 @@
-cd code/
-ls
-cd CodeSnippet/leetcode/
-ls
-type emacs
-ls -l /usr/bin/emacs
-ls -lh /usr/bin/emacs
-brew install emacs
-brew remove emacs
-cd ../../Panda/
-ls
-cd usr/
-ls
-git push
-git push
-ls
-ls
-cd 
-ls
-cd .emacs.d/
-ls
-git pull
-git commit -am"add ignore"
-git pull
-git commit -am"sync up"
-git pull
-ls
-mkdir lisp
-mv *.el lisp/
-ls
-rm -rf color-theme-zenburn.el\~ 
-ls
-rm -rf trap
-ls
-rm -rf tramp 
-ls
-rm -rf *.eld
-ls
-rm -rf history 
-ls
-git commit -am"add a lisp dir in .emacs.d to remove wanrning messages"
-git push
-git status
-rm -rf slime/slime.el.~1.1430.~ ; 
-git status
-git commit -am"add lisp dir"
-git add .
-git commit -am"add lisp dir"
-git push
-git status
-ls
-ls
-ls
-cd
-ls
-cd code/
-ls
-cd CodeSnippet/leetcode/
-ls
-g++ median-of-two-sorted-arrays.cc 
-g++ median-of-two-sorted-arrays.cc 
-g++ median-of-two-sorted-arrays.cc 
-g++ median-of-two-sorted-arrays.cc 
-./a.out 
-./a.out 
 g++ median-of-two-sorted-arrays.cc 
 ./a.out 
 g++ median-of-two-sorted-arrays.cc 
@@ -126,3 +61,68 @@ ls -l | wc -l
 ls -l | wc -l
 ls -l | wc -l
 ls -l | wc -l
+ls
+cd
+ls
+cd bs20/property/
+ls
+mkdbg
+make -C obj/debug/
+cd /home/yukang/bs20/pli/design/VHDL/GCD/vcs-mx.13.06.debug
+cat run.sh 
+ls
+ls
+cd
+ls
+cd bs20/
+ls
+cd infra/
+ls
+git status
+ls
+git commit -am"add more comments"
+git push
+git pull
+git push
+ls
+cd ..
+ls
+./infra/build-hima.py profile
+cd pli/
+ls
+cd obj/profile/
+ls
+cd ..
+ls
+cd ..
+ls
+./buildlib profile
+cd ../infra/
+ls
+cd ../multicore/obj/profile/
+ls
+./HimaTestMulticore.exe 
+ls
+cd ..
+ls
+cd ..
+ls
+cd ..
+ls
+cd infra/
+ls
+git status
+git commit -am"add profile"
+git push
+qmerge-client.py 
+ls
+cd ..
+ls
+cd infra/
+ls
+git status
+cd ..
+ls
+./infra/sgit.py -sync
+rm -rf flexlmAPI/ core/ trace/
+./infra/build-hima.py 
