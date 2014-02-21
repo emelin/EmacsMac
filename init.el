@@ -71,7 +71,12 @@
 
 (toggle-fullscreen)
 
-(load-file "~/.emacs.d/lisp/anything.el")
+;(require 'revive)
+;(autoload 'save-current-configuration "revive" "Save status" t)
+;(autoload 'resume "revive" "Resume Emacs" t)
+;(autoload 'wipe "revive" "Wipe Emacs" t)
+
+
 ;(load-file "~/.emacs.d/lisp/anything-match-plugin.el")
 (require 'anything-complete)
 ;; Bind C-o to complete shell history
@@ -431,7 +436,6 @@
 (add-hook 'lua-mode-hook '(lambda ()
 			    (local-set-key (kbd "RET") 'newline-and-indent)))
 
-
 (setq abbrev-mode t)
 (global-set-key (kbd "C-=") 'dabbrev-expand)
 
@@ -481,8 +485,6 @@
 (add-hook 'c++-mode-common-hook
 	  '(lambda()
 	     (require 'xcscope)))
-
-
 
 (load-file "~/.emacs.d/lisp/gtags.el")
 (gtags-mode)
@@ -682,7 +684,7 @@ original buffer content
   (interactive)
   (setq file-macro
 	(concat "_" (replace-regexp-in-string "\\." "_"
-					  (upcase (file-name-nondirectory buffer-file-name))) "_"))
+            (upcase (file-name-nondirectory buffer-file-name))) "_"))
   (setq guard-begin (concat "#ifndef " file-macro "\n"
 			    "#define " file-macro "\n\n"))
   (setq guard-end
@@ -724,6 +726,7 @@ original buffer content
 
 (put 'set-goal-column 'disabled nil)
 
+<<<<<<< HEAD
 ;; (setq elfeed-feeds
 ;;       '("http://cyukang.com/atom.xml"
 ;;         "http://wangcong.org/blog/?feed=rss2"
@@ -751,3 +754,11 @@ original buffer content
 
 ;; or some other keybinding...
 (global-set-key (kbd "C-x F") 'find-file-as-root)
+=======
+(defalias 'qrr 'query-replace-regexp)
+(defalias 'lml 'list-matching-lines)
+
+(defalias 'g 'grep)
+(defalias 'gf 'grep-find)
+(defalias 'fd 'find-dired)
+>>>>>>> 467e920a6b64c68d82e19cf4837d37606ffd72df
