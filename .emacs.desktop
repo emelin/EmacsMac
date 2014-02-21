@@ -1,0 +1,447 @@
+;; -*- mode: emacs-lisp; coding: emacs-mule; -*-
+;; --------------------------------------------------------------------------
+;; Desktop File for Emacs
+;; --------------------------------------------------------------------------
+;; Created Sat Jan 11 10:45:41 2014
+;; Desktop file format version 206
+;; Emacs version 24.3.1
+
+;; Global section:
+(setq desktop-missing-file-warning nil)
+(setq tags-file-name nil)
+(setq tags-table-list nil)
+(setq search-ring '("auto-save" "vecotro" "uniqu" "src" "panda" "reorder" "preorder" "post" "bian" "longest" "long" "<<" "size" "elfeed" "yukang" "search-title-max"))
+(setq regexp-search-ring nil)
+(setq register-alist nil)
+(setq file-name-history '("~/.emacs.d/init.el" "/Users/kang/code/CodeSnippet/leetcode/unique-path-double.cc" "/Users/kang/code/CodeSnippet/leetcode/text-justification.cc" "/Users/kang/code/CodeSnippet/leetcode/anagrams.cc" "/Users/kang/code/CodeSnippet/leetcode/insert-interval.cc" "/Users/kang/code/CodeSnippet/leetcode/choujiang/choujian.cc" "/Users/kang/code/CodeSnippet/leetcode/class.cc" "/Users/kang/code/CodeSnippet/leetcode/longest-consecutive-sequence.cc" "/Users/kang/code/CodeSnippet/leetcode/longest-common-prefix.cc" "/Users/kang/code/Basketball_demo/.gitignore" "/Users/kang/code/Maze/Maze/.gitignore" "/Users/kang/code/Maze/Maze/README.md" "/Users/kang/code/Maze/Makefile" "/Users/kang/code/Panda/README.md" "/Users/kang/code/Maze/README.md" "/Users/kang/code/CodeSnippet/leetcode/rotate-image.cc" "/Users/kang/code/CodeSnippet/leetcode/next-permutation.cc" "/Users/kang/code/CodeSnippet/leetcode/permutation-sequence.cc" "/Users/kang/code/CodeSnippet/leetcode/sprial-matrix-ii.cc" "/Users/kang/code/CodeSnippet/leetcode/divide-two-integers.cc" "/Users/kang/code/CodeSnippet/leetcode/valid-number.cc" "/Users/kang/code/CodeSnippet/leetcode/sprial-matrix.cc" "/Users/kang/code/CodeSnippet/leetcode/permutations.cc" "/Users/kang/.emacs.d/init.el" "/Users/kang/code/CodeSnippet/leetcode/permutations.cc" "/Users/kang/code/CodeSnippet/leetcode/permutations-ii.cc" "/Users/kang/.emacs.d/elpa/elfeed-1.0.1/elfeed.el" "/Users/kang/.emacs.d/elfeed/elfeed.el" "/Users/kang/.emacs.d/elfeed/Makefile" "/Users/kang/.emacs.d/elpa/elfeed-1.0.1/README.md"))
+
+;; Buffer section -- buffers listed in same order as in buffer list:
+(desktop-create-buffer 206
+  "/Users/kang/.emacs.d/init.el"
+  "init.el<2>"
+  'emacs-lisp-mode
+  '(global-auto-revert-mode)
+  1288
+  '(1 nil)
+  nil
+  nil
+  '((buffer-file-coding-system . undecided-unix)))
+
+(desktop-create-buffer 206
+  "/Users/kang/code/CodeSnippet/leetcode/unique-path2-ii.cc"
+  "unique-path2-ii.cc"
+  'c++-mode
+  '(abbrev-mode global-auto-revert-mode hi-lock-mode projectile-mode hs-minor-mode)
+  322
+  '(110 nil)
+  nil
+  nil
+  '((tab-width . 4) (indent-tabs-mode) (buffer-file-coding-system . utf-8-unix)))
+
+(desktop-create-buffer 206
+  nil
+  "leetcode"
+  'dired-mode
+  '(global-auto-revert-mode hi-lock-mode projectile-mode)
+  11354
+  '(243 nil)
+  t
+  '("/Users/kang/code/CodeSnippet/leetcode/")
+  nil)
+
+(desktop-create-buffer 206
+  "/Users/kang/code/CodeSnippet/leetcode/unique-path-double.cc"
+  "unique-path-double.cc"
+  'c++-mode
+  '(abbrev-mode global-auto-revert-mode hi-lock-mode projectile-mode hs-minor-mode)
+  1
+  '(nil nil)
+  nil
+  nil
+  '((tab-width . 4) (indent-tabs-mode) (buffer-file-coding-system . undecided-unix)))
+
+(desktop-create-buffer 206
+  "/Users/kang/code/CodeSnippet/leetcode/text-justification.cc"
+  "text-justification.cc"
+  'c++-mode
+  '(abbrev-mode global-auto-revert-mode hi-lock-mode projectile-mode hs-minor-mode)
+  1205
+  '(98 nil)
+  nil
+  nil
+  '((tab-width . 4) (indent-tabs-mode) (buffer-file-coding-system . utf-8-unix)))
+
+(desktop-create-buffer 206
+  "/Users/kang/code/CodeSnippet/leetcode/anagrams.cc"
+  "anagrams.cc"
+  'c++-mode
+  '(abbrev-mode global-auto-revert-mode hi-lock-mode projectile-mode hs-minor-mode)
+  805
+  '(77 nil)
+  nil
+  nil
+  '((tab-width . 4) (indent-tabs-mode) (buffer-file-coding-system . utf-8-unix)))
+
+(desktop-create-buffer 206
+  "/Users/kang/code/CodeSnippet/leetcode/insert-interval.cc"
+  "insert-interval.cc"
+  'c++-mode
+  '(abbrev-mode global-auto-revert-mode hi-lock-mode projectile-mode hs-minor-mode)
+  373
+  '(396 nil)
+  nil
+  nil
+  '((tab-width . 4) (indent-tabs-mode) (buffer-file-coding-system . utf-8-unix)))
+
+(desktop-create-buffer 206
+  nil
+  "Panda"
+  'dired-mode
+  '(global-auto-revert-mode hi-lock-mode projectile-mode)
+  964
+  '(964 nil)
+  t
+  '("/Users/kang/code/Panda/")
+  nil)
+
+(desktop-create-buffer 206
+  nil
+  "usr"
+  'dired-mode
+  '(global-auto-revert-mode hi-lock-mode projectile-mode)
+  177
+  '(nil nil)
+  t
+  '("/Users/kang/code/Panda/usr/")
+  nil)
+
+(desktop-create-buffer 206
+  "/Users/kang/code/Panda/boot/setup.s"
+  "setup.s"
+  'asm-mode
+  '(global-auto-revert-mode hi-lock-mode projectile-mode)
+  1604
+  '(1180 nil)
+  nil
+  nil
+  '((buffer-file-coding-system . undecided-unix)))
+
+(desktop-create-buffer 206
+  "/Users/kang/code/Panda/boot/head.s"
+  "head.s"
+  'asm-mode
+  '(global-auto-revert-mode hi-lock-mode projectile-mode)
+  1
+  '(nil nil)
+  nil
+  nil
+  '((buffer-file-coding-system . undecided-unix)))
+
+(desktop-create-buffer 206
+  nil
+  "code"
+  'dired-mode
+  '(global-auto-revert-mode hi-lock-mode projectile-mode)
+  697
+  '(220 nil)
+  t
+  '("/Users/kang/code/")
+  nil)
+
+(desktop-create-buffer 206
+  "/Users/kang/code/CodeSnippet/leetcode/reorder-list.cc"
+  "reorder-list.cc"
+  'c++-mode
+  '(abbrev-mode global-auto-revert-mode hi-lock-mode projectile-mode hs-minor-mode)
+  1182
+  '(265 nil)
+  nil
+  nil
+  '((tab-width . 4) (indent-tabs-mode) (buffer-file-coding-system . undecided-unix)))
+
+(desktop-create-buffer 206
+  "/Users/kang/code/CodeSnippet/leetcode/binary-tree-preorder-traversal.cc"
+  "binary-tree-preorder-traversal.cc"
+  'c++-mode
+  '(abbrev-mode global-auto-revert-mode hi-lock-mode projectile-mode hs-minor-mode)
+  1
+  '(nil nil)
+  nil
+  nil
+  '((tab-width . 4) (indent-tabs-mode) (buffer-file-coding-system . undecided-unix)))
+
+(desktop-create-buffer 206
+  "/Users/kang/code/CodeSnippet/leetcode/binary-tree-postorder-traversel.cc"
+  "binary-tree-postorder-traversel.cc"
+  'c++-mode
+  '(abbrev-mode global-auto-revert-mode hi-lock-mode projectile-mode hs-minor-mode)
+  621
+  '(1319 nil)
+  nil
+  nil
+  '((tab-width . 4) (indent-tabs-mode) (buffer-file-coding-system . undecided-unix)))
+
+(desktop-create-buffer 206
+  "/Users/kang/code/CodeSnippet/leetcode/class.cc"
+  "class.cc"
+  'c++-mode
+  '(abbrev-mode global-auto-revert-mode hi-lock-mode projectile-mode hs-minor-mode)
+  312
+  '(95 nil)
+  nil
+  nil
+  '((tab-width . 4) (indent-tabs-mode) (buffer-file-coding-system . utf-8-unix)))
+
+(desktop-create-buffer 206
+  "/Users/kang/code/CodeSnippet/leetcode/longest-substring-without-repeating-characters.cc"
+  "longest-substring-without-repeating-characters.cc"
+  'c++-mode
+  '(abbrev-mode global-auto-revert-mode hi-lock-mode projectile-mode hs-minor-mode)
+  1
+  '(nil nil)
+  nil
+  nil
+  '((tab-width . 4) (indent-tabs-mode) (buffer-file-coding-system . undecided-unix)))
+
+(desktop-create-buffer 206
+  "/Users/kang/code/CodeSnippet/leetcode/longest-palindromic-substring.cc"
+  "longest-palindromic-substring.cc"
+  'c++-mode
+  '(abbrev-mode global-auto-revert-mode hi-lock-mode projectile-mode hs-minor-mode)
+  187
+  '(nil nil)
+  nil
+  nil
+  '((tab-width . 4) (indent-tabs-mode) (buffer-file-coding-system . undecided-unix)))
+
+(desktop-create-buffer 206
+  "/Users/kang/code/CodeSnippet/leetcode/longest-consecutive-sequence.cc"
+  "longest-consecutive-sequence.cc"
+  'c++-mode
+  '(abbrev-mode global-auto-revert-mode hi-lock-mode projectile-mode hs-minor-mode)
+  444
+  '(444 nil)
+  nil
+  nil
+  '((tab-width . 4) (indent-tabs-mode) (buffer-file-coding-system . undecided-unix)))
+
+(desktop-create-buffer 206
+  "/Users/kang/code/CodeSnippet/leetcode/longest-common-prefix.cc"
+  "longest-common-prefix.cc"
+  'c++-mode
+  '(abbrev-mode global-auto-revert-mode hi-lock-mode projectile-mode hs-minor-mode)
+  898
+  '(nil nil)
+  nil
+  nil
+  '((tab-width . 4) (indent-tabs-mode) (buffer-file-coding-system . undecided-unix)))
+
+(desktop-create-buffer 206
+  "/Users/kang/code/Panda/README.md"
+  "README.md"
+  'fundamental-mode
+  '(global-auto-revert-mode hi-lock-mode projectile-mode)
+  479
+  '(391 nil)
+  nil
+  nil
+  '((tab-width . 4) (buffer-file-coding-system . undecided-unix)))
+
+(desktop-create-buffer 206
+  "/Users/kang/code/Basketball_demo/.gitignore"
+  ".gitignore"
+  'fundamental-mode
+  '(global-auto-revert-mode hi-lock-mode projectile-mode)
+  14
+  '(nil nil)
+  nil
+  nil
+  '((buffer-file-coding-system . undecided-unix)))
+
+(desktop-create-buffer 206
+  "/Users/kang/code/Maze/Maze/.gitignore"
+  ".gitignore<2>"
+  'fundamental-mode
+  '(global-auto-revert-mode hi-lock-mode projectile-mode)
+  4
+  '(nil nil)
+  nil
+  nil
+  '((buffer-file-coding-system . utf-8-unix)))
+
+(desktop-create-buffer 206
+  "/Users/kang/code/Maze/Maze/README.md"
+  "README.md<2>"
+  'fundamental-mode
+  '(global-auto-revert-mode hi-lock-mode projectile-mode)
+  95
+  '(83 nil)
+  nil
+  nil
+  '((tab-width . 4) (buffer-file-coding-system . undecided-unix)))
+
+(desktop-create-buffer 206
+  "/Users/kang/code/Maze/Makefile"
+  "Makefile"
+  'makefile-bsdmake-mode
+  '(global-auto-revert-mode hi-lock-mode projectile-mode)
+  870
+  '(nil nil)
+  nil
+  nil
+  '((indent-tabs-mode . t) (buffer-file-coding-system . undecided-unix)))
+
+(desktop-create-buffer 206
+  "/Users/kang/code/Maze/README.md"
+  "README.md<3>"
+  'fundamental-mode
+  '(global-auto-revert-mode hi-lock-mode projectile-mode)
+  1
+  '(nil nil)
+  nil
+  nil
+  '((tab-width . 4) (buffer-file-coding-system . undecided-unix)))
+
+(desktop-create-buffer 206
+  "/Users/kang/Desktop/resume2/resume/wyx-cn.tex"
+  "wyx-cn.tex"
+  'latex-mode
+  '(global-auto-revert-mode hi-lock-mode projectile-mode)
+  1543
+  '(nil nil)
+  nil
+  nil
+  '((indent-tabs-mode) (buffer-file-coding-system . utf-8-unix)))
+
+(desktop-create-buffer 206
+  nil
+  "resume"
+  'dired-mode
+  '(global-auto-revert-mode hi-lock-mode projectile-mode)
+  1012
+  '(nil nil)
+  t
+  '("/Users/kang/Desktop/resume2/resume/")
+  nil)
+
+(desktop-create-buffer 206
+  "/Users/kang/code/CodeSnippet/leetcode/rotate-image.cc"
+  "rotate-image.cc"
+  'c++-mode
+  '(abbrev-mode global-auto-revert-mode hi-lock-mode projectile-mode hs-minor-mode)
+  503
+  '(62 nil)
+  nil
+  nil
+  '((tab-width . 4) (indent-tabs-mode) (buffer-file-coding-system . utf-8-unix)))
+
+(desktop-create-buffer 206
+  "/Users/kang/code/CodeSnippet/leetcode/permutation-sequence.cc"
+  "permutation-sequence.cc"
+  'c++-mode
+  '(abbrev-mode global-auto-revert-mode hi-lock-mode projectile-mode hs-minor-mode)
+  251
+  '(81 nil)
+  nil
+  nil
+  '((tab-width . 4) (indent-tabs-mode) (buffer-file-coding-system . utf-8-unix)))
+
+(desktop-create-buffer 206
+  "/Users/kang/code/CodeSnippet/leetcode/next-permutation.cc"
+  "next-permutation.cc"
+  'c++-mode
+  '(abbrev-mode global-auto-revert-mode hi-lock-mode projectile-mode hs-minor-mode)
+  1123
+  '(86 nil)
+  nil
+  nil
+  '((tab-width . 4) (indent-tabs-mode) (buffer-file-coding-system . undecided-unix)))
+
+(desktop-create-buffer 206
+  "/Users/kang/code/CodeSnippet/leetcode/sprial-matrix-ii.cc"
+  "sprial-matrix-ii.cc"
+  'c++-mode
+  '(abbrev-mode global-auto-revert-mode hi-lock-mode projectile-mode hs-minor-mode)
+  38
+  '(1405 nil)
+  nil
+  nil
+  '((tab-width . 4) (indent-tabs-mode) (buffer-file-coding-system . undecided-unix)))
+
+(desktop-create-buffer 206
+  "/Users/kang/code/CodeSnippet/leetcode/divide-two-integers.cc"
+  "divide-two-integers.cc"
+  'c++-mode
+  '(abbrev-mode global-auto-revert-mode hi-lock-mode projectile-mode hs-minor-mode)
+  685
+  '(62 nil)
+  nil
+  nil
+  '((tab-width . 4) (indent-tabs-mode) (buffer-file-coding-system . utf-8-unix)))
+
+(desktop-create-buffer 206
+  "/Users/kang/code/CodeSnippet/leetcode/valid-number.cc"
+  "valid-number.cc"
+  'c++-mode
+  '(abbrev-mode global-auto-revert-mode hi-lock-mode projectile-mode hs-minor-mode)
+  449
+  '(171 nil)
+  nil
+  nil
+  '((tab-width . 4) (indent-tabs-mode) (buffer-file-coding-system . utf-8-unix)))
+
+(desktop-create-buffer 206
+  "/Users/kang/code/CodeSnippet/leetcode/sprial-matrix.cc"
+  "sprial-matrix.cc"
+  'c++-mode
+  '(abbrev-mode global-auto-revert-mode hi-lock-mode projectile-mode hs-minor-mode)
+  1393
+  '(60 nil)
+  nil
+  nil
+  '((tab-width . 4) (indent-tabs-mode) (buffer-file-coding-system . utf-8-unix)))
+
+(desktop-create-buffer 206
+  "/Users/kang/code/CodeSnippet/leetcode/permutations.cc"
+  "permutations.cc"
+  'c++-mode
+  '(abbrev-mode global-auto-revert-mode hi-lock-mode projectile-mode hs-minor-mode)
+  708
+  '(1 nil)
+  nil
+  nil
+  '((tab-width . 4) (indent-tabs-mode) (buffer-file-coding-system . undecided-unix)))
+
+(desktop-create-buffer 206
+  "/Users/kang/code/CodeSnippet/leetcode/permutations-ii.cc"
+  "permutations-ii.cc"
+  'c++-mode
+  '(abbrev-mode global-auto-revert-mode hi-lock-mode projectile-mode hs-minor-mode)
+  120
+  '(138 nil)
+  nil
+  nil
+  '((tab-width . 4) (indent-tabs-mode) (buffer-file-coding-system . utf-8-unix)))
+
+(desktop-create-buffer 206
+  "/Users/kang/.emacs.d/elpa/archives/gnu/archive-contents"
+  " *http elpa.gnu.org:80*"
+  'fundamental-mode
+  '(global-auto-revert-mode hi-lock-mode projectile-mode)
+  11018
+  '(nil nil)
+  nil
+  nil
+  '((buffer-file-coding-system . raw-text-unix)))
+
+(desktop-create-buffer 206
+  "/Users/kang/.emacs.d/elpa/archives/marmalade/archive-contents"
+  " *http marmalade-repo.org:80*"
+  'fundamental-mode
+  '(global-auto-revert-mode hi-lock-mode projectile-mode)
+  81910
+  '(nil nil)
+  nil
+  nil
+  '((buffer-file-coding-system . raw-text-unix)))
+

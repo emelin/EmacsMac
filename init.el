@@ -40,12 +40,13 @@
 (setq message-log-max nil)
 (setq ring-bell-function 'ignore)
 
-(load "desktop")
-(desktop-save-mode)
+;(load "desktop")
+;(desktop-save-mode)
+;(desktop-auto-save)
 (show-paren-mode)
 
-;;(set-default-font "Source Code Pro-12")
-;;(set-fontset-font "fontset-default" 'gb18030' ("STHeiti" . "unicode-bmp"))
+(set-default-font "Source Code Pro-13")
+(set-fontset-font "fontset-default" 'gb18030' ("STHeiti" . "unicode-bmp"))
 
 (require 'linum)
 
@@ -137,9 +138,8 @@
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
- '(highlight-current-line-face ((t (:background "gray32"))))
- '(highlight-symbol-face ((t (:background "selectedMenuItemColor"))))
- '(which-func ((t (:foreground "dark cyan")))))
+ '(highlight-current-line-face ((t (:background "gray34"))))
+ '(highlight-symbol-face ((t (:background "selectedMenuItemColor")))))
 
 
 (require 'highlight-current-line)
@@ -168,6 +168,21 @@
   (other-window 1)
   (eshell))
 (global-set-key (kbd "C-c e") 'open-eshell-now)
+
+(defun open-eshell-run-this-file()
+  "Open eshell and run this file"
+  (interactive)
+  (let ((name (file-name-base (buffer-file-name))))
+    (delete-other-windows)
+    (split-window-horizontally)
+    (other-window 1)
+    (eshell)
+    (goto-char (point-max))
+    (insert-string (concat "./" name))
+    (message "prepare run: %s" name)))
+
+(global-set-key (kbd "C-c '") 'open-eshell-run-this-file)
+
 
 (defun go-to-other-window-and-close-this-one()
   "Go to other window and close current window"
@@ -313,6 +328,15 @@
   (find-file filename))
 
 
+(defun search-symbol-occur-at-point()
+  (interactive)
+  (let ((search-target (symbol-name (symbol-at-point))))
+    (isearch-occur search-target)))
+
+(global-set-key (kbd "C-c 0") 'search-symbol-occur-at-point)
+
+(require 'smart-compile+)
+(global-set-key  (kbd "C-c ;") 'smart-compile)
 (require 'flymake-clang-c)
 (require 'flymake-clang-c++)
 
@@ -431,7 +455,17 @@
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
+ '(clean-buffer-list-delay-general 2)
+ '(clean-buffer-list-delay-special 4)
+ '(clean-buffer-list-kill-buffer-names
+   (quote
+    ("*Help*" "*Apropos*" "*Buffer List*" "*Compile-Log*" "*info*" "*vc*" "*vc-diff*" "*diff*" "*Messages*" "*anything*" "*ag")))
+ '(clean-buffer-list-kill-never-buffer-names nil)
+ '(clean-buffer-list-kill-regexps
+   (quote
+    ("^\\*Man " "^\\*Messages\\*" "^\\*scratch*" "^\\*GNU*" "*Messages*")))
  '(flymake-gui-warnings-enabled nil)
+ '(newsticker-url-list (quote (("cyukang" "http://cyukang.com/atom" nil nil nil))))
  '(projectile-enable-caching nil)
  '(projectile-global-mode t)
  '(projectile-require-project-root nil))
@@ -689,3 +723,31 @@ original buffer content
                             auto-mode-alist))
 
 (put 'set-goal-column 'disabled nil)
+
+;; (setq elfeed-feeds
+;;       '("http://cyukang.com/atom.xml"
+;;         "http://wangcong.org/blog/?feed=rss2"
+;;         "http://www.joelonsoftware.com/rss.xml"
+;;         "http://www.norvig.com/rss-feed.xml"
+;;         "http://tiny4.org/blog/feed"
+;; 	"http://www.reddit.com/r/programming/.rss"
+;;         "http://coolshell.cn/feed"))
+
+(add-to-list 'load-path "~/.emacs.d/erlang")
+(require 'erlang)
+(require 'erlang-start)
+(require 'ag)
+
+(require 'midnight)
+
+(defun find-file-as-root ()
+  "Like `ido-find-file, but automatically edit the file with
+   root-privileges (using tramp/sudo), if the file is not writable by user."
+  (interactive)
+  (let ((file (ido-read-file-name "Edit as root: ")))
+    (unless (file-writable-p file)
+      (setq file (concat "/sudo:root@localhost:" file)))
+    (find-file file)))
+
+;; or some other keybinding...
+(global-set-key (kbd "C-x F") 'find-file-as-root)

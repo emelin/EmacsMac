@@ -1,128 +1,128 @@
-cd Desktop/
 ls
-cd resume2/
+cd ..
 ls
-cd resume/
+cd ..
 ls
-make
+find ./ -name \*.scm
+find ./ -name \*.scm | xargs grep let
 ls
-cd ~/Desktop/
+cd ch3
 ls
-mv wyx-cn.pdf 陈于康_cn.pdf
+find ./ -name \*.scm | xargs grep let
+find ./ -name \*.scm | xargs grep letrec
+ls
+cd ..
+ls
+cd ch4
+ls
+find ./ -name \*.scm | xargs grep let-exp
+ls
+cd ..
+ls
+git status
+git add ch7
+git status
+rm -rf ch7/base/env.scm 
+ls
+git status
+git commit -am"continue chapter 7"
+git status
+ls
+git add ch6
+git status
+git commit -am"pause ch6"
+ls
+git status
 ls
 ls
-cd 
+erl
 ls
-cd Co
 cd code/
 ls
-cd CodeSnippet/leetcode/
-ls
-type emacs
-ls -l /usr/bin/emacs
-ls -lh /usr/bin/emacs
-brew install emacs
-brew remove emacs
-cd ../../Panda/
-ls
-cd usr/
-ls
-git push
-git push
+mkdir erlang
+cd erlang/
 ls
 ls
-cd 
+mv math.erl math_demo.erl
 ls
-cd .emacs.d/
+rm -rf math_demo.erl
 ls
-git pull
-git commit -am"add ignore"
-git pull
-git commit -am"sync up"
-git pull
+mv math.erl math_demo.erl
 ls
-mkdir lisp
-mv *.el lisp/
+erl
+erl
 ls
-rm -rf color-theme-zenburn.el\~ 
+cd code/erlang/
 ls
-rm -rf trap
+erl
 ls
-rm -rf tramp 
+cd ../../base/chapter7/
 ls
-rm -rf *.eld
+cd inferred/
 ls
-rm -rf history 
+find ./ -name \*.scm | xargs grep equal-types?
 ls
-git commit -am"add a lisp dir in .emacs.d to remove wanrning messages"
-git push
-git status
-rm -rf slime/slime.el.~1.1430.~ ; 
-git status
-git commit -am"add lisp dir"
-git add .
-git commit -am"add lisp dir"
-git push
-git status
+ls
+ls
+ls
+ls
+cd code/
+ls
+cd eopl/
+ls
+ls
+ls
+cd ch7
+ls
 ls
 ls
 ls
 cd
 ls
-cd code/
+cd Desktop/
 ls
-cd CodeSnippet/leetcode/
+ls -l
+pwd
 ls
-g++ median-of-two-sorted-arrays.cc 
-g++ median-of-two-sorted-arrays.cc 
-g++ median-of-two-sorted-arrays.cc 
-g++ median-of-two-sorted-arrays.cc 
-./a.out 
-./a.out 
-g++ median-of-two-sorted-arrays.cc 
-./a.out 
-g++ median-of-two-sorted-arrays.cc 
-./a.out 
-g++ median-of-two-sorted-arrays.cc 
-./a.out 
-g++ median-of-two-sorted-arrays.cc 
-./a.out 
-g++ median-of-two-sorted-arrays.cc 
-g++ median-of-two-sorted-arrays.cc 
-./a.out 
-g++ median-of-two-sorted-arrays.cc 
-./a.out 
 ls
-cd co
-l
-cd 
+cd
 ls
-cd Co
+cd .emacs.d/
+ls
+cd themes/
+ls
+ls ls
+ls
+cd
 ls
 cd code/
 ls
-cd CodeSnippet/
+cd eopl/
 ls
-cd leetcode/
+cd ch7
+ls
+ls
+cd .emacs.d/
+ls
+wget http://www.emacswiki.org/emacs/download/lusty-explorer.el
+sl
+ls
+ls
+cd .emacs.d/
+ls
+cd themes/
 ls
 git status
-git add .
-git commit -am"median of two sorted array"
-git push
+cd
+cd -
+ls
+cd ..
+ls
+git status
+mv themes/zenburn-theme.el /tmp
 ls
 cd .em
 ls
-cd
+fidn ./ -name \*zen\*
+find ./ -name \*zen\*
 ls
-cd .emacs.d/
-ls
-find ./ -name melpa.el
-ls
-ls
-cd
-ls
-cd .emacs.d/
-ls
-find ./ -name \*.el | xargs grep package-desc-vers
-find ./ -name init-elpa.el
-find ./ -name elpa.el

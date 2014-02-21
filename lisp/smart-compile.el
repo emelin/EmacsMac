@@ -154,11 +154,11 @@ you can define your own compile commands."
           (kill-local-variable 'compile-command)
 
           ;; compile
-          (setq not-yet
-                (smart-compile-command-make smart-compile-alist))
+          ;; (setq not-yet
+          ;;       (smart-compile-command-make smart-compile-alist))
 
           ;; If compile-command is not defined and the contents begins with "#!",
-          ;; set compile-command to fikename.
+          ;; set compile-command to filename.
           (if not-yet
               (smart-compile-shell))
           ))
