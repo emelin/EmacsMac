@@ -52,6 +52,18 @@
 
 (require 'ido)
 (ido-mode t)
+;; fuzzy matching is a must have
+(setq ido-enable-flex-matching t)
+
+;; This tab override shouldn't be necessary given ido's default
+;; configuration, but minibuffer-complete otherwise dominates the
+;; tab binding because of my custom tab-completion-everywhere
+;; configuration.
+(add-hook 'ido-setup-hook
+          (lambda ()
+            (define-key ido-completion-map [tab] 'ido-complete)))
+
+(windmove-default-keybindings 'meta)
 
 (require 'ibuffer)
 (global-set-key (kbd "C-x C-b") 'ibuffer)
@@ -107,6 +119,7 @@
 		("\\.scss$" . css-mode)
 		("Rakefile" . ruby-mode)
 		("rakefile" . ruby-mode)
+		("\\.go$" . go-mode)
 		) auto-mode-alist))
 
 
@@ -117,7 +130,7 @@
 (require 'highlight-symbol)
 (require 'sgml-mode)
 (setq highlight-symbol-idle-delay 0.5)
-(highlight-symbol-mode 1)
+(highlight-symbol-mode)
 (defun highlight-symbol-mode-on ()
   "Turn on function `highlight-symbol-mode'."
   (highlight-symbol-mode 1))
@@ -709,7 +722,6 @@ original buffer content
             (slime-mode t)))
 
 (setq slime-csi-path "/usr/local/bin/csi")
-
 (set-variable (quote scheme-program-name) "csi")
 
 (defun linux-c-mode ()
@@ -725,16 +737,6 @@ original buffer content
                             auto-mode-alist))
 
 (put 'set-goal-column 'disabled nil)
-
-<<<<<<< HEAD
-;; (setq elfeed-feeds
-;;       '("http://cyukang.com/atom.xml"
-;;         "http://wangcong.org/blog/?feed=rss2"
-;;         "http://www.joelonsoftware.com/rss.xml"
-;;         "http://www.norvig.com/rss-feed.xml"
-;;         "http://tiny4.org/blog/feed"
-;; 	"http://www.reddit.com/r/programming/.rss"
-;;         "http://coolshell.cn/feed"))
 
 (add-to-list 'load-path "~/.emacs.d/erlang")
 (require 'erlang)
@@ -754,11 +756,34 @@ original buffer content
 
 ;; or some other keybinding...
 (global-set-key (kbd "C-x F") 'find-file-as-root)
-=======
+
 (defalias 'qrr 'query-replace-regexp)
 (defalias 'lml 'list-matching-lines)
+(defalias 'him 'helm-imenu)
 
 (defalias 'g 'grep)
 (defalias 'gf 'grep-find)
 (defalias 'fd 'find-dired)
->>>>>>> 467e920a6b64c68d82e19cf4837d37606ffd72df
+
+
+;; golang
+(add-to-list 'load-path "~/.emacs.d/go-mode")
+(require 'go-mode)
+(require 'go-mode-load)
+(setq gofmt-command "goimports")
+(add-hook 'before-save-hook 'gofmt-before-save)
+
+(add-hook 'go-mode-hook (lambda ()
+                          (local-set-key (kbd "C-c C-r") 'go-remove-unused-imports)))
+
+(add-hook 'go-mode-hook (lambda ()
+                          (local-set-key (kbd "C-c C-r") 'go-remove-unused-imports)))
+
+(load-file "~/Desktop/code/emacSay/emacsay-mode.el")
+
+(load-file "~/.emacs.d/go-autocomplete.el")
+(require 'go-autocomplete)
+(require 'auto-complete-config)
+
+
+(require 'ess)
