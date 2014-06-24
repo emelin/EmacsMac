@@ -120,6 +120,7 @@
 		("Rakefile" . ruby-mode)
 		("rakefile" . ruby-mode)
 		("\\.go$" . go-mode)
+		("\\.gohtml$" . html-mode)
 		) auto-mode-alist))
 
 
@@ -129,16 +130,19 @@
 
 (require 'highlight-symbol)
 (require 'sgml-mode)
+
 (setq highlight-symbol-idle-delay 0.5)
 (highlight-symbol-mode)
+
 (defun highlight-symbol-mode-on ()
   "Turn on function `highlight-symbol-mode'."
   (highlight-symbol-mode 1))
 (defun highlight-symbol-mode-off ()
   "Turn off function `highlight-symbol-mode'."
   (highlight-symbol-mode -1))
+
 (dolist (hook '(emacs-lisp-mode-hook lisp-interaction-mode-hook java-mode-hook
-	c++-mode-hook  c-mode-common-hook text-mode-hook ruby-mode-hook html-mode-hook scheme-mode))
+	c++-mode-hook  c-mode-common-hook text-mode-hook ruby-mode-hook html-mode-hook scheme-mode go-mode))
   (add-hook hook 'highlight-symbol-mode-on))
 
 (global-set-key [(control f3)] 'highlight-symbol-at-point)
@@ -149,8 +153,6 @@
 (global-set-key (kbd "C-c M-N") 'highlight-symbol-next-in-defun)
 (global-set-key (kbd "C-c M-P") 'highlight-symbol-prev-in-defun)
 
-;;(define-globalized-minor-mode global-highlight-symbol-mode highlight-symbol-mode highlight-symbol-mode)
-;;(global-highlight-symbol-mode 1)
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
@@ -318,6 +320,7 @@
  /Library/Frameworks
 "
                )))
+
 ;; ac-source-gtags
 (my-ac-config)
 
@@ -660,54 +663,7 @@
 (set-face-background 'mode-line "gray20")
 
 (load-file "~/.emacs.d/auto/autoconfig.el")
-;;;###autoload
-(defun switch-source-file ()
-  (interactive)
-  (setq file-name (buffer-file-name))
-  (cond ((string-match "\\.cpp" file-name)
-         (find-file (replace-regexp-in-string "\\.cpp" "\.h" file-name)))
-        ((string-match "\\.cc" file-name)
-         (find-file (replace-regexp-in-string "\\.cc" "\.hh" file-name)))
-        ((string-match "\\.hh" file-name)
-         (find-file (replace-regexp-in-string "\\.hh" "\.cc" file-name)))
-        ((string-match "\\.h" file-name)
-         (find-file (replace-regexp-in-string "\\.h" "\.c" file-name)))
-        ((string-match "\\.c" file-name)
-         (find-file (replace-regexp-in-string "\\.c" "\.h" file-name)))
-        ((string-match "\\.h" file-name)
-         (find-file (replace-regexp-in-string "\\.h" "\.cpp" file-name)))))
 
-(global-set-key [f11] 'switch-source-file)
-
-
-(add-hook 'before-save-hook 'delete-trailing-whitespace)
-
-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-;; c/c++ header include guard
-(defun insert-include-guard ()
-  "insert include guard for c and c++ header file.
-for file filename.ext will generate:
-#ifndef FILENAME_EXT_
-#define FILENAME_EXT_
-
-original buffer content
-
-#endif//FILENAME_EXT_
-"
-  (interactive)
-  (setq file-macro
-	(concat "_" (replace-regexp-in-string "\\." "_"
-            (upcase (file-name-nondirectory buffer-file-name))) "_"))
-  (setq guard-begin (concat "#ifndef " file-macro "\n"
-			    "#define " file-macro "\n\n"))
-  (setq guard-end
-	(concat "\n\n#endif//" file-macro "\n"))
-  (setq position (point))
-  (goto-char (point-min))
-  (insert guard-begin)
-  (goto-char (point-max))
-  (insert guard-end)
-  (goto-char (+ position (length guard-begin))))
 
 ;;(require 'cmuscheme)
 (add-to-list 'load-path "~/.emacs.d/slime")
@@ -757,15 +713,6 @@ original buffer content
 ;; or some other keybinding...
 (global-set-key (kbd "C-x F") 'find-file-as-root)
 
-(defalias 'qrr 'query-replace-regexp)
-(defalias 'lml 'list-matching-lines)
-(defalias 'him 'helm-imenu)
-
-(defalias 'g 'grep)
-(defalias 'gf 'grep-find)
-(defalias 'fd 'find-dired)
-
-
 ;; golang
 (add-to-list 'load-path "~/.emacs.d/go-mode")
 (require 'go-mode)
@@ -785,5 +732,24 @@ original buffer content
 (require 'go-autocomplete)
 (require 'auto-complete-config)
 
-
 (require 'ess)
+(defun run-cover ()
+  "Run go coverage in tmp dir"
+  (interactive)
+  (let ((cmd (format "gocover %s" (buffer-file-name))))
+    (shell-command cmd)))
+
+
+(global-set-key (kbd "C-x g") 'run-cover)
+(global-set-key (kbd "C-;") 'helm-projectile)
+;;(require 'zen-and-art-theme)
+
+(defalias 'qrr 'query-replace-regexp)
+(defalias 'lml 'list-matching-lines)
+(defalias 'him 'helm-imenu)
+(defalias 'hf 'helm-projectile)
+(defalias 'cp 'copy-region-as-kill)
+
+(defalias 'g 'grep)
+(defalias 'gf 'grep-find)
+(defalias 'fd 'find-dired)
