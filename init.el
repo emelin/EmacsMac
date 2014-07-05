@@ -223,6 +223,7 @@
 (require 'auto-complete-config)
 (ac-config-default)
 (setq ac-auto-start 3)
+(setq ac-auto-show-menu nil)
 
 (define-key ac-complete-mode-map "\C-n" 'ac-next)
 (define-key ac-complete-mode-map "\C-p" 'ac-previous)
@@ -231,15 +232,16 @@
 (add-to-list 'ac-dictionary-directories "~/.emacs.d/auto-complete/ac-dict")
 
 (require 'auto-complete-clang)
-
 (define-key ac-mode-map  [(control tab)] 'auto-complete)
+
 (defun my-ac-config ()
-  (setq-default ac-sources '(ac-source-abbrev ac-source-dictionary ac-source-words-in-same-mode-buffers))
+  ;;(setq-default ac-sources '(ac-source-abbrev ac-source-dictionary ac-source-words-in-all-buffer))
   (add-hook 'emacs-lisp-mode-hook 'ac-emacs-lisp-mode-setup)
   (add-hook 'c-mode-common-hook 'ac-cc-mode-setup)
   (add-hook 'ruby-mode-hook 'ac-ruby-mode-setup)
   (add-hook 'css-mode-hook 'ac-css-mode-setup)
   (add-hook 'auto-complete-mode-hook 'ac-common-setup))
+(my-ac-config)
 
 (setq ac-clang-flags
       (mapcar (lambda (item)(concat "-I" item))
@@ -257,8 +259,6 @@
 "
                )))
 
-ac-source-gtags
-(my-ac-config)
 
 (defun with-line-copy-file-name()
   (interactive)
