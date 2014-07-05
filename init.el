@@ -166,7 +166,7 @@
 
 
 ;; (defun disable-highlight-current-line()
-  ;;(highlight-current-line-on nil))
+;;(highlight-current-line-on nil))
 
 ;;(add-hook 'eshell-mode-hook 'disable-highlight-current-line)
   
@@ -204,7 +204,6 @@
 (require 'undo-tree)
 (global-undo-tree-mode)
 
-
 (defun get-continue-string ()
   (interactive)
   (skip-chars-backward "^ \t\n\"\'\(\)\<\>\!\&\;\\\[\]")
@@ -222,11 +221,12 @@
 (setq auto-save-default nil)
 (require 'auto-complete)
 (require 'auto-complete-config)
-
 (ac-config-default)
-(setq ac-auto-start 2)
+(setq ac-auto-start 3)
+
 (define-key ac-complete-mode-map "\C-n" 'ac-next)
 (define-key ac-complete-mode-map "\C-p" 'ac-previous)
+
 (add-to-list 'load-path "~/.emacs.d/auto-complete-clang")
 (add-to-list 'ac-dictionary-directories "~/.emacs.d/auto-complete/ac-dict")
 
@@ -556,12 +556,12 @@ ac-source-gtags
 (require 'iedit)
 (global-set-key "\C-ci" 'iedit-mode)
 
-(require 'key-chord)
-(key-chord-mode 1)
-(key-chord-define-global "kr" 'kill-region)
-(key-chord-define-global "uc" 'uncomment-region)
-(key-chord-define-global "cm" 'comment-region)
-(key-chord-define-global "hj" 'copy-region-as-kill)
+;;(require 'key-chord)
+;;(key-chord-mode 1)
+;;(key-chord-define-global "kr" 'kill-region)
+;;(key-chord-define-global "uc" 'uncomment-region)
+;;(key-chord-define-global "cm" 'comment-region)
+;;(key-chord-define-global "hj" 'copy-region-as-kill)
 
 ;;
 ;; ace jump mode major function
@@ -658,9 +658,23 @@ ac-source-gtags
 (add-hook 'go-mode-hook (lambda ()
                           (local-set-key (kbd "C-c C-r") 'go-remove-unused-imports)))
 
+(defun open-eshell-run-go()
+  "Open eshell and run this file"
+  (interactive)
+  (let ((name (file-name-nondirectory (buffer-file-name))))
+    (delete-other-windows)
+    (split-window-horizontally)
+    (other-window 1)
+    (eshell)
+    (goto-char (point-max))
+    (insert-string (concat "go run ./" name))
+    (message "prepare run Go: %s" name)))
+
+
 (add-hook 'go-mode-hook (lambda ()
 			  (local-set-key (kbd "C-c C-k") 'godef-jump)
 			  (local-set-key (kbd "C-c C-j") 'pop-tag-mark)
+			  (local-set-key (kbd "C-c e") 'open-eshell-run-go)
 			  (local-set-key (kbd "C-c f") 'helm-imenu)))
 
 (load-file "~/.emacs.d/go-autocomplete.el")
@@ -681,7 +695,7 @@ ac-source-gtags
 
 (global-set-key (kbd "C-x g") 'run-cover)
 (global-set-key (kbd "C-;") 'helm-projectile)
-(require 'zen-and-art-theme)
+;; (require 'zen-and-art-theme)
 
 
 (load-file "~/.emacs.d/yaml-mode.el")
@@ -706,6 +720,8 @@ ac-source-gtags
 (defalias 'bk 'helm-bookmarks)
 (defalias 'kr 'kill-region)
 (defalias 'gp 'grep)
+(defalias 'cm 'comment-region)
+(defalias 'uc 'uncomment-region)
 (defalias 'gf 'grep-find)
 (defalias 'fd 'find-dired)
 (defalias 'e 'eshell)
