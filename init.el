@@ -492,7 +492,11 @@
 	  '(lambda()
 	     (require 'xcscope)))
 
+
+(load-file "~/.emacs.d/lusty-explorer.el")
 (load-file "~/.emacs.d/lisp/gtags.el")
+
+(require 'lusty-explorer)
 (gtags-mode)
 
 (defun gtags-root-dir ()
