@@ -14,11 +14,12 @@
     (define-key view-mode-map "o" 'other-window)
     (define-key view-mode-map "G" 'end-of-buffer)
     (define-key view-mode-map "i" 'view-mode)
-    (define-key view-mode-map "j" 'backward-char)
-    (define-key view-mode-map "k" 'forward-char)
+    (define-key view-mode-map "j" 'next-line)
+    (define-key view-mode-map "k" 'previous-line)
+    (define-key view-mode-map "h" 'backward-char)
+    (define-key view-mode-map "l" 'forward-char)
     (define-key view-mode-map "c" 'view-forward-to-char)
     (define-key view-mode-map "C" 'view-backward-to-char)
-    (define-key view-mode-map "l" 'View-scroll-line-backward)
     (defun view-forward-to-char (n char)
       "Move forward to Nth occurence of CHAR.
 Typing CHAR again will move forwad to the next Nth occurence of CHAR."

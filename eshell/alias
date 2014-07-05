@@ -1,3 +1,5 @@
-alias l ls $*
-alias mkae mamake $*
+alias gp git pull --rebase
+alias gs git status
 alias mamake make $*
+alias mkae mamake $*
+alias l ls $*

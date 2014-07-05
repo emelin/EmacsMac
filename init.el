@@ -5,8 +5,12 @@
 (when (>= emacs-major-version 24)
   (require 'package)
   (package-initialize)
+  (add-to-list 'package-archives
+               '("melpa" . "http://melpa.milkbox.net/packages/") t)
   (add-to-list 'package-archives '("marmalade" . "http://marmalade-repo.org/packages/") t)
   )
+
+(require 'package)
 
 (setq load-path (cons (expand-file-name "~/.emacs.d/lisp") load-path))
 
@@ -121,6 +125,7 @@
 		("rakefile" . ruby-mode)
 		("\\.go$" . go-mode)
 		("\\.gohtml$" . html-mode)
+		("\\.thrift$" . trhift-mode)
 		) auto-mode-alist))
 
 
@@ -146,20 +151,13 @@
   (add-hook hook 'highlight-symbol-mode-on))
 
 (global-set-key [(control f3)] 'highlight-symbol-at-point)
-(global-set-key [f3] 'highlight-symbol-next)
-(global-set-key [(shift f3)] 'highlight-symbol-prev)
-(global-set-key [(meta f3)] 'highlight-symbol-prev)
 (global-set-key (kbd "C-c r"  ) 'highlight-symbol-query-replace)
 (global-set-key (kbd "C-c M-N") 'highlight-symbol-next-in-defun)
 (global-set-key (kbd "C-c M-P") 'highlight-symbol-prev-in-defun)
+(global-set-key (kbd "C-c f") 'highlight-symbol-next)
+(global-set-key (kbd "C-c b") 'highlight-symbol-prev)
 
-(custom-set-faces
- ;; custom-set-faces was added by Custom.
- ;; If you edit it by hand, you could mess it up, so be careful.
- ;; Your init file should contain only one such instance.
- ;; If there is more than one, they won't work right.
- '(highlight-current-line-face ((t (:background "gray34"))))
- '(highlight-symbol-face ((t (:background "selectedMenuItemColor")))))
+
 
 
 (require 'highlight-current-line)
@@ -219,8 +217,6 @@
 (global-set-key (kbd "C-x [") 'tabbar-backward)
 (global-set-key (kbd "C-x ]") 'tabbar-forward)
 (global-set-key (kbd "C-c ]") 'previous-buffer)
-(global-set-key (kbd "C-,") 'scroll-up-command)
-(global-set-key (kbd "C-.") 'scroll-down-command)
 (global-set-key (kbd "C-c [") 'next-buffer)
 
 (setq tabbar-buffer-groups-function
@@ -278,18 +274,17 @@
 (flymake-mode)
 
 (add-to-list 'load-path "~/.emacs.d/auto-complete")
-
 (setq auto-save-default nil)
 (require 'auto-complete)
 (require 'auto-complete-config)
+
 (ac-config-default)
-(add-to-list 'ac-dictionary-directories "~/.emacs.d/auto-complete/ac-dict")
 (setq ac-auto-start 2)
-(global-auto-complete-mode t)
 (define-key ac-complete-mode-map "\C-n" 'ac-next)
 (define-key ac-complete-mode-map "\C-p" 'ac-previous)
-
 (add-to-list 'load-path "~/.emacs.d/auto-complete-clang")
+(add-to-list 'ac-dictionary-directories "~/.emacs.d/auto-complete/ac-dict")
+
 (require 'auto-complete-clang)
 
 (define-key ac-mode-map  [(control tab)] 'auto-complete)
@@ -299,11 +294,7 @@
   ;; (add-hook 'c-mode-common-hook 'ac-cc-mode-setup)
   (add-hook 'ruby-mode-hook 'ac-ruby-mode-setup)
   (add-hook 'css-mode-hook 'ac-css-mode-setup)
-  (add-hook 'auto-complete-mode-hook 'ac-common-setup)
-  (global-auto-complete-mode t))
-(defun my-ac-cc-mode-setup ()
-  (setq ac-sources (append '(ac-source-clang ac-source-yasnippet) ac-sources)))
-(add-hook 'c-mode-common-hook 'my-ac-cc-mode-setup)
+  (add-hook 'auto-complete-mode-hook 'ac-common-setup))
 
 (setq ac-clang-flags
       (mapcar (lambda (item)(concat "-I" item))
@@ -485,7 +476,6 @@
    (quote
     ("^\\*Man " "^\\*Messages\\*" "^\\*scratch*" "^\\*GNU*" "*Messages*")))
  '(flymake-gui-warnings-enabled nil)
- '(newsticker-url-list (quote (("cyukang" "http://cyukang.com/atom" nil nil nil))))
  '(projectile-enable-caching nil)
  '(projectile-global-mode t)
  '(projectile-require-project-root nil))
@@ -533,8 +523,8 @@
 
 (add-hook 'after-save-hook 'gtags-update-hook)
 
-(global-set-key (kbd "C-,") 'gtags-find-tag)
-(global-set-key (kbd "C-.") 'gtags-pop-stack)
+;;(global-set-key (kbd "C-,") 'gtags-find-tag)
+;;(global-set-key (kbd "C-.") 'gtags-pop-stack)
 (global-set-key [f9] 'gtags-find-symbol)
 (global-set-key [(shift f9)] 'gtags-pop-stack)
 (global-set-key (kbd "C-x j f") 'gtags-find-file)
@@ -543,12 +533,10 @@
 
 (require 'xgtags)
 (xgtags-mode 1)
-(global-set-key (kbd "C-,") 'xgtags-find-tag)
+
 (global-set-key (kbd "C-x j t") 'xgtags-find-tag)
 (global-set-key (kbd "C-.") 'xgtags-pop-stack)
 (global-set-key (kbd "C-x j b") 'xgtags-pop-stack)
-(global-set-key [f9] 'xgtags-find-symbol)
-(global-set-key [(shift f9)] 'xgtags-find-rtag)
 (global-set-key (kbd "C-x j f") 'gtags-find-file)
 (global-set-key (kbd "C-;") 'gtags-find-file)
 (global-set-key (kbd "M-n") 'xgtags-select-next-tag)
@@ -621,13 +609,10 @@
 
 (require 'key-chord)
 (key-chord-mode 1)
-;; (key-chord-define-global "p[" 'undo)
-;; (key-chord-define-global "[]" 'indent-region)
-;; (key-chord-define-global "cm" 'comment-region)
-;; (key-chord-define-global "uc" 'uncomment-region)
-;; (key-chord-define-global "kr" 'kill-region)
-(key-chord-define-global ";'" 'copy-region-as-kill)
-
+(key-chord-define-global "kr" 'kill-region)
+(key-chord-define-global "uc" 'uncomment-region)
+(key-chord-define-global "cm" 'comment-region)
+(key-chord-define-global "hj" 'copy-region-as-kill)
 
 ;;
 ;; ace jump mode major function
@@ -663,7 +648,6 @@
 (set-face-background 'mode-line "gray20")
 
 (load-file "~/.emacs.d/auto/autoconfig.el")
-
 
 ;;(require 'cmuscheme)
 (add-to-list 'load-path "~/.emacs.d/slime")
@@ -726,11 +710,18 @@
 (add-hook 'go-mode-hook (lambda ()
                           (local-set-key (kbd "C-c C-r") 'go-remove-unused-imports)))
 
-(load-file "~/Desktop/code/emacSay/emacsay-mode.el")
+(add-hook 'go-mode-hook (lambda ()
+			  (local-set-key (kbd "C-c C-k") 'godef-jump)
+			  (local-set-key (kbd "C-c C-j") 'pop-tag-mark)
+			  (local-set-key (kbd "C-c f") 'helm-imenu)))
 
 (load-file "~/.emacs.d/go-autocomplete.el")
 (require 'go-autocomplete)
 (require 'auto-complete-config)
+
+(add-hook 'go-mode-hook (lambda ()
+			  (auto-complete-mode)
+			  (highlight-symbol-mode)))
 
 (require 'ess)
 (defun run-cover ()
@@ -744,12 +735,39 @@
 (global-set-key (kbd "C-;") 'helm-projectile)
 ;;(require 'zen-and-art-theme)
 
+
+(load-file "~/.emacs.d/yaml-mode.el")
+(require 'yaml-mode)
+
+(load-file "~/.emacs.d/thrift-mode.el")
+(require 'thrift-mode)
+
+(setq web-mode-engines-alist
+      '(("razor" . "\\.gohtml\\'")
+        ))
+
+(require 'yasnippet)
+(delq 'ac-source-yasnippet ac-sources)
+(require 'ido-select-window)
+(defalias 'idw 'ido-select-window)
 (defalias 'qrr 'query-replace-regexp)
 (defalias 'lml 'list-matching-lines)
 (defalias 'him 'helm-imenu)
 (defalias 'hf 'helm-projectile)
 (defalias 'cp 'copy-region-as-kill)
-
+(defalias 'book 'helm-bookmarks)
+(defalias 'kr 'kill-region)
 (defalias 'g 'grep)
 (defalias 'gf 'grep-find)
 (defalias 'fd 'find-dired)
+(defalias 'e 'eshell)
+
+(global-set-key (kbd "C-l") 'execute-extended-command)
+
+(custom-set-faces
+ ;; custom-set-faces was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+ '(highlight-current-line-face ((t (:background "gray30"))))
+ '(highlight-symbol-face ((t (:background "selectedMenuItemColor")))))
