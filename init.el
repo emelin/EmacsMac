@@ -46,17 +46,14 @@
 
 ;(load "desktop")
 ;(desktop-save-mode)
-;(desktop-auto-save)
 (show-paren-mode)
 
 (set-default-font "Source Code Pro-13")
 (set-fontset-font "fontset-default" 'gb18030' ("STHeiti" . "unicode-bmp"))
 
 (require 'linum)
-
 (require 'ido)
 (ido-mode t)
-;; fuzzy matching is a must have
 (setq ido-enable-flex-matching t)
 
 ;; This tab override shouldn't be necessary given ido's default
@@ -72,7 +69,6 @@
 (require 'ibuffer)
 (global-set-key (kbd "C-x C-b") 'ibuffer)
 
-
 (defun toggle-fullscreen ()
   "Toggle full screen"
   (interactive)
@@ -87,12 +83,6 @@
 
 (toggle-fullscreen)
 
-;(require 'revive)
-;(autoload 'save-current-configuration "revive" "Save status" t)
-;(autoload 'resume "revive" "Resume Emacs" t)
-;(autoload 'wipe "revive" "Wipe Emacs" t)
-
-
 ;(load-file "~/.emacs.d/lisp/anything-match-plugin.el")
 (require 'anything-complete)
 ;; Bind C-o to complete shell history
@@ -103,7 +93,6 @@
 (global-set-key (kbd "C-x m") 'anything-execute-extended-command)
 (global-set-key (kbd "C-c C-m") 'anything-execute-extended-command)
 (global-set-key (kbd "C-c m")   'anything-execute-extended-command)
-
 
 (setq auto-mode-alist
       (append '(("\\.cpp$" . c++-mode)
@@ -157,14 +146,11 @@
 (global-set-key (kbd "C-c f") 'highlight-symbol-next)
 (global-set-key (kbd "C-c b") 'highlight-symbol-prev)
 
-
-
-
 (require 'highlight-current-line)
 (highlight-current-line-minor-mode)
-(highlight-current-line-on t)
+;; (highlight-current-line-on t)
 ;; To customize the background color
-(set-face-background 'highlight-current-line-face "gray24")
+;; (set-face-background 'highlight-current-line-face "gray29")
 
 (require 'highlight-parentheses)
 (defun turn-on-highlight-parentheses-mode ()
@@ -178,6 +164,12 @@
 
 (load-file "~/.emacs.d/lisp/viewer.el")
 
+
+;; (defun disable-highlight-current-line()
+  ;;(highlight-current-line-on nil))
+
+;;(add-hook 'eshell-mode-hook 'disable-highlight-current-line)
+  
 (defun open-eshell-now ()
   "Open eshell"
   (interactive)
@@ -201,7 +193,6 @@
 
 (global-set-key (kbd "C-c '") 'open-eshell-run-this-file)
 
-
 (defun go-to-other-window-and-close-this-one()
   "Go to other window and close current window"
   (interactive)
@@ -209,52 +200,6 @@
   (delete-other-windows))
 
 (global-set-key (kbd "C-c k") 'go-to-other-window-and-close-this-one)
-
-(require 'tabbar)
-;;(tabbar-mode)
-(global-set-key (kbd "C-c b") 'tabbar-backward-group)
-(global-set-key (kbd "C-c f") 'tabbar-forward-group)
-(global-set-key (kbd "C-x [") 'tabbar-backward)
-(global-set-key (kbd "C-x ]") 'tabbar-forward)
-(global-set-key (kbd "C-c ]") 'previous-buffer)
-(global-set-key (kbd "C-c [") 'next-buffer)
-
-(setq tabbar-buffer-groups-function
-    (lambda (b) (list "All Buffers")))
-
-(setq tabbar-buffer-list-function
-    (lambda ()
-        (remove-if
-          (lambda(buffer)
-             (find (aref (buffer-name buffer) 0) " *"))
-          (buffer-list))))
-
-(set-face-attribute 'tabbar-default-face nil
-                    :family "DejaVu Sans Mono"
-                    :background "#3f3f3f"
-                    :foreground "gray30"
-                    :height 0.1
-                    )
-
-(set-face-attribute 'tabbar-button-face nil
-                    :inherit 'tabbar-default
-                    :box '(:line-width 1 :color "yellow70")
-                    )
-
-(set-face-attribute 'tabbar-selected-face nil
-                    :inherit 'tabbar-default
-                    :foreground "DarkGreen"
-                    :background "LightGoldenrod"
-                    :box '(:line-width 1 :color "DarkGoldenrod")
-                    :overline "rosy brown"
-                    :underline "rosy brown"
-                    :weight 'bold
-                    )
-(set-face-attribute 'tabbar-unselected-face nil
-                    :inherit 'tabbar-default
-                    :box '(:line-width 1 :color "#00B2BF")
-                    )
-
 
 (require 'undo-tree)
 (global-undo-tree-mode)
@@ -291,7 +236,7 @@
 (defun my-ac-config ()
   (setq-default ac-sources '(ac-source-abbrev ac-source-dictionary ac-source-words-in-same-mode-buffers))
   (add-hook 'emacs-lisp-mode-hook 'ac-emacs-lisp-mode-setup)
-  ;; (add-hook 'c-mode-common-hook 'ac-cc-mode-setup)
+  (add-hook 'c-mode-common-hook 'ac-cc-mode-setup)
   (add-hook 'ruby-mode-hook 'ac-ruby-mode-setup)
   (add-hook 'css-mode-hook 'ac-css-mode-setup)
   (add-hook 'auto-complete-mode-hook 'ac-common-setup))
@@ -312,7 +257,7 @@
 "
                )))
 
-;; ac-source-gtags
+ac-source-gtags
 (my-ac-config)
 
 (defun with-line-copy-file-name()
@@ -356,11 +301,11 @@
 (defun my-c-mode-common-hook()
   (setq tab-width 4 indent-tabs-mode nil)
   (hs-minor-mode t)
-  ;; hungry-delete and auto-newline
-  ;;(c-toggle-auto-hungry-state 1)
+  hungry-delete and auto-newline
+  (c-toggle-auto-hungry-state 1)
   (c-set-style "stroustrup")
   (setq c-basic-offset 4)
-  ;(flymake-clang-c-load)
+  (flymake-clang-c-load)
   (define-key c-mode-base-map [(control \`)] 'hs-toggle-hiding)
   (define-key c-mode-base-map [(return)] 'newline-and-indent)
   (define-key c-mode-base-map [(f7)] 'compile)
@@ -372,7 +317,7 @@
   (setq c-macro-prompt-flag t)
   (setq abbrev-mode t)
   (hs-minor-mode)
-  ;;(setq ac-auto-start nil)
+  (setq ac-auto-start nil)
   (setq ac-expand-on-auto-complete nil)
   (setq ac-quick-help-delay 0.5)
   (define-key c-mode-base-map (kbd "M-/") 'ac-complete-clang)
@@ -429,7 +374,7 @@
   (setq c++-basic-offset 4)
   (hs-minor-mode)
   (c-set-style "mycodingstyle")
-  ;;(flymake-clang-c++-load)
+  (flymake-clang-c++-load)
   (define-key c-mode-base-map [(return)] 'newline-and-indent))
 
 (require 'python-mode)
@@ -446,9 +391,9 @@
 (setq abbrev-mode t)
 (global-set-key (kbd "C-=") 'dabbrev-expand)
 
-;; (setq ansi-color-names-vector
-;;       ["black" "red" "green" "yellow" "sky blue" "magenta" "cyan" "white"])
-;; (ansi-color-for-comint-mode-on)
+(setq ansi-color-names-vector
+      ["black" "red" "green" "yellow" "sky blue" "magenta" "cyan" "white"])
+(ansi-color-for-comint-mode-on)
 
 (add-to-list 'load-path "~/.emacs.d/themes")
 (require 'zenburn-theme)
@@ -686,7 +631,6 @@
 (require 'erlang)
 (require 'erlang-start)
 (require 'ag)
-
 (require 'midnight)
 
 (defun find-file-as-root ()
@@ -737,7 +681,7 @@
 
 (global-set-key (kbd "C-x g") 'run-cover)
 (global-set-key (kbd "C-;") 'helm-projectile)
-;;(require 'zen-and-art-theme)
+(require 'zen-and-art-theme)
 
 
 (load-file "~/.emacs.d/yaml-mode.el")
@@ -756,22 +700,15 @@
 (defalias 'idw 'ido-select-window)
 (defalias 'qrr 'query-replace-regexp)
 (defalias 'lml 'list-matching-lines)
-(defalias 'him 'helm-imenu)
+(defalias 'hi 'helm-imenu)
 (defalias 'hf 'helm-projectile)
 (defalias 'cp 'copy-region-as-kill)
-(defalias 'book 'helm-bookmarks)
+(defalias 'bk 'helm-bookmarks)
 (defalias 'kr 'kill-region)
-(defalias 'g 'grep)
+(defalias 'gp 'grep)
 (defalias 'gf 'grep-find)
 (defalias 'fd 'find-dired)
 (defalias 'e 'eshell)
 
 (global-set-key (kbd "C-l") 'execute-extended-command)
 
-(custom-set-faces
- ;; custom-set-faces was added by Custom.
- ;; If you edit it by hand, you could mess it up, so be careful.
- ;; Your init file should contain only one such instance.
- ;; If there is more than one, they won't work right.
- '(highlight-current-line-face ((t (:background "gray30"))))
- '(highlight-symbol-face ((t (:background "selectedMenuItemColor")))))
