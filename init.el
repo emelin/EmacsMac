@@ -1,3 +1,5 @@
+(setq load-path (cons (expand-file-name "~/.emacs.d/lisp") load-path))
+
 (defsubst package-desc-vers (desc)
   "Extract version from a package description vector."
   (aref desc 0))
@@ -7,17 +9,16 @@
   (package-initialize)
   (add-to-list 'package-archives
                '("melpa" . "http://melpa.milkbox.net/packages/") t)
-  (add-to-list 'package-archives '("marmalade" . "http://marmalade-repo.org/packages/") t)
+  (add-to-list 'package-archives
+	       '("marmalade" . "http://marmalade-repo.org/packages/") t)
   )
 
 (require 'package)
 
-(setq load-path (cons (expand-file-name "~/.emacs.d/lisp") load-path))
 
 (tool-bar-mode -1)
 (scroll-bar-mode -1)
 (set-fringe-mode '(0 . 0))
-
 (setq make-backup-files nil)
 (fset 'yes-or-no-p 'y-or-n-p)
 
@@ -35,17 +36,12 @@
 
 (global-auto-revert-mode t)
 (setq column-number-mode t)
-
 (setq line-number-mode t)
 (setq display-time-24hr-format t)
-(setq display-time-day-and-date t)
 (display-time)
-(global-set-key [C-tab] "\C-q\t")
-(setq message-log-max nil)
+;;(setq message-log-max nil)
 (setq ring-bell-function 'ignore)
 
-;(load "desktop")
-;(desktop-save-mode)
 (show-paren-mode)
 
 (set-default-font "Source Code Pro-13")
@@ -63,8 +59,6 @@
 (add-hook 'ido-setup-hook
           (lambda ()
             (define-key ido-completion-map [tab] 'ido-complete)))
-
-(windmove-default-keybindings 'meta)
 
 (require 'ibuffer)
 (global-set-key (kbd "C-x C-b") 'ibuffer)
@@ -145,6 +139,8 @@
 (global-set-key (kbd "C-c M-P") 'highlight-symbol-prev-in-defun)
 (global-set-key (kbd "C-c f") 'highlight-symbol-next)
 (global-set-key (kbd "C-c b") 'highlight-symbol-prev)
+(global-set-key (kbd "C-<return>") 'other-window)
+
 
 (require 'highlight-current-line)
 (highlight-current-line-minor-mode)
@@ -160,8 +156,9 @@
   turn-on-highlight-parentheses-mode)
 (global-highlight-parentheses-mode)
 (setq hl-paren-background-colors '("green"))
-(global-set-key (kbd "C-'") 'highlight-symbol-next)
 
+
+(load-file "~/.emacs.d/lisp/c-config.el")
 (load-file "~/.emacs.d/lisp/viewer.el")
 
 
@@ -178,20 +175,6 @@
   (other-window 1)
   (eshell))
 (global-set-key (kbd "C-c e") 'open-eshell-now)
-
-(defun open-eshell-run-this-file()
-  "Open eshell and run this file"
-  (interactive)
-  (let ((name (file-name-base (buffer-file-name))))
-    (delete-other-windows)
-    (split-window-horizontally)
-    (other-window 1)
-    (eshell)
-    (goto-char (point-max))
-    (insert-string (concat "./" name))
-    (message "prepare run: %s" name)))
-
-(global-set-key (kbd "C-c '") 'open-eshell-run-this-file)
 
 (defun go-to-other-window-and-close-this-one()
   "Go to other window and close current window"
@@ -231,34 +214,6 @@
 (add-to-list 'load-path "~/.emacs.d/auto-complete-clang")
 (add-to-list 'ac-dictionary-directories "~/.emacs.d/auto-complete/ac-dict")
 
-(require 'auto-complete-clang)
-(define-key ac-mode-map  [(control tab)] 'auto-complete)
-
-(defun my-ac-config ()
-  ;;(setq-default ac-sources '(ac-source-abbrev ac-source-dictionary ac-source-words-in-all-buffer))
-  (add-hook 'emacs-lisp-mode-hook 'ac-emacs-lisp-mode-setup)
-  (add-hook 'c-mode-common-hook 'ac-cc-mode-setup)
-  (add-hook 'ruby-mode-hook 'ac-ruby-mode-setup)
-  (add-hook 'css-mode-hook 'ac-css-mode-setup)
-  (add-hook 'auto-complete-mode-hook 'ac-common-setup))
-(my-ac-config)
-
-(setq ac-clang-flags
-      (mapcar (lambda (item)(concat "-I" item))
-              (split-string
-               "
- /usr/llvm-gcc-4.2/bin/../lib/gcc/i686-apple-darwin11/4.2.1/include
- /usr/include/c++/4.2.1
- /usr/include/c++/4.2.1/backward
- /usr/local/include
- /Applications/Xcode.app/Contents/Developer/usr/llvm-gcc-4.2/lib/gcc/i686-apple-darwin11/4.2.1/include
- /usr/include
- /Users/kang/code/Panda/inc
- /System/Library/Frameworks
- /Library/Frameworks
-"
-               )))
-
 
 (defun with-line-copy-file-name()
   (interactive)
@@ -294,99 +249,9 @@
 
 (require 'smart-compile+)
 (global-set-key  (kbd "C-c ;") 'smart-compile)
-(require 'flymake-clang-c)
-(require 'flymake-clang-c++)
 
-(require 'clang-lookup)
-(defun my-c-mode-common-hook()
-  (setq tab-width 4 indent-tabs-mode nil)
-  (hs-minor-mode t)
-  hungry-delete and auto-newline
-  (c-toggle-auto-hungry-state 1)
-  (c-set-style "stroustrup")
-  (setq c-basic-offset 4)
-  (flymake-clang-c-load)
-  (define-key c-mode-base-map [(control \`)] 'hs-toggle-hiding)
-  (define-key c-mode-base-map [(return)] 'newline-and-indent)
-  (define-key c-mode-base-map [(f7)] 'compile)
-  (define-key c-mode-base-map [(f8)] 'ff-get-other-file)
-  (define-key c-mode-base-map [(meta \`)] 'c-indent-command)
-  (setq c-macro-shrink-window-flag t)
-  (setq c-macro-preprocessor "cpp")
-  (setq c-macro-cppflags " ")
-  (setq c-macro-prompt-flag t)
-  (setq abbrev-mode t)
-  (hs-minor-mode)
-  (setq ac-auto-start nil)
-  (setq ac-expand-on-auto-complete nil)
-  (setq ac-quick-help-delay 0.5)
-  (define-key c-mode-base-map (kbd "M-/") 'ac-complete-clang)
-  (define-key c-mode-base-map (kbd "C-j") 'ac-complete-clang)
-  )
-
-(defface font-lock-function-call-face
-  '((t (:foreground "LightSkyBlue2")))
-  "Font Lock mode face used to highlight function calls."
-  :group 'font-lock-highlighting-faces)
-
-(defvar font-lock-function-call-face 'font-lock-function-call-face)
-(add-hook 'my-c-mode-common-hook
-          (lambda ()
-            (font-lock-add-keywords
-             nil
-             '(("\\<\\(\\sw+\\) ?(" 1 font-lock-function-call-face)) t)))
-
-(add-hook 'c-mode-hook
-          (lambda ()
-            (font-lock-add-keywords
-             nil
-             '(("\\<\\(\\sw+\\) ?(" 1 font-lock-function-call-face)) t)))
-
-(add-hook 'c++-mode-hook
-          (lambda ()
-            (font-lock-add-keywords
-             nil
-             '(("\\<\\(\\sw+\\) ?(" 1 font-lock-function-call-face)) t)))
-
-(add-hook 'c-mode-common-hook 'my-c-mode-common-hook)
-
-(setq c-basic-offset 4)
-(setq c++-basic-offset 4)
-
-(c-add-style "mycodingstyle"
-             '((c-basic-offset . 4)
-               (c-comment-only-line-offset . 0)
-               (c-hanging-braces-alist . ((substatement-open before after)))
-               (c-offsets-alist . ((topmost-intro        . 0)
-                                   (topmost-intro-cont   . 0)
-                                   (substatement         . 4)
-                                   (substatement-open    . 0)
-                                   (statement-case-open  . 4)
-                                   (statement-cont       . 4)
-                                   (access-label         . -4)
-                                   (inclass              . 4)
-                                   (inline-open          . 4)
-                                   (innamespace          . 0)
-                                   ))))
-
-
-(defun my-c++-mode-hook()
-  (setq c++-basic-offset 4)
-  (hs-minor-mode)
-  (c-set-style "mycodingstyle")
-  (flymake-clang-c++-load)
-  (define-key c-mode-base-map [(return)] 'newline-and-indent))
 
 (require 'python-mode)
-(add-hook 'c++-mode-hook 'my-c++-mode-hook)
-(add-hook 'c++-mode-hook 'my-c-mode-common-hook)
-(add-hook 'python-mode-hook '(lambda ()
-			       (local-set-key (kbd "RET") 'newline-and-indent)))
-(add-hook 'ruby-mode-hook '(lambda ()
-			     (local-set-key (kbd "RET") 'newline-and-indent)))
-
-(add-hook 'lua-mode-hook '(lambda ()
-			    (local-set-key (kbd "RET") 'newline-and-indent)))
 
 (setq abbrev-mode t)
 (global-set-key (kbd "C-=") 'dabbrev-expand)
@@ -397,7 +262,6 @@
 
 (add-to-list 'load-path "~/.emacs.d/themes")
 (require 'zenburn-theme)
-
 
 (autoload 'ansi-color-for-comint-mode-on "ansi-color" nil t)
 (add-hook 'shell-mode-hook 'ansi-color-for-comint-mode-on t)
@@ -411,85 +275,23 @@
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
- '(clean-buffer-list-delay-general 2)
- '(clean-buffer-list-delay-special 4)
+ '(clean-buffer-list-delay-general 1)
+ '(clean-buffer-list-delay-special 0)
  '(clean-buffer-list-kill-buffer-names
    (quote
-    ("*Help*" "*Apropos*" "*Buffer List*" "*Compile-Log*" "*info*" "*vc*" "*vc-diff*" "*diff*" "*Messages*" "*anything*" "*ag")))
+    ("*Help*" "*Apropos*" "*Buffer List*" "*Compile-Log*"
+     "*info*" "*vc*" "*vc-diff*" "*diff*" "*anything*" "*ag")))
  '(clean-buffer-list-kill-never-buffer-names nil)
- '(clean-buffer-list-kill-regexps
-   (quote
-    ("^\\*Man " "^\\*Messages\\*" "^\\*scratch*" "^\\*GNU*" "*Messages*")))
+ '(clean-buffer-list-kill-regexps (quote ("^\\*Man " "^\\*scratch*" "^\\*GNU*")))
  '(flymake-gui-warnings-enabled nil)
  '(projectile-enable-caching nil)
  '(projectile-global-mode t)
  '(projectile-require-project-root nil))
 
-
 (setq which-func-cleanup-function
       (lambda (s) (set-text-properties 0 (length s) nil s) s))
 
-(require 'xcscope)
-(add-hook 'c-mode-common-hook
-	  '(lambda ()
-	     (require 'xcscope)))
-(add-hook 'c++-mode-common-hook
-	  '(lambda()
-	     (require 'xcscope)))
-
-
-(load-file "~/.emacs.d/lusty-explorer.el")
 (load-file "~/.emacs.d/lisp/gtags.el")
-
-(require 'lusty-explorer)
-(gtags-mode)
-
-(defun gtags-root-dir ()
-  "Returns GTAGS root directory or nil if doesn't exist."
-  (with-temp-buffer
-    (if (zerop (call-process "global" nil t nil "-pr"))
-        (buffer-substring (point-min) (1- (point-max)))
-      nil)))
-
-(defun gtags-update-single(filename)
-  "Update Gtags database for changes in a single file"
-  (interactive)
-  (start-process "update-gtags" nil "bash" "-c"
-                 (concat "cd " (gtags-root-dir) " ; gtags --single-update " filename )))
-
-(defun gtags-update-current-file()
-  (interactive)
-  (defvar filename)
-  (setq filename (replace-regexp-in-string (gtags-root-dir) "." (buffer-file-name (current-buffer))))
-  (gtags-update-single filename)
-  (message "Gtags updated for %s" filename))
-
-(defun gtags-update-hook()
-  "Update GTAGS file incrementally upon saving a file"
-  (when gtags-mode
-    (when (gtags-root-dir)
-      (gtags-update-current-file))))
-
-(add-hook 'after-save-hook 'gtags-update-hook)
-
-;;(global-set-key (kbd "C-,") 'gtags-find-tag)
-;;(global-set-key (kbd "C-.") 'gtags-pop-stack)
-(global-set-key [f9] 'gtags-find-symbol)
-(global-set-key [(shift f9)] 'gtags-pop-stack)
-(global-set-key (kbd "C-x j f") 'gtags-find-file)
-
-(global-set-key (kbd "C-;") 'gtags-find-file)
-
-(require 'xgtags)
-(xgtags-mode 1)
-
-(global-set-key (kbd "C-x j t") 'xgtags-find-tag)
-(global-set-key (kbd "C-.") 'xgtags-pop-stack)
-(global-set-key (kbd "C-x j b") 'xgtags-pop-stack)
-(global-set-key (kbd "C-x j f") 'gtags-find-file)
-(global-set-key (kbd "C-;") 'gtags-find-file)
-(global-set-key (kbd "M-n") 'xgtags-select-next-tag)
-(global-set-key (kbd "M-p") 'xgtags-select-prev-tag)
 
 (autoload 'markdown-mode "markdown-mode.el"
     "Major mode for editing Markdown files" t)
@@ -613,18 +415,6 @@
 (setq slime-csi-path "/usr/local/bin/csi")
 (set-variable (quote scheme-program-name) "csi")
 
-(defun linux-c-mode ()
-  "C mode with adjusted defaults for use with the Linux kernel."
-  (interactive)
-  (c-mode)
-  (c-set-style "K&R")
-  (setq tab-width 8)
-  (setq indent-tabs-mode t)
-  (setq c-basic-offset 8))
-
-(setq auto-mode-alist (cons '("/home/kang/code/linux.*/.*\\.[ch]$" . linux-c-mode)
-                            auto-mode-alist))
-
 (put 'set-goal-column 'disabled nil)
 
 (add-to-list 'load-path "~/.emacs.d/erlang")
@@ -658,6 +448,9 @@
 (add-hook 'go-mode-hook (lambda ()
                           (local-set-key (kbd "C-c C-r") 'go-remove-unused-imports)))
 
+;; (eval-after-load "go-mode"
+;;   '(require 'flymake-go))
+
 (defun open-eshell-run-go()
   "Open eshell and run this file"
   (interactive)
@@ -679,7 +472,6 @@
 
 (load-file "~/.emacs.d/go-autocomplete.el")
 (require 'go-autocomplete)
-(require 'auto-complete-config)
 
 (add-hook 'go-mode-hook (lambda ()
 			  (auto-complete-mode)
@@ -697,7 +489,6 @@
 (global-set-key (kbd "C-;") 'helm-projectile)
 ;; (require 'zen-and-art-theme)
 
-
 (load-file "~/.emacs.d/yaml-mode.el")
 (require 'yaml-mode)
 
@@ -712,10 +503,12 @@
 (delq 'ac-source-yasnippet ac-sources)
 (require 'ido-select-window)
 (defalias 'idw 'ido-select-window)
-(defalias 'qrr 'query-replace-regexp)
+(defalias 'qrr 'query-replace)
 (defalias 'lml 'list-matching-lines)
 (defalias 'hi 'helm-imenu)
 (defalias 'hf 'helm-projectile)
+(defalias 'hr 'helm-recentf)
+(defalias 'h 'helm-mini)
 (defalias 'cp 'copy-region-as-kill)
 (defalias 'bk 'helm-bookmarks)
 (defalias 'kr 'kill-region)
@@ -725,6 +518,56 @@
 (defalias 'gf 'grep-find)
 (defalias 'fd 'find-dired)
 (defalias 'e 'eshell)
+(defalias 'ha 'helm-ag)
+(defalias 'hat 'helm-ag-this-file)
+(defalias 'w 'windmove-up)
+(defalias 's 'windmove-down)
+(defalias 'd 'windmove-right)
+(defalias 'a 'windmove-left)
 
 (global-set-key (kbd "C-l") 'execute-extended-command)
 
+;; make buffer names unique even if the files have the same names
+(require 'uniquify)
+(setq uniquify-buffer-name-style 'forward)
+
+(require 'window-numbering)
+(window-numbering-mode)
+
+(require 'smex)
+
+(setq helm-ag-base-command "ag --nocolor --nogroup --ignore-case")
+(setq helm-ag-command-option "--all-text")
+(setq helm-ag-thing-at-point 'symbol)
+
+(add-hook 'emacs-startup-hook #'(lambda ()
+                                  (let ((default-directory (getenv "HOME")))
+                                    (command-execute 'eshell)
+                                    (bury-buffer))))
+
+(defun clear-by-mode()
+  (interactive)
+  (let ((all-buffers (buffer-list)))
+    (dolist (buffer all-buffers)
+      (when (string-equal (symbol-name (buffer-mode buffer))
+			  "emacs-lisp-mode")
+	 (message "%s" buffer)))))
+
+(defun buffer-mode (&optional buffer-or-name)
+  "Returns the major mode associated with a buffer.
+If buffer-or-name is nil return current buffer's mode."
+  (buffer-local-value 'major-mode
+                      (if buffer-or-name (get-buffer buffer-or-name) (current-buffer))))
+
+(require 'midnight)
+
+
+(custom-set-faces
+ '(highlight-symbol-face ((t (:background "medium slate blue")))))
+
+(defun eshell/clear ()
+  "Hi, you will clear the eshell buffer."
+  (interactive)
+  (let ((inhibit-read-only t))
+    (erase-buffer)
+    (message "erase eshell buffer")))
