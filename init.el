@@ -207,12 +207,16 @@
 (ac-config-default)
 (setq ac-auto-start 3)
 (setq ac-auto-show-menu nil)
+(setq ac-ignore-case 'smart)
 
 (define-key ac-complete-mode-map "\C-n" 'ac-next)
 (define-key ac-complete-mode-map "\C-p" 'ac-previous)
 
 (add-to-list 'load-path "~/.emacs.d/auto-complete-clang")
-(add-to-list 'ac-dictionary-directories "~/.emacs.d/auto-complete/ac-dict")
+(require 'auto-complete-clang)
+(define-key ac-mode-map  [(control tab)] 'auto-complete)
+;;(add-to-list 'ac-dictionary-directories "~/.emacs.d/auto-complete/ac-dict")
+
 
 
 (defun with-line-copy-file-name()
@@ -291,7 +295,6 @@
 (setq which-func-cleanup-function
       (lambda (s) (set-text-properties 0 (length s) nil s) s))
 
-(load-file "~/.emacs.d/lisp/gtags.el")
 
 (autoload 'markdown-mode "markdown-mode.el"
     "Major mode for editing Markdown files" t)
@@ -520,12 +523,17 @@
 (defalias 'e 'eshell)
 (defalias 'ha 'helm-ag)
 (defalias 'hat 'helm-ag-this-file)
+(defalias 'i 'iy-go-to-char)
+(defalias 'ib 'iy-go-to-char-backward)
 (defalias 'w 'windmove-up)
 (defalias 's 'windmove-down)
 (defalias 'd 'windmove-right)
 (defalias 'a 'windmove-left)
+(defalias 'ep 'er/expand-region)
 
 (global-set-key (kbd "C-l") 'execute-extended-command)
+(global-set-key (kbd "C-c C-k") 'kill-region)
+(global-set-key (kbd "C-c C-c") 'copy-region-as-kill)
 
 ;; make buffer names unique even if the files have the same names
 (require 'uniquify)
@@ -571,3 +579,7 @@ If buffer-or-name is nil return current buffer's mode."
   (let ((inhibit-read-only t))
     (erase-buffer)
     (message "erase eshell buffer")))
+
+(require 'multiple-cursors)
+(global-set-key (kbd "C-S-c C-S-c") 'mc/edit-lines)
+

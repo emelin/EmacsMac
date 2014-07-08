@@ -1,5 +1,4 @@
-(require 'auto-complete-clang)
-(define-key ac-mode-map  [(control tab)] 'auto-complete)
+(load-file "~/.emacs.d/lisp/gtags.el")
 
 (defun my-ac-config ()
   ;;(setq-default ac-sources '(ac-source-abbrev ac-source-dictionary ac-source-words-in-all-buffer))
@@ -167,8 +166,6 @@
 (global-set-key [(shift f9)] 'gtags-pop-stack)
 (global-set-key (kbd "C-x j f") 'gtags-find-file)
 
-(global-set-key (kbd "C-;") 'gtags-find-file)
-
 (require 'xgtags)
 (xgtags-mode 1)
 
@@ -176,7 +173,7 @@
 (global-set-key (kbd "C-.") 'xgtags-pop-stack)
 (global-set-key (kbd "C-x j b") 'xgtags-pop-stack)
 (global-set-key (kbd "C-x j f") 'gtags-find-file)
-(global-set-key (kbd "C-;") 'gtags-find-file)
+;(global-set-key (kbd "C-;") 'gtags-find-file)
 (global-set-key (kbd "M-n") 'xgtags-select-next-tag)
 (global-set-key (kbd "M-p") 'xgtags-select-prev-tag)
 

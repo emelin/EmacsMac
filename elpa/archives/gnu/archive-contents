@@ -142,7 +142,7 @@
 	      ((:url . "http://elpa.gnu.org/packages/epoch-view.html")
 	       (:keywords "data" "timestamp" "epoch" "unix"))])
  (ergoemacs-mode .
-		 [(5 14 7)
+		 [(5 14 7 1)
 		  ((emacs
 		    (24 1))
 		   (undo-tree
@@ -278,7 +278,7 @@
 	    ((:url . "http://elpa.gnu.org/packages/omn-mode.html")
 	     (:keywords))])
  (org .
-      [(20140630)
+      [(20140707)
        nil "Outline-based notes management and organizer" tar nil])
  (osc .
       [(0 1)
