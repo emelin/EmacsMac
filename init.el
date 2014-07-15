@@ -498,9 +498,20 @@
 (load-file "~/.emacs.d/thrift-mode.el")
 (require 'thrift-mode)
 
+(require 'web-mode)
+(defun my-web-mode-hook ()
+  (setq web-mode-markup-indent-offset 4)
+  (setq web-mode-css-indent-offset 4)
+  (setq web-mode-code-indent-offset 4)
+  (setq web-mode-script-padding 4)
+  (setq web-mode-style-padding 4)
+  )
+(add-hook 'web-mode-hook  'my-web-mode-hook)
+(add-to-list 'auto-mode-alist '("\\.html\\'" . web-mode))
+(add-to-list 'auto-mode-alist '("\\.gohtml\\'" . web-mode))
+(add-to-list 'auto-mode-alist '("\\.js\\'" . web-mode))
 (setq web-mode-engines-alist
-      '(("razor" . "\\.gohtml\\'")
-        ))
+      '(("razor" . "\\.gohtml\\'")))
 
 (require 'yasnippet)
 (delq 'ac-source-yasnippet ac-sources)

@@ -199,8 +199,6 @@
     ts-mode
     sclang-mode
     go-mode
-    eshell-mode
-    shell-mode
     text-mode
     html-mode
     web-mode
