@@ -271,8 +271,8 @@
 (add-hook 'shell-mode-hook 'ansi-color-for-comint-mode-on t)
 
 
-(setq which-func-modes t)
-(which-func-mode 1)
+;;(setq which-func-modes t)
+;;(which-func-mode 1)
 
 (custom-set-variables
  ;; custom-set-variables was added by Custom.
@@ -541,6 +541,8 @@
 (defalias 'd 'windmove-right)
 (defalias 'a 'windmove-left)
 (defalias 'ep 'er/expand-region)
+(defalias 'mh 'my-helm-multi-all)
+(defalias 'f 'helm-buffers-list)
 
 (global-set-key (kbd "C-l") 'execute-extended-command)
 (global-set-key (kbd "C-c C-k") 'kill-region)
@@ -593,4 +595,20 @@ If buffer-or-name is nil return current buffer's mode."
 
 (require 'multiple-cursors)
 (global-set-key (kbd "C-S-c C-S-c") 'mc/edit-lines)
+
+
+(eval-after-load "helm-regexp"
+  '(helm-attrset 'follow 1 helm-source-moccur))
+
+(defun my-helm-multi-all ()
+  "multi-occur in all buffers backed by files."
+  (interactive)
+  (helm-multi-occur
+   (delq nil
+         (mapcar (lambda (b)
+                   (when (buffer-file-name b) (buffer-name b)))
+                 (buffer-list)))))
+
+
+(require 'sublimity)
 
