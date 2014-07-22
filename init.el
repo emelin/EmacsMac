@@ -288,10 +288,11 @@
  '(clean-buffer-list-kill-never-buffer-names nil)
  '(clean-buffer-list-kill-regexps (quote ("^\\*Man " "^\\*scratch*" "^\\*GNU*")))
  '(flymake-gui-warnings-enabled nil)
- '(projectile-enable-caching nil)
+ ;;'(projectile-enable-caching nil)
  '(projectile-global-mode t)
  '(projectile-require-project-root nil))
 
+(setq projectile-enable-caching t)
 (setq which-func-cleanup-function
       (lambda (s) (set-text-properties 0 (length s) nil s) s))
 
@@ -313,7 +314,12 @@
 (add-hook 'javascript-mode-hook 'auto-indent-minor-mode)
 (add-hook 'ruby-mode-hook 'auto-indent-minor-mode)
 
+(add-hook 'python-mode-hook (lambda ()
+			      (guess-indentation-style)))
+
 (load-file "~/.emacs.d/lisp/set-indent.el")
+(load-file "~/.emacs.d/lisp/guess-tab.el")
+
 
 (require 'dired-x)
 (setq dired-omit-files "^\\...+$")
@@ -361,14 +367,7 @@
 (require 'iedit)
 (global-set-key "\C-ci" 'iedit-mode)
 
-;;(require 'key-chord)
-;;(key-chord-mode 1)
-;;(key-chord-define-global "kr" 'kill-region)
-;;(key-chord-define-global "uc" 'uncomment-region)
-;;(key-chord-define-global "cm" 'comment-region)
-;;(key-chord-define-global "hj" 'copy-region-as-kill)
 
-;;
 ;; ace jump mode major function
 ;;
 (require 'ace-jump-mode)
@@ -609,6 +608,4 @@ If buffer-or-name is nil return current buffer's mode."
                    (when (buffer-file-name b) (buffer-name b)))
                  (buffer-list)))))
 
-
-(require 'sublimity)
 
