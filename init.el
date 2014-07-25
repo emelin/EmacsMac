@@ -15,7 +15,6 @@
 
 (require 'package)
 
-
 (tool-bar-mode -1)
 (scroll-bar-mode -1)
 (set-fringe-mode '(0 . 0))
@@ -60,6 +59,8 @@
           (lambda ()
             (define-key ido-completion-map [tab] 'ido-complete)))
 
+(add-hook 'before-save-hook 'delete-trailing-whitespace)
+
 (require 'ibuffer)
 (global-set-key (kbd "C-x C-b") 'ibuffer)
 
@@ -74,6 +75,7 @@
   (if (not (frame-parameter nil 'fullscreen))
       (display-time-mode 0))
   )
+
 
 (toggle-fullscreen)
 
@@ -166,7 +168,7 @@
 ;;(highlight-current-line-on nil))
 
 ;;(add-hook 'eshell-mode-hook 'disable-highlight-current-line)
-  
+
 (defun open-eshell-now ()
   "Open eshell"
   (interactive)
@@ -607,5 +609,3 @@ If buffer-or-name is nil return current buffer's mode."
          (mapcar (lambda (b)
                    (when (buffer-file-name b) (buffer-name b)))
                  (buffer-list)))))
-
-
