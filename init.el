@@ -92,9 +92,8 @@
 
 (require 'smex)
 (smex-initialize)
-
 (global-set-key (kbd "C-j") 'smex)
-(global-set-key (kbd "C-c j") 'smex-major-mode-commands)
+(global-set-key (kbd "C-l") 'smex)
 
 (setq auto-mode-alist
       (append '(("\\.cpp$" . c++-mode)
@@ -551,7 +550,7 @@
 (defalias 'mh 'my-helm-multi-all)
 (defalias 'f 'helm-buffers-list)
 
-(global-set-key (kbd "C-l") 'execute-extended-command)
+
 (global-set-key (kbd "C-c C-k") 'kill-region)
 (global-set-key (kbd "C-c C-c") 'copy-region-as-kill)
 
@@ -615,3 +614,10 @@ If buffer-or-name is nil return current buffer's mode."
          (mapcar (lambda (b)
                    (when (buffer-file-name b) (buffer-name b)))
                  (buffer-list)))))
+
+(defun nuke-all-buffers ()
+  (interactive)
+  (mapcar 'kill-buffer (buffer-list))
+  (delete-other-windows))
+
+(global-set-key (kbd "C-x K") 'nuke-all-buffers)
