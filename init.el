@@ -79,7 +79,6 @@
 
 (toggle-fullscreen)
 
-;(load-file "~/.emacs.d/lisp/anything-match-plugin.el")
 (require 'anything-complete)
 ;; Bind C-o to complete shell history
 (anything-complete-shell-history-setup-key "\C-o")
@@ -89,6 +88,13 @@
 (global-set-key (kbd "C-x m") 'anything-execute-extended-command)
 (global-set-key (kbd "C-c C-m") 'anything-execute-extended-command)
 (global-set-key (kbd "C-c m")   'anything-execute-extended-command)
+
+
+(require 'smex)
+(smex-initialize)
+
+(global-set-key (kbd "C-j") 'smex)
+(global-set-key (kbd "C-c j") 'smex-major-mode-commands)
 
 (setq auto-mode-alist
       (append '(("\\.cpp$" . c++-mode)
