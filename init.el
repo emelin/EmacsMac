@@ -38,6 +38,7 @@
 (setq line-number-mode t)
 (setq display-time-24hr-format t)
 (display-time)
+
 ;;(setq message-log-max nil)
 (setq ring-bell-function 'ignore)
 
@@ -166,8 +167,7 @@
 
 
 (load-file "~/.emacs.d/lisp/c-config.el")
-(load-file "~/.emacs.d/lisp/viewer.el")
-
+;;(load-file "~/.emacs.d/lisp/viewer.el")
 
 ;; (defun disable-highlight-current-line()
 ;;(highlight-current-line-on nil))
@@ -549,7 +549,7 @@
 (defalias 'ep 'er/expand-region)
 (defalias 'mh 'my-helm-multi-all)
 (defalias 'f 'helm-buffers-list)
-
+(defalias 'g 'god-mode-all)
 
 (global-set-key (kbd "C-c C-k") 'kill-region)
 (global-set-key (kbd "C-c C-c") 'copy-region-as-kill)
@@ -588,7 +588,6 @@ If buffer-or-name is nil return current buffer's mode."
 
 (require 'midnight)
 
-
 (custom-set-faces
  '(highlight-symbol-face ((t (:background "medium slate blue")))))
 
@@ -621,3 +620,26 @@ If buffer-or-name is nil return current buffer's mode."
   (delete-other-windows))
 
 (global-set-key (kbd "C-x K") 'nuke-all-buffers)
+
+
+(require 'god-mode)
+(global-set-key (kbd "<escape>") 'god-local-mode)
+
+(defun my-update-cursor ()
+  (setq cursor-type (if (or god-local-mode buffer-read-only)
+                        'box
+                      'bar)))
+
+(add-hook 'god-mode-enabled-hook 'my-update-cursor)
+(add-hook 'god-mode-disabled-hook 'my-update-cursor)
+
+(define-key god-local-mode-map (kbd ".") 'repeat)
+(define-key god-local-mode-map (kbd "i") 'god-local-mode)
+(global-set-key (kbd "C-x C-1") 'delete-other-windows)
+(global-set-key (kbd "C-x C-2") 'split-window-below)
+(global-set-key (kbd "C-x C-3") 'split-window-right)
+(global-set-key (kbd "C-x C-0") 'delete-window)
+
+(add-to-list 'god-exempt-major-modes 'dired-mode)
+(add-to-list 'god-exempt-major-modes 'eshell-mode)
+(add-to-list 'god-exempt-major-modes 'shell-mode)
