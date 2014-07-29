@@ -115,6 +115,7 @@
 		("\\.go$" . go-mode)
 		("\\.gohtml$" . html-mode)
 		("\\.thrift$" . trhift-mode)
+		("\\.js$" . js2-mode)
 		) auto-mode-alist))
 
 
@@ -205,14 +206,30 @@
 
 (flymake-mode)
 
+
+;; (require 'company)
+;; (eval-after-load 'company
+;;   '(progn
+;;      (define-key company-active-map (kbd "C-n") 'company-select-next)
+;;      (define-key company-active-map (kbd "C-p") 'company-select-previous)))
+
+;; (add-hook 'after-init-hook 'global-company-mode)
+
+;;(define-key company-mode-map "\C-n" 'company-select-next)
+;;(define-key company-mode-map "\C-p" 'company-select-previous)
+
 (add-to-list 'load-path "~/.emacs.d/auto-complete")
+
 (setq auto-save-default nil)
+
 (require 'auto-complete)
 (require 'auto-complete-config)
 (ac-config-default)
-(setq ac-auto-start 3)
-(setq ac-auto-show-menu nil)
+(setq ac-auto-start 1)
+(setq ac-auto-show-menu t)
+(setq ac-use-fuzzy t)
 (setq ac-ignore-case 'smart)
+(setq ac-ignore-case nil)
 
 (define-key ac-complete-mode-map "\C-n" 'ac-next)
 (define-key ac-complete-mode-map "\C-p" 'ac-previous)
@@ -220,9 +237,7 @@
 (add-to-list 'load-path "~/.emacs.d/auto-complete-clang")
 (require 'auto-complete-clang)
 (define-key ac-mode-map  [(control tab)] 'auto-complete)
-;;(add-to-list 'ac-dictionary-directories "~/.emacs.d/auto-complete/ac-dict")
-
-
+(add-to-list 'ac-dictionary-directories "~/.emacs.d/auto-complete/ac-dict")
 
 (defun with-line-copy-file-name()
   (interactive)
@@ -264,6 +279,7 @@
 
 (setq abbrev-mode t)
 (global-set-key (kbd "C-=") 'dabbrev-expand)
+(global-set-key (kbd "C-o") 'dabbrev-expand)
 
 (setq ansi-color-names-vector
       ["black" "red" "green" "yellow" "sky blue" "magenta" "cyan" "white"])
@@ -288,12 +304,12 @@
  '(clean-buffer-list-delay-special 0)
  '(clean-buffer-list-kill-buffer-names
    (quote
-    ("*Help*" "*Apropos*" "*Buffer List*" "*Compile-Log*"
-     "*info*" "*vc*" "*vc-diff*" "*diff*" "*anything*" "*ag")))
+    ("*Help*" "*Apropos*" "*Buffer List*" "*Compile-Log*" "*info*" "*vc*" "*vc-diff*" "*diff*" "*anything*" "*ag")))
  '(clean-buffer-list-kill-never-buffer-names nil)
  '(clean-buffer-list-kill-regexps (quote ("^\\*Man " "^\\*scratch*" "^\\*GNU*")))
+ ;;'(company-minimum-prefix-length 1)
  '(flymake-gui-warnings-enabled nil)
- ;;'(projectile-enable-caching nil)
+ ;;'(global-company-mode t)
  '(projectile-global-mode t)
  '(projectile-require-project-root nil))
 
@@ -449,12 +465,6 @@
 (setq gofmt-command "goimports")
 (add-hook 'before-save-hook 'gofmt-before-save)
 
-(add-hook 'go-mode-hook (lambda ()
-                          (local-set-key (kbd "C-c C-r") 'go-remove-unused-imports)))
-
-(add-hook 'go-mode-hook (lambda ()
-                          (local-set-key (kbd "C-c C-r") 'go-remove-unused-imports)))
-
 ;; (eval-after-load "go-mode"
 ;;   '(require 'flymake-go))
 
@@ -513,7 +523,7 @@
 (add-hook 'web-mode-hook  'my-web-mode-hook)
 (add-to-list 'auto-mode-alist '("\\.html\\'" . web-mode))
 (add-to-list 'auto-mode-alist '("\\.gohtml\\'" . web-mode))
-(add-to-list 'auto-mode-alist '("\\.js\\'" . web-mode))
+;;(add-to-list 'auto-mode-alist '("\\.js\\'" . web-mode))
 (setq web-mode-engines-alist
       '(("razor" . "\\.gohtml\\'")))
 
@@ -587,6 +597,10 @@ If buffer-or-name is nil return current buffer's mode."
 (require 'midnight)
 
 (custom-set-faces
+ ;; custom-set-faces was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
  '(highlight-symbol-face ((t (:background "medium slate blue")))))
 
 (defun eshell/clear ()
@@ -641,3 +655,16 @@ If buffer-or-name is nil return current buffer's mode."
 (add-to-list 'god-exempt-major-modes 'dired-mode)
 (add-to-list 'god-exempt-major-modes 'eshell-mode)
 (add-to-list 'god-exempt-major-modes 'shell-mode)
+
+(require 'ac-js2)
+(require 'js2-mode)
+(add-hook 'js-mode-hook 'js2-minor-mode)
+(add-hook 'js2-mode-hook 'ac-js2-mode)
+(add-hook 'js2-mode-hook 'skewer-mode)
+(add-hook 'css-mode-hook 'skewer-css-mode)
+(add-hook 'html-mode-hook 'skewer-html-mode)
+
+;; Haskell mode
+(require 'haskell-mode)
+(add-hook 'haskell-mode-hook 'turn-on-haskell-indent)
+(add-hook 'haskell-mode-hook 'turn-on-haskell-doc-mode)
