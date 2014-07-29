@@ -150,10 +150,10 @@
 
 
 (require 'highlight-current-line)
-(highlight-current-line-minor-mode)
-;; (highlight-current-line-on t)
+(highlight-current-line)
+(highlight-current-line-on t)
 ;; To customize the background color
-;; (set-face-background 'highlight-current-line-face "gray29")
+(set-face-background 'highlight-current-line-face "gray30")
 
 (require 'highlight-parentheses)
 (defun turn-on-highlight-parentheses-mode ()
@@ -603,13 +603,6 @@ If buffer-or-name is nil return current buffer's mode."
  ;; If there is more than one, they won't work right.
  '(highlight-symbol-face ((t (:background "medium slate blue")))))
 
-(defun eshell/clear ()
-  "Hi, you will clear the eshell buffer."
-  (interactive)
-  (let ((inhibit-read-only t))
-    (erase-buffer)
-    (message "erase eshell buffer")))
-
 (require 'multiple-cursors)
 (global-set-key (kbd "C-S-c C-S-c") 'mc/edit-lines)
 
@@ -644,6 +637,18 @@ If buffer-or-name is nil return current buffer's mode."
 
 (add-hook 'god-mode-enabled-hook 'my-update-cursor)
 (add-hook 'god-mode-disabled-hook 'my-update-cursor)
+
+(defun clear-and-send-input()
+  (interactive)
+  (if (> (count-lines 1 (point)) 800)
+      (let ((inhibit-read-only t))
+        (message "Clear the eshell now !")
+	(erase-buffer)))
+  (eshell-send-input))
+
+(add-hook 'eshell-mode-hook (lambda ()
+			      (local-set-key (kbd "<return>") 'clear-and-send-input)
+			      (highlight-current-line-minor-mode)))
 
 (define-key god-local-mode-map (kbd ".") 'repeat)
 (define-key god-local-mode-map (kbd "i") 'god-local-mode)
