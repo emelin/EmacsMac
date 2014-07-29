@@ -1,4 +1,5 @@
-(setq load-path (cons (expand-file-name "~/.emacs.d/lisp") load-path))
+(setq load-path
+      (cons (expand-file-name "~/.emacs.d/lisp") load-path))
 
 (defsubst package-desc-vers (desc)
   "Extract version from a package description vector."
@@ -43,7 +44,8 @@
 (show-paren-mode)
 
 (set-default-font "Source Code Pro-13")
-(set-fontset-font "fontset-default" 'gb18030' ("STHeiti" . "unicode-bmp"))
+(set-fontset-font "fontset-default"
+		  'gb18030' ("STHeiti" . "unicode-bmp"))
 
 (require 'linum)
 (require 'ido)
@@ -136,8 +138,16 @@
   "Turn off function `highlight-symbol-mode'."
   (highlight-symbol-mode -1))
 
-(dolist (hook '(emacs-lisp-mode-hook lisp-interaction-mode-hook java-mode-hook
-	c++-mode-hook  c-mode-common-hook text-mode-hook ruby-mode-hook html-mode-hook scheme-mode go-mode))
+(dolist (hook '(emacs-lisp-mode-hook
+		lisp-interaction-mode-hook
+		java-mode-hook
+		c++-mode-hook
+		c-mode-common-hook
+		text-mode-hook
+		ruby-mode-hook
+		html-mode-hook
+		scheme-mode go-mode))
+
   (add-hook hook 'highlight-symbol-mode-on))
 
 (global-set-key [(control f3)] 'highlight-symbol-at-point)
@@ -153,7 +163,7 @@
 (highlight-current-line)
 (highlight-current-line-on t)
 ;; To customize the background color
-(set-face-background 'highlight-current-line-face "gray30")
+(set-face-background 'highlight-current-line-face "gray29")
 
 (require 'highlight-parentheses)
 (defun turn-on-highlight-parentheses-mode ()
@@ -304,9 +314,11 @@
  '(clean-buffer-list-delay-special 0)
  '(clean-buffer-list-kill-buffer-names
    (quote
-    ("*Help*" "*Apropos*" "*Buffer List*" "*Compile-Log*" "*info*" "*vc*" "*vc-diff*" "*diff*" "*anything*" "*ag")))
+    ("*Help*" "*Apropos*" "*Buffer List*" "*Compile-Log*"
+     "*info*" "*vc*" "*vc-diff*" "*diff*" "*anything*" "*ag")))
  '(clean-buffer-list-kill-never-buffer-names nil)
- '(clean-buffer-list-kill-regexps (quote ("^\\*Man " "^\\*scratch*" "^\\*GNU*")))
+ '(clean-buffer-list-kill-regexps
+   (quote ("^\\*Man " "^\\*scratch*" "^\\*GNU*")))
  ;;'(company-minimum-prefix-length 1)
  '(flymake-gui-warnings-enabled nil)
  ;;'(global-company-mode t)
@@ -323,7 +335,8 @@
 (setq auto-mode-alist
     (cons '("\\.md" . markdown-mode) auto-mode-alist))
 
-(global-set-key (kbd "s-p") 'eshell-previous-matching-input-from-input)
+(global-set-key (kbd "s-p")
+		'eshell-previous-matching-input-from-input)
 
 (require 'lua-mode)
 (autoload 'lua-mode "lua-mode" "Lua editing mode." t)
@@ -646,9 +659,10 @@ If buffer-or-name is nil return current buffer's mode."
 	(erase-buffer)))
   (eshell-send-input))
 
-(add-hook 'eshell-mode-hook (lambda ()
-			      (local-set-key (kbd "<return>") 'clear-and-send-input)
-			      (highlight-current-line-minor-mode)))
+(add-hook 'eshell-mode-hook
+	  (lambda ()
+	    (local-set-key (kbd "<return>") 'clear-and-send-input)
+	    (highlight-current-line-minor-mode)))
 
 (define-key god-local-mode-map (kbd ".") 'repeat)
 (define-key god-local-mode-map (kbd "i") 'god-local-mode)
@@ -673,3 +687,8 @@ If buffer-or-name is nil return current buffer's mode."
 (require 'haskell-mode)
 (add-hook 'haskell-mode-hook 'turn-on-haskell-indent)
 (add-hook 'haskell-mode-hook 'turn-on-haskell-doc-mode)
+
+
+(require 'fill-column-indicator)
+(set-fill-column 80)
+(fci-mode)
