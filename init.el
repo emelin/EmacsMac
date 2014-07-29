@@ -241,13 +241,16 @@
 (setq ac-ignore-case 'smart)
 (setq ac-ignore-case nil)
 
+(require 'ac-company)
 (define-key ac-complete-mode-map "\C-n" 'ac-next)
 (define-key ac-complete-mode-map "\C-p" 'ac-previous)
+
+(add-to-list 'ac-dictionary-directories "~/.emacs.d/auto-complete/ac-dict")
 
 (add-to-list 'load-path "~/.emacs.d/auto-complete-clang")
 (require 'auto-complete-clang)
 (define-key ac-mode-map  [(control tab)] 'auto-complete)
-(add-to-list 'ac-dictionary-directories "~/.emacs.d/auto-complete/ac-dict")
+
 
 (defun with-line-copy-file-name()
   (interactive)
@@ -295,8 +298,9 @@
       ["black" "red" "green" "yellow" "sky blue" "magenta" "cyan" "white"])
 (ansi-color-for-comint-mode-on)
 
-(add-to-list 'load-path "~/.emacs.d/themes")
+;;(add-to-list 'load-path "~/.emacs.d/themes")
 (require 'zenburn-theme)
+;;(require 'zen-and-art-theme)
 
 (autoload 'ansi-color-for-comint-mode-on "ansi-color" nil t)
 (add-hook 'shell-mode-hook 'ansi-color-for-comint-mode-on t)
@@ -517,7 +521,7 @@
 
 (global-set-key (kbd "C-x g") 'run-cover)
 (global-set-key (kbd "C-;") 'helm-projectile)
-;; (require 'zen-and-art-theme)
+
 
 (load-file "~/.emacs.d/yaml-mode.el")
 (require 'yaml-mode)
@@ -661,8 +665,7 @@ If buffer-or-name is nil return current buffer's mode."
 
 (add-hook 'eshell-mode-hook
 	  (lambda ()
-	    (local-set-key (kbd "<return>") 'clear-and-send-input)
-	    (highlight-current-line-minor-mode)))
+	    (local-set-key (kbd "<return>") 'clear-and-send-input)))
 
 (define-key god-local-mode-map (kbd ".") 'repeat)
 (define-key god-local-mode-map (kbd "i") 'god-local-mode)
