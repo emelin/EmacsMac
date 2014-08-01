@@ -246,6 +246,7 @@
 (define-key ac-complete-mode-map "\C-p" 'ac-previous)
 
 (add-to-list 'ac-dictionary-directories "~/.emacs.d/auto-complete/ac-dict")
+(add-to-list 'ac-user-dictionary-files "~/.emacs.d/lisp/ac-dict")
 
 (add-to-list 'load-path "~/.emacs.d/auto-complete-clang")
 (require 'auto-complete-clang)
