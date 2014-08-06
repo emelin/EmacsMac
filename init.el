@@ -146,8 +146,13 @@
 		text-mode-hook
 		ruby-mode-hook
 		html-mode-hook
+		js-mode-hook
+		go-mode-hook
+		markdown-mode-hook
+		web-mode-hook
+		js2-mode-hook
+		eshell-mode-hook
 		scheme-mode go-mode))
-
   (add-hook hook 'highlight-symbol-mode-on))
 
 (global-set-key [(control f3)] 'highlight-symbol-at-point)
@@ -228,12 +233,14 @@
 ;;(define-key company-mode-map "\C-n" 'company-select-next)
 ;;(define-key company-mode-map "\C-p" 'company-select-previous)
 
+
 (add-to-list 'load-path "~/.emacs.d/auto-complete")
 
 (setq auto-save-default nil)
 
 (require 'auto-complete)
 (require 'auto-complete-config)
+(setq ac-delay 0.4)
 (ac-config-default)
 (setq ac-auto-start 1)
 (setq ac-auto-show-menu t)
