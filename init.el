@@ -128,7 +128,7 @@
 (require 'highlight-symbol)
 (require 'sgml-mode)
 
-(setq highlight-symbol-idle-delay 0.5)
+(setq highlight-symbol-idle-delay 0.3)
 (highlight-symbol-mode)
 
 (defun highlight-symbol-mode-on ()
@@ -665,7 +665,7 @@ If buffer-or-name is nil return current buffer's mode."
 
 (defun clear-and-send-input()
   (interactive)
-  (if (> (count-lines 1 (point)) 800)
+  (if (> (count-lines 1 (point)) 2000)
       (let ((inhibit-read-only t))
         (message "Clear the eshell now !")
 	(erase-buffer)))
