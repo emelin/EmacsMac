@@ -545,12 +545,13 @@
   (setq web-mode-script-padding 4)
   (setq web-mode-style-padding 4)
   )
+
 (add-hook 'web-mode-hook  'my-web-mode-hook)
 (add-to-list 'auto-mode-alist '("\\.html\\'" . web-mode))
 (add-to-list 'auto-mode-alist '("\\.gohtml\\'" . web-mode))
-;;(add-to-list 'auto-mode-alist '("\\.js\\'" . web-mode))
 (setq web-mode-engines-alist
       '(("razor" . "\\.gohtml\\'")))
+
 
 (require 'yasnippet)
 (delq 'ac-source-yasnippet ac-sources)
@@ -703,3 +704,12 @@ If buffer-or-name is nil return current buffer's mode."
 (require 'fill-column-indicator)
 (set-fill-column 80)
 (fci-mode)
+
+
+(defun delete-this-file ()
+  "Delete (move to trash) the file that is
+   associated with the current buffer."
+  (interactive)
+  (let ((filename (buffer-file-name)))
+    (delete-file filename t)
+    (kill-buffer)))
