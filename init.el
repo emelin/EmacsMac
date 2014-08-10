@@ -490,7 +490,6 @@
 ;; golang
 (add-to-list 'load-path "~/.emacs.d/go-mode")
 (require 'go-mode)
-(require 'go-mode-load)
 (setq gofmt-command "goimports")
 (add-hook 'before-save-hook 'gofmt-before-save)
 
