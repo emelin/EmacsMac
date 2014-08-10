@@ -20,6 +20,12 @@
 (setq make-backup-files nil)
 (fset 'yes-or-no-p 'y-or-n-p)
 
+;; make indentation commands use space only (never tab character)
+(setq-default indent-tabs-mode nil)
+(setq-default tab-width 4)
+(setq tab-width 4)
+
+
 (global-set-key (kbd "C-c l") 'set-mark-command)
 (global-set-key (kbd "C-x c") 'copy-region-as-kill)
 (global-set-key (kbd "C-c u") 'uncomment-region)
@@ -115,11 +121,10 @@
 		("Rakefile" . ruby-mode)
 		("rakefile" . ruby-mode)
 		("\\.go$" . go-mode)
-		("\\.gohtml$" . html-mode)
 		("\\.thrift$" . trhift-mode)
+		("\\.erb$" . web-mode)
 		("\\.js$" . js2-mode)
 		) auto-mode-alist))
-
 
 (if (functionp 'global-hi-lock-mode)
     (global-hi-lock-mode 1)
@@ -364,8 +369,7 @@
 			      (guess-indentation-style)))
 
 (load-file "~/.emacs.d/lisp/set-indent.el")
-(load-file "~/.emacs.d/lisp/guess-tab.el")
-
+;;(load-file "~/.emacs.d/lisp/guess-tab.el")
 
 (require 'dired-x)
 (setq dired-omit-files "^\\...+$")
@@ -512,7 +516,7 @@
 			  (local-set-key (kbd "C-c e") 'open-eshell-run-go)
 			  (local-set-key (kbd "C-c f") 'helm-imenu)))
 
-(load-file "~/.emacs.d/go-autocomplete.el")
+(load-file "~/.emacs.d/mode/go-autocomplete.el")
 (require 'go-autocomplete)
 
 (add-hook 'go-mode-hook (lambda ()
@@ -531,26 +535,11 @@
 (global-set-key (kbd "C-;") 'helm-projectile)
 
 
-(load-file "~/.emacs.d/yaml-mode.el")
+(load-file "~/.emacs.d/mode/yaml-mode.el")
 (require 'yaml-mode)
 
-(load-file "~/.emacs.d/thrift-mode.el")
+(load-file "~/.emacs.d/mode/thrift-mode.el")
 (require 'thrift-mode)
-
-(require 'web-mode)
-(defun my-web-mode-hook ()
-  (setq web-mode-markup-indent-offset 4)
-  (setq web-mode-css-indent-offset 4)
-  (setq web-mode-code-indent-offset 4)
-  (setq web-mode-script-padding 4)
-  (setq web-mode-style-padding 4)
-  )
-
-(add-hook 'web-mode-hook  'my-web-mode-hook)
-(add-to-list 'auto-mode-alist '("\\.html\\'" . web-mode))
-(add-to-list 'auto-mode-alist '("\\.gohtml\\'" . web-mode))
-(setq web-mode-engines-alist
-      '(("razor" . "\\.gohtml\\'")))
 
 
 (require 'yasnippet)
@@ -713,3 +702,26 @@ If buffer-or-name is nil return current buffer's mode."
   (let ((filename (buffer-file-name)))
     (delete-file filename t)
     (kill-buffer)))
+
+(add-hook 'ruby-mode-hook 'robe-mode)
+(add-hook 'robe-mode-hook 'ac-robe-setup)
+
+
+(require 'web-mode)
+(defun my-web-mode-hook ()
+  (setq web-mode-markup-indent-offset 4)
+  (setq web-mode-css-indent-offset 4)
+  (setq web-mode-code-indent-offset 4)
+  (setq web-mode-script-padding 4)
+  (setq web-mode-style-padding 4)
+  (setq web-mode-block-padding 1)
+  )
+
+(add-hook 'web-mode-hook  'my-web-mode-hook)
+(add-to-list 'auto-mode-alist '("\\.html?\\'" . web-mode))
+(add-to-list 'auto-mode-alist '("\\.gohtml\\'" . web-mode))
+(add-to-list 'auto-mode-alist '("\\.js\\'" . web-mode))
+(setq web-mode-engines-alist
+      '(("razor" . "\\.gohtml\\'")
+        )
+      )

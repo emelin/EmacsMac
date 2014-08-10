@@ -2,7 +2,12 @@
 ;;; This format is meant to be slightly human-readable;
 ;;; nevertheless, you probably don't want to edit it.
 ;;; -*- End Of Bookmark File Format Version Stamp -*-
-(("slime.el"
+(("int"
+ (filename . "~")
+ (front-context-string)
+ (rear-context-string . " xcode     \n~ $ ")
+ (position . 291))
+("slime.el"
  (filename . "~/.emacs.d/slime/slime.el")
  (front-context-string . "          (goto-")
  (rear-context-string . "elog nil 0 100)\n")
