@@ -121,6 +121,7 @@
 		("Rakefile" . ruby-mode)
 		("rakefile" . ruby-mode)
 		("\\.go$" . go-mode)
+        ("\\.rs$" . rust-mode)
 		("\\.thrift$" . trhift-mode)
 		("\\.erb$" . web-mode)
 		("\\.js$" . js2-mode)
@@ -263,7 +264,7 @@
 (add-to-list 'load-path "~/.emacs.d/auto-complete-clang")
 (require 'auto-complete-clang)
 (define-key ac-mode-map  [(control tab)] 'auto-complete)
-
+(global-auto-complete-mode)
 
 (defun with-line-copy-file-name()
   (interactive)
@@ -724,3 +725,12 @@ If buffer-or-name is nil return current buffer's mode."
       '(("razor" . "\\.gohtml\\'")
         )
       )
+
+
+(defun insert-a-dot()
+  (interactive)
+  (insert-string "·"))
+
+(global-set-key (kbd "C-c 9") 'insert-a-dot)
+
+(load-file "~/.emacs.d/lisp/rust-mode.el")
