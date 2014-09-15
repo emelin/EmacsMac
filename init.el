@@ -342,7 +342,7 @@
  '(projectile-global-mode t)
  '(projectile-require-project-root nil))
 
-(setq projectile-enable-caching t)
+(setq projectile-enable-caching nil)
 (setq which-func-cleanup-function
       (lambda (s) (set-text-properties 0 (length s) nil s) s))
 
