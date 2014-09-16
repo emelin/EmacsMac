@@ -655,7 +655,7 @@ If buffer-or-name is nil return current buffer's mode."
 
 (defun clear-and-send-input()
   (interactive)
-  (if (> (count-lines 1 (point)) 2000)
+  (if (> (count-lines 1 (point)) 10000)
       (let ((inhibit-read-only t))
         (message "Clear the eshell now !")
 	(erase-buffer)))
