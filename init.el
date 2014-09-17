@@ -734,3 +734,5 @@ If buffer-or-name is nil return current buffer's mode."
 (global-set-key (kbd "C-c 9") 'insert-a-dot)
 
 (load-file "~/.emacs.d/lisp/rust-mode.el")
+
+(load-file "~/.emacs.d/lisp/slim-mode.el")
