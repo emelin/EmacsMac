@@ -559,6 +559,7 @@
 (defalias 'cm 'comment-region)
 (defalias 'uc 'uncomment-region)
 (defalias 'gf 'grep-find)
+(defalias 'pg 'projectile-ag)
 (defalias 'fd 'find-dired)
 (defalias 'e 'eshell)
 (defalias 'ha 'helm-ag)
@@ -703,6 +704,7 @@ If buffer-or-name is nil return current buffer's mode."
     (delete-file filename t)
     (kill-buffer)))
 
+(require 'robe)
 (add-hook 'ruby-mode-hook 'robe-mode)
 (add-hook 'robe-mode-hook 'ac-robe-setup)
 
@@ -734,5 +736,9 @@ If buffer-or-name is nil return current buffer's mode."
 (global-set-key (kbd "C-c 9") 'insert-a-dot)
 
 (load-file "~/.emacs.d/lisp/rust-mode.el")
-
 (load-file "~/.emacs.d/lisp/slim-mode.el")
+(load-file "~/.emacs.d/lisp/projectile-rails.el")
+
+(require 'helm-rails)
+(require 'projectile-rails)
+(add-hook 'projectile-mode-hook 'projectile-rails-on)
