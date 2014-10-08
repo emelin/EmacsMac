@@ -114,7 +114,7 @@
 		("\\.pl$" . perl-mode)
 		("\\.hs$". haskell-mode)
 		("\\.vhd$" . text-mode)
-		("\\.rb$"  . ruby-mode)
+		("\\.rb$"  . enh-ruby-mode)
 		("\\.rake$" . ruby-mode)
 		("Gemfile" . ruby-mode)
 		("\\.scss$" . css-mode)
@@ -125,6 +125,7 @@
 		("\\.thrift$" . trhift-mode)
 		("\\.erb$" . web-mode)
 		("\\.js$" . js2-mode)
+        ("\\.slim$" . slim-mode)
 		) auto-mode-alist))
 
 (if (functionp 'global-hi-lock-mode)
@@ -253,6 +254,9 @@
 (setq ac-use-fuzzy t)
 (setq ac-ignore-case 'smart)
 (setq ac-ignore-case nil)
+
+(add-to-list 'ac-modes 'enh-ruby-mode)
+(add-to-list 'ac-modes 'web-mode)
 
 (require 'ac-company)
 (define-key ac-complete-mode-map "\C-n" 'ac-next)
@@ -742,3 +746,13 @@ If buffer-or-name is nil return current buffer's mode."
 (require 'helm-rails)
 (require 'projectile-rails)
 (add-hook 'projectile-mode-hook 'projectile-rails-on)
+;;(set-face-background 'highlight-indentation-face "#e3e3d3")
+;;(set-face-background 'highlight-indentation-current-column-face "#c3b3b3")
+
+(load-file "~/.emacs.d/lisp/highlight-indentation.el")
+(require 'highlight-indentation)
+(add-hook 'enh-ruby-mode-hook
+          (lambda () (highlight-indentation-mode)))
+
+(add-hook 'coffee-mode-hook
+          (lambda () (highlight-indentation-mode)))
