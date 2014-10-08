@@ -1,0 +1,292 @@
+;;; -*- coding: utf-8 -*-
+
+;; ----- ido-last-directory-list -----
+(
+ ("/Users/yukang/createdji/app/assets/images/" . "login/")
+ ("/Users/yukang/Downloads/metronic_v3.2.0/theme/assets/admin/pages/" . "scripts/")
+ ("/Users/yukang/Downloads/metronic_v3.2.0/theme/assets/admin/" . "pages/")
+ ("/Users/yukang/Downloads/metronic_v3.2.0/theme/assets/global/plugins/" . "backstretch/")
+ ("/Users/yukang/Downloads/metronic_v3.2.0/theme/assets/global/" . "plugins/")
+ ("/Users/yukang/Downloads/metronic_v3.2.0/theme/assets/" . "admin/")
+ ("/Users/yukang/Downloads/metronic_v3.2.0/theme/" . "assets/")
+ ("/Users/yukang/Downloads/metronic_v3.2.0/" . "theme/")
+ ("/Users/yukang/Downloads/" . "metronic_v3.2.0/")
+ ("/Users/yukang/createdji/public/metronic/admin/layout/" . "img/")
+ ("/Users/yukang/createdji/public/metronic/admin/" . "layout/")
+ ("/Users/yukang/createdji/public/metronic/frontend/pages/" . "img/")
+ ("/Users/yukang/createdji/public/metronic/frontend/" . "pages/")
+ ("/Users/yukang/createdji/public/metronic/" . "admin/")
+ ("/Users/yukang/createdji/public/" . "metronic/")
+ ("/Users/yukang/createdji/app/assets/javascripts/" . "pages/")
+ ("/Users/yukang/createdji/app/assets/" . "images/")
+ ("/Users/yukang/createdji/db/" . "migrate/")
+ ("/Users/" . "yukang/")
+ ("/Users/yukang/code/createdji/app/views/" . "accounts/")
+ ("/Users/yukang/createdji/app/views/" . "videos/")
+ ("/Users/yukang/createdji/app/" . "assets/")
+ ("/Users/yukang/createdji/" . "db/")
+ ("/Users/yukang/.emacs.d/" . "eshell/")
+ ("/" . "tmp/")
+ ("/Users/yukang/code/ruby-china/app/" . "controllers/")
+ ("/Users/yukang/code/ruby-china/" . "app/")
+ ("/Users/yukang/" . "code/")
+ ("/Users/yukang/code/createdji_grade/" . "lib/")
+ ("/Users/yukang/code/createdji/app/assets/" . "javascripts/")
+ ("/Users/yukang/code/createdji/app/" . "views/")
+ ("/Users/yukang/code/createdji/" . "app/")
+ ("/Users/yukang/code/" . "createdji/")
+)
+
+;; ----- ido-work-directory-list -----
+(
+ "/Users/yukang/createdji/app/views/home/"
+ "/Users/yukang/createdji/db/migrate/"
+ "/Users/yukang/createdji/lib/site_client/"
+ "/Users/yukang/createdji/"
+ "/Users/yukang/createdji/app/views/videos/"
+ "/Users/yukang/createdji/app/views/photos/"
+ "/Users/yukang/createdji/app/views/commons/"
+ "/tmp/"
+ "/Users/yukang/createdji/app/assets/javascripts/pages/"
+ "/Users/yukang/createdji/app/views/accounts/"
+ "/Users/yukang/code/createdji/app/views/accounts/"
+ "/Users/yukang/createdji/app/assets/images/"
+ "/Users/yukang/Downloads/metronic_v3.2.0/theme/assets/admin/pages/scripts/"
+ "/Users/yukang/createdji/app/assets/stylesheets/"
+ "/Users/yukang/createdji/public/metronic/frontend/pages/css/"
+ "/Users/yukang/createdji/app/views/layouts/"
+ "/Users/yukang/createdji/app/controllers/"
+ "/Users/yukang/createdji/app/models/"
+ "/Users/yukang/createdji/app/views/kaminari/"
+ "/Users/yukang/createdji/app/views/search/"
+ "/Users/yukang/createdji/app/views/comments/"
+ "/Users/yukang/createdji/app/assets/javascripts/commons/"
+ "/Users/yukang/.emacs.d/eshell/"
+ "/Users/yukang/code/createdji/app/views/manage/"
+ "/Users/yukang/createdji/app/views/manage/"
+ "/Users/yukang/code/createdji/config/"
+ "/Users/yukang/createdji/config/"
+ "/Users/yukang/code/createdji/app/views/comments/"
+ "/Users/yukang/code/createdji/app/controllers/"
+ "/Users/yukang/.emacs.d/"
+ "/Users/yukang/code/createdji/app/views/photos/"
+ "/Users/yukang/code/createdji/app/views/commons/"
+ "/Users/yukang/code/createdji/app/views/videos/"
+ "/Users/yukang/code/createdji/app/views/home/"
+ "/Users/yukang/code/createdji/app/models/"
+ "/Users/yukang/.emacs.d/lisp/"
+ "/Users/yukang/code/ruby-china/app/controllers/"
+ "/Users/yukang/code/createdji_grade/"
+ "/Users/yukang/code/createdji_grade/lib/"
+ "/Users/yukang/code/createdji/"
+)
+
+;; ----- ido-work-file-list -----
+(
+ "_videos.html.slim"
+ "20140925092955_create_licensings.rb"
+ "20140925092750_create_licenses.rb"
+ "youtube.rb"
+ "README.md"
+ "_show.html.slim"
+ "index.html.slim"
+ "_share.html.slim"
+ "_footer.html.slim"
+ "_about.html.slim"
+)
+
+;; ----- ido-dir-file-cache -----
+(
+ ("/Users/yukang/createdji/app/views/home/" (21546 32064 0 0) "index.html.slim" "help.html.slim" "about.html.slim" "_videos.html.slim" "_photos.html.slim" "_links.html.slim" "_about.html.slim" "../" "./")
+
+ ("/Users/yukang/createdji/db/" (21546 24764 0 0) "seeds.rb" "schema.rb" "migrate/" "development.sqlite3" "../" "./")
+
+ ("/Users/yukang/createdji/app/views/admin/home/" (21544 50938 0 0) "overview.html.slim" "index.html.slim" "../" "./")
+
+ ("/Users/yukang/createdji/lib/site_client/" (21529 22089 0 0) "youtube.rb" "youku.rb" "vimeo.rb" "video.rb" "twitter.rb" "sina.rb" "google.rb" "facebook.rb" "builder.rb" "../" "./")
+
+ ("/Users/yukang/.emacs.d/" (21546 29513 0 0) "yasnippet/" "var/" "todo/" "themes/" "swank-chicken/" "slime/" "ruby-mode/" "README.md" "projectile.cache" "projectile-bookmarks.eld" "projectile/" "powerline/" "org-mode/" "newsticker/" "muse/" "multiple-cursors/" "mode/" "magit/" "lisp/" "init.el" "iedit/" "ido.last" "helm/" "gfw.pac" "games/" "eshell/" "erlang/" "emacs-rails/" "emacs-company/" "emacs-clang-complete-async/" "emacs-bash-completion/" "elpa/" "bookmarks" "auto-save-list/" "auto-complete-clang/" "auto-complete/" "auto/" "ac-comphist.dat" ".gitignore" ".git/" ".emacs.desktop" "../" "./")
+
+ ("/Users/yukang/createdji/app/views/manage/" (21546 26334 0 0) "work.html.slim" "videos.json.jbuilder" "photos.json.jbuilder" "link_account_callback.html.slim" "index.html.slim" "edit_resource.html.slim" "_video.html.slim" "_resource.html.slim" "_profile.html.slim" "_photo.html.slim" "_password.html.slim" "_pagination.html.slim" "_no_resources.html.slim" "_my_work_resource_type.html.slim" "_my_work_resource_permissions.html.slim" "_loading.html.slim" "_link_site.html.slim" "_link.html.slim" "_index.html.slim" "_favorites.html.slim" "_edit_resource.html.slim" "../" "./")
+
+ ("/Users/yukang/createdji/app/views/layouts/" (21546 27175 0 0) "metronic.html.slim" "login.html.slim" "home.html.slim" "application.html.slim" "admin.html.slim" "../" "./")
+
+ ("/Users/yukang/createdji/app/assets/stylesheets/" (21546 28141 0 0) "metronic.css.scss.erb" "metronic/" "global.css.scss" "common/" "application.css.scss" "admin/" "../" "./")
+
+ ("/Users/yukang/code/createdji/app/views/accounts/" (21546 22972 0 0) "signup.html.erb" "signin.html.erb" "reset_psw_invalid.html.erb" "reset_password.html.erb" "oauth_video.html.erb" "oauth_sns.html.erb" "oauth_link.html.erb" "forget_password.html.erb" "../" "./")
+
+ ("/Users/yukang/createdji/app/views/accounts/" (21546 26335 0 0) "signup.html.slim.back" "signup.html.slim" "signin.html.slim" "reset_psw_invalid.html.slim" "reset_password.html.slim" "oauth_video.html.slim" "oauth_sns.html.slim" "oauth_link.html.slim" "forget_password.html.slim" "../" "./")
+
+ ("/Users/yukang/createdji/app/assets/javascripts/pages/" (21546 26335 0 0) "users.coffee" "upload.coffee" "resources.coffee" "resource.js" "photos.coffee" "manage.js" "manage.coffee.bak" "login.js" "jquery.backstretch.js" "home.js" "forget.js" "background.js" "accounts_signup.js" "accounts_signin.js" "../" "./")
+
+ ("/tmp/" (21546 22869 0 0) "rspec-demo/" "mysql.sock" "launchd-270.zP87SJ/" "launchd-247.8SaTfE/" "launchd-174.8CgDrz/" "launch-y8PCIR/" "launch-A95KeX/" "haha" "createdji/" "_work.html.slim" "../" "./")
+
+ ("/Users/yukang/createdji/app/views/commons/" (21546 26335 0 0) "_weibo_meta.html.slim" "_uploads_item_photo.html.slim" "_upload_videos.html.slim" "_upload_photos.html.slim" "_upload_main.html.slim" "_tags_noborder.html.slim" "_tags.html.slim" "_sns_meta.html.slim" "_siderbar.html.slim" "_share_short.html.slim" "_share.html.slim" "_resource_action.html.slim" "_photo_group.html.slim" "_paginate.html.slim" "_no_data.html.slim" "_modal.html.slim" "_mark.html.slim" "_like_and_favorite.html.slim" "_like.html.slim" "_item_search_photo.html.slim" "_header.html.slim" "_head.html.slim" "_google_analytics.html.slim" "_footer.html.slim" "_favorite.html.slim" "_comments.html.slim" "_comment_like.html.slim" "_comment_action.html.slim" "_author_header.html.slim" "_author_details.html.slim" "_author.html.slim" "_about.html.slim" "../" "./")
+
+ ("/Users/yukang/createdji/app/views/photos/" (21546 27153 0 0) "show.js.erb" "show.html.slim" "login.js.erb" "index.html.slim" "edit.js.erb" "_show.html.slim" "_more.html.slim" "_modal_show.html.slim" "../" "./")
+
+ ("/Users/yukang/createdji/app/controllers/" (21546 26335 0 0) "videos_controller.rb" "users_controller.rb" "uploads_controller.rb" "test_controller.rb" "templates_controller.rb" "search_controller.rb" "photos_controller.rb" "metronic_controller.rb" "manage_controller.rb" "login_controller.rb" "likes_controller.rb" "home_controller.rb" "favorites_controller.rb" "events_controller.rb" "concerns/" "comments_controller.rb" "authorize_controller.rb" "application_controller.rb" "api/" "admin/" "accounts_controller.rb" "../" "./")
+
+ ("/Users/yukang/createdji/app/views/videos/" (21546 29352 0 0) "show.js.erb" "show.html.slim" "login.js.erb" "index.html.slim" "edit.js.erb" "_show.html.slim" "_more.html.slim" "_modal_show.html.slim" "../" "./")
+
+ ("/Users/yukang/createdji/app/assets/stylesheets/metronic/admin/layout/themes/" (21546 28807 0 0) "light2.scss" "light.scss" "grey.scss" "default.scss" "darkblue.scss" "blue.scss" "_base.scss" "../" "./")
+
+ ("/Users/yukang/" (21546 8240 0 0) "Public/" "prev/" "Pictures/" "org/" "Music/" "Movies/" "Library/" "InitMac/" "Downloads/" "Documents/" "Desktop/" "createdji/" "code/" ".zshrc.pre-oh-my-zsh" ".zshrc-e" ".zshrc" ".zsh_history" ".zsh-update" ".zlogin" ".zcompdump-Yukang的Mac mini-5.0.2" ".viminfo" ".Trash/" ".ssh/" ".smex-items" ".rvm/" ".profile" ".pow/" ".oh-my-zsh/" ".mysql_history" ".irb-history" ".gitconfig" ".gemrc" ".gem/" ".emacs.d/" ".DS_Store" ".CFUserTextEncoding" ".bashrc" ".bash_profile" ".bash_history" "../" "./")
+
+ ("/Users/yukang/createdji/app/models/" (21546 10136 0 0) "view.rb" "video.rb" "tag.rb" "star.rb" "settings.rb" "photo.rb" "like.rb" "licensing.rb" "license.rb" "favorite.rb" "event.rb" "equipment.rb" "concerns/" "comment.rb" "category.rb" "categorizing.rb" "account.rb" ".keep" "../" "./")
+
+ ("/Users/yukang/createdji/app/assets/images/login/" (21546 8240 0 0) "logo-big.png" "bg2.jpg" "bg.jpg" "bg-white-lock.png" "4.jpg" "3.jpg" "2.jpg" "1.jpg" "../" "./")
+
+ ("/Users/yukang/createdji/app/assets/images/" (21545 13644 0 0) "video/" "upload_bg.jpg" "spr_bak.png" "spr.png" "maintenance.png" "logo.jpg" "login/" "loading.gif" "img/" "images/" "icons/" "events/" "equipments/" "cameras/" "bg/" "Algarve-Beach-1.jpg" "404.png" "../" "./")
+
+ ("/Users/yukang/.emacs.d/eshell/" (21545 36880 0 0) "lastdir" "history" "alias" "../" "./")
+
+ ("/Users/yukang/createdji/public/metronic/frontend/pages/css/" (21545 13644 0 0) "style-shop.css" "style-revolution-slider.css" "style-layer-slider.css" "portfolio.css" "login.css" "gallery.css" "../" "./")
+
+ ("/Users/yukang/Downloads/metronic_v3.2.0/theme/assets/admin/pages/scripts/" (21510 892 0 0) "ui-tree.js" "ui-toastr.js" "ui-notific8.js" "ui-nestable.js" "ui-idletimeout.js" "ui-general.js" "ui-extended-modals.js" "ui-datepaginator.js" "ui-blockui.js" "ui-alert-dialog-api.js" "todo.js" "tasks.js" "table-managed.js" "table-editable.js" "table-ajax.js" "table-advanced.js" "search.js" "portlet-draggable.js" "portfolio.js" "maps-vector.js" "maps-google.js" "login.js" "login-soft.js" "lock.js" "index.js" "inbox.js" "form-wizard.js" "form-validation.js" "form-samples.js" "form-image-crop.js" "form-fileupload.js" "form-editable.js" "form-dropzone.js" "ecommerce-products.js" "ecommerce-products-edit.js" "ecommerce-orders.js" "ecommerce-orders-view.js" "ecommerce-index.js" "custom.js" "contact-us.js" "components-pickers.js" "components-nouisliders.js" "components-knob-dials.js" "components-jqueryui-sliders.js" "components-ion-sliders.js" "components-form-tools.js" "components-editors.js" "components-dropdowns.js" "coming-soon.js" "charts.js" "calendar.js" "../" "./")
+
+ ("/Users/yukang/Downloads/metronic_v3.2.0/theme/assets/admin/pages/" (21510 892 0 0) "scripts/" "media/" "img/" "css/" "../" "./")
+
+ ("/Users/yukang/Downloads/metronic_v3.2.0/theme/assets/admin/" (21510 892 0 0) "pages/" "layout2/" "layout/" "../" "./")
+
+ ("/Users/yukang/Downloads/metronic_v3.2.0/theme/assets/global/plugins/backstretch/" (21510 892 0 0) "README.md" "LICENSE-MIT" "jquery.backstretch.min.js" "jquery.backstretch.js" "../" "./")
+
+ ("/Users/yukang/Downloads/metronic_v3.2.0/theme/assets/global/plugins/" (21510 906 0 0) "zoom/" "uniform/" "typeahead/" "slider-revolution-slider/" "slider-layer-slider/" "simple-line-icons/" "select2/" "respond.min.js" "rateit/" "plupload/" "pace/" "nouislider/" "moment.min.js" "jstree/" "jqvmap/" "jquery.sparkline.min.js" "jquery.scrollTo.min.js" "jquery.pulsate.min.js" "jquery.parallax.js" "jquery.mockjax.js" "jquery.input-ip-address-control-1.0.min.js" "jquery.easing.js" "jquery.cokie.min.js" "jquery.blockui.min.js" "jquery-validation/" "jquery-ui-touch-punch/" "jquery-ui/" "jquery-tags-input/" "jquery-slimscroll/" "jquery-notific8/" "jquery-nestable/" "jquery-multi-select/" "jquery-mixitup/" "jquery-migrate-1.2.1.min.js" "jquery-knob/" "jquery-inputmask/" "jquery-idle-timeout/" "jquery-file-upload/" "jquery-easypiechart/" "jquery-bootpag/" "jquery-1.11.0.min.map" "jquery-1.11.0.min.js" "jcrop/" "ion.rangeslider/" "holder.js" "gritter/" "gmaps/" "fullcalendar/" "fuelux/" "font-awesome/" "flot/" "fancybox/" "excanvas.min.js" "dropzone/" "datatables/" "countdown/" "clockface/" "ckeditor/" "carousel-owl-carousel/" "bootstrap-wysihtml5/" "bootstrap-wizard/" "bootstrap-touchspin/" "bootstrap-toastr/" "bootstrap-timepicker/" "bootstrap-switch/" "bootstrap-summernote/" "bootstrap-sessiontimeout/" "bootstrap-select/" "bootstrap-pwstrength/" "bootstrap-modal/" "bootstrap-maxlength/" "bootstrap-markdown/" "bootstrap-hover-dropdown/" "bootstrap-fileinput/" "bootstrap-editable/" "bootstrap-datetimepicker/" "bootstrap-daterangepicker/" "bootstrap-datepicker/" "bootstrap-datepaginator/" "bootstrap-colorpicker/" "bootstrap/" "bootbox/" "backstretch/" "../" "./")
+
+ ("/Users/yukang/Downloads/metronic_v3.2.0/theme/assets/global/" (21510 906 0 0) "scripts/" "plugins/" "img/" "css/" "../" "./")
+
+ ("/Users/yukang/Downloads/metronic_v3.2.0/theme/assets/" (21510 892 0 0) "global/" "frontend/" "admin/" "../" "./")
+
+ ("/Users/yukang/Downloads/metronic_v3.2.0/theme/" (21510 906 0 0) "templates/" "sass/" "assets/" "../" "./")
+
+ ("/Users/yukang/Downloads/metronic_v3.2.0/" (21529 244 0 0) "theme_rtl/" "theme/" "start.html" "readme.txt" "_start/" "_resources/" "_documentation/" ".DS_Store" "../" "./")
+
+ ("/Users/yukang/Downloads/" (21546 1692 0 0) "麦添淇简历.rar" "麦添淇简历/" "第三方账户信息.pdf" "个人简历.pdf" "u=61400081,2151392061&fm=23&gp=0.jpg" "u=2304448802,1817029814&fm=21&gp=0.jpg" "u=1954875034,535770948&fm=12&gp=0.jpg" "themeforest-4021469-metronic-responsive-admin-dashboard-template.zip" "Sublime Text Build 3065.dmg" "seafile-tutorial.doc" "QQEIM_1.3.1_56871.dmg" "QQ_V3.1.2.dmg" "photo_1.zip" "photo_1.dng" "photo-1-375d616a48302537660ce6aca7f8cdb4.jpg" "p3-o-35b6be5bb6bfdd1e194efef50ae4c4ac.jpg" "p1-o-a482aa4165ddee9685e0845b7228b23f.jpg" "p1-o-8bed96d76111c158a9a08fd94c48b14b.jpg" "metronic_v3.2.0/" "iTerm.app/" "IMG_0082.JPG" "images.jpeg" "google-chrome-37-0-2062-94-multi-mac.dmg" "Emacs-2014-09-14_01-40-00-117879-universal.dmg" "Dkeyauth.exe" "DJI forum Rules.pdf" "CreateDJI第二阶段开发功能分配情况.docx" "baiduinput_mac_v3.3_1000e.dmg" "Alfred_2.4_279.zip" "Alfred_2.4_279/" "Alfred 2.dmg" "About Downloads.lpdf/" "230646.png" "2014年工作进度汇总表模板-xxx .xlsx" "0ed1085d4dca67de723ba9745c79e469.jpg" ".localized" ".DS_Store" "../" "./")
+
+ ("/Users/yukang/createdji/app/assets/javascripts/" (21544 50938 0 0) "vendor/" "plugins/" "pages/" "metronic.js" "commons/" "app.js" "admin/" "../" "./")
+
+ ("/Users/yukang/createdji/public/metronic/admin/layout/img/" (21544 50939 0 0) "sidebar_toggler_icon_light2.png" "sidebar_toggler_icon_light.png" "sidebar_toggler_icon_grey.png" "sidebar_toggler_icon_default.png" "sidebar_toggler_icon_darkblue.png" "sidebar_toggler_icon_blue.png" "sidebar_inline_toggler_icon_light2.jpg" "sidebar_inline_toggler_icon_light.jpg" "sidebar_inline_toggler_icon_grey.jpg" "sidebar_inline_toggler_icon_default.jpg" "sidebar_inline_toggler_icon_darkblue.jpg" "sidebar_inline_toggler_icon_blue.jpg" "sidebar_arrow_icon_light_rtl.png" "sidebar_arrow_icon_light.png" "sidebar-menu-arrow.png" "sidebar-menu-arrow-right.png" "sidebar-menu-arrow-reverse.png" "search_icon_light.png" "remove-icon-small.png" "photo2.jpg" "photo1.jpg" "menu-toggler.png" "logo.png" "logo-invert.png" "logo-big.png" "loading.gif" "loading-spinner-grey.gif" "loading-spinner-default.gif" "loading-spinner-blue.gif" "inbox-nav-arrow-blue.png" "icon-img-up.png" "icon-img-down.png" "icon-color.png" "icon-color-close.png" "hor-menu-red-arrow.png" "avatar9.jpg" "avatar8.jpg" "avatar7.jpg" "avatar6.jpg" "avatar5.jpg" "avatar4.jpg" "avatar3_small.jpg" "avatar3.jpg" "avatar2.jpg" "avatar1_small.jpg" "avatar11.jpg" "avatar10.jpg" "avatar1.jpg" "avatar.png" "arrow-down.png" "ajax-modal-loading.gif" "ajax-loading.gif" "../" "./")
+
+ ("/Users/yukang/createdji/public/metronic/admin/layout/" (21544 50939 0 0) "scripts/" "img/" "../" "./")
+
+ ("/Users/yukang/createdji/public/metronic/admin/" (21544 50939 0 0) "pages/" "layout/" "../" "./")
+
+ ("/Users/yukang/createdji/public/metronic/frontend/pages/img/" (21544 50940 0 0) "works/" "title-bg/" "revolutionslider/" "products/" "product1big.jpg" "product1.jpg" "posts/" "pics/" "photos/" "people/" "layerslider/" "index-sliders/" "img3.jpg" "img1.jpg" "clients/" "cart-img.jpg" "careers/" "brands/" "16-9.jpg" "../" "./")
+
+ ("/Users/yukang/createdji/public/metronic/frontend/pages/" (21544 50940 0 0) "scripts/" "img/" "css/" "../" "./")
+
+ ("/Users/yukang/createdji/public/metronic/frontend/" (21544 50940 0 0) "pages/" "onepage/" "layout/" "../" "./")
+
+ ("/Users/yukang/createdji/public/metronic/" (21544 50940 0 0) "global/" "frontend/" "admin/" "../" "./")
+
+ ("/Users/yukang/createdji/public/" (21544 50940 0 0) "uploads/" "robots.txt" "plugins/" "metronic/" "favicon.ico" "500.html" "422.html" "404.html" "../" "./")
+
+ ("/Users/yukang/createdji/config/" (21545 8719 0 0) "unicorn.rb" "secrets.yml" "routes.rb" "requirejs.yml" "newrelic.yaml" "locales/" "initializers/" "environments/" "environment.rb" "deploy.rb" "datas/" "database.yml.example" "database.yml" "boot.rb" "application.yml" "application.rb" "../" "./")
+
+ ("/Users/yukang/createdji/app/views/" (21545 219 0 0) "widgets/" "videos/" "users/" "uploads/" "tmpls/" "test/" "search/" "photos/" "metronic/" "manage/" "likes/" "layouts/" "home/" "favorites/" "events/" "emails/" "commons/" "comments/" "api/" "admin/" "accounts/" "../" "./")
+
+ ("/Users/yukang/createdji/app/models/concerns/" (21544 50938 0 0) "grade_resource.rb" "grade_action.rb" ".keep" "../" "./")
+
+ ("/Users/yukang/createdji/app/assets/javascripts/commons/" (21544 56156 0 0) "utils.js" "jquery.tooltipster.js" "header.js.coffee" "fixed.js" "comments.js.coffee" "comment.js" "carousel.js" "art.js" "../" "./")
+
+ ("/Users/yukang/createdji/app/views/search/" (21544 50939 0 0) "tag_index.html.slim" "index.html.slim" "all_search.html.slim" "../" "./")
+
+ ("/Users/yukang/createdji/db/migrate/" (21544 50939 0 0) "20140928065520_add_camera_and_equipment_to_photos_and_videos.rb" "20140928023810_add_country_to_photos_and_videos.rb" "20140926015422_add_missing_taggable_index.acts_as_taggable_on_engine.rb" "20140926015421_add_taggings_counter_cache_to_tags.acts_as_taggable_on_engine.rb" "20140926015420_add_missing_unique_indices.acts_as_taggable_on_engine.rb" "20140926015419_acts_as_taggable_on_migration.acts_as_taggable_on_engine.rb" "20140926015341_drop_tags_table.rb" "20140925095953_add_location_to_video.rb" "20140925092955_create_licensings.rb" "20140925092750_create_licenses.rb" "20140925085749_create_categorizings.rb" "20140925084307_create_categories.rb" "20140925031822_add_resource_count_to_account.rb" "20140924034107_add_count_to_account.rb" "20140924020053_add_counter_to_video.rb" "20140924013917_add_counter_to_photo.rb" "20140918064910_add_country_to_photos.rb" "20140912074847_create_equipment.rb" "20140912033054_add_reset_password_token_to_accounts.rb" "20140907173800_add_bio_and_about_to_account.rb" "20140904070540_change_photos_account_id_to_cookie.rb" "20140904060002_add_location_to_photos.rb" "20140613035515_create_views.rb" "20140612033006_create_tags.rb" "20140605065632_create_stars.rb" "20140605020047_create_favorites.rb" "20140605015952_create_likes.rb" "20140529020819_create_equipments.rb" "20140527092119_create_accounts.rb" "20140516020119_create_comments.rb" "20140516020049_create_photos.rb" "20140516020026_create_videos.rb" "../" "./")
+
+ ("/Users/yukang/createdji/app/views/kaminari/" (21545 154 0 0) "_prev_page.html.slim" "_paginator.html.slim" "_page.html.slim" "_next_page.html.slim" "_last_page.html.slim" "_gap.html.slim" "_first_page.html.slim" "../" "./")
+
+ ("/Users/yukang/createdji/" (21544 56158 0 0) "tmp/" "test/" "start.rb" "spec/" "README.md" "Rakefile" "public/" "log/" "lib/" "Gemfile.lock" "Gemfile" "db/" "config.ru" "config/" "Capfile" "bin/" "app/" ".pow/" ".gitignore" ".git/" "../" "./")
+
+ ("/Users/yukang/createdji/app/helpers/" (21544 63111 0 0) "videos_helper.rb" "user_helper.rb" "search_helper.rb" "metronic_helper.rb" "home_helper.rb" "authorize_helper.rb" "application_helper.rb" "api/" "admin/" "accounts_helper.rb" "../" "./")
+
+ ("/Users/yukang/createdji/app/views/comments/" (21544 50938 0 0) "index.json.jbuilder" "index.js.slim" "destroy.json.jbuilder" "create.json.jbuilder" "_index.html.slim" "_comment.json.jbuilder" "../" "./")
+
+ ("/Users/yukang/code/createdji/app/models/" (21539 31532 0 0) "view.rb" "video.rb" "tag.rb" "star.rb" "settings.rb" "photo.rb" "like.rb" "favorite.rb" "event.rb" "equipment.rb" "concerns/" "comment.rb" "account.rb" ".keep" "../" "./")
+
+ ("/Users/yukang/code/createdji/app/views/commons/" (21538 27207 0 0) "demo.rb" "_weibo_meta.html.erb" "_video.html.erb" "_uploads_item_photo.html.erb" "_upload_videos.html.erb" "_upload_photos.html.erb" "_upload_main.html.erb" "_sns_meta.html.erb" "_resource_action.html.erb" "_photo_group.html.erb" "_photo.html.erb" "_no_data.html.erb" "_like_and_favorite.html.erb" "_like.html.erb" "_item_search_photo.html.erb" "_header.html.erb" "_head.html.erb" "_google_analytics.html.erb" "_footer.html.erb" "_favorite.html.erb" "_comments.html.erb" "_comment_like.html.erb" "_comment_action.html.erb" "../" "./")
+
+ ("/Users/yukang/code/createdji/app/views/photos/" (21540 55023 0 0) "show.html.erb" "more.html.erb" "index.html.erb" "../" "./")
+
+ ("/Users/yukang/code/createdji/app/controllers/" (21539 56028 0 0) "videos_controller.rb" "users_controller.rb" "uploads_controller.rb" "test_controller.rb" "templates_controller.rb" "search_controller.rb" "photos_controller.rb" "metronic_controller.rb" "manage_controller.rb" "likes_controller.rb" "home_controller.rb" "favorites_controller.rb" "events_controller.rb" "concerns/" "comments_controller.rb" "authorize_controller.rb" "application_controller.rb" "api/" "admin/" "accounts_controller.rb" "../" "./")
+
+ ("/Users/yukang/createdji/app/assets/" (21529 22089 0 0) "stylesheets/" "javascripts/" "images/" "fonts/" "../" "./")
+
+ ("/Users/yukang/code/createdji/app/views/manage/" (21527 40805 0 0) "videos.json.jbuilder" "photos.json.jbuilder" "link_account_callback.html.erb" "index.html.erb" "_work.html.erb" "_video.html.erb" "_resource.html.erb" "_profile.html.erb" "_photo.html.erb" "_password.html.erb" "_pagination.html.erb" "_no_resources.html.erb" "_my_work_resource_type.html.erb" "_my_work_resource_permissions.html.erb" "_loading.html.erb" "_link_site.html.erb" "_link.html.erb" "_favorites.html.erb" "_edit_resource.html.erb" "../" "./")
+
+ ("/Users/yukang/createdji/app/uploaders/" (21537 6025 0 0) "photo_uploader.rb" "avatar_uploader.rb" "../" "./")
+
+ ("/Users/yukang/code/createdji/app/views/videos/" (21535 46564 0 0) "show.html.erb" "more.html.erb" "index.html.erb" "../" "./")
+
+ ("/Users/yukang/code/createdji/config/" (21531 58050 0 0) "unicorn.rb" "secrets.yml" "routes.rb" "requirejs.yml" "locales/" "initializers/" "environments/" "environment.rb" "deploy.rb" "datas/" "database.yml.example" "database.yml" "boot.rb" "application.yml" "application.rb" "../" "./")
+
+ ("/Users/yukang/code/createdji/app/views/home/" (21531 58050 0 0) "index.html.erb" "help.html.erb" "about.html.erb" "_videos.html.erb" "_photos.html.erb" "_events.html.erb" "_event.html.erb" "../" "./")
+
+ ("/Users/yukang/code/createdji/app/assets/" (21526 48415 0 0) "stylesheets/" "javascripts/" "images/" "fonts/" ".DS_Store" "../" "./")
+
+ ("/Users/yukang/code/createdji/app/assets/javascripts/" (21531 58050 0 0) "vendor/" "pages/" "metronic.js.coffee" "commons/" "app.js" "admin/" "../" "./")
+
+ ("/Users/yukang/code/createdji/app/assets/javascripts/pages/" (21535 53900 0 0) "users.coffee" "upload.coffee" "resources.coffee" "photos.coffee" "manage.coffee" "home.js" "accounts_signup.js" "accounts_signin.js" "../" "./")
+
+ ("/Users/yukang/code/createdji/app/views/" (21531 58050 0 0) "widgets/" "videos/" "users/" "uploads/" "tmpls/" "test/" "search/" "photos/" "metronic/" "manage/" "likes/" "layouts/" "home/" "favorites/" "events/" "emails/" "commons/" "comments/" "api/" "admin/" "accounts/" "../" "./")
+
+ ("/Users/yukang/code/createdji/" (21531 58050 0 0) "tmp/" "test/" "spec/" "README.rdoc" "Rakefile" "public/" "log/" "lib/" "Gemfile.lock" "Gemfile" "db/" "config.ru" "config/" "Capfile" "bin/" "app/" ".rspec" ".gitignore" ".git/" "../" "./")
+
+ ("/tmp/createdji/" (21531 41865 0 0) "tmp/" "test/" "spec/" "README.rdoc" "Rakefile" "public/" "log/" "lib/" "Gemfile.lock" "Gemfile" "db/" "config.ru" "config/" "Capfile" "bin/" "app/" ".gitignore" ".git/" "../" "./")
+
+ ("/Users/yukang/code/createdji/app/views/comments/" (21526 41135 0 0) "index.json.jbuilder" "index.js.erb" "destroy.js.erb" "create.json.jbuilder" "create.html.erb" "_comment.json.jbuilder" "../" "./")
+
+ ("/Users/yukang/createdji/app/" (21529 22089 0 0) "views/" "uploaders/" "models/" "mailers/" "helpers/" "controllers/" "assets/" "../" "./")
+
+ ("/Users/yukang/code/" (21528 2605 0 0) "ruby-china/" "createdji_grade/" "createDJI-module/" "createdji/" "../" "./")
+
+ ("/Users/yukang/.emacs.d/lisp/" (21528 63189 0 0) "zenburn-theme.el" "xgtags.el" "xcscope.el" "winring.el" "window-number.el" "weblogger.el" "vline.el" "viewer.el" "verilog-mode.el" "undo-tree.el" "thinks.el" "tabbar.el" "tabbar-ruler.el" "tabbar-conf.el" "swbuff.el" "sudoku.el" "smart-mode-line.el" "smart-compile.el.1" "smart-compile.el" "smart-compile+.el" "slim-mode.el" "showtip.el" "shell-command.el" "set-indent.el" "sdcv.el" "rust-mode.el" "psvn.el" "project-mode.el" "paredit.el" "mutt.el" "muse_kang.el" "muse_init.el" "multi-term.el" "multi-gud.el" "multi-gdb-ui.el" "mode-line.el" "markdown-mode.el" "lua-mode.el" "linum.el" "levenshtein.el" "key-chord.el" "kang-dark.el" "jump-dls.el" "indent-config.el" "ifdef.el" "htmlize.el" "history.el" "highlight-symbol.el" "highlight-parentheses.el" "highlight-indentation.el" "highlight-current-line.el" "guess-tab.el" "gtags.el" "gprof.el" "goto-last-change.el" "git.el" "func.el" "flymake-ruby.el" "flymake-clang-c.el" "flymake-clang-c++.el" "filladapt.el" "etags-select.el" "emacsay-mode.el" "dash-at-point.el" "ctypes.el" "cpp.el" "color-theme.el" "color-theme-sons-of-obsidian.el" "color-theme-molokai.el" "clang-lookup.el" "clang-completion-mode.el" "c-config.el" "browse-kill-ring.el" "bookmark+.el" "bookmark+-mac.el" "bookmark+-lit.el" "bookmark+-key.el" "bookmark+-doc.el" "bookmark+-chg.el" "bookmark+-bmu.el" "bookmark+-1.el" "beautify-line.el" "bash-completion.el" "auto-indent-mode.el" "anything.el" "anything-match-plugin.el" "anything-complete.el" "ace-jump-mode.el" "ac-company.el" "../" "./")
+
+ ("/Users/yukang/code/createdji_grade/lib/" (21526 52121 0 0) "tasks/" "resource_calculate.rb" "assets/" "../" "./")
+
+ ("/Users/" (21526 39648 0 0) "yukang/" "Shared/" "Guest/" ".localized" "../" "./")
+
+ ("/Users/yukang/code/ruby-china/app/controllers/" (21527 56756 0 0) "users_controller.rb" "users/" "topics_controller.rb" "sites_controller.rb" "sessions_controller.rb" "search_controller.rb" "replies_controller.rb" "photos_controller.rb" "pages_controller.rb" "notifications_controller.rb" "notes_controller.rb" "nodes_controller.rb" "likes_controller.rb" "jobs_controller.rb" "home_controller.rb" "cpanel/" "comments_controller.rb" "application_controller.rb" "account_controller.rb" "../" "./")
+
+ ("/Users/yukang/code/ruby-china/app/" (21527 56756 0 0) "views/" "uploaders/" "models/" "mailers/" "helpers/" "grape/" "controllers/" "cells/" "assets/" "../" "./")
+
+ ("/Users/yukang/code/ruby-china/" (21527 56756 0 0) "start_faye_server" "spec/" "setup.rb" "script/" "README.md" "Rakefile" "public/" "misc/" "lib/" "Gemfile.lock" "Gemfile" "faye_server/" "doc/" "db/" "config.ru" "config/" "Capfile" "app/" ".travis.yml" ".rspec" ".gitignore" ".git/" "../" "./")
+
+ ("/Users/yukang/code/createdji_grade/app/controllers/concerns/" (21526 47012 0 0) ".keep" "../" "./")
+
+ ("/Users/yukang/code/createdji_grade/app/controllers/" (21526 47012 0 0) "resources_controller.rb" "concerns/" "application_controller.rb" "../" "./")
+
+ ("/Users/yukang/code/createdji_grade/app/models/" (21526 47012 0 0) "resource.rb" "metadata.rb" "concerns/" ".keep" "../" "./")
+
+ ("/Users/yukang/code/createdji_grade/app/assets/stylesheets/" (21526 47012 0 0) "application.css" "../" "./")
+
+ ("/Users/yukang/code/createdji_grade/app/assets/javascripts/" (21526 47012 0 0) "application.js" "../" "./")
+
+ ("/Users/yukang/code/createdji_grade/" (21526 47985 0 0) "vendor/" "tmp/" "test/" "spec/" "README.md" "Rakefile" "public/" "log/" "lib/" "Gemfile.lock" "Gemfile" "doc/" "db/" "config.ru" "config/" "bin/" "app/" ".rspec" ".gitignore" ".git/" "../" "./")
+
+ ("/Users/yukang/code/createdji/app/mailers/" (21526 41135 0 0) "email_notifier.rb" ".keep" "../" "./")
+
+ ("/Users/yukang/code/createdji/app/helpers/" (21526 41135 0 0) "videos_helper.rb" "user_helper.rb" "search_helper.rb" "home_helper.rb" "authorize_helper.rb" "application_helper.rb" "api/" "admin/" "accounts_helper.rb" "../" "./")
+
+ ("/Users/yukang/code/createdji/app/helpers/api/v1/" (21526 41135 0 0) "comments_helper.rb" "../" "./")
+
+ ("/Users/yukang/code/createdji/app/assets/javascripts/vendor/" (21526 41135 0 0) "ng-tags-input.js" "../" "./")
+
+ ("/Users/yukang/code/createdji/app/assets/javascripts/commons/" (21526 41135 0 0) "jquery.tooltipster.js" "header.js.coffee" "comments.js.coffee" "carousel.js" "art.js" "../" "./")
+
+ ("/Users/yukang/code/createdji/app/assets/stylesheets/" (21526 41135 0 0) "global.css.scss" "common/" "application.css.scss" "admin/" "../" "./")
+
+ ("/Users/yukang/code/createdji/app/assets/stylesheets/admin/" (21526 41135 0 0) "admin.css.scss" "../" "./")
+
+ ("/Users/yukang/code/createdji/app/assets/fonts/" (21526 41135 0 0) "OpenSans-Regular.woff" "OpenSans-Regular.ttf" "OpenSans-Regular.svg" "OpenSans-Regular.eot" "opensans-light.woff" "opensans-light.ttf" "opensans-light.svg" "opensans-light.eot" "fontello.woff" "fontello.ttf" "fontello.svg" "fontello.eot" "../" "./")
+
+ ("/Users/yukang/code/createdji/app/" (21526 41135 0 0) "views/" "uploaders/" "models/" "mailers/" "helpers/" "controllers/" "assets/" "../" "./")
+
+ ("/Users/yukang/code/createdji/spec/controllers/admin/" (21526 41135 0 0) "photos_controller_spec.rb" "events_controller_spec.rb" "admin_users_controller_spec.rb" "admin_controller_spec.rb" "accounts_controller_spec.rb" "../" "./")
+
+ ("/Users/yukang/code/createdji/spec/controllers/" (21526 41135 0 0) "videos_controller_spec.rb" "user_controller_spec.rb" "search_controller_spec.rb" "home_controller_spec.rb" "authorize_controller_spec.rb" "api/" "admin/" "accounts_controller_spec.rb" "../" "./")
+
+ ("/Users/yukang/code/createdji/spec/" (21526 41135 0 0) "views/" "routing/" "requests/" "models/" "helpers/" "controllers/" "../" "./")
+)
+
+;; ----- ido-unc-hosts-cache -----
+t
