@@ -25,7 +25,6 @@
 (setq-default tab-width 4)
 (setq tab-width 4)
 
-
 (global-set-key (kbd "C-c l") 'set-mark-command)
 (global-set-key (kbd "C-x c") 'copy-region-as-kill)
 (global-set-key (kbd "C-c u") 'uncomment-region)
