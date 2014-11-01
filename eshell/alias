@@ -1,6 +1,8 @@
-alias c clear
-alias gp git pull --rebase
-alias gs git status
-alias mamake make $*
-alias mkae mamake $*
 alias l ls $*
+alias mkae mamake $*
+alias mamake make $*
+alias gs git status
+alias gp git pull --rebase
+alias c clear
+alias ruby /Users/kang/.rvm/rubies/ruby-2.1.2/bin/ruby
+alias gc git pull --rebase; git push

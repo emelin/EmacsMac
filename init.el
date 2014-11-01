@@ -755,3 +755,6 @@ If buffer-or-name is nil return current buffer's mode."
 
 (add-hook 'coffee-mode-hook
           (lambda () (highlight-indentation-mode)))
+
+(require 'rvm)
+(rvm-use-default)
