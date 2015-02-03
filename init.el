@@ -526,6 +526,10 @@
 			  (auto-complete-mode)
 			  (highlight-symbol-mode)))
 
+(add-hook 'rust-mode-hook (lambda ()
+                          (auto-complete-mode)
+                          (highlight-symbol-mode)))
+
 (require 'ess)
 (defun run-cover ()
   "Run go coverage in tmp dir"
@@ -758,3 +762,25 @@ If buffer-or-name is nil return current buffer's mode."
 
 (require 'rvm)
 (rvm-use-default)
+
+
+(add-to-list 'load-path "~/.emacs.d/tuareg/")
+(require 'tuareg)
+(require 'merlin)
+(setq auto-mode-alist
+      (append '(("\\.ml[ily]?$" . tuareg-mode)
+                ("\\.topml$" . tuareg-mode))
+              auto-mode-alist))
+(autoload 'utop-setup-ocaml-buffer "utop" "Toplevel for OCaml" t)
+(autoload 'utop-minor-mode "utop" "Minor mode for utop" t)
+(add-hook 'tuareg-mode-hook 'utop-minor-mode)
+
+(require 'merlin)
+(setq opam-share (substring (shell-command-to-string "opam config var share 2> /dev/null") 0 -1))
+;; Start merlin on ocaml files
+(add-hook 'tuareg-mode-hook 'merlin-mode t)
+(add-hook 'caml-mode-hook 'merlin-mode t)
+;; Enable auto-complete
+(setq merlin-use-auto-complete-mode 'easy)
+;; Use opam switch to lookup ocamlmerlin binary
+(setq merlin-command 'opam)

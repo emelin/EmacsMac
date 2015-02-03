@@ -2,6 +2,30 @@
 
 ;; ----- ido-last-directory-list -----
 (
+ ("/Users/kang/code/ProjectEulerRust/" . "src/")
+ ("/Users/kang/" . ".emacs.d/")
+ ("/Users/kang/code/r6.rs/" . "src/")
+ ("/Users/kang/code/CodeSnippet/rust/" . "src/")
+ ("/Users/kang/code/CodeSnippet/" . "rust/")
+ ("/Users/kang/code/OS/RUST/rust-nightly-x86_64-unknown-linux-gnu/lib/rustlib/x86_64-unknown-linux-gnu/" . "lib/")
+ ("/Users/kang/code/OS/RUST/rust-nightly-x86_64-unknown-linux-gnu/lib/rustlib/" . "x86_64-unknown-linux-gnu/")
+ ("/Users/kang/code/OS/RUST/rust-nightly-x86_64-unknown-linux-gnu/lib/" . "rustlib/")
+ ("/Users/kang/code/OS/RUST/rust-nightly-x86_64-unknown-linux-gnu/" . "lib/")
+ ("/Users/kang/code/OS/RUST/" . "rust-nightly-x86_64-unknown-linux-gnu/")
+ ("/Users/kang/code/OS/" . "RUST/")
+ ("/Users/kang/code/OS/rustix/" . "kernel/")
+ ("/Users/kang/code/chenyukang.github.com/" . "_posts/")
+ ("/Users/kang/code/rust-scm/tray_rust/src/" . "film/")
+ ("/Users/kang/code/rust-scm/tray_rust/" . "src/")
+ ("/Users/kang/code/CodeSnippet/rust/tunning/" . "src/")
+ ("/Users/kang/code/go/" . "src/")
+ ("/Users/kang/code/iron-lang/" . "src/")
+ ("/Users/kang/code/rust/src/" . "compiler-rt/")
+ ("/Users/kang/code/rust/" . "src/")
+ ("/Users/kang/code/GoScheme/src/" . "eval/")
+ ("/Users/kang/code/GoScheme/" . "src/")
+ ("/Users/kang/code/" . "rust-scm/")
+ ("/Users/kang/code/rust-scm/" . "src/")
  ("/Users/yukang/createdji/app/assets/images/" . "login/")
  ("/Users/yukang/Downloads/metronic_v3.2.0/theme/assets/admin/pages/" . "scripts/")
  ("/Users/yukang/Downloads/metronic_v3.2.0/theme/assets/admin/" . "pages/")
@@ -39,6 +63,34 @@
 
 ;; ----- ido-work-directory-list -----
 (
+ "/Users/kang/.emacs.d/"
+ "/Users/kang/code/CodeSnippet/ocaml/dawo/"
+ "/Users/kang/code/CodeSnippet/"
+ "/Users/kang/code/chenyukang.github.com/_posts/"
+ "/Users/kang/code/CodeSnippet/ocaml/"
+ "/Users/kang/code/ProjectEulerRust/src/"
+ "/Users/kang/code/CodeSnippet/ruby/"
+ "/Users/kang/.emacs.d/tuareg/"
+ "/Users/kang/code/rust-scm/src/"
+ "/Users/kang/code/r6.rs/src/"
+ "/Users/kang/code/r6.rs/tests/"
+ "/Users/kang/code/r6.rs/"
+ "/Users/kang/code/rust-scm/"
+ "/Users/kang/code/rust-scm/demo/"
+ "/Users/kang/code/CodeSnippet/rust/"
+ "/Users/kang/code/xv6/"
+ "/Users/kang/code/OS/rustix/kernel/"
+ "/Users/kang/code/OS/rustix/"
+ "/Users/kang/code/rust-scm/tray_rust/src/film/"
+ "/Users/kang/code/GoScheme/src/eval/"
+ "/Users/kang/code/rustix/"
+ "/Users/kang/code/unix/"
+ "/Users/kang/code/GoScheme/src/scheme/"
+ "/Users/kang/code/iron-lang/src/"
+ "/Users/kang/code/CodeSnippet/rust/tunning/src/"
+ "/Users/kang/code/CodeSnippet/rust/tunning/"
+ "/Users/kang/code/bootstrap-scheme/"
+ "/Users/kang/code/rust/"
  "/Users/yukang/createdji/app/views/home/"
  "/Users/yukang/createdji/db/migrate/"
  "/Users/yukang/createdji/lib/site_client/"
@@ -61,42 +113,136 @@
  "/Users/yukang/createdji/app/views/search/"
  "/Users/yukang/createdji/app/views/comments/"
  "/Users/yukang/createdji/app/assets/javascripts/commons/"
- "/Users/yukang/.emacs.d/eshell/"
- "/Users/yukang/code/createdji/app/views/manage/"
- "/Users/yukang/createdji/app/views/manage/"
- "/Users/yukang/code/createdji/config/"
- "/Users/yukang/createdji/config/"
- "/Users/yukang/code/createdji/app/views/comments/"
- "/Users/yukang/code/createdji/app/controllers/"
- "/Users/yukang/.emacs.d/"
- "/Users/yukang/code/createdji/app/views/photos/"
- "/Users/yukang/code/createdji/app/views/commons/"
- "/Users/yukang/code/createdji/app/views/videos/"
- "/Users/yukang/code/createdji/app/views/home/"
- "/Users/yukang/code/createdji/app/models/"
- "/Users/yukang/.emacs.d/lisp/"
- "/Users/yukang/code/ruby-china/app/controllers/"
- "/Users/yukang/code/createdji_grade/"
- "/Users/yukang/code/createdji_grade/lib/"
- "/Users/yukang/code/createdji/"
 )
 
 ;; ----- ido-work-file-list -----
 (
- "_videos.html.slim"
- "20140925092955_create_licensings.rb"
- "20140925092750_create_licenses.rb"
- "youtube.rb"
- "README.md"
- "_show.html.slim"
- "index.html.slim"
- "_share.html.slim"
- "_footer.html.slim"
- "_about.html.slim"
+ "init.el"
+ "ch3.ml"
+ "ch4.ml"
+ ".gitignore"
+ "stack.ml"
+ "stack.cmi"
+ "cal.ml"
+ "ch2.ml"
+ "list.ml"
+ "common.rs"
 )
 
 ;; ----- ido-dir-file-cache -----
 (
+ ("/Users/kang/.emacs.d/" (21710 13936 0 0) "yasnippet/" "var/" "tuareg/" "tramp" "todo/" "themes/" "swank-chicken/" "slime/" "ruby-mode/" "README.md" "projectile.cache" "projectile-bookmarks.eld" "projectile/" "project-explorer-cache/" "powerline/" "org-mode/" "newsticker/" "muse/" "multiple-cursors/" "mode/" "magit/" "lisp/" "init.el" "iedit/" "ido.last" "helm/" "gfw.pac" "games/" "eshell/" "erlang/" "emacs-rails/" "emacs-company/" "emacs-clang-complete-async/" "emacs-bash-completion/" "elpa/" "bookmarks" "auto-save-list/" "auto-complete-clang/" "auto-complete/" "auto/" "ac-comphist.dat" ".gitignore" ".git/" ".emacs.desktop" "../" "./")
+
+ ("/Users/kang/" (21710 14023 0 0) "xcode/" "share/" "rustup.sh" "Public/" "Pictures/" "Music/" "Movies/" "Library/" "hima/" "GoAgentX/" "go/" "Dropbox/" "Downloads/" "Documents/" "Desktop/" "code/" "binary.c" "bin/" "benchmark/" "Applications/" "Alfred.alfredpreferences/" ".zshrc.backup" ".zshrc" ".zsh_history" ".zsh-update" ".zprofile" ".zlogin" ".zcompdump-Yukang-5.0.5" ".zcompdump-Yukang-5.0.2" ".zcompdump" ".Xauthority" ".viminfo" ".vim/" ".utop-history" ".Trash/" ".subversion/" ".ssh/" ".sqlite_history" ".smex-items" ".slime-history.eld" ".ShadowsocksX/" ".sh_history" ".rvmrc" ".rvm/" ".rnd" ".recentf" ".Rapp.history" ".python-eggs/" ".pry_history" ".profile" ".pow/" ".plex/" ".pip/" ".opam/" ".oh-my-zsh/" ".ocamlinit" ".npm/" ".node-gyp/" ".netrc" ".mysql_history" ".mongorc.js" ".mongod.log" ".mirb_history" ".matplotlib/" ".mallory/" ".lldb-history" ".lesshst" ".irssi/" ".irb-history" ".ipython/" ".ido.last~" ".ido.last" ".hgignore_global" ".heroku/" ".gopm/" ".gitk" ".gitignore_global" ".gitconfig" ".ghc/" ".gemrc" ".gem/" ".fontconfig/" ".eshell/" ".erlang_config/" ".erlang.cookie" ".emacs~" ".emacslink.el" ".emacs_shell" ".emacs.desktop" ".emacs.d/" ".elfeed/" ".elasticsearch.log" ".DS_Store" ".dropbox/" ".dict" ".dialyzer_plt" ".dbshell" ".config/" ".CFUserTextEncoding" ".cargo/" ".cache/" ".cabal/" ".bundler/" ".bashrc" ".bash_profile" ".bash_history" ".back.emacs.d/" ".atom/" ".#staic.cc" "../" "./")
+
+ ("/Users/kang/code/CodeSnippet/ocaml/dawo/" (21710 13956 0 0) "stack.o" "stack.ml" "stack.cmx" "stack.cmi" "stack" "ch4.ml" "ch3.ml" "ch2.ml" "cal.o" "cal.ml" "cal.cmx" "cal.cmi" "cal" ".#ch3.ml" "../" "./")
+
+ ("/tmp/" (21709 57445 0 0) "thunder_ui_2015-01-31.log" "thunder_ui_2015-01-30.log" "thunder_ui_2015-01-19.log" "KSOutOfProcessFetcher.501.r55jifrBu08ZlGAfPLYXKgYad4c=/" "KSOutOfProcessFetcher.0.r55jifrBu08ZlGAfPLYXKgYad4c=/" "com.apple.launchd.KgTbVpUZaZ/" "com.apple.launchd.esBfLWHmwj/" "com.apple.launchd.EFBgYtWn76/" ".keystone_install_lock" "../" "./")
+
+ ("/Users/kang/code/CodeSnippet/" (21709 58918 0 0) "topcoder/" "rust/" "ruby/" "README" "R/" "python/" "ocaml/" "lua/" "leetcode/" "js/" "haskell/" "hackerrank/" "go/" "geeksforgeeks/" "erlang/" "cpp/" "codechef/" "c/" "build.ninja" ".gitignore" ".git/" ".DS_Store" "../" "./")
+
+ ("/Users/kang/code/" (21708 59019 0 0) "zfw/" "xv6/" "unix/" "tinyrb/" "SpamLib/" "rustix/" "rust-scm/" "rust-rosetta/" "rust-2048/" "rust/" "rubywarrior/" "ruby-china/" "Ruby/" "robigo-luculenta/" "r6.rs/" "qwirkler/" "Python/" "ProjectEulerRust/" "Poj/" "playground/" "parallel/" "Panda/" "oxischeme/" "osdev/" "OS/" "openstackgeek/" "openstack/" "ninja/" "nightly/" "mywiki/" "multitasking/" "Maze/" "lua/" "linux/" "leveldb/" "lambda-china/" "jumang/" "jekyll-bootstrap/" "iron-lang/" "iota/" "homebrew/" "hack_hdf/" "hack_guahao/" "hack_dxy/" "GoScheme/" "gorazor/" "go/" "Game/" "fucc/" "fleurix/" "eventmachine/" "erlang/" "eopl/" "emacSay/" "dsC/" "dji/" "cyukang/" "Complier/" "CodeSnippet/" "CityRoad/" "chenyukang.github.com/" "bootstrap-scheme/" "blog/" "Basketball_demo/" "backup/" "adventure/" ".DS_Store" ".com.apple.timemachine.supported" ".clang-completion-error" "../" "./")
+
+ ("/Users/kang/code/chenyukang.github.com/_posts/" (21709 46043 0 0) "2015-01-19-refer.md" "2015-01-10-rust-10-alpha.md" "2014-09-14-a-retargetable-c-compiler-design-and-implementation.md" "2014-08-01-install-server.md" "2014-07-29-buffer-size-limit-for-eshell.md" "2014-06-28-scheme-go.md" "2014-06-22-go-dev.md" "2014-05-24-recent.md" "2014-04-18-visualize-git-proj.md" "2014-04-11-heartbleed.md" "2014-03-29-eopl.md" "2014-03-06-random-number.md" "2014-01-14-leetcode-anagrams.md" "2014-01-04-regular-expression-matching-dfa.md" "2013-11-23-kernel-analysis-process-defunct.md" "2013-11-20-topological-sort.md" "2013-10-05-do-presentation-like-a-geek.md" "2013-10-02-testing-prose-io.md" "2013-09-26-gotous.md" "2013-08-24-meta-programming-ruby.md" "2013-07-14-ruby-warrior.md" "2013-07-06-studying-rails.md" "2013-05-18-critbit.md" "2013-05-09-git-command.md" "2013-04-17-apt-usage.md" "2013-04-11-xor_link_list.md" "2013-03-03-try-mathjax.md" "2013-02-15-reading-bootstrap-scheme.md" "2013-01-27-emacs-speaking-now.md" "2013-01-22-poj-500.md" "2013-01-04-print-stack-before-exiting.md" "2012-12-26-browser-objs-in-ruby.md" "2012-12-16-use-clang-autocomplete-mode.md" "2012-12-13-have-a-try-for-ninja.md" "2012-11-22-ruby-robot-ai.md" "2012-11-14-ruby_block_proc.md" "2012-11-08-lijiang.md" "2012-11-05-emacs-symbol-util.md" "2012-10-29-runlim.md" "2012-10-16-delegate_ruby_cpp.md" "2012-09-27-3d-python-call-path.md" "2012-09-18-a-start-k-shortest.md" "2012-09-13-change-domain-name.md" "2012-08-19-os-dev-debug.md" "2012-08-09-switch-screen.md" "2012-07-11-branch_prediction.md" "2012-06-25-gdb-with-libso.md" "2012-06-20-bsfl-bitmap.md" "2012-06-13-try-jekyll-git.md" "2012-04-21-xx.html" "2012-04-11-test.html" "2012-04-11-find-duplicated-cycle-detection.html" "2012-04-11-ffs.html" "2012-03-08-eproject.md" "2011-12-21-a-emacs-func.html" "2011-11-03-guanggao.html" "2011-10-20-basketball.html" "2011-09-25-xingshi.html" "2011-08-18-life_in_shangha.html" "2011-08-16-ooc_in_python.html" "2011-07-30-fastsearch-in-python2.html" "2011-07-24-emacssleep.html" "2011-07-23-toshanghia.html" "2011-07-22-wumpus-and-2.html" "2011-06-14-advanced-linux-porg-notes.html" "2011-06-07-554.html" "2011-05-23-hexiethings.html" "2011-05-22-memcached.html" "2011-05-06-valgrind.html" "2011-04-25-memleak2.html" "2011-04-23-mianduijuren.html" "2011-03-27-guitar.html" "2011-03-27-fuckpaper.html" "2011-03-09-cflow.html" "2011-03-03-ood_for_wife.html" "2011-02-22-workingtime.html" "2011-02-16-chunjie.html" "2010-12-30-tenyears.html" "2010-12-29-theprophet.html" "2010-12-22-c-mem-leak.html" "2010-12-01-luopanzi.html" "2010-11-20-gene-alg.html" "2010-11-15-emacs-muse.html" "2010-11-14-damien-rice.html" "2010-10-27-haveyourfun.html" "2010-10-27-forc.html" "2010-10-14-beizidaoshui.html" "2010-10-06-a-complaint-free-world.html" "2010-09-30-forjob.html" "2010-08-21-using-automake.html" "2010-08-21-emacs-for-fun.html" "2010-08-20-zheteng.html" "2010-08-05-programming-peal.html" "2010-08-04-nba-kids.html" "2010-08-02-findsum.html" "2010-08-02-astart-k-shortest-path.html" "2010-07-27-sicp.html" "2010-07-22-maze.html" "2010-07-20-union-set-maze.html" "2010-07-20-the-game-of-life.html" "2010-07-20-pointerbug.html" "2010-07-20-concrete-abstractions.html" "2010-07-20-c-deep.html" "2010-07-17-emacs-keyboard-macros.html" "2010-07-15-thinking.html" "2010-07-13-hello-world.html" "../" "./")
+
+ ("/Users/kang/code/CodeSnippet/ruby/" (21708 47255 0 0) "write.rb" "url.rb" "table.rb" "struct.rb" "smart-array.rb" "Roulette.rb" "rename.rb" "remove_binary.rb" "region.rb" "quicksort.rb" "proc_table.rb" "proc_demo.rb" "proc.rb" "permutation.rb" "paraller.rb" "paralel_timeout.rb" "objserver.rb" "moduleC/" "method_missing.rb" "meta/" "json.rb" "hosiptal.rb" "hello.json" "first_norepeat.rb" "excel.rb" "doctor.rb" "demo.rb" "debug.rb" "curses/" "chat.rb" "bug.rb" "add_attr_check.rb" "../" "./")
+
+ ("/Users/kang/code/CodeSnippet/ocaml/" (21709 26270 0 0) "record.ml" "list.ml" "insert-sort.ml" "func.ml" "dawo/" "../" "./")
+
+ ("/Users/kang/code/ProjectEulerRust/src/bin/" (21708 59701 0 0) "p136.rs" "p135.rs" "p134.rs" "p133.rs" "p132.rs" "p131.rs" "p130.rs" "p129.rs" "p128.rs" "p127.rs" "p126.rs" "p125.rs" "p124.rs" "p123.rs" "p122.rs" "p121.rs" "p120.rs" "p119.rs" "p118.rs" "p117.rs" "p116.rs" "p115.rs" "p114.rs" "p113.rs" "p112.rs" "p111.rs" "p110.rs" "p109.rs" "p108.rs" "p107.rs" "p106.rs" "p105.rs" "p104.rs" "p103.rs" "p102.rs" "p101.rs" "p100.rs" "p099.rs" "p098.rs" "p097.rs" "p096.rs" "p095.rs" "p094.rs" "p093.rs" "p092.rs" "p091.rs" "p090.rs" "p089.rs" "p088.rs" "p087.rs" "p086.rs" "p085.rs" "p084.rs" "p083.rs" "p082.rs" "p081.rs" "p080.rs" "p079.rs" "p078.rs" "p077.rs" "p076.rs" "p075.rs" "p074.rs" "p073.rs" "p072.rs" "p071.rs" "p070.rs" "p069.rs" "p068.rs" "p067.rs" "p066.rs" "p065.rs" "p064.rs" "p063.rs" "p062.rs" "p061.rs" "p060.rs" "p059.rs" "p058.rs" "p057.rs" "p056.rs" "p055.rs" "p054.rs" "p053.rs" "p052.rs" "p051.rs" "p050.rs" "p049.rs" "p048.rs" "p047.rs" "p046.rs" "p045.rs" "p044.rs" "p043.rs" "p042.rs" "p041.rs" "p040.rs" "p039.rs" "p038.rs" "p037.rs" "p036.rs" "p035.rs" "p034.rs" "p033.rs" "p032.rs" "p031.rs" "p030.rs" "p029.rs" "p028.rs" "p027.rs" "p026.rs" "p025.rs" "p024.rs" "p023.rs" "p022.rs" "p021.rs" "p020.rs" "p019.rs" "p018.rs" "p017.rs" "p016.rs" "p015.rs" "p014.rs" "p013.rs" "p012.rs" "p011.rs" "p010.rs" "p009.rs" "p008.rs" "p007.rs" "p006.rs" "p005.rs" "p004.rs" "p003.rs" "p002.rs" "p001.rs" "euler.rs" "../" "./")
+
+ ("/Users/kang/code/ProjectEulerRust/src/" (21708 59701 0 0) "common.rs" "bin/" "../" "./")
+
+ ("/Users/kang/code/ProjectEulerRust/" (21708 59701 0 0) "src/" "README.md" "pkg/" "Makefile" "LICENSE" "Cargo.toml" "Cargo.lock" ".travis.yml" ".gitignore" ".git/" "../" "./")
+
+ ("/Users/kang/code/rust/" (21699 48968 0 0) "x86_64-apple-darwin/" "update.sh" "tmp/" "src/" "RELEASES.md" "README.md" "mk/" "man/" "Makefile.in" "Makefile" "LICENSE-MIT" "LICENSE-APACHE" "doc/" "dl/" "dist/" "COPYRIGHT" "CONTRIBUTING.md" "configure" "config.stamp" "config.mk" "config.log" "AUTHORS.txt" ".travis.yml" ".mailmap" ".gitmodules" ".gitignore" ".gitattributes" ".git/" ".DS_Store" "../" "./")
+
+ ("/Users/kang/code/OS/rustix/" (21697 7043 0 0) "xv62rustx.map" "tools/" "staging/" "Rules.inc" "README.md" "ocaml.pdf" "Makefile" "LICENSE" "kernel/" "export.sh" "demo.rs" "demo" "CREDITS.md" "boot/" ".gitignore" ".git/" "../" "./")
+
+ ("/Users/kang/code/OS/rustix/kernel/" (21697 3897 0 0) "x86asm.rs" "uart.rs" "traps.rs" "task.rs" "spinlock.rs" "rlibc.rs" "proc.rs" "picirq.rs" "mmu.rs" "memlayout.rs" "Makefile" "libunicode.rlib" "libstd.rlib" "libmorestack.a" "libkernel.a" "libcore.rlib" "libcompiler-rt.a" "libcollections.rlib" "liballoc.rlib" "lapic.rs" "kernel.rs" "kalloc.rs" "console.rs" "../" "./")
+
+ ("/Users/kang/code/r6.rs/tests/" (21699 48428 0 0) "eval_test.rs" "../" "./")
+
+ ("/Users/kang/code/rust-scm/src/" (21703 41405 0 0) "parser.rs" "main.rs" "eval.rs" "env.rs" "ast.rs" "../" "./")
+
+ ("/Users/kang/.emacs.d/tuareg/" (21706 20291 0 0) "tuareg_indent.el" "tuareg.el" "tuareg-site-file.el" "tuareg-light.el" "sample.ml" "README.md" "opam/" "ocamldebug.el" "Makefile" "HISTORY" "COPYING" "CHANGES" ".gitignore" ".git/" ".bzrignore" "../" "./")
+
+ ("/Users/kang/code/rust-scm/" (21699 45878 0 0) "tray_rust/" "test.scm" "target/" "src/" "README.md" "LICENSE" "demo/" "CompilerConstruction.pdf" "Cargo.toml" "Cargo.lock" ".travis.yml" ".gitignore" ".git/" ".DS_Store" "../" "./")
+
+ ("/Users/kang/code/r6.rs/" (21699 48494 0 0) "tests/" "target/" "src/" "README.md" "LICENSE" "Cargo.toml" "Cargo.lock" ".travis.yml" ".gitignore" ".git/" "../" "./")
+
+ ("/Users/kang/code/r6.rs/src/" (21699 48274 0 0) "runtime.rs" "primitive.rs" "parser.rs" "lib.rs" "lexer.rs" "error.rs" "datum.rs" "compiler.rs" "base.rs" "../" "./")
+
+ ("/Users/kang/code/rust-scm/demo/" (21699 23915 0 0) "rust-words/" "res" "rc.rs" "func.rs" "exp.rs" "demo.rs" "demo" "buf.rs" "buf" "ast.rs" "../" "./")
+
+ ("/Users/kang/code/CodeSnippet/rust/src/" (21561 61362 0 0) "main.rs" "../" "./")
+
+ ("/Users/kang/code/CodeSnippet/rust/" (21698 30077 0 0) "zip.rs" "vector.rs" "vec_init_size.rs" "vec.rs" "unreacheable.rs" "tuples.rs" "tunning/" "trait.rs" "thread.rs" "testing/" "struct.rs" "string.rs" "src/" "result.rs" "raii.rs" "phrases/" "os_type.rs" "op.rs" "mut_pointer.rs" "move.rs" "modules/" "match.rs" "macro.rs" "loop.rs" "linklist_type.rs" "linklist.rs" "life/" "infer.rs" "hello.rs" "hash_func.rs" "hash.rs" "guessing_game/" "future.rs" "from_fn.rs" "for_cpp.rs" "exp.rs" "error.rs" "enum.rs" "default.rs" "dangling.rs" "concurrency.rs" "collects.rs" "chen.rs" "channel.rs" "Cargo.lock" "borrow_checker.rs" "ast.rs" "array.rs" "arc.hs" ".gitignore" "../" "./")
+
+ ("/Users/kang/code/xv6/" (21697 508 0 0) "zombie.sym" "zombie.c" "zombie.asm" "xv6.img" "xv6-rev6.pdf" "x86.h" "wc.sym" "wc.c" "wc.asm" "vm.c" "vectors.S" "vectors.pl" "usys.S" "usertests.sym" "usertests.c" "usertests.asm" "user.h" "umalloc.c" "ulib.c" "uart.c" "types_flymake.h.gch" "types.h" "TRICKS" "traps_flymake.h.gch" "traps.h" "trapasm.S" "trap.c" "toc.hdr" "toc.ftr" "timer.c" "sysproc.c" "sysfile.c" "syscall.h" "syscall.c" "symlink.patch" "swtch.S" "string.c" "stressfs.sym" "stressfs.c" "stressfs.asm" "stat.h" "spinlock.h" "spinlock.c" "sleep1.p" "sign.pl" "sh.sym" "sh.c" "sh.asm" "runoff.spec" "runoff.list" "rm.sym" "rm.c" "rm.asm" "README" "proc.h" "proc.c" "printf.c" "pr.pl" "pipe.c" "picirq.c" "param_flymake.h.gch" "param.h" "Notes" "mp.h" "mp.c" "mmu.h" "mkfs.c" "mkdir.sym" "mkdir.c" "mkdir.asm" "memlayout.h" "memide.c" "Makefile" "main.c" "LucidaSans-Typewriter83~" "ls.sym" "ls.c" "ls.asm" "log.c" "ln.sym" "ln.c" "ln.asm" "LICENSE" "lapic.c" "kill.sym" "kill.c" "kill.asm" "kernel.sym" "kernel.ld" "kernel.asm" "kbd.h" "kbd.c" "kalloc.c" "ioapic.c" "initcode.S" "initcode.out" "initcode.asm" "init.sym" "init.c" "init.asm" "ide.c" "GTAGS" "GRTAGS" "grep.sym" "grep.c" "grep.asm" "GPATH" "gdbutil" "fs.img" "fs.h" "fs.c" "forktest.c" "forktest.asm" "file.h" "file.c" "fcntl.h" "exec.c" "entryother.S" "entryother.asm" "entry.S" "elf.h" "echo.sym" "echo.c" "echo.asm" "defs.h" "cscope.out" "cscope.files" "console.c" "cat.sym" "cat.c" "cat.asm" "BUGS" "buf.h" "bootmain.c" "bootblock.asm" "bootasm.S" "book-rev6.pdf" "bochsout.txt" "bio.c" "asm.h" ".projectile" ".gitignore" ".git/" ".gdbinit.tmpl" ".dir-locals.el" ".cvsignore" "../" "./")
+
+ ("/Users/kang/code/OS/" (21696 64212 0 0) "xv6/" "rustix/" "RUST/" "../" "./")
+
+ ("/Users/kang/code/OS/RUST/rust-nightly-x86_64-unknown-linux-gnu/lib/rustlib/x86_64-unknown-linux-gnu/lib/" (21691 25313 0 0) "libunicode-4e7c5e5c.rlib" "libtest-4e7c5e5c.so" "libtest-4e7c5e5c.rlib" "libterm-4e7c5e5c.so" "libterm-4e7c5e5c.rlib" "libsyntax-4e7c5e5c.so" "libstd-4e7c5e5c.so" "libstd-4e7c5e5c.rlib" "libserialize-4e7c5e5c.so" "libserialize-4e7c5e5c.rlib" "librustdoc-4e7c5e5c.so" "librustc_typeck-4e7c5e5c.so" "librustc_trans-4e7c5e5c.so" "librustc_resolve-4e7c5e5c.so" "librustc_privacy-4e7c5e5c.so" "librustc_llvm-4e7c5e5c.so" "librustc_driver-4e7c5e5c.so" "librustc_borrowck-4e7c5e5c.so" "librustc_bitflags-4e7c5e5c.rlib" "librustc_back-4e7c5e5c.so" "librustc-4e7c5e5c.so" "libregex-4e7c5e5c.so" "libregex-4e7c5e5c.rlib" "librbml-4e7c5e5c.so" "librbml-4e7c5e5c.rlib" "librand-4e7c5e5c.rlib" "libmorestack.a" "liblog-4e7c5e5c.so" "liblog-4e7c5e5c.rlib" "liblibc-4e7c5e5c.rlib" "libgraphviz-4e7c5e5c.so" "libgraphviz-4e7c5e5c.rlib" "libgetopts-4e7c5e5c.so" "libgetopts-4e7c5e5c.rlib" "libfmt_macros-4e7c5e5c.so" "libflate-4e7c5e5c.so" "libflate-4e7c5e5c.rlib" "libcore-4e7c5e5c.rlib" "libcompiler-rt.a" "libcollections-4e7c5e5c.rlib" "libarena-4e7c5e5c.so" "libarena-4e7c5e5c.rlib" "liballoc-4e7c5e5c.rlib" "../" "./")
+
+ ("/Users/kang/code/OS/RUST/rust-nightly-x86_64-unknown-linux-gnu/lib/rustlib/x86_64-unknown-linux-gnu/" (21691 25312 0 0) "lib/" "../" "./")
+
+ ("/Users/kang/code/OS/RUST/rust-nightly-x86_64-unknown-linux-gnu/lib/rustlib/" (21691 25312 0 0) "x86_64-unknown-linux-gnu/" "etc/" "../" "./")
+
+ ("/Users/kang/code/OS/RUST/rust-nightly-x86_64-unknown-linux-gnu/lib/" (21691 25312 0 0) "rustlib/" "libtest-4e7c5e5c.so" "libterm-4e7c5e5c.so" "libsyntax-4e7c5e5c.so" "libstd-4e7c5e5c.so" "libserialize-4e7c5e5c.so" "librustdoc-4e7c5e5c.so" "librustc_typeck-4e7c5e5c.so" "librustc_trans-4e7c5e5c.so" "librustc_resolve-4e7c5e5c.so" "librustc_privacy-4e7c5e5c.so" "librustc_llvm-4e7c5e5c.so" "librustc_driver-4e7c5e5c.so" "librustc_borrowck-4e7c5e5c.so" "librustc_back-4e7c5e5c.so" "librustc-4e7c5e5c.so" "libregex-4e7c5e5c.so" "librbml-4e7c5e5c.so" "liblog-4e7c5e5c.so" "libgraphviz-4e7c5e5c.so" "libgetopts-4e7c5e5c.so" "libfmt_macros-4e7c5e5c.so" "libflate-4e7c5e5c.so" "libarena-4e7c5e5c.so" "../" "./")
+
+ ("/Users/kang/code/OS/RUST/rust-nightly-x86_64-unknown-linux-gnu/" (21691 25322 0 0) "share/" "rust-installer-version" "README.md" "manifest-rustc.in" "manifest-rust-docs.in" "manifest-cargo.in" "LICENSE-MIT" "LICENSE-APACHE" "lib/" "install.sh" "etc/" "COPYRIGHT" "components" "bin/" "../" "./")
+
+ ("/Users/kang/code/OS/RUST/" (21694 30113 0 0) "rust-nightly-x86_64-unknown-linux-gnu/" "rust-nightly-x86_64-apple-darwin.tar.gz" "rust-nightly-x86_64-apple-darwin/" "../" "./")
+
+ ("/Users/kang/code/rustix/" (21694 30390 0 0) "tools/" "staging/" "Rules.inc" "README.md" "Makefile" "LICENSE" "kernel/" "CREDITS.md" "boot/" ".gitignore" ".git/" "../" "./")
+
+ ("/Users/kang/code/unix/" (21691 48056 0 0) "x86_64-unix-kernel.json" "tools/" "staging/" "Rules.inc" "README.md" "Makefile" "LICENSE" "kernel/" "gcc-4.8.1-for-linux64.dmg" "CREDITS.md" "boot/" ".gitignore" ".git/" "../" "./")
+
+ ("/Users/kang/code/chenyukang.github.com/" (21693 9743 0 0) "tags.html" "sitemap.xml" "scratch/" "robots.txt" "README.md" "Rakefile" "pages.html" "links.md" "index.md" "images/" "feed.xml" "favicon.ico" "CNAME" "changelog.md" "atom.xml" "assets/" "archive.html" "about.md" "_site/" "_posts/" "_plugins/" "_layouts/" "_includes/" "_config.yml" "404.html" ".gitignore" ".git/" ".DS_Store" "../" "./")
+
+ ("/Users/kang/code/rust-scm/tray_rust/src/film/" (21669 10797 0 0) "render_target.rs" "mod.rs" "color.rs" "camera.rs" "../" "./")
+
+ ("/Users/kang/code/rust-scm/tray_rust/src/" (21669 10797 0 0) "main.rs" "linalg/" "lib.rs" "geometry/" "film/" "../" "./")
+
+ ("/Users/kang/code/rust-scm/tray_rust/" (21669 10797 0 0) "src/" "README.md" "LICENSE.md" "Cargo.toml" "Cargo.lock" ".gitignore" ".git/" "../" "./")
+
+ ("/Users/kang/code/CodeSnippet/rust/tunning/" (21690 27675 0 0) "src/" "Cargo.toml" "Cargo.lock" "../" "./")
+
+ ("/Users/kang/code/CodeSnippet/rust/tunning/src/" (21689 60573 0 0) "tunning.rs" "../" "./")
+
+ ("/Users/kang/code/GoScheme/src/scheme/" (21422 53741 0 0) "scheme.go" "../" "./")
+
+ ("/Users/kang/code/GoScheme/" (21682 28873 0 0) "test.scm" "stdlib.scm" "src/" "scheme" "README.md" "Makefile" ".travis.yml" ".gitignore" ".git/" "../" "./")
+
+ ("/Users/kang/code/GoScheme/src/eval/" (21682 28573 0 0) "proc_test.go" "proc.go" "parser_test.go" "parser.go" "eval_test.go" "eval.go" "data.go" "../" "./")
+
+ ("/Users/kang/code/go/src/" (21502 60052 0 0) "gopkg.in/" "github.com/" "demo/" "code.google.com/" "chat/" "../" "./")
+
+ ("/Users/kang/code/go/" (21462 3245 0 0) "src/" "pkg/" "bin/" "../" "./")
+
+ ("/Users/kang/code/bootstrap-scheme/" (21422 16933 0 0) "stdlib.scm" "scheme.dSYM/" "scheme.c" "scheme" "README" "Makefile" "LICENSE" "GTAGS" "GRTAGS" "GPATH" "demo.c" "CHANGES" ".gitignore" ".git/" "../" "./")
+
+ ("/Users/kang/code/iron-lang/src/" (21623 20709 0 0) "parser.rs" "iron.rs" "interp.rs" "ast.rs" "../" "./")
+
+ ("/Users/kang/code/iron-lang/" (21621 54846 0 0) "test/" "src/" "README.md" "Makefile" "LICENSE.txt" "lib/" ".travis.yml" ".gitignore" ".git/" "../" "./")
+
+ ("/Users/kang/code/rust/src/libstd/time/" (21660 12428 0 0) "mod.rs" "duration.rs" "../" "./")
+
+ ("/Users/kang/code/rust/src/libstd/" (21660 12428 0 0) "unit.rs" "tuple.rs" "time/" "thunk.rs" "thread_local/" "thread.rs" "task.rs" "sys/" "sync/" "rtdeps.rs" "rt/" "rand/" "prelude.rs" "path/" "os.rs" "num/" "macros.rs" "lib.rs" "io/" "hash.rs" "fmt.rs" "failure.rs" "error.rs" "dynamic_lib.rs" "comm/" "collections/" "c_vec.rs" "c_str.rs" "bool.rs" "bitflags.rs" "ascii.rs" "../" "./")
+
+ ("/Users/kang/code/rust/src/libcore/" (21660 12428 0 0) "ty.rs" "tuple.rs" "str.rs" "slice.rs" "simd.rs" "result.rs" "raw.rs" "ptr.rs" "prelude.rs" "panicking.rs" "option.rs" "ops.rs" "num/" "mem.rs" "macros.rs" "lib.rs" "kinds.rs" "iter.rs" "intrinsics.rs" "hash/" "fmt/" "finally.rs" "default.rs" "cmp.rs" "clone.rs" "char.rs" "cell.rs" "borrow.rs" "atomic.rs" "array.rs" "any.rs" "../" "./")
+
+ ("/Users/kang/code/rust/src/compiler-rt/android/include/sys/" (21644 24894 0 0) "ucontext.h" "../" "./")
+
+ ("/Users/kang/code/rust/src/compiler-rt/" (21644 24894 0 0) "www/" "unittests/" "test/" "SDKs/" "README.txt" "Makefile" "make/" "LICENSE.TXT" "lib/" "include/" "CREDITS.TXT" "CODE_OWNERS.TXT" "CMakeLists.txt" "cmake/" "android/" ".gitignore" ".git" ".arcconfig" "../" "./")
+
+ ("/Users/kang/code/rust/src/" (21660 12428 0 0) "test/" "snapshots.txt" "rustllvm/" "rust-installer/" "rt/" "llvm/" "libunicode/" "libtime/" "libtest/" "libterm/" "libsyntax/" "libstd/" "libserialize/" "librustdoc/" "librustc_typeck/" "librustc_trans/" "librustc_resolve/" "librustc_llvm/" "librustc_driver/" "librustc_borrowck/" "librustc_back/" "librustc/" "libregex_macros/" "libregex/" "librbml/" "librand/" "liblog/" "liblibc/" "libgraphviz/" "libgetopts/" "libfmt_macros/" "libflate/" "libcoretest/" "libcore/" "libcollections/" "libbacktrace/" "libarena/" "liballoc/" "jemalloc/" "grammar/" "etc/" "driver/" "doc/" "compiletest/" "compiler-rt/" ".DS_Store" "../" "./")
+
+ ("/Users/kang/code/rust/src/rustllvm/" (21644 5175 0 0) "RustWrapper.cpp" "rustllvm.h" "README" "PassWrapper.cpp" "llvm-auto-clean-trigger" "../" "./")
+
+ ("/Users/kang/code/GoScheme/src/" (21381 61957 0 0) "scheme/" "eval/" "../" "./")
+
  ("/Users/yukang/createdji/app/views/home/" (21546 32064 0 0) "index.html.slim" "help.html.slim" "about.html.slim" "_videos.html.slim" "_photos.html.slim" "_links.html.slim" "_about.html.slim" "../" "./")
 
  ("/Users/yukang/createdji/db/" (21546 24764 0 0) "seeds.rb" "schema.rb" "migrate/" "development.sqlite3" "../" "./")
@@ -118,8 +264,6 @@
  ("/Users/yukang/createdji/app/views/accounts/" (21546 26335 0 0) "signup.html.slim.back" "signup.html.slim" "signin.html.slim" "reset_psw_invalid.html.slim" "reset_password.html.slim" "oauth_video.html.slim" "oauth_sns.html.slim" "oauth_link.html.slim" "forget_password.html.slim" "../" "./")
 
  ("/Users/yukang/createdji/app/assets/javascripts/pages/" (21546 26335 0 0) "users.coffee" "upload.coffee" "resources.coffee" "resource.js" "photos.coffee" "manage.js" "manage.coffee.bak" "login.js" "jquery.backstretch.js" "home.js" "forget.js" "background.js" "accounts_signup.js" "accounts_signin.js" "../" "./")
-
- ("/tmp/" (21546 22869 0 0) "rspec-demo/" "mysql.sock" "launchd-270.zP87SJ/" "launchd-247.8SaTfE/" "launchd-174.8CgDrz/" "launch-y8PCIR/" "launch-A95KeX/" "haha" "createdji/" "_work.html.slim" "../" "./")
 
  ("/Users/yukang/createdji/app/views/commons/" (21546 26335 0 0) "_weibo_meta.html.slim" "_uploads_item_photo.html.slim" "_upload_videos.html.slim" "_upload_photos.html.slim" "_upload_main.html.slim" "_tags_noborder.html.slim" "_tags.html.slim" "_sns_meta.html.slim" "_siderbar.html.slim" "_share_short.html.slim" "_share.html.slim" "_resource_action.html.slim" "_photo_group.html.slim" "_paginate.html.slim" "_no_data.html.slim" "_modal.html.slim" "_mark.html.slim" "_like_and_favorite.html.slim" "_like.html.slim" "_item_search_photo.html.slim" "_header.html.slim" "_head.html.slim" "_google_analytics.html.slim" "_footer.html.slim" "_favorite.html.slim" "_comments.html.slim" "_comment_like.html.slim" "_comment_action.html.slim" "_author_header.html.slim" "_author_details.html.slim" "_author.html.slim" "_about.html.slim" "../" "./")
 
@@ -186,106 +330,6 @@
  ("/Users/yukang/createdji/app/views/" (21545 219 0 0) "widgets/" "videos/" "users/" "uploads/" "tmpls/" "test/" "search/" "photos/" "metronic/" "manage/" "likes/" "layouts/" "home/" "favorites/" "events/" "emails/" "commons/" "comments/" "api/" "admin/" "accounts/" "../" "./")
 
  ("/Users/yukang/createdji/app/models/concerns/" (21544 50938 0 0) "grade_resource.rb" "grade_action.rb" ".keep" "../" "./")
-
- ("/Users/yukang/createdji/app/assets/javascripts/commons/" (21544 56156 0 0) "utils.js" "jquery.tooltipster.js" "header.js.coffee" "fixed.js" "comments.js.coffee" "comment.js" "carousel.js" "art.js" "../" "./")
-
- ("/Users/yukang/createdji/app/views/search/" (21544 50939 0 0) "tag_index.html.slim" "index.html.slim" "all_search.html.slim" "../" "./")
-
- ("/Users/yukang/createdji/db/migrate/" (21544 50939 0 0) "20140928065520_add_camera_and_equipment_to_photos_and_videos.rb" "20140928023810_add_country_to_photos_and_videos.rb" "20140926015422_add_missing_taggable_index.acts_as_taggable_on_engine.rb" "20140926015421_add_taggings_counter_cache_to_tags.acts_as_taggable_on_engine.rb" "20140926015420_add_missing_unique_indices.acts_as_taggable_on_engine.rb" "20140926015419_acts_as_taggable_on_migration.acts_as_taggable_on_engine.rb" "20140926015341_drop_tags_table.rb" "20140925095953_add_location_to_video.rb" "20140925092955_create_licensings.rb" "20140925092750_create_licenses.rb" "20140925085749_create_categorizings.rb" "20140925084307_create_categories.rb" "20140925031822_add_resource_count_to_account.rb" "20140924034107_add_count_to_account.rb" "20140924020053_add_counter_to_video.rb" "20140924013917_add_counter_to_photo.rb" "20140918064910_add_country_to_photos.rb" "20140912074847_create_equipment.rb" "20140912033054_add_reset_password_token_to_accounts.rb" "20140907173800_add_bio_and_about_to_account.rb" "20140904070540_change_photos_account_id_to_cookie.rb" "20140904060002_add_location_to_photos.rb" "20140613035515_create_views.rb" "20140612033006_create_tags.rb" "20140605065632_create_stars.rb" "20140605020047_create_favorites.rb" "20140605015952_create_likes.rb" "20140529020819_create_equipments.rb" "20140527092119_create_accounts.rb" "20140516020119_create_comments.rb" "20140516020049_create_photos.rb" "20140516020026_create_videos.rb" "../" "./")
-
- ("/Users/yukang/createdji/app/views/kaminari/" (21545 154 0 0) "_prev_page.html.slim" "_paginator.html.slim" "_page.html.slim" "_next_page.html.slim" "_last_page.html.slim" "_gap.html.slim" "_first_page.html.slim" "../" "./")
-
- ("/Users/yukang/createdji/" (21544 56158 0 0) "tmp/" "test/" "start.rb" "spec/" "README.md" "Rakefile" "public/" "log/" "lib/" "Gemfile.lock" "Gemfile" "db/" "config.ru" "config/" "Capfile" "bin/" "app/" ".pow/" ".gitignore" ".git/" "../" "./")
-
- ("/Users/yukang/createdji/app/helpers/" (21544 63111 0 0) "videos_helper.rb" "user_helper.rb" "search_helper.rb" "metronic_helper.rb" "home_helper.rb" "authorize_helper.rb" "application_helper.rb" "api/" "admin/" "accounts_helper.rb" "../" "./")
-
- ("/Users/yukang/createdji/app/views/comments/" (21544 50938 0 0) "index.json.jbuilder" "index.js.slim" "destroy.json.jbuilder" "create.json.jbuilder" "_index.html.slim" "_comment.json.jbuilder" "../" "./")
-
- ("/Users/yukang/code/createdji/app/models/" (21539 31532 0 0) "view.rb" "video.rb" "tag.rb" "star.rb" "settings.rb" "photo.rb" "like.rb" "favorite.rb" "event.rb" "equipment.rb" "concerns/" "comment.rb" "account.rb" ".keep" "../" "./")
-
- ("/Users/yukang/code/createdji/app/views/commons/" (21538 27207 0 0) "demo.rb" "_weibo_meta.html.erb" "_video.html.erb" "_uploads_item_photo.html.erb" "_upload_videos.html.erb" "_upload_photos.html.erb" "_upload_main.html.erb" "_sns_meta.html.erb" "_resource_action.html.erb" "_photo_group.html.erb" "_photo.html.erb" "_no_data.html.erb" "_like_and_favorite.html.erb" "_like.html.erb" "_item_search_photo.html.erb" "_header.html.erb" "_head.html.erb" "_google_analytics.html.erb" "_footer.html.erb" "_favorite.html.erb" "_comments.html.erb" "_comment_like.html.erb" "_comment_action.html.erb" "../" "./")
-
- ("/Users/yukang/code/createdji/app/views/photos/" (21540 55023 0 0) "show.html.erb" "more.html.erb" "index.html.erb" "../" "./")
-
- ("/Users/yukang/code/createdji/app/controllers/" (21539 56028 0 0) "videos_controller.rb" "users_controller.rb" "uploads_controller.rb" "test_controller.rb" "templates_controller.rb" "search_controller.rb" "photos_controller.rb" "metronic_controller.rb" "manage_controller.rb" "likes_controller.rb" "home_controller.rb" "favorites_controller.rb" "events_controller.rb" "concerns/" "comments_controller.rb" "authorize_controller.rb" "application_controller.rb" "api/" "admin/" "accounts_controller.rb" "../" "./")
-
- ("/Users/yukang/createdji/app/assets/" (21529 22089 0 0) "stylesheets/" "javascripts/" "images/" "fonts/" "../" "./")
-
- ("/Users/yukang/code/createdji/app/views/manage/" (21527 40805 0 0) "videos.json.jbuilder" "photos.json.jbuilder" "link_account_callback.html.erb" "index.html.erb" "_work.html.erb" "_video.html.erb" "_resource.html.erb" "_profile.html.erb" "_photo.html.erb" "_password.html.erb" "_pagination.html.erb" "_no_resources.html.erb" "_my_work_resource_type.html.erb" "_my_work_resource_permissions.html.erb" "_loading.html.erb" "_link_site.html.erb" "_link.html.erb" "_favorites.html.erb" "_edit_resource.html.erb" "../" "./")
-
- ("/Users/yukang/createdji/app/uploaders/" (21537 6025 0 0) "photo_uploader.rb" "avatar_uploader.rb" "../" "./")
-
- ("/Users/yukang/code/createdji/app/views/videos/" (21535 46564 0 0) "show.html.erb" "more.html.erb" "index.html.erb" "../" "./")
-
- ("/Users/yukang/code/createdji/config/" (21531 58050 0 0) "unicorn.rb" "secrets.yml" "routes.rb" "requirejs.yml" "locales/" "initializers/" "environments/" "environment.rb" "deploy.rb" "datas/" "database.yml.example" "database.yml" "boot.rb" "application.yml" "application.rb" "../" "./")
-
- ("/Users/yukang/code/createdji/app/views/home/" (21531 58050 0 0) "index.html.erb" "help.html.erb" "about.html.erb" "_videos.html.erb" "_photos.html.erb" "_events.html.erb" "_event.html.erb" "../" "./")
-
- ("/Users/yukang/code/createdji/app/assets/" (21526 48415 0 0) "stylesheets/" "javascripts/" "images/" "fonts/" ".DS_Store" "../" "./")
-
- ("/Users/yukang/code/createdji/app/assets/javascripts/" (21531 58050 0 0) "vendor/" "pages/" "metronic.js.coffee" "commons/" "app.js" "admin/" "../" "./")
-
- ("/Users/yukang/code/createdji/app/assets/javascripts/pages/" (21535 53900 0 0) "users.coffee" "upload.coffee" "resources.coffee" "photos.coffee" "manage.coffee" "home.js" "accounts_signup.js" "accounts_signin.js" "../" "./")
-
- ("/Users/yukang/code/createdji/app/views/" (21531 58050 0 0) "widgets/" "videos/" "users/" "uploads/" "tmpls/" "test/" "search/" "photos/" "metronic/" "manage/" "likes/" "layouts/" "home/" "favorites/" "events/" "emails/" "commons/" "comments/" "api/" "admin/" "accounts/" "../" "./")
-
- ("/Users/yukang/code/createdji/" (21531 58050 0 0) "tmp/" "test/" "spec/" "README.rdoc" "Rakefile" "public/" "log/" "lib/" "Gemfile.lock" "Gemfile" "db/" "config.ru" "config/" "Capfile" "bin/" "app/" ".rspec" ".gitignore" ".git/" "../" "./")
-
- ("/tmp/createdji/" (21531 41865 0 0) "tmp/" "test/" "spec/" "README.rdoc" "Rakefile" "public/" "log/" "lib/" "Gemfile.lock" "Gemfile" "db/" "config.ru" "config/" "Capfile" "bin/" "app/" ".gitignore" ".git/" "../" "./")
-
- ("/Users/yukang/code/createdji/app/views/comments/" (21526 41135 0 0) "index.json.jbuilder" "index.js.erb" "destroy.js.erb" "create.json.jbuilder" "create.html.erb" "_comment.json.jbuilder" "../" "./")
-
- ("/Users/yukang/createdji/app/" (21529 22089 0 0) "views/" "uploaders/" "models/" "mailers/" "helpers/" "controllers/" "assets/" "../" "./")
-
- ("/Users/yukang/code/" (21528 2605 0 0) "ruby-china/" "createdji_grade/" "createDJI-module/" "createdji/" "../" "./")
-
- ("/Users/yukang/.emacs.d/lisp/" (21528 63189 0 0) "zenburn-theme.el" "xgtags.el" "xcscope.el" "winring.el" "window-number.el" "weblogger.el" "vline.el" "viewer.el" "verilog-mode.el" "undo-tree.el" "thinks.el" "tabbar.el" "tabbar-ruler.el" "tabbar-conf.el" "swbuff.el" "sudoku.el" "smart-mode-line.el" "smart-compile.el.1" "smart-compile.el" "smart-compile+.el" "slim-mode.el" "showtip.el" "shell-command.el" "set-indent.el" "sdcv.el" "rust-mode.el" "psvn.el" "project-mode.el" "paredit.el" "mutt.el" "muse_kang.el" "muse_init.el" "multi-term.el" "multi-gud.el" "multi-gdb-ui.el" "mode-line.el" "markdown-mode.el" "lua-mode.el" "linum.el" "levenshtein.el" "key-chord.el" "kang-dark.el" "jump-dls.el" "indent-config.el" "ifdef.el" "htmlize.el" "history.el" "highlight-symbol.el" "highlight-parentheses.el" "highlight-indentation.el" "highlight-current-line.el" "guess-tab.el" "gtags.el" "gprof.el" "goto-last-change.el" "git.el" "func.el" "flymake-ruby.el" "flymake-clang-c.el" "flymake-clang-c++.el" "filladapt.el" "etags-select.el" "emacsay-mode.el" "dash-at-point.el" "ctypes.el" "cpp.el" "color-theme.el" "color-theme-sons-of-obsidian.el" "color-theme-molokai.el" "clang-lookup.el" "clang-completion-mode.el" "c-config.el" "browse-kill-ring.el" "bookmark+.el" "bookmark+-mac.el" "bookmark+-lit.el" "bookmark+-key.el" "bookmark+-doc.el" "bookmark+-chg.el" "bookmark+-bmu.el" "bookmark+-1.el" "beautify-line.el" "bash-completion.el" "auto-indent-mode.el" "anything.el" "anything-match-plugin.el" "anything-complete.el" "ace-jump-mode.el" "ac-company.el" "../" "./")
-
- ("/Users/yukang/code/createdji_grade/lib/" (21526 52121 0 0) "tasks/" "resource_calculate.rb" "assets/" "../" "./")
-
- ("/Users/" (21526 39648 0 0) "yukang/" "Shared/" "Guest/" ".localized" "../" "./")
-
- ("/Users/yukang/code/ruby-china/app/controllers/" (21527 56756 0 0) "users_controller.rb" "users/" "topics_controller.rb" "sites_controller.rb" "sessions_controller.rb" "search_controller.rb" "replies_controller.rb" "photos_controller.rb" "pages_controller.rb" "notifications_controller.rb" "notes_controller.rb" "nodes_controller.rb" "likes_controller.rb" "jobs_controller.rb" "home_controller.rb" "cpanel/" "comments_controller.rb" "application_controller.rb" "account_controller.rb" "../" "./")
-
- ("/Users/yukang/code/ruby-china/app/" (21527 56756 0 0) "views/" "uploaders/" "models/" "mailers/" "helpers/" "grape/" "controllers/" "cells/" "assets/" "../" "./")
-
- ("/Users/yukang/code/ruby-china/" (21527 56756 0 0) "start_faye_server" "spec/" "setup.rb" "script/" "README.md" "Rakefile" "public/" "misc/" "lib/" "Gemfile.lock" "Gemfile" "faye_server/" "doc/" "db/" "config.ru" "config/" "Capfile" "app/" ".travis.yml" ".rspec" ".gitignore" ".git/" "../" "./")
-
- ("/Users/yukang/code/createdji_grade/app/controllers/concerns/" (21526 47012 0 0) ".keep" "../" "./")
-
- ("/Users/yukang/code/createdji_grade/app/controllers/" (21526 47012 0 0) "resources_controller.rb" "concerns/" "application_controller.rb" "../" "./")
-
- ("/Users/yukang/code/createdji_grade/app/models/" (21526 47012 0 0) "resource.rb" "metadata.rb" "concerns/" ".keep" "../" "./")
-
- ("/Users/yukang/code/createdji_grade/app/assets/stylesheets/" (21526 47012 0 0) "application.css" "../" "./")
-
- ("/Users/yukang/code/createdji_grade/app/assets/javascripts/" (21526 47012 0 0) "application.js" "../" "./")
-
- ("/Users/yukang/code/createdji_grade/" (21526 47985 0 0) "vendor/" "tmp/" "test/" "spec/" "README.md" "Rakefile" "public/" "log/" "lib/" "Gemfile.lock" "Gemfile" "doc/" "db/" "config.ru" "config/" "bin/" "app/" ".rspec" ".gitignore" ".git/" "../" "./")
-
- ("/Users/yukang/code/createdji/app/mailers/" (21526 41135 0 0) "email_notifier.rb" ".keep" "../" "./")
-
- ("/Users/yukang/code/createdji/app/helpers/" (21526 41135 0 0) "videos_helper.rb" "user_helper.rb" "search_helper.rb" "home_helper.rb" "authorize_helper.rb" "application_helper.rb" "api/" "admin/" "accounts_helper.rb" "../" "./")
-
- ("/Users/yukang/code/createdji/app/helpers/api/v1/" (21526 41135 0 0) "comments_helper.rb" "../" "./")
-
- ("/Users/yukang/code/createdji/app/assets/javascripts/vendor/" (21526 41135 0 0) "ng-tags-input.js" "../" "./")
-
- ("/Users/yukang/code/createdji/app/assets/javascripts/commons/" (21526 41135 0 0) "jquery.tooltipster.js" "header.js.coffee" "comments.js.coffee" "carousel.js" "art.js" "../" "./")
-
- ("/Users/yukang/code/createdji/app/assets/stylesheets/" (21526 41135 0 0) "global.css.scss" "common/" "application.css.scss" "admin/" "../" "./")
-
- ("/Users/yukang/code/createdji/app/assets/stylesheets/admin/" (21526 41135 0 0) "admin.css.scss" "../" "./")
-
- ("/Users/yukang/code/createdji/app/assets/fonts/" (21526 41135 0 0) "OpenSans-Regular.woff" "OpenSans-Regular.ttf" "OpenSans-Regular.svg" "OpenSans-Regular.eot" "opensans-light.woff" "opensans-light.ttf" "opensans-light.svg" "opensans-light.eot" "fontello.woff" "fontello.ttf" "fontello.svg" "fontello.eot" "../" "./")
-
- ("/Users/yukang/code/createdji/app/" (21526 41135 0 0) "views/" "uploaders/" "models/" "mailers/" "helpers/" "controllers/" "assets/" "../" "./")
-
- ("/Users/yukang/code/createdji/spec/controllers/admin/" (21526 41135 0 0) "photos_controller_spec.rb" "events_controller_spec.rb" "admin_users_controller_spec.rb" "admin_controller_spec.rb" "accounts_controller_spec.rb" "../" "./")
-
- ("/Users/yukang/code/createdji/spec/controllers/" (21526 41135 0 0) "videos_controller_spec.rb" "user_controller_spec.rb" "search_controller_spec.rb" "home_controller_spec.rb" "authorize_controller_spec.rb" "api/" "admin/" "accounts_controller_spec.rb" "../" "./")
-
- ("/Users/yukang/code/createdji/spec/" (21526 41135 0 0) "views/" "routing/" "requests/" "models/" "helpers/" "controllers/" "../" "./")
 )
 
 ;; ----- ido-unc-hosts-cache -----
