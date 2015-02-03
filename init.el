@@ -773,3 +773,11 @@ If buffer-or-name is nil return current buffer's mode."
   '(progn
      (define-key coffee-mode-map [(meta r)] 'coffee-compile-buffer)
      (define-key coffee-mode-map (kbd "C-j") 'coffee-newline-and-indent)))
+
+
+
+(setq fiplr-root-markers '(".git" ".svn"))
+(setq fiplr-ignored-globs '((directories (".git" ".svn" "tmp"))
+                            (files ("*.jpg" "*.png" "*.zip" "*~" "*.keep"))))
+
+(global-set-key (kbd "C-x f") 'fiplr-find-file)
