@@ -10,3 +10,4 @@ history
 *.cache
 tramp
 eshell/lastdir
+ido.last

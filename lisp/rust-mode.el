@@ -31,9 +31,6 @@
     (modify-syntax-entry ?\" "\"" table)
     (modify-syntax-entry ?\\ "\\" table)
 
-    ;; _ is a word-char
-    (modify-syntax-entry ?_ "w" table)
-
     ;; Comments
     (modify-syntax-entry ?/  ". 124b" table)
     (modify-syntax-entry ?*  ". 23"   table)
@@ -71,8 +68,8 @@
     ;; open bracket ends the line
     (when (not (looking-at "[[:blank:]]*\\(?://.*\\)?$"))
       (when (looking-at "[[:space:]]")
-	(forward-word 1)
-	(backward-word 1))
+        (forward-word 1)
+        (backward-word 1))
       (current-column))))
 
 (defun rust-rewind-to-beginning-of-current-level-expr ()
@@ -176,8 +173,8 @@
     "false" "fn" "for"
     "if" "impl" "in"
     "let" "loop"
-    "match" "mod" "mut"
-    "priv" "proc" "pub"
+    "match" "mod" "move" "mut"
+    "priv" "pub"
     "ref" "return"
     "self" "static" "struct" "super"
     "true" "trait" "type"
@@ -192,7 +189,7 @@
     "u64" "i64"
 
     "f32" "f64"
-    "float" "int" "uint"
+    "float" "int" "uint" "isize" "usize"
     "bool"
     "str" "char"))
 
@@ -397,7 +394,7 @@ This is written mainly to be used as `beginning-of-defun-function' for Rust.
 Don't move to the beginning of the line. `beginning-of-defun',
 which calls this, does that afterwards."
   (interactive "p")
-  (re-search-backward (concat "^\\(" rust-top-item-beg-re "\\)\\b")
+  (re-search-backward (concat "^\\(" rust-top-item-beg-re "\\)\\_>")
                       nil 'move (or arg 1)))
 
 (defun rust-end-of-defun ()
@@ -442,7 +439,7 @@ This is written mainly to be used as `end-of-defun-function' for Rust."
   ;; Allow paragraph fills for comments
   (setq-local comment-start-skip "\\(?://[/!]*\\|/\\*[*!]?\\)[[:space:]]*")
   (setq-local paragraph-start
-       (concat "[[:space:]]*\\(?:" comment-start-skip "\\|\\*/?[[:space:]]*\\|\\)$"))
+              (concat "[[:space:]]*\\(?:" comment-start-skip "\\|\\*/?[[:space:]]*\\|\\)$"))
   (setq-local paragraph-separate paragraph-start)
   (setq-local normal-auto-fill-function 'rust-do-auto-fill)
   (setq-local fill-paragraph-function 'rust-fill-paragraph)
