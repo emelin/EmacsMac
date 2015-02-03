@@ -131,8 +131,10 @@
     (global-hi-lock-mode 1)
   (hi-lock-mode 1))
 
-(require 'highlight-symbol)
+
+
 (require 'sgml-mode)
+(require 'highlight-symbol)
 
 (setq highlight-symbol-idle-delay 0.3)
 (highlight-symbol-mode)
@@ -158,7 +160,8 @@
 		web-mode-hook
 		js2-mode-hook
 		eshell-mode-hook
-		scheme-mode go-mode))
+        enh-ruby-mode-hook
+        scheme-mode go-mode))
   (add-hook hook 'highlight-symbol-mode-on))
 
 (global-set-key [(control f3)] 'highlight-symbol-at-point)
@@ -167,6 +170,7 @@
 (global-set-key (kbd "C-c M-P") 'highlight-symbol-prev-in-defun)
 (global-set-key (kbd "C-c f") 'highlight-symbol-next)
 (global-set-key (kbd "C-c b") 'highlight-symbol-prev)
+
 (global-set-key (kbd "C-<return>") 'other-window)
 
 
@@ -760,9 +764,11 @@ If buffer-or-name is nil return current buffer's mode."
 (add-hook 'coffee-mode-hook
           (lambda () (highlight-indentation-mode)))
 
+
 (require 'rvm)
 (rvm-use-default)
 
+<<<<<<< HEAD
 
 (add-to-list 'load-path "~/.emacs.d/tuareg/")
 (require 'tuareg)
@@ -784,3 +790,13 @@ If buffer-or-name is nil return current buffer's mode."
 (setq merlin-use-auto-complete-mode 'easy)
 ;; Use opam switch to lookup ocamlmerlin binary
 (setq merlin-command 'opam)
+
+;; coffeescript
+(custom-set-variables
+ '(coffee-tab-width 2)
+ '(coffee-args-compile '("-c" "--bare")))
+
+(eval-after-load "coffee-mode"
+  '(progn
+     (define-key coffee-mode-map [(meta r)] 'coffee-compile-buffer)
+     (define-key coffee-mode-map (kbd "C-j") 'coffee-newline-and-indent)))
