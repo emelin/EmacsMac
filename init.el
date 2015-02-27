@@ -354,7 +354,6 @@
 (setq which-func-cleanup-function
       (lambda (s) (set-text-properties 0 (length s) nil s) s))
 
-
 (autoload 'markdown-mode "markdown-mode.el"
     "Major mode for editing Markdown files" t)
 (setq auto-mode-alist
@@ -768,8 +767,6 @@ If buffer-or-name is nil return current buffer's mode."
 (require 'rvm)
 (rvm-use-default)
 
-<<<<<<< HEAD
-
 (add-to-list 'load-path "~/.emacs.d/tuareg/")
 (require 'tuareg)
 (require 'merlin)
@@ -777,9 +774,21 @@ If buffer-or-name is nil return current buffer's mode."
       (append '(("\\.ml[ily]?$" . tuareg-mode)
                 ("\\.topml$" . tuareg-mode))
               auto-mode-alist))
-(autoload 'utop-setup-ocaml-buffer "utop" "Toplevel for OCaml" t)
-(autoload 'utop-minor-mode "utop" "Minor mode for utop" t)
-(add-hook 'tuareg-mode-hook 'utop-minor-mode)
+
+;; Setup environment variables using opam
+(dolist (var (car (read-from-string (shell-command-to-string "opam config env --sexp"))))
+  (setenv (car var) (cadr var)))
+
+;; Update the emacs path
+(setq exec-path (append (parse-colon-path (getenv "PATH"))
+                        (list exec-directory)))
+
+;; Update the emacs load path
+(add-to-list 'load-path (expand-file-name "../../share/emacs/site-lisp"
+                                          (getenv "OCAML_TOPLEVEL_PATH")))
+
+;; Automatically load utop.el
+(autoload 'utop "utop" "Toplevel for OCaml" t)
 
 (require 'merlin)
 (setq opam-share (substring (shell-command-to-string "opam config var share 2> /dev/null") 0 -1))
@@ -808,3 +817,10 @@ If buffer-or-name is nil return current buffer's mode."
                             (files ("*.jpg" "*.png" "*.zip" "*~" "*.keep"))))
 
 (global-set-key (kbd "C-x f") 'fiplr-find-file)
+
+(defun ido-ignore-non-user-except-ielm (name)
+  "Ignore all non-user (a.k.a. *starred*) buffers except *ielm*."
+  (and (string-match "^\*" name)
+       (not (string= name "*ielm*"))))
+
+(setq ido-ignore-buffers '("\\` " ido-ignore-non-user-except-ielm))
